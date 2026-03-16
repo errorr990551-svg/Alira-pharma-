@@ -2,7 +2,7 @@ const { sendMail } = require("../services/emailService");
 
 exports.submitContactForm = async (req, res) => {
   try {
-    const { name, email, phone, message } = req.body;
+    const { name, company, email, phone, message } = req.body;
 
     if (!name || !email || !message) {
       return res.status(400).json({
@@ -22,6 +22,7 @@ exports.submitContactForm = async (req, res) => {
       html: `
         <h2>New Contact Enquiry</h2>
         <p><b>Name:</b> ${name}</p>
+        <p><b>Company:</b> ${company || "N/A"}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Phone:</b> ${phone}</p>
         <p><b>Message:</b><br/>${message}</p>

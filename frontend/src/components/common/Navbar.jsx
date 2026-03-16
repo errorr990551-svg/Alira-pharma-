@@ -478,9 +478,11 @@ const Navbar = () => {
   // State for Desktop Mega Menu
   const [activeCategory, setActiveCategory] = useState(productCategories[0].id);
   const [isProductsHovered, setIsProductsHovered] = useState(false);
+  const [isBlogHovered, setIsBlogHovered] = useState(false);
 
   // State for Mobile Menu Accordions
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
 
   // --- NEW ADDITION: Listen for Footer "See more" click event ---
@@ -505,6 +507,7 @@ const Navbar = () => {
   const links = [
     { name: "Home", href: "/" },
     { name: "Company Profile", href: "/about" },
+    { name: "Blog", href: "#blog", isDropdown: true },
     { name: "Products", href: "#products", isDropdown: true }, // Marked as dropdown
     { name: "Contact", href: "/contact" },
   ];
@@ -525,6 +528,51 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6 lg:space-x-45 h-full ml-30">
             {links.map((link) => {
               if (link.isDropdown) {
+                // Blog Dropdown
+                if (link.name === "Blog") {
+                  return (
+                    <div 
+                      key={link.name} 
+                      className="h-full flex items-center group relative"
+                      onMouseEnter={() => setIsBlogHovered(true)}
+                      onMouseLeave={() => setIsBlogHovered(false)}
+                    >
+                      <button className="flex items-center gap-1 font-medium text-gray-600 hover:text-teal-600 text-sm lg:text-base transition-colors duration-200 cursor-pointer h-full border-b-2 border-transparent hover:border-teal-500">
+                        {link.name}
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isBlogHovered ? 'rotate-180' : ''}`} />
+                      </button>
+
+                      {/* BLOG DROPDOWN */}
+                      <div 
+                        className={`absolute top-full -right-20 bg-white shadow-xl border-t border-teal-500 rounded-b-lg overflow-hidden transition-all duration-300 origin-top z-50 w-72 ${
+                          isBlogHovered ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                        }`}
+                      >
+                        <div className="p-6 space-y-3">
+                          <Link
+                            to="/blog/ent-neuro-surgical-tools"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Sourcing ENT & Neuro-Surgical Tools</h4>
+                            <p className="text-sm text-gray-600">A comprehensive procurement guide for hospital officers</p>
+                          </Link>
+                          
+                          <Link
+                            to="/blog/india-uae-cepa-zero-duty-medical-imports-dubai"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">The Zero-Duty Revolution</h4>
+                            <p className="text-sm text-gray-600">UAE healthcare and India-UAE CEPA benefits</p>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
+                // Products Dropdown (existing logic)
                 return (
                   <div 
                     key={link.name} 
@@ -628,6 +676,40 @@ const Navbar = () => {
         <div className="px-4 pt-2 pb-6 space-y-1">
           {links.map((link) => {
             if (link.isDropdown) {
+              // Blog Dropdown for Mobile
+              if (link.name === "Blog") {
+                return (
+                  <div key={link.name} className="border-b border-gray-50 last:border-0">
+                    <button 
+                      onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
+                      className="w-full flex items-center justify-between py-3 text-lg font-medium text-gray-700 hover:text-teal-600 px-4 rounded-lg"
+                    >
+                      {link.name}
+                      <ChevronDown className={`w-5 h-5 transition-transform ${mobileBlogOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    
+                    {/* Mobile Blog Posts */}
+                    <div className={`overflow-hidden transition-all duration-300 ${mobileBlogOpen ? 'max-h-[300px]' : 'max-h-0'}`}>
+                      <Link 
+                        to="/blog/ent-neuro-surgical-tools"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Sourcing ENT & Neuro-Surgical Tools
+                      </Link>
+                      <Link 
+                        to="/blog/india-uae-cepa-zero-duty-medical-imports-dubai"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        The Zero-Duty Revolution
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+
+              // Products Dropdown for Mobile (existing)
               return (
                 <div key={link.name} className="border-b border-gray-50 last:border-0">
                   <button 

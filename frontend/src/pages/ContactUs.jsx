@@ -12,6 +12,7 @@ export const sendContactMessage = (data) => {
 const ContactUs = () => {
     const [formData, setFormData] = useState({
     name: "",
+    company: "",
     email: "",
     phone: "",
     message: "",
@@ -36,6 +37,7 @@ const ContactUs = () => {
 
       setFormData({
         name: "",
+        company: "",
         email: "",
         phone: "",
         message: "",
@@ -116,9 +118,12 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Email Us</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 flex flex-col gap-1">
                     <a href="mailto:anmolchauhan@alirapharmaceuticals.com" className="hover:text-teal-600 transition-colors">
                       anmolchauhan@alirapharmaceuticals.com
+                    </a>
+                    <a href="mailto:info@alirapharmaceuticals.com" className="hover:text-teal-600 transition-colors">
+                      info@alirapharmaceuticals.com
                     </a>
                   </p>
                 </div>
@@ -146,6 +151,21 @@ const ContactUs = () => {
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
                   placeholder="John Doe"
+                />
+              </div>
+
+              {/* Company Name Field */}
+              <div>
+                <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Company Name
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
+                  placeholder="Your Company"
                 />
               </div>
 

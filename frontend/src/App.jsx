@@ -7,6 +7,8 @@ import Navbar from './components/common/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import Footer from './components/common/Footer.jsx'
 import About from './pages/About.jsx'
+import BlogPost from './pages/BlogPost.jsx'
+import BlogPost2 from './pages/BlogPost2.jsx'
 import Category1 from './pages/products/Category1.jsx'
 import Category2 from './pages/products/Category2.jsx'
 import Category3 from './pages/products/Category3.jsx'
@@ -32,6 +34,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
+        <Route path='/blog/ent-neuro-surgical-tools' element={<BlogPost/>} />
+        <Route path='/blog/india-uae-cepa-zero-duty-medical-imports-dubai' element={<BlogPost2/>} />
         <Route path='/contact' element={<ContactUs/>} />
         <Route path='/seo' element={<SeoPage/>} />
 

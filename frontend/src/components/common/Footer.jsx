@@ -52,11 +52,16 @@ const Footer = () => {
                     UTTAR PRADESH, 201304
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-teal-700 shrink-0" />
-                <a href="mailto:anmolchauhan@alirapharmaceuticals.com" className="text-sm hover:text-teal-700 transition-colors">
-                  Email: anmolchauhan@alirapharmaceuticals.com
-                </a>
+              <li className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-teal-700 mt-1 shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:anmolchauhan@alirapharmaceuticals.com" className="text-sm hover:text-teal-700 transition-colors">
+                    anmolchauhan@alirapharmaceuticals.com
+                  </a>
+                  <a href="mailto:info@alirapharmaceuticals.com" className="text-sm hover:text-teal-700 transition-colors">
+                    info@alirapharmaceuticals.com
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-teal-700 shrink-0" />
