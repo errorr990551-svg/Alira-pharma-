@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { Menu, X, ArrowRight, Truck, Medal, FileCheck, Globe, Scan, DollarSign, Lightbulb, Users, ChevronRight, Factory, ShieldCheck, ClipboardList, Building2, Stethoscope, FlaskConical, Heart, CheckSquare, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
+import manufacturingImg from '../assets/Images/manufacturing.jpg';
+import aboutImg from '../assets/Images/about alira.avif';
 
 
 // --- Features Data ---
@@ -302,7 +304,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-teal-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
                 {/* Warehouse Image Placeholder */}
                 <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  src={aboutImg}
                   alt="Pharmaceutical Warehouse"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
@@ -543,9 +545,9 @@ const Home = () => {
                 <div className="absolute top-0 right-0 w-[110%] h-[105%] bg-teal-500 rounded-tr-[5rem] rounded-bl-[5rem] -translate-y-4 translate-x-4 -z-10 hidden md:block"></div>
 
                 <div className="relative rounded-tr-[4rem] rounded-bl-[4rem] overflow-hidden shadow-2xl border-4 border-white">
-                  {/* IMPORT NOTE: Replace with your imported image variable or path */}
+                  {/* Manufacturing Image */}
                   <img
-                    src="https://via.placeholder.com/600x500"
+                    src={manufacturingImg}
                     alt="Warehouse Operations"
                     className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                   />

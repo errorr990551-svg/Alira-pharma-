@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Mail, Phone, Printer, Linkedin, ChevronRight } from 'lucide-react';
+import { MapPin, Mail, Phone, Printer, Linkedin, ChevronRight, FileText } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import policiesPDF from '../../assets/EXPORT RETURN & REPLACEMENT TERMS.pdf';
 
 const Footer = () => {
 
@@ -36,7 +37,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           
           {/* Column 1: Contact Information */}
           <div>
@@ -161,6 +162,25 @@ const Footer = () => {
             >
               <Linkedin className="w-5 h-5" />
             </a>
+          </div>
+
+          {/* Column 5: Policies */}
+          <div>
+            <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
+              Policies
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href={policiesPDF}
+                  download="EXPORT RETURN & REPLACEMENT TERMS.pdf"
+                  className="group flex items-center text-sm hover:text-teal-700 transition-colors"
+                >
+                  <FileText className="w-4 h-4 text-teal-700 mr-2" />
+                  <span>Export & Return Terms</span>
+                </a>
+              </li>
+            </ul>
           </div>
 
         </div>

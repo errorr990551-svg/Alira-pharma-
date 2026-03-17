@@ -1,6 +1,8 @@
 import React from 'react'
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { ClipboardList, User, Hand, Award, CheckSquare, Globe, Scan, DollarSign, Lightbulb, Users,Truck, ChevronRight, Factory, } from 'lucide-react';
+import missionImg from '../assets/Images/mission.png';
+import visionImg from '../assets/Images/vision.png';
 
 
 // --- Features Data ---
@@ -153,18 +155,14 @@ const About = () => {
               {/* Mission Section (Image Left / Text Right) */}
               <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 {/* Image Placeholder */}
-                <div className="w-full lg:w-1/2">
+                <div className="w-full lg:w-1/2 flex justify-center">
                   {/* Using anchor tag as placeholder container */}
-                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl aspect-4/3 group bg-white border border-gray-100 hover:border-teal-200 transition-colors">
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 group-hover:text-teal-600 transition-colors">
-                      <span className="text-lg font-bold">Mission Image Placeholder</span>
-                      <span className="text-sm">(Click to Upload Image)</span>
-                    </div>
+                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl group bg-white border border-gray-100 hover:border-teal-200 transition-colors max-w-md">
                     {/* Optional: Add actual image src when available */}
                     <img
-                      src="https://via.placeholder.com/800x600/f0fdfa/14b8a6?text=Mission+Image"
-                      alt="Mission Placeholder"
-                      className="w-full h-full object-cover opacity-0 hover:opacity-10 transition-opacity"
+                      src={missionImg}
+                      alt="Mission Image"
+                      className="w-full h-auto object-contain"
                     />
                   </a>
                 </div>
@@ -175,20 +173,18 @@ const About = () => {
                     Mission
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                    To manufacture and supply high-quality surgical instruments and medical disposables that meet international standards of safety, precision, and reliability.
-<br /> Alira Pharmaceuticals is committed to delivering world-class surgical and healthcare products through advanced manufacturing, strict quality control, and continuous innovation. We serve hospitals, distributors, and healthcare institutions globally with dependable supply and competitive pricing.
-
+                    Our mission is simple, but heavy with responsibility to never forget that every product we make may one day stand between danger and survival. We work in an industry where mistakes are not numbers, they are names. Where precision is not preference, it is protection. That is why we hold ourselves to standards that do not bend, even when no one is watching. We are here to build medical devices and solutions that earn trust not through words, but through performance—quiet, consistent, and uncompromising. Because when something carries our name, it must be worthy of the lives that depend on it.
                   </p>
 
                   <div className="space-y-4">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Our mission focuses on:</h4>
                     <ul className="space-y-4">
                       {[
-                        "Manufacturing precision-engineered surgical instruments using medical-grade stainless steel",
-                        "Maintaining strict quality assurance and international compliance standards",
-                        "Ensuring reliable global export and timely delivery",
-                        "Building long-term partnerships based on trust and performance",
-                        "Continuous product innovation and improvement"
+                        "Never compromise on precision—lives depend on it",
+                        "Build trust through performance, not promises",
+                        "Hold ourselves to standards that do not bend",
+                        "Earn responsibility by honoring the weight we carry",
+                        "Create products worthy of the lives that depend on them"
                       ].map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           <CheckSquare className="w-6 h-6 text-teal-600 shrink-0 mt-1" />
@@ -203,18 +199,14 @@ const About = () => {
               {/* Vision Section (Text Left / Image Right) */}
               <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                 {/* Image Placeholder */}
-                <div className="w-full lg:w-1/2">
+                <div className="w-full lg:w-1/2 flex justify-center">
                   {/* Using anchor tag as placeholder container */}
-                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl aspect-4/3 group bg-white border border-gray-100 hover:border-teal-200 transition-colors">
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 group-hover:text-teal-600 transition-colors">
-                      <span className="text-lg font-bold">Vision Image Placeholder</span>
-                      <span className="text-sm">(Click to Upload Image)</span>
-                    </div>
+                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl group bg-white border border-gray-100 hover:border-teal-200 transition-colors max-w-md">
                     {/* Optional: Add actual image src when available */}
                     <img
-                      src="https://via.placeholder.com/800x600/f0fdfa/14b8a6?text=Vision+Image"
-                      alt="Vision Placeholder"
-                      className="w-full h-full object-cover opacity-0 hover:opacity-10 transition-opacity"
+                      src={visionImg}
+                      alt="Vision Image"
+                      className="w-full h-auto object-contain"
                     />
                   </a>
                 </div>
@@ -225,20 +217,21 @@ const About = () => {
                     Vision
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                    To become a globally recognized manufacturer and exporter of surgical instruments and medical disposables, known for quality, integrity, and excellence.
-<br /> We envision expanding our global footprint while setting benchmarks in manufacturing standards, product durability, and customer satisfaction across healthcare markets worldwide.
-
+                    We are building more than a company. We are building a reputation that will outlive us.
+                    <br /><br />A reputation that walks into operating rooms before we ever do. A name that represents certainty in moments filled with uncertainty. We envision a future where our brand is not chosen because it is the biggest, but because it is the safest choice. Where growth never comes at the cost of integrity. Where innovation serves humanity, not ego.
+                    <br /><br />As we expand across continents and move into full-scale manufacturing, our purpose will remain unchanged: to raise the standard of trust in healthcare so high that our name becomes a quiet assurance, a symbol that what is in a surgeon's hand has been built with conscience, discipline, and respect for life itself.
+                    <br /><br />We do not want to be remembered for market share. We want to be remembered for the lives protected because we refused to compromise.
                   </p>
 
                   <div className="space-y-4">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Our vision aspires to:</h4>
                     <ul className="space-y-4">
                       {[
-                        "Lead in surgical instrument manufacturing excellence",
-                        "Expand exports across international healthcare markets",
-                        "Achieve globally recognized certifications and compliance standards",
-                        "Invest in modern production technology and skilled workforce",
-                        "Create sustainable and ethical manufacturing practices"
+                        "Build a reputation based on uncompromising safety and integrity",
+                        "Choose to be remembered for lives protected, not market share",
+                        "Raise the standard of trust in healthcare globally",
+                        "Prove that growth and conscience can grow together",
+                        "Create certainty in moments filled with uncertainty"
                       ].map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           <CheckSquare className="w-6 h-6 text-teal-600 shrink-0 mt-1" />
