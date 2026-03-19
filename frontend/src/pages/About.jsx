@@ -1,8 +1,8 @@
 import React from 'react'
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { ClipboardList, User, Hand, Award, CheckSquare, Globe, Scan, DollarSign, Lightbulb, Users,Truck, ChevronRight, Factory, } from 'lucide-react';
-import missionImg from '../assets/Images/mission.png';
-import visionImg from '../assets/Images/vision.png';
+import missionImg from '../assets/Images/mission.jpeg';
+import visionImg from '../assets/Images/vision.jpeg';
 
 
 // --- Features Data ---
@@ -156,15 +156,13 @@ const About = () => {
               <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 {/* Image Placeholder */}
                 <div className="w-full lg:w-1/2 flex justify-center">
-                  {/* Using anchor tag as placeholder container */}
-                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl group bg-white border border-gray-100 hover:border-teal-200 transition-colors max-w-md">
-                    {/* Optional: Add actual image src when available */}
+                  <div className="relative rounded-lg overflow-hidden shadow-xl aspect-4/3 lg:aspect-auto lg:h-[600px] w-full">
                     <img
                       src={missionImg}
                       alt="Mission Image"
-                      className="w-full h-auto object-contain"
+                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-in-out"
                     />
-                  </a>
+                  </div>
                 </div>
 
                 {/* Text Content */}
@@ -200,15 +198,13 @@ const About = () => {
               <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                 {/* Image Placeholder */}
                 <div className="w-full lg:w-1/2 flex justify-center">
-                  {/* Using anchor tag as placeholder container */}
-                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl group bg-white border border-gray-100 hover:border-teal-200 transition-colors max-w-md">
-                    {/* Optional: Add actual image src when available */}
+                  <div className="relative rounded-lg overflow-hidden shadow-xl aspect-4/3 lg:aspect-auto lg:h-[600px] w-full">
                     <img
                       src={visionImg}
                       alt="Vision Image"
-                      className="w-full h-auto object-contain"
+                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-in-out"
                     />
-                  </a>
+                  </div>
                 </div>
 
                 {/* Text Content */}

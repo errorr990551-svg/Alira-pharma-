@@ -20,6 +20,7 @@ import Category8 from './pages/products/Category8.jsx'
 import Category9 from './pages/products/Category9.jsx'
 import Category10 from './pages/products/Category10.jsx'
 import Category11 from './pages/products/Category11.jsx'
+import Category12 from './pages/products/Category12.jsx'
 import ContactUs from './pages/ContactUs.jsx'
 import PopUp from './components/common/PopUp.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx'
@@ -73,6 +74,9 @@ function App() {
 
         <Route path="/products/disposables-iv/:productId" element={<Category11 />} />
         <Route path="/products/disposables-iv" element={<Category11 />} />
+        
+        <Route path="/products/medical-device/:productId" element={<Category12 />} />
+        <Route path="/products/medical-device" element={<Category12 />} />
         
       </Routes>
       <Footer />

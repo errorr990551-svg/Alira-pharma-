@@ -456,6 +456,15 @@ const productCategories = [
       "IV Sets",
       "IV Cannula"
     ]
+  },
+  {
+    id: 'medical-device',
+    category: "Medical Device",
+    products: [
+      "Under water seal drainage system",
+      "Digital thermometer",
+      "Blood pressure moniter"
+    ]
   }
 ];
 
@@ -595,6 +604,9 @@ const Navbar = () => {
                         
                         {/* LEFT SIDE: Categories */}
                         <div className="w-1/3 bg-gray-50 overflow-y-auto border-r border-gray-100 py-6">
+                          <div className="px-8 pb-4 text-sm font-bold text-teal-600 tracking-wider">
+                            OEM available on demand
+                          </div>
                           {productCategories.map((cat) => (
                             <div 
                               key={cat.id}
@@ -722,6 +734,9 @@ const Navbar = () => {
                   
                   {/* Mobile Nested Menu */}
                   <div className={`overflow-hidden transition-all duration-300 ${mobileProductsOpen ? 'max-h-[1000px]' : 'max-h-0'}`}>
+                    <div className="px-8 py-3 text-sm font-bold text-teal-600 bg-gray-50 border-b border-gray-100">
+                      OEM available on demand
+                    </div>
                     {productCategories.map((cat) => (
                       <div key={cat.id} className="bg-gray-50">
                         <button 
