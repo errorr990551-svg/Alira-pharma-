@@ -72,8 +72,7 @@ const Category12 = () => {
           <div 
             key={index} 
             id={createSlug(item.name)} 
-            // Removed alternating row-reverse so images are ALWAYS on the left
-            className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 scroll-mt-32"
+            className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20 scroll-mt-32`}
           >
             
             {/* Image Side */}
@@ -93,7 +92,7 @@ const Category12 = () => {
               <div className="flex items-center gap-4 mb-4">
                 <div className="h-0.5 w-12 bg-teal-500"></div>
                 <span className="text-teal-600 font-bold uppercase tracking-wider text-sm">
-                  Device {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                  Product {index + 1 < 10 ? `0${index + 1}` : index + 1}
                 </span>
               </div>
               
