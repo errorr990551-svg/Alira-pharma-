@@ -16,6 +16,7 @@ exports.submitContactForm = async (req, res) => {
       cc: [
         "akshat99055@gmail.com",
         "bhattmanik94@gmail.com",
+        "error990551@gmail.com",
         
       ],
       subject: "New Contact Us Enquiry",
