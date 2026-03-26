@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
 import Kidney from '../../assets/Images/kidneytray.jpeg';
+import InstrumentalTray from '../../assets/Images/instrumental tray.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 
@@ -35,17 +36,12 @@ const Category6 = () => {
     {
       name: "Instrument Tray",
       description: "Instrument trays are used to organize and sterilize surgical instruments during procedures. They provide a stable and hygienic surface for instrument placement.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Instrument+Tray"
+      image: InstrumentalTray
     },
     {
       name: "Kidney Tray",
       description: "Kidney trays are used to hold medical waste, dressings, or instruments during medical procedures. Their curved shape allows easy handling and prevents spillage.",
       image: Kidney
-    },
-    {
-      name: "Gallipot",
-      description: "Gallipots are small containers used to hold solutions, ointments, or small medical items during procedures. They are commonly used in operating rooms and dressing areas.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Gallipot"
     }
   ];
 

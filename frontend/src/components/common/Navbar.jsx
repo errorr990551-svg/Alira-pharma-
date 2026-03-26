@@ -73,8 +73,7 @@
 //     category: "Trays & Utility Items",
 //     products: [
 //       "Instrument Tray",
-//       "Kidney Tray",
-//       "Gallipot"
+//       "Kidney Tray"
 //     ]
 //   },
 //   {
@@ -404,8 +403,7 @@ const productCategories = [
     category: "Trays & Utility Items",
     products: [
       "Instrument Tray",
-      "Kidney Tray",
-      "Gallipot"
+      "Kidney Tray"
     ]
   },
   {
@@ -463,7 +461,7 @@ const productCategories = [
     products: [
       "Under water seal drainage system",
       "Digital thermometer",
-      "Blood pressure moniter"
+      "Blood pressure monitor"
     ]
   }
 ];

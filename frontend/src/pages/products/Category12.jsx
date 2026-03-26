@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+import UnderWaterSeal from '../../assets/Images/underwater seal.jpeg';
+import DigitalThermometer from '../../assets/Images/digital thermometer.jpeg';
+import BloodPressure from '../../assets/Images/blood pressure.jpeg';
+
 // Using a placeholder image for now as requested
 const placeholderImage = 'https://placehold.co/600x400?text=Medical+Device';
 
@@ -38,17 +42,17 @@ const Category12 = () => {
     {
       name: "Under water seal drainage system",
       description: "An under water seal drainage system is used to remove air, fluid, or pus from the pleural cavity, helping restore normal lung function. It is commonly used in thoracic surgeries and emergency care settings. The system ensures controlled drainage while preventing backflow, maintaining patient safety and effective respiratory support.",
-      image: placeholderImage
+      image: UnderWaterSeal
     },
     {
       name: "Digital thermometer",
       description: "A digital thermometer is used to measure body temperature quickly and accurately. It provides fast readings with easy-to-read digital displays, making it suitable for clinical and home use. Designed for hygiene and reliability, it ensures precise temperature monitoring for effective patient care.",
-      image: placeholderImage
+      image: DigitalThermometer
     },
     {
-      name: "Blood pressure moniter",
+      name: "Blood pressure monitor",
       description: "A blood pressure monitor is used to measure systolic and diastolic blood pressure levels along with pulse rate. It is essential for monitoring cardiovascular health in hospitals, clinics, and home settings. Designed for accuracy and ease of use, it helps in early detection and management of hypertension.",
-      image: placeholderImage
+      image: BloodPressure
     }
   ];
 
@@ -80,7 +84,7 @@ const Category12 = () => {
               <div className="relative group rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
                 <div className="aspect-4/3 overflow-hidden relative">
                    {/* We can use either img or ZoomableImage from components. Assuming standard img if ZoomableImage was causing issues, but Category1 uses ZoomableImage */}
-                   <img src={item.image} alt={item.name} className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" />
+                   <ZoomableImage src={item.image} alt={item.name} />
                 </div>
                 {/* Decorative Accent */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 pointer-events-none"></div>
