@@ -18,14 +18,14 @@ const featuresData = [
   },
   {
     id: 2,
-    icon: Scan,
+    icon: ClipboardList, // Changed from Scan/FileCheck to ClipboardList
     title: "Strict Quality Control",
     shortText: "Every product undergoes rigorous inspection and testing to meet international healthcare standards and ensure consistent performance.",
     longText: " From high-volume generics to hard-to-find niche medications, our catalog is constantly updated to reflect current demands. We maintain robust stock levels to minimize backorders and ensure your patients never have to wait for critical treatments."
   },
   {
     id: 3,
-    icon: Truck, // Reusing Truck icon, or could use MapPin/Globe
+    icon: Truck, 
     title: "Global Export Network",
     shortText: "We supply hospitals, distributors, and medical institutions across international markets with reliable shipping and documentation support.",
     longText: " Our logistics partners are vetted for excellence in cold-chain management and secure transport. Whether you are a rural independent pharmacy or a large urban hospital system, our reliable supply chain reaches you with speed and precision."
@@ -123,21 +123,24 @@ const reviews = [
     text: "What distinguishes these wholesale pharmaceutical distributors is their attention to detail and understanding of the unique needs of hospitals. They have streamlined our procurement process and have made it supremely easier for us to serve our patients.",
     author: "Dr. Grace Kim",
     role: "Director of Hospital Procurement",
-    rating: 4.2
+    rating: 4.2,
+    image: "https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=200"
   },
   {
     id: 2,
     text: "Reliability is critical in our field, and Alira has never let us down. Their commitment to compliance and the speed of their delivery network have significantly improved our operational efficiency across multiple clinic locations.",
     author: "James Wilson",
     role: "Regional Pharmacy Manager",
-    rating: 4.8
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200"
   },
   {
     id: 3,
     text: "Finding a distributor that understands both human and animal health needs is rare. Alira's specialized veterinary support and consistent stock of hard-to-find formulations have been invaluable to our practice.",
     author: "Dr. Sarah Jenkins",
     role: "Veterinary Medical Director",
-    rating: 4.5
+    rating: 4.5,
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=200"
   }
 ];
 
@@ -195,6 +198,35 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // SEO Configuration
+    document.title = "Alira Pharmaceuticals | Global Surgical & Medical Supply Manufacturer";
+
+    // Update Meta Description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    const descriptionContent = "Alira Pharmaceuticals is a leading manufacturer and exporter of precision surgical instruments, PPE, wound care, and medical disposables. Request a bulk quote today!";
+    
+    if (metaDescription) {
+      metaDescription.setAttribute('content', descriptionContent);
+    } else {
+      metaDescription = document.createElement('meta');
+      metaDescription.name = "description";
+      metaDescription.content = descriptionContent;
+      document.head.appendChild(metaDescription);
+    }
+
+    // Update Meta Keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "Surgical instrument manufacturer, medical supplies exporter, bulk PPE suppliers, hospital disposables, wound care products, Alira Pharmaceuticals, medical grade stainless steel instruments, OEM medical manufacturing";
+    
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywordsContent);
+    } else {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.name = "keywords";
+      metaKeywords.content = keywordsContent;
+      document.head.appendChild(metaKeywords);
+    }
+
     if (location.state?.scrollTo === "faq") {
       const section = document.getElementById("faq");
       if (section) {
@@ -213,10 +245,13 @@ const Home = () => {
         {/* Background Banner Area */}
         <div
           className="relative bg-teal-900 pt-32 pb-48 lg:pt-40 lg:pb-64 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
-          }}
         >
+          {/* Main Hero Background Image for SEO Alt Text */}
+          <img 
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            alt="Global medical supply distribution and pharmaceutical manufacturing headquarters"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           {/* Overlays */}
           <div className="absolute inset-0 bg-teal-900/80 mix-blend-multiply" />
           <div className="absolute inset-0 bg-linear-to-t from-teal-900/90 via-teal-900/40 to-transparent" />
@@ -261,7 +296,7 @@ const Home = () => {
             {/* Card 1 */}
             <div className="bg-cyan-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-cyan-100 text-center">
               <div className="flex justify-center mb-4">
-                <Truck className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
+                <Truck className="w-10 h-10 text-teal-700" strokeWidth={1.5} aria-label="International shipping and global medical supply export logistics" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Wide Product Range</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -272,7 +307,7 @@ const Home = () => {
             {/* Card 2 */}
             <div className="bg-cyan-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-cyan-100 text-center">
               <div className="flex justify-center mb-4">
-                <Medal className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
+                <Stethoscope className="w-10 h-10 text-teal-700" strokeWidth={1.5} aria-label="Precision engineered surgical instruments and medical diagnostic equipment" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Certified Manufacturing</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -283,7 +318,7 @@ const Home = () => {
             {/* Card 3 */}
             <div className="bg-cyan-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-cyan-100 text-center">
               <div className="flex justify-center mb-4">
-                <FileCheck className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
+                <ClipboardList className="w-10 h-10 text-teal-700" strokeWidth={1.5} aria-label="Certified medical manufacturing quality control and international compliance" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Global Export Network</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -305,7 +340,7 @@ const Home = () => {
                 {/* Warehouse Image Placeholder */}
                 <img
                   src={aboutImg}
-                  alt="Pharmaceutical Warehouse"
+                  alt="Alira Pharmaceuticals warehouse facility with organized medical supplies for global export"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -548,8 +583,8 @@ const Home = () => {
                   {/* Manufacturing Image */}
                   <img
                     src={manufacturingImg}
-                    alt="Warehouse Operations"
-                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                    alt="Staff managing inventory and quality inspection at Alira Pharmaceuticals manufacturing unit"
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               </div>
@@ -696,9 +731,16 @@ const Home = () => {
                   <div className="w-full flex flex-col md:flex-row justify-between items-end md:items-center mt-auto border-t border-teal-400/30 pt-6">
 
                     {/* Author Info */}
-                    <div className="text-left mb-4 md:mb-0">
-                      <h4 className="text-xl font-bold">{reviews[currentReview].author}</h4>
-                      <p className="text-teal-100 text-sm">{reviews[currentReview].role}</p>
+                    <div className="flex items-center gap-4 mb-4 md:mb-0">
+                      <img 
+                        src={reviews[currentReview].image} 
+                        alt={`${reviews[currentReview].author} - ${reviews[currentReview].role} and Alira Pharmaceuticals client`} 
+                        className="w-14 h-14 rounded-full border-2 border-teal-300 object-cover" 
+                      />
+                      <div className="text-left">
+                        <h4 className="text-xl font-bold">{reviews[currentReview].author}</h4>
+                        <p className="text-teal-100 text-sm">{reviews[currentReview].role}</p>
+                      </div>
                     </div>
 
                     {/* Rating */}

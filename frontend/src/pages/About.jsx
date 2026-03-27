@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { ClipboardList, User, Hand, Award, CheckSquare, Globe, Scan, DollarSign, Lightbulb, Users,Truck, ChevronRight, Factory, } from 'lucide-react';
 import missionImg from '../assets/Images/mission.jpeg';
@@ -53,6 +53,38 @@ const featuresData = [
 
 const About = () => {
   const { openQuotePopup } = useQuotePopup();
+
+  // SEO Configuration
+  useEffect(() => {
+    document.title = "Company Profile | Alira Pharmaceuticals | Medical Supply Manufacturer";
+
+    // Update Meta Description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    const descriptionContent = "Learn about Alira Pharmaceuticals, a trusted global exporter of surgical instruments and medical disposables. We combine precision engineering with a mission of uncompromising patient safety.";
+    
+    if (metaDescription) {
+      metaDescription.setAttribute('content', descriptionContent);
+    } else {
+      metaDescription = document.createElement('meta');
+      metaDescription.name = "description";
+      metaDescription.content = descriptionContent;
+      document.head.appendChild(metaDescription);
+    }
+
+    // Update Meta Keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "Alira Pharmaceuticals profile, medical device manufacturer, surgical instrument exporter, healthcare supply mission, certified medical manufacturing, global medical distribution, surgical tool engineering.";
+    
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywordsContent);
+    } else {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.name = "keywords";
+      metaKeywords.content = keywordsContent;
+      document.head.appendChild(metaKeywords);
+    }
+  }, []);
+
   return (
     <div>
 
@@ -63,7 +95,7 @@ const About = () => {
           {/* Placeholder Background - Replace with your specific banner image later */}
           <img 
             src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&q=80&w=2000" 
-            alt="About Us Banner" 
+            alt="Alira Pharmaceuticals corporate banner - Global medical supply solutions" 
             className="w-full h-full object-cover opacity-20"
           />
           {/* Gradient Overlay for Text Readability */}
@@ -93,7 +125,7 @@ const About = () => {
                     {/* Placeholder for the "People Walking/Talking" image */}
                     <img 
                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600" 
-                        alt="Alira Team Collaboration" 
+                        alt="Alira Pharmaceuticals team discussing medical manufacturing and quality control" 
                         className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-in-out"
                     />
                     </div>
@@ -159,7 +191,7 @@ const About = () => {
                   <div className="relative rounded-lg overflow-hidden shadow-xl aspect-4/3 lg:aspect-auto lg:h-[600px] w-full">
                     <img
                       src={missionImg}
-                      alt="Mission Image"
+                      alt="Alira Pharmaceuticals mission - Commitment to precision in surgical manufacturing"
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-in-out"
                     />
                   </div>
@@ -201,7 +233,7 @@ const About = () => {
                   <div className="relative rounded-lg overflow-hidden shadow-xl aspect-4/3 lg:aspect-auto lg:h-[600px] w-full">
                     <img
                       src={visionImg}
-                      alt="Vision Image"
+                      alt="Alira Pharmaceuticals vision - Raising the standard of global healthcare trust"
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-in-out"
                     />
                   </div>

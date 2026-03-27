@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Printer, Send } from 'lucide-react';
 
@@ -19,6 +19,37 @@ const ContactUs = () => {
   });
 
   const [loading, setLoading] = useState(false);
+
+  // SEO Configuration
+  useEffect(() => {
+    document.title = "Contact Alira Pharmaceuticals | Medical Supply Inquiry & Support";
+
+    // Update Meta Description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    const descriptionContent = "Contact Alira Pharmaceuticals for product inquiries, bulk quotes, or partnerships. Reach our Uttar Pradesh headquarters via phone, email, or our online form.";
+    
+    if (metaDescription) {
+      metaDescription.setAttribute('content', descriptionContent);
+    } else {
+      metaDescription = document.createElement('meta');
+      metaDescription.name = "description";
+      metaDescription.content = descriptionContent;
+      document.head.appendChild(metaDescription);
+    }
+
+    // Update Meta Keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "Contact Alira Pharmaceuticals, medical supply quotes, surgical instrument inquiries, Alira Pharmaceuticals phone number, medical exporter contact, hospital supply partnership, pharmaceutical distributor India.";
+    
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywordsContent);
+    } else {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.name = "keywords";
+      metaKeywords.content = keywordsContent;
+      document.head.appendChild(metaKeywords);
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -56,6 +87,12 @@ const ContactUs = () => {
       <div className="bg-teal-900 py-16 lg:py-20 relative overflow-hidden">
         {/* Abstract Background Pattern */}
         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center mix-blend-overlay"></div>
+        {/* Hidden Image for SEO Alt Text */}
+        <img 
+          src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80&w=2000" 
+          alt="Customer support team for Alira Pharmaceuticals medical and surgical products" 
+          className="sr-only" 
+        />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Contact Us</h1>
@@ -83,7 +120,7 @@ const ContactUs = () => {
               {/* Address */}
               <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="bg-teal-50 p-3 rounded-full text-teal-600 shrink-0">
-                  <MapPin className="w-6 h-6" />
+                  <MapPin className="w-6 h-6" aria-label="Alira Pharmaceuticals headquarters location in Sector-132, Noida, Uttar Pradesh" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Our Headquarters</h3>
@@ -98,7 +135,7 @@ const ContactUs = () => {
               {/* Phone & Fax */}
               <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="bg-teal-50 p-3 rounded-full text-teal-600 shrink-0">
-                  <Phone className="w-6 h-6" />
+                  <Phone className="w-6 h-6" aria-label="Call Alira Pharmaceuticals for medical supply support and ordering" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
@@ -114,7 +151,7 @@ const ContactUs = () => {
               {/* Email */}
               <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="bg-teal-50 p-3 rounded-full text-teal-600 shrink-0">
-                  <Mail className="w-6 h-6" />
+                  <Mail className="w-6 h-6" aria-label="Email Alira Pharmaceuticals for wholesale surgical instrument inquiries" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Email Us</h3>

@@ -473,7 +473,7 @@ const Logo = () => (
   <div className="flex items-center">
     <img 
       src={LogoImg} 
-      alt="Alira Pharmaceutical" 
+      alt="Alira Pharmaceuticals company logo - Medical and Surgical Supplies Manufacturer" 
       className="h-20 w-auto object-contain" 
     />
   </div>
