@@ -15,7 +15,6 @@ exports.submitContactForm = async (req, res) => {
       to: "anmolchauhan@alirapharmaceuticals.com",
       cc: [
         "akshat99055@gmail.com",
-        "bhattmanik94@gmail.com",
         "error990551@gmail.com",
         
       ],
