@@ -10,8 +10,8 @@ exports.sendMail = async ({
   attachments = [],
 }) => {
   try {
-    const response = await resend.emails.send({
-      from:"Alira Pharmaceuticals <no-reply@errorr.in>",
+    const { data, error } = await resend.emails.send({
+      from: "Alira Pharmaceuticals <no-reply@inquiry.errorr.in>",
       to: Array.isArray(to) ? to : [to],
       cc: cc
         ? Array.isArray(cc)
@@ -28,7 +28,13 @@ exports.sendMail = async ({
         : undefined,
     });
 
-    return response;
+    if (error) {
+      console.error("RESEND API ERROR:", error);
+      throw error;
+    }
+
+    console.log("RESEND SUCCESS:", data);
+    return data;
   } catch (error) {
     console.error("RESEND ERROR:", error);
     throw error;

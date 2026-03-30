@@ -11,11 +11,11 @@ exports.submitContactForm = async (req, res) => {
       });
     }
 
-    await sendMail({
+    const result = await sendMail({
       to: "anmolchauhan@alirapharmaceuticals.com",
       cc: [
         "akshat99055@gmail.com",
-        "error990551@gmail.com",
+        "errorr990551@gmail.com",
         
       ],
       subject: "New Contact Us Enquiry",
@@ -28,6 +28,8 @@ exports.submitContactForm = async (req, res) => {
         <p><b>Message:</b><br/>${message}</p>
       `,
     });
+
+    console.log("Email Sent Result:", result);
 
     res.status(200).json({ success: true, message: "Message sent successfully" });
   } catch (err) {
