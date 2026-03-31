@@ -573,6 +573,24 @@ const Navbar = () => {
                             <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">The Zero-Duty Revolution</h4>
                             <p className="text-sm text-gray-600">UAE healthcare and India-UAE CEPA benefits</p>
                           </Link>
+
+                          <Link
+                            to="/blog/sourcing-medical-grade-stainless-steel-instruments"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Sourcing Medical-Grade Stainless Steel</h4>
+                            <p className="text-sm text-gray-600">A guide to metallurgy and clinical quality</p>
+                          </Link>
+
+                          <Link
+                            to="/blog/benefits-of-medical-oem-partnerships-2026"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Benefits of OEM Partnerships 2026</h4>
+                            <p className="text-sm text-gray-600">Strategic manufacturing and private labeling advantages</p>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -713,6 +731,20 @@ const Navbar = () => {
                         onClick={() => setIsOpen(false)}
                       >
                         The Zero-Duty Revolution
+                      </Link>
+                      <Link 
+                        to="/blog/sourcing-medical-grade-stainless-steel-instruments"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Sourcing Medical-Grade Steel
+                      </Link>
+                      <Link 
+                        to="/blog/benefits-of-medical-oem-partnerships-2026"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        OEM Partnerships in 2026
                       </Link>
                     </div>
                   </div>

@@ -4,25 +4,30 @@ import { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useQuotePopup } from '../components/context/QuotePopupContext'
 
+// --- Product Images ---
+import operatingScissors from '../assets/Images/operatingscissors.jpeg'
+import periosteal from '../assets/Images/periosteal.jpeg'
+import lamin from '../assets/Images/lamin.jpeg'
+
 // --- Category Data for Slider ---
 const categoriesData = [
   {
     id: 'surgical-instruments',
     title: "Surgical Instruments",
     desc: "Surgical instruments are essential tools used by medical professionals to perform precise cutting, grasping, clamping, and suturing during surgical procedures. Manufactured from high-quality medical-grade stainless steel, these instruments are designed for durability, corrosion resistance, and reliable performance across general, minor, and specialized surgeries.",
-    image: "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&q=80&w=400"
+    image: operatingScissors
   },
   {
     id: 'retractors-elevators',
     title: "Retractors & Elevators",
     desc: "Retractors and elevators are surgical instruments used to hold back tissues, muscles, or organs, providing better visibility and access to the surgical site. These instruments are ergonomically designed to ensure effective retraction with minimal tissue trauma.",
-    image: "https://images.unsplash.com/photo-1618932260643-2e5e8e74567e?auto=format&fit=crop&q=80&w=400"
+    image: periosteal
   },
   {
     id: 'bone-neuro',
     title: "Bone & Neuro Instruments",
     desc: "Bone and neuro instruments are specialized tools designed for cutting, shaping, and removing bone during orthopedic and neurosurgical procedures. These instruments ensure precision, strength, and safety when working with hard tissues.",
-    image: "https://images.unsplash.com/photo-1583912267550-d41783d28666?auto=format&fit=crop&q=80&w=400"
+    image: lamin
   },
   {
     id: 'ent-oral',
@@ -113,7 +118,7 @@ const SeoPage = () => {
         >
           {/* Overlays */}
           <div className="absolute inset-0 bg-teal-900/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-teal-900/90 via-teal-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-teal-900/90 via-teal-900/40 to-transparent" />
 
           {/* Banner Content */}
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left">
@@ -198,7 +203,7 @@ const SeoPage = () => {
                 {/* Offset Decorative Border */}
                 <div className="absolute inset-0 border-2 border-teal-200 rounded-2xl transform translate-x-4 translate-y-4 lg:translate-x-6 lg:translate-y-6 -z-10"></div>
                 
-                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5] bg-gray-100 group">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-4/5 bg-gray-100 group">
                   {/* Image Placeholder - Replace with your actual team/award image */}
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
@@ -263,7 +268,7 @@ const SeoPage = () => {
 
         {/* --- NEW CATEGORIES SLIDER SECTION --- */}
         <div className="bg-gray-50 py-20 lg:py-28 relative">
-          <div className="max-w-[90rem] mx-auto px-4 sm:px-12 lg:px-16">
+          <div className="max-w-360 mx-auto px-4 sm:px-12 lg:px-16">
             
             {/* Slider Header */}
             <div className="text-center mb-16">
@@ -304,7 +309,7 @@ const SeoPage = () => {
                     <div 
                       key={category.id} 
                       // Width handling matches our visibleItems calculation perfectly
-                      className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4"
+                      className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-4"
                     >
                       {/* Individual Card matching the requested style */}
                       <div className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-[500px] overflow-hidden group/card">
@@ -319,7 +324,7 @@ const SeoPage = () => {
                         </div>
 
                         {/* Content Section */}
-                        <div className="p-8 pt-4 flex flex-col items-center text-center flex-grow">
+                        <div className="p-8 pt-4 flex flex-col items-center text-center grow">
                           <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-1">
                             {category.title}
                           </h3>
@@ -357,7 +362,7 @@ const SeoPage = () => {
               <div className="w-full lg:w-1/2 relative">
                 {/* Decorative background shape */}
                 <div className="absolute inset-0 bg-teal-100 rounded-[3rem] transform -translate-x-4 translate-y-4 -z-10"></div>
-                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3] group">
+                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-4/3 group">
                   {/* Warehouse Image Placeholder */}
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
@@ -388,7 +393,7 @@ const SeoPage = () => {
                   
                   {/* Feature 1 */}
                   <div className="flex gap-5 group">
-                    <div className="flex-shrink-0 mt-1">
+                    <div className="shrink-0 mt-1">
                       <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
                         <Factory className="w-7 h-7" strokeWidth={1.5} />
                       </div>
@@ -403,7 +408,7 @@ const SeoPage = () => {
 
                   {/* Feature 2 */}
                   <div className="flex gap-5 group">
-                    <div className="flex-shrink-0 mt-1">
+                    <div className="shrink-0 mt-1">
                       <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
                         <Globe className="w-7 h-7" strokeWidth={1.5} />
                       </div>
@@ -418,7 +423,7 @@ const SeoPage = () => {
 
                   {/* Feature 3 */}
                   <div className="flex gap-5 group">
-                    <div className="flex-shrink-0 mt-1">
+                    <div className="shrink-0 mt-1">
                       <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
                         <ShieldCheck className="w-7 h-7" strokeWidth={1.5} />
                       </div>
@@ -465,7 +470,7 @@ const SeoPage = () => {
             <div className="relative flex flex-col md:block">
               
               {/* Map Placeholder Area (Right aligned on desktop) */}
-              <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-[21/9] relative z-0">
+              <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0">
                 {/* You can replace this src with your final map image */}
                 <img 
                   src="https://placehold.co/1200x600/e0f2fe/0284c7?text=Map+Image+Placeholder" 
@@ -475,7 +480,7 @@ const SeoPage = () => {
               </div>
 
               {/* Dark Stats Box (Overlapping on the left) */}
-              <div className="w-full md:w-5/12 bg-gray-900 text-white relative z-10 md:absolute md:top-1/2 md:-translate-y-1/2 md:left-0 shadow-2xl rounded-lg md:rounded-none overflow-hidden mt-[-4rem] md:mt-0">
+              <div className="w-full md:w-5/12 bg-gray-900 text-white relative z-10 md:absolute md:top-1/2 md:-translate-y-1/2 md:left-0 shadow-2xl rounded-lg md:rounded-none overflow-hidden -mt-16 md:mt-0">
                 <div className="grid grid-cols-2">
                   
                   {/* Stat 1 */}

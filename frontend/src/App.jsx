@@ -9,6 +9,8 @@ import Footer from './components/common/Footer.jsx'
 import About from './pages/About.jsx'
 import BlogPost from './pages/BlogPost.jsx'
 import BlogPost2 from './pages/BlogPost2.jsx'
+import BlogPost3 from './pages/BlogPost3.jsx'
+import BlogPost4 from './pages/BlogPost4.jsx'
 import Category1 from './pages/products/Category1.jsx'
 import Category2 from './pages/products/Category2.jsx'
 import Category3 from './pages/products/Category3.jsx'
@@ -37,6 +39,8 @@ function App() {
         <Route path='/about' element={<About/>} />
         <Route path='/blog/ent-neuro-surgical-tools' element={<BlogPost/>} />
         <Route path='/blog/india-uae-cepa-zero-duty-medical-imports-dubai' element={<BlogPost2/>} />
+        <Route path='/blog/sourcing-medical-grade-stainless-steel-instruments' element={<BlogPost3/>} />
+        <Route path='/blog/benefits-of-medical-oem-partnerships-2026' element={<BlogPost4/>} />
         <Route path='/contact' element={<ContactUs/>} />
         <Route path='/seo' element={<SeoPage/>} />
 
