@@ -17,47 +17,47 @@ const categoriesData = [
   {
     id: 'surgical-instruments',
     title: "Surgical Tools",
-    desc: "Precision Surgical Instruments Riyadh: High-quality medical-grade stainless steel surgical instruments for Riyadh hospitals.",
+    desc: "Precision Surgical Instruments Jeddah: High-quality medical-grade stainless steel surgical instruments for Jeddah hospitals and surgical centers.",
     image: operatingScissors
   },
   {
     id: 'ppe',
     title: "PPE / Masks",
-    desc: "Certified PPE Supplies Riyadh: Wholesale face masks and personal protective equipment for Saudi medical facilities.",
+    desc: "Certified PPE Supplies Jeddah: Wholesale face masks and personal protective equipment for Jeddah medical facilities and clinics.",
     image: maskImg
   },
   {
     id: 'warehouse',
     title: "Warehouse",
-    desc: "Global Medical Logistics for Riyadh: Efficient supply chain and export network delivering medical disposables to Riyadh.",
+    desc: "Global Medical Logistics Jeddah: Efficient supply chain and export network delivering medical disposables via Jeddah Islamic Port.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
 const faqData = [
   {
-    question: "Do you export surgical instruments directly to Riyadh?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics across Riyadh and the wider Saudi Arabian region."
+    question: "Do you export surgical instruments directly to Jeddah?",
+    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics across Jeddah and the Western Province of Saudi Arabia."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
-    answer: "Our products are manufactured according to international quality benchmarks (like ISO) and are designed to meet the rigorous safety and regulatory standards required for the Saudi market."
+    answer: "Our products are manufactured according to international quality benchmarks (like ISO) and are designed to meet the rigorous safety and regulatory standards required for the Saudi market and SFDA guidelines."
   },
   {
-    question: "What is the typical lead time for an export order to Riyadh?",
-    answer: "Lead times vary based on order volume, but our strategic logistics network is optimized for fast transit to Riyadh. Contact our Export Team for a specific timeline based on your requirements."
+    question: "What is the typical lead time for an export order to Jeddah?",
+    answer: "By leveraging major shipping routes to Jeddah, we optimize for fast transit. Lead times vary based on order volume, but our team ensures the most efficient logistics path to the Red Sea coast."
   },
   {
     question: "Can I request a bulk quote for medical disposables?",
-    answer: "Absolutely. We specialize in wholesale supply. You can Request a Quote via our website, and our team will provide competitive pricing tailored for the Riyadh market."
+    answer: "Absolutely. We specialize in wholesale supply for the Jeddah market. You can Request a Quote via our website, and our team will provide competitive pricing."
   },
   {
-    question: "Do you provide samples before a bulk purchase?",
-    answer: "We understand the need for quality assurance. We can arrange for product samples to be sent to your facility in Riyadh for evaluation by your clinical team."
+    question: "Do you provide samples before a bulk purchase in Jeddah?",
+    answer: "We understand the importance of quality assurance. We can arrange for product samples to be sent to your facility in Jeddah for evaluation by your clinical or procurement team."
   }
 ];
 
-const SeoPage = () => {
+const JeddahPage = () => {
     const { openQuotePopup } = useQuotePopup();
     // --- Slider State & Logic ---
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -84,11 +84,11 @@ const SeoPage = () => {
 
     useEffect(() => {
         // SEO Configuration
-        document.title = "Top Surgical Instruments & Medical Supplies Exporter to Riyadh";
+        document.title = "Top Surgical Instruments & Medical Supplies Exporter to Jeddah";
 
         // Update Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
-        const descriptionContent = "Leading manufacturer of high-quality surgical instruments, PPE, and medical disposables. Reliable export and supply chain solutions for hospitals and clinics in Riyadh, Saudi Arabia.";
+        const descriptionContent = "Leading manufacturer of high-quality surgical instruments, PPE, and medical disposables. Reliable export and supply chain solutions for hospitals and clinics in Jeddah, Saudi Arabia.";
         
         if (metaDescription) {
             metaDescription.setAttribute('content', descriptionContent);
@@ -101,7 +101,7 @@ const SeoPage = () => {
 
         // Update Meta Keywords
         let metaKeywords = document.querySelector('meta[name="keywords"]');
-        const keywordsContent = "Surgical instruments Riyadh, medical supplies Saudi Arabia, wholesale medical disposables Riyadh, pharmaceutical distributors Saudi Arabia, hospital equipment exporter";
+        const keywordsContent = "Surgical instruments Jeddah, medical supplies Saudi Arabia, wholesale medical disposables Jeddah, pharmaceutical distributors Jeddah, hospital equipment exporter, medical supplies Red Sea region.";
         
         if (metaKeywords) {
             metaKeywords.setAttribute('content', keywordsContent);
@@ -140,10 +140,10 @@ const SeoPage = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left">
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Global Manufacturer & Exporter of Surgical & Medical Supplies to Riyadh
+                Global Manufacturer & Exporter of Surgical & Medical Supplies to Jeddah
               </h1>
               <p className="text-lg md:text-xl text-teal-50 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Delivering precision-crafted surgical instruments, certified PPE, and premium medical disposables to the heart of Saudi Arabia’s healthcare sector.
+                Delivering precision-crafted surgical instruments, certified PPE, and premium medical disposables to Jeddah’s rapidly expanding healthcare sector.
               </p>
 
               {/* Link with Arrow */}
@@ -159,7 +159,7 @@ const SeoPage = () => {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors">
-                  Download Riyadh Product Catalog
+                  Download Jeddah Product Catalog
                 </button>
                 <button onClick={openQuotePopup} className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg cursor-pointer">
                   Get Export Quote
@@ -223,11 +223,11 @@ const SeoPage = () => {
                   {/* Image Placeholder - Replace with your actual team/award image */}
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
-                    alt="Alira Medical Export Riyadh" 
+                    alt="Alira Medical Export Jeddah" 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   
-                  {/* Brand Badge Overlay (Like the "SAI FURNITURE ART" box) */}
+                  {/* Brand Badge Overlay */}
                   <div className="absolute bottom-0 right-0 bg-teal-700 text-white px-8 py-4 font-bold uppercase tracking-widest text-sm rounded-tl-2xl shadow-lg">
                     Alira Pharmaceuticals
                   </div>
@@ -248,30 +248,30 @@ const SeoPage = () => {
                   {/* SEO Block 1 */}
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Pharmaceutical Distributors for Riyadh
+                      Pharmaceutical Distributors for Jeddah
                     </h3>
                     <p>
-                      Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Riyadh healthcare market</span>. We ensure our Saudi partners receive compliant, high-efficacy products that meet international safety and regulatory standards. Our dedicated professionals ensure that every facility is meticulously stocked with attention to safety and regulatory standards.
+                      Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Jeddah healthcare market</span>. We ensure our partners in the Hejaz region receive compliant, high-efficacy products that meet international safety and regulatory standards. Our dedicated professionals ensure that every facility is meticulously stocked with attention to safety and regulatory standards.
                     </p>
                   </div>
 
                   {/* SEO Block 2 */}
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Surgical Instruments Suppliers in Riyadh
+                      Surgical Instruments Suppliers in Jeddah
                     </h3>
                     <p>
-                      We provide <span className="font-semibold text-teal-700">Riyadh’s surgeons</span> with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in the Kingdom. These finely manufactured pieces provide reliability during critical procedures and add an element of uncompromising safety to your operating rooms.
+                      We provide <span className="font-semibold text-teal-700">Jeddah’s surgeons</span> and medical professionals with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in the Kingdom’s western hub.
                     </p>
                   </div>
 
                   {/* SEO Block 3 */}
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Wholesale Medical Disposables in Riyadh
+                      Wholesale Medical Disposables in Jeddah
                     </h3>
                     <p>
-                      Hygiene and infection control are non-negotiable. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer Riyadh clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is sourced from high-quality manufacturers to ensure uncompromised hygiene in <span className="font-semibold text-teal-700">Riyadh</span>, making it a perfect addition to any healthcare facility.
+                      Hygiene and infection control are non-negotiable for Jeddah's busy medical centers. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is sourced from high-quality manufacturers to ensure uncompromised hygiene in <span className="font-semibold text-teal-700">Jeddah</span>, making it a perfect addition to any healthcare facility.
                     </p>
                   </div>
 
@@ -324,10 +324,8 @@ const SeoPage = () => {
                   {categoriesData.map((category) => (
                     <div 
                       key={category.id} 
-                      // Width handling matches our visibleItems calculation perfectly
                       className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-4"
                     >
-                      {/* Individual Card matching the requested style */}
                       <div className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-[500px] overflow-hidden group/card">
                         
                         {/* Image Section */}
@@ -382,7 +380,7 @@ const SeoPage = () => {
                   {/* Warehouse Image Placeholder */}
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
-                    alt="Global Medical Logistics for Riyadh" 
+                    alt="Global Medical Logistics Jeddah" 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -393,15 +391,15 @@ const SeoPage = () => {
                 
                 {/* Headers */}
                 <span className="text-teal-600 font-bold tracking-widest uppercase text-sm mb-3 block">
-                  Why Choose Alira for Riyadh Exports?
+                  Why Choose Alira for Jeddah Exports?
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Precision Manufacturing, Worldwide Supply to Riyadh
+                  Precision Manufacturing, Worldwide Supply to Jeddah
                 </h2>
                 
                 {/* Description */}
                 <p className="text-gray-600 text-lg leading-relaxed mb-10 text-justify">
-                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Riyadh medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
+                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Jeddah medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
 
                 {/* Features List */}
@@ -411,13 +409,13 @@ const SeoPage = () => {
                   <div className="flex gap-5 group">
                     <div className="shrink-0 mt-1">
                       <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
-                        <Factory className="w-7 h-7" strokeWidth={1.5} />
+                        <Truck className="w-7 h-7" strokeWidth={1.5} />
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Export Expertise</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Strategic Logistics</h3>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        20+ years of experience navigating international shipping and Saudi customs requirements, ensuring a smooth supply chain for Riyadh healthcare facilities.
+                        20+ years of experience navigating international shipping, specifically utilizing the Jeddah Islamic Port for faster local clearance.
                       </p>
                     </div>
                   </div>
@@ -432,7 +430,7 @@ const SeoPage = () => {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">Bulk Efficiency</h3>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        We specialize in high-volume wholesale orders for large hospital networks and medical distributors in Riyadh, offering scalability and reliability.
+                        We specialize in high-volume wholesale orders for large hospital networks and private healthcare groups in Jeddah, offering scalability and reliability.
                       </p>
                     </div>
                   </div>
@@ -447,7 +445,7 @@ const SeoPage = () => {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">Certified Quality & Compliance</h3>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        All products manufactured under strict quality control using medical-grade materials, meeting the rigorous safety and regulatory standards required for the Saudi market.
+                        All products manufactured under strict quality control (ISO/CE) using medical-grade materials, meeting the rigorous standards for the Saudi market.
                       </p>
                     </div>
                   </div>
@@ -465,29 +463,24 @@ const SeoPage = () => {
             
             {/* Top Text Row */}
             <div className="flex flex-col md:flex-row gap-8 mb-16 items-start">
-              {/* Headings */}
               <div className="w-full md:w-5/12">
                 <h2 className="text-xl md:text-2xl font-bold text-teal-600 uppercase tracking-widest mb-2">
                   MEDICAL SUPPLIES EXPORT
                 </h2>
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
-                  Leading Medical Supply Manufacturers for Riyadh
+                  Leading Medical Supply Manufacturers for Jeddah
                 </h3>
               </div>
-              {/* Paragraph */}
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Riyadh market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping and Saudi customs requirements. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Riyadh.
+                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Jeddah market</span>. We are a prominent manufacturer and supplier in the healthcare industry, leveraging major shipping routes to <span className="font-semibold text-teal-700">Jeddah Islamic Port</span> for faster local clearance. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Jeddah.
                 </p>
               </div>
             </div>
 
             {/* Bottom Row: Map and Stats Overlap */}
             <div className="relative flex flex-col md:block">
-              
-              {/* Map Placeholder Area (Right aligned on desktop) */}
               <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0">
-                {/* You can replace this src with your final map image */}
                 <img 
                   src={placeholderMap} 
                   alt="Service Map" 
@@ -495,39 +488,28 @@ const SeoPage = () => {
                 />
               </div>
 
-              {/* Dark Stats Box (Overlapping on the left) */}
+              {/* Dark Stats Box */}
               <div className="w-full md:w-5/12 bg-gray-900 text-white relative z-10 md:absolute md:top-1/2 md:-translate-y-1/2 md:left-0 shadow-2xl rounded-lg md:rounded-none overflow-hidden -mt-16 md:mt-0">
                 <div className="grid grid-cols-2">
-                  
-                  {/* Stat 1 */}
                   <div className="p-8 border-b border-r border-gray-700 flex flex-col justify-center">
                     <div className="text-4xl lg:text-5xl font-bold text-teal-400 mb-2">100+</div>
                     <div className="text-sm font-semibold tracking-wide text-gray-300">Dealers Across India Served</div>
                   </div>
-                  
-                  {/* Stat 2 */}
                   <div className="p-8 border-b border-gray-700 flex flex-col justify-center">
                     <div className="text-4xl lg:text-5xl font-bold text-teal-400 mb-2">5000+</div>
                     <div className="text-sm font-semibold tracking-wide text-gray-300">Wholesale Orders</div>
                   </div>
-                  
-                  {/* Stat 3 */}
                   <div className="p-8 border-r border-gray-700 flex flex-col justify-center">
                     <div className="text-4xl lg:text-5xl font-bold text-teal-400 mb-2">400+</div>
                     <div className="text-sm font-semibold tracking-wide text-gray-300">Exclusive Products</div>
                   </div>
-                  
-                  {/* Stat 4 */}
                   <div className="p-8 flex flex-col justify-center">
                     <div className="text-4xl lg:text-5xl font-bold text-teal-400 mb-2">20+</div>
                     <div className="text-sm font-semibold tracking-wide text-gray-300">Years of Experience</div>
                   </div>
-
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
 
@@ -581,4 +563,4 @@ const SeoPage = () => {
   )
 }
 
-export default SeoPage
+export default JeddahPage

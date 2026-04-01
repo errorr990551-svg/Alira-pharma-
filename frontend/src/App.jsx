@@ -27,6 +27,7 @@ import ContactUs from './pages/ContactUs.jsx'
 import PopUp from './components/common/PopUp.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx'
 import SeoPage from './pages/SeoPage.jsx'
+import JeddahPage from './pages/JeddahPage.jsx'
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
         <Route path='/blog/sourcing-medical-grade-stainless-steel-instruments' element={<BlogPost3/>} />
         <Route path='/blog/benefits-of-medical-oem-partnerships-2026' element={<BlogPost4/>} />
         <Route path='/contact' element={<ContactUs/>} />
-        <Route path='/seo' element={<SeoPage/>} />
+        <Route path='/Riyadh' element={<SeoPage/>} />
+        <Route path='/Jeddah' element={<JeddahPage/>} />
 
 
 
