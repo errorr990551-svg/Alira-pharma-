@@ -11,13 +11,10 @@ exports.submitContactForm = async (req, res) => {
       });
     }
 
-    const result = await sendMail({
+    // Trigger email send without awaiting (Non-blocking for fast UI)
+    sendMail({
       to: "anmolchauhan@alirapharmaceuticals.com",
-      cc: [
-        "akshat99055@gmail.com",
-        "errorr990551@gmail.com",
-        
-      ],
+      cc: ["akshat99055@gmail.com", "errorr990551@gmail.com"],
       subject: "New Contact Us Enquiry",
       html: `
         <h2>New Contact Enquiry</h2>
@@ -27,10 +24,11 @@ exports.submitContactForm = async (req, res) => {
         <p><b>Phone:</b> ${phone}</p>
         <p><b>Message:</b><br/>${message}</p>
       `,
-    });
+    })
+      .then((result) => console.log("Background Email SENT:", result))
+      .catch((error) => console.error("Background Email FAILED:", error));
 
-    console.log("Email Sent Result:", result);
-
+    // Respond immediately to the frontend
     res.status(200).json({ success: true, message: "Message sent successfully" });
   } catch (err) {
     console.error(err);
