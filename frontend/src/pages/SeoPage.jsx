@@ -8,7 +8,16 @@ import { useQuotePopup } from '../components/context/QuotePopupContext'
 // --- Product Images ---
 import operatingScissors from '../assets/Images/operatingscissors.jpeg'
 import periosteal from '../assets/Images/periosteal.jpeg'
-import maskImg from '../assets/Images/3ply.jpeg'
+import bonecutter from '../assets/Images/bonecutter.jpeg'
+import tongue from '../assets/Images/tongue.jpeg'
+import scalpel from '../assets/Images/scalpel.jpeg'
+import InstrumentalTray from '../assets/Images/instrumental tray.jpeg'
+import nitrile from '../assets/Images/nitrile.jpeg'
+import ply from '../assets/Images/3ply.jpeg'
+import gowns from '../assets/Images/gowns.jpeg'
+import gs from '../assets/Images/gauzeswabs.jpeg'
+import syringes from '../assets/Images/syringes.jpeg'
+import BloodPressure from '../assets/Images/blood pressure.jpeg'
 import placeholderMap from '../assets/Images/placeholder.jpeg'
 
 
@@ -16,21 +25,63 @@ import placeholderMap from '../assets/Images/placeholder.jpeg'
 const categoriesData = [
   {
     id: 'surgical-instruments',
-    title: "Surgical Tools",
-    desc: "Precision Surgical Instruments Riyadh: High-quality medical-grade stainless steel surgical instruments for Riyadh hospitals.",
+    title: "Surgical Instruments",
     image: operatingScissors
   },
   {
-    id: 'ppe',
-    title: "PPE / Masks",
-    desc: "Certified PPE Supplies Riyadh: Wholesale face masks and personal protective equipment for Saudi medical facilities.",
-    image: maskImg
+    id: 'retractors-elevators',
+    title: "Retractors & Elevators",
+    image: periosteal
   },
   {
-    id: 'warehouse',
-    title: "Warehouse",
-    desc: "Global Medical Logistics for Riyadh: Efficient supply chain and export network delivering medical disposables to Riyadh.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
+    id: 'bone-neuro',
+    title: "Bone & Neuro Instruments",
+    image: bonecutter
+  },
+  {
+    id: 'ent-oral',
+    title: "ENT & Oral Instruments",
+    image: tongue
+  },
+  {
+    id: 'surgical-blades',
+    title: "Surgical Blades & Accessories",
+    image: scalpel
+  },
+  {
+    id: 'trays-utility',
+    title: "Trays & Utility Items",
+    image: InstrumentalTray
+  },
+  {
+    id: 'gloves',
+    title: "Gloves",
+    image: nitrile
+  },
+  {
+    id: 'ppe',
+    title: "Face Masks & PPE",
+    image: ply
+  },
+  {
+    id: 'drapes-gowns',
+    title: "Surgical Drapes & Gowns",
+    image: gowns
+  },
+  {
+    id: 'wound-care',
+    title: "Wound Care & Dressings",
+    image: gs
+  },
+  {
+    id: 'disposables-iv',
+    title: "Disposables & IV Products",
+    image: syringes
+  },
+  {
+    id: 'medical-device',
+    title: "Medical Device",
+    image: BloodPressure
   }
 ];
 
@@ -344,9 +395,6 @@ const SeoPage = () => {
                           <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-1">
                             {category.title}
                           </h3>
-                          <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
-                            {category.desc}
-                          </p>
                           
                           {/* Dark View More Button */}
                           <div className="mt-auto">
@@ -392,69 +440,88 @@ const SeoPage = () => {
               <div className="w-full lg:w-1/2">
                 
                 {/* Headers */}
-                <span className="text-teal-600 font-bold tracking-widest uppercase text-sm mb-3 block">
-                  Why Choose Alira for Riyadh Exports?
-                </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Precision Manufacturing, Worldwide Supply to Riyadh
                 </h2>
                 
                 {/* Description */}
-                <p className="text-gray-600 text-lg leading-relaxed mb-10 text-justify">
+                <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
                   Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Riyadh medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
 
-                {/* Features List */}
-                <div className="space-y-8">
-                  
-                  {/* Feature 1 */}
-                  <div className="flex gap-5 group">
-                    <div className="shrink-0 mt-1">
-                      <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
-                        <Factory className="w-7 h-7" strokeWidth={1.5} />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Export Expertise</h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">
-                        20+ years of experience navigating international shipping and Saudi customs requirements, ensuring a smooth supply chain for Riyadh healthcare facilities.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Feature 2 */}
-                  <div className="flex gap-5 group">
-                    <div className="shrink-0 mt-1">
-                      <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
-                        <Globe className="w-7 h-7" strokeWidth={1.5} />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Bulk Efficiency</h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">
-                        We specialize in high-volume wholesale orders for large hospital networks and medical distributors in Riyadh, offering scalability and reliability.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Feature 3 */}
-                  <div className="flex gap-5 group">
-                    <div className="shrink-0 mt-1">
-                      <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
-                        <ShieldCheck className="w-7 h-7" strokeWidth={1.5} />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Certified Quality & Compliance</h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">
-                        All products manufactured under strict quality control using medical-grade materials, meeting the rigorous safety and regulatory standards required for the Saudi market.
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+
+        {/* --- WHY CHOOSE ALIRA RIYADH --- */}
+        <div className="bg-teal-50 py-20 lg:py-28">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                Why Choose Alira for Riyadh Exports?
+              </h2>
+              <div className="h-1.5 w-24 bg-teal-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Point 1 */}
+              <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-teal-100/50">
+                <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-500">
+                  <Factory 
+                    className="w-8 h-8" 
+                    strokeWidth={1.5} 
+                    role="img"
+                    title="Export Expertise - 20+ years navigating Saudi customs"
+                    aria-label="Export Expertise - 20+ years navigating Saudi customs"
+                  />
+                  {/* Hidden img for SEO tools that only scan <img> tags */}
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Export Expertise - 20+ years navigating Saudi customs" className="sr-only" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Export Expertise</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  20+ years of experience navigating international shipping and Saudi customs requirements.
+                </p>
+              </div>
+
+              {/* Point 2 */}
+              <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-teal-100/50">
+                <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-500">
+                  <ShieldCheck 
+                    className="w-8 h-8" 
+                    strokeWidth={1.5} 
+                    role="img"
+                    title="Certified Quality - All products manufactured under strict quality control"
+                    aria-label="Certified Quality - All products manufactured under strict quality control"
+                  />
+                  {/* Hidden img for SEO tools that only scan <img> tags */}
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Certified Quality - All products manufactured under strict quality control" className="sr-only" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Certified Quality</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  All products manufactured under strict quality control using medical-grade materials.
+                </p>
+              </div>
+
+              {/* Point 3 */}
+              <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-teal-100/50">
+                <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-500">
+                  <Globe 
+                    className="w-8 h-8" 
+                    strokeWidth={1.5} 
+                    role="img"
+                    title="Bulk Efficiency - High-volume wholesale orders for Riyadh networks"
+                    aria-label="Bulk Efficiency - High-volume wholesale orders for Riyadh networks"
+                  />
+                  {/* Hidden img for SEO tools that only scan <img> tags */}
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Bulk Efficiency - High-volume wholesale orders for Riyadh networks" className="sr-only" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Bulk Efficiency</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We specialize in high-volume wholesale orders for large hospital networks in Riyadh.
+                </p>
+              </div>
             </div>
           </div>
         </div>

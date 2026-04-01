@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, Factory, FileCheck, Globe, Medal, ShieldCheck, Truck } from 'lucide-react'
+import { ArrowRight, ChevronDown, Factory, FileCheck, Globe, Medal, ShieldCheck, Truck, ClipboardList, Stethoscope } from 'lucide-react'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -87,28 +87,28 @@ const categoriesData = [
 
 const faqData = [
   {
-    question: "Do you export surgical instruments directly to Jeddah?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics across Jeddah and the Western Province of Saudi Arabia."
+    question: "Do you export surgical instruments directly to Al Khobar?",
+    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics throughout Al Khobar and the Eastern Province."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
-    answer: "Our products are manufactured according to international quality benchmarks (like ISO) and are designed to meet the rigorous safety and regulatory standards required for the Saudi market and SFDA guidelines."
+    answer: "Our products are manufactured according to international quality benchmarks (like ISO) and are designed to meet the rigorous safety and regulatory standards required for the Saudi market."
   },
   {
-    question: "What is the typical lead time for an export order to Jeddah?",
-    answer: "By leveraging major shipping routes to Jeddah, we optimize for fast transit. Lead times vary based on order volume, but our team ensures the most efficient logistics path to the Red Sea coast."
+    question: "What is the typical lead time for an export order to Al Khobar?",
+    answer: "By leveraging major shipping routes to the Eastern Province, we optimize for fast transit. Lead times vary based on order volume, but our team ensures a streamlined logistics path to Al Khobar."
   },
   {
-    question: "Can I request a bulk quote for medical disposables?",
-    answer: "Absolutely. We specialize in wholesale supply for the Jeddah market. You can Request a Quote via our website, and our team will provide competitive pricing."
+    question: "Can I request a bulk quote for medical disposables in Al Khobar?",
+    answer: "Absolutely. We specialize in wholesale supply. You can Request a Quote via our website, and our team will provide competitive pricing tailored for the Al Khobar market."
   },
   {
-    question: "Do you provide samples before a bulk purchase in Jeddah?",
-    answer: "We understand the importance of quality assurance. We can arrange for product samples to be sent to your facility in Jeddah for evaluation by your clinical or procurement team."
+    question: "Do you provide samples before a bulk purchase in Al Khobar?",
+    answer: "We understand the need for quality assurance in high-end medical facilities. We can arrange for product samples to be sent to your facility in Al Khobar for evaluation by your clinical or procurement team."
   }
 ];
 
-const JeddahPage = () => {
+const KhobarPage = () => {
     const { openQuotePopup } = useQuotePopup();
     // --- Slider State & Logic ---
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -135,11 +135,11 @@ const JeddahPage = () => {
 
     useEffect(() => {
         // SEO Configuration
-        document.title = "Top Surgical Instruments & Medical Supplies Exporter to Jeddah";
+        document.title = "Top Surgical Instruments & Medical Supplies Exporter to Al Khobar";
 
         // Update Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
-        const descriptionContent = "Leading manufacturer of high-quality surgical instruments, PPE, and medical disposables. Reliable export and supply chain solutions for hospitals and clinics in Jeddah, Saudi Arabia.";
+        const descriptionContent = "Leading manufacturer of high-quality surgical instruments, PPE, and medical disposables. Reliable export and supply chain solutions for private hospitals and specialized clinics in Al Khobar, Saudi Arabia.";
         
         if (metaDescription) {
             metaDescription.setAttribute('content', descriptionContent);
@@ -152,7 +152,7 @@ const JeddahPage = () => {
 
         // Update Meta Keywords
         let metaKeywords = document.querySelector('meta[name="keywords"]');
-        const keywordsContent = "Surgical instruments Jeddah, medical supplies Saudi Arabia, wholesale medical disposables Jeddah, pharmaceutical distributors Jeddah, hospital equipment exporter, medical supplies Red Sea region.";
+        const keywordsContent = "Surgical instruments Al Khobar, medical supplies Khobar, wholesale medical disposables Al Khobar, pharmaceutical distributors Eastern Province, hospital equipment exporter, medical supplies Dhahran.";
         
         if (metaKeywords) {
             metaKeywords.setAttribute('content', keywordsContent);
@@ -185,16 +185,19 @@ const JeddahPage = () => {
         >
           {/* Overlays */}
           <div className="absolute inset-0 bg-teal-900/80 mix-blend-multiply" />
+          {/* Hidden img for SEO tools */}
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Global manufacturer exporting surgical and medical supplies to Al Khobar institutions and clinics." className="sr-only" />
+          
           <div className="absolute inset-0 bg-linear-to-t from-teal-900/90 via-teal-900/40 to-transparent" />
 
           {/* Banner Content */}
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left">
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Global Manufacturer & Exporter of Surgical & Medical Supplies to Jeddah
+                Global Manufacturer & Exporter of Surgical & Medical Supplies to Al Khobar
               </h1>
               <p className="text-lg md:text-xl text-teal-50 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Delivering precision-crafted surgical instruments, certified PPE, and premium medical disposables to Jeddah’s rapidly expanding healthcare sector.
+                Delivering precision-crafted surgical instruments, certified PPE, and premium medical disposables to the elite healthcare institutions and private hospitals of Al Khobar.
               </p>
 
               {/* Link with Arrow */}
@@ -210,10 +213,10 @@ const JeddahPage = () => {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors">
-                  Download Jeddah Product Catalog
+                  Download Al Khobar Product Catalog
                 </button>
                 <button onClick={openQuotePopup} className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg cursor-pointer">
-                  Get Export Quote
+                   Get Export Quote
                 </button>
               </div>
             </div>
@@ -226,8 +229,9 @@ const JeddahPage = () => {
 
             {/* Card 1 */}
             <div className="bg-cyan-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-cyan-100 text-center">
-              <div className="flex justify-center mb-4">
-                <Truck className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
+              <div className="flex justify-center mb-4 text-teal-700">
+                <Truck className="w-10 h-10" strokeWidth={1.5} role="img" title="International shipping and global medical supply export logistics" aria-label="International shipping and global medical supply export logistics" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="International shipping and global medical supply export logistics" className="sr-only" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Wide Product Range</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -237,8 +241,9 @@ const JeddahPage = () => {
 
             {/* Card 2 */}
             <div className="bg-cyan-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-cyan-100 text-center">
-              <div className="flex justify-center mb-4">
-                <Medal className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
+              <div className="flex justify-center mb-4 text-teal-700">
+                <Stethoscope className="w-10 h-10" strokeWidth={1.5} role="img" title="Precision engineered surgical instruments and medical diagnostic equipment" aria-label="Precision engineered surgical instruments and medical diagnostic equipment" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Precision engineered surgical instruments and medical diagnostic equipment" className="sr-only" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Certified Manufacturing</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -248,8 +253,9 @@ const JeddahPage = () => {
 
             {/* Card 3 */}
             <div className="bg-cyan-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-cyan-100 text-center">
-              <div className="flex justify-center mb-4">
-                <FileCheck className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
+              <div className="flex justify-center mb-4 text-teal-700">
+                <ClipboardList className="w-10 h-10" strokeWidth={1.5} role="img" title="Certified medical manufacturing quality control and international compliance" aria-label="Certified medical manufacturing quality control and international compliance" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Certified medical manufacturing quality control and international compliance" className="sr-only" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Global Export Network</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -260,7 +266,7 @@ const JeddahPage = () => {
           </div>
         </div>
 
-        {/* --- NEW SEO CONTENT SECTION --- */}
+        {/* --- MAIN PAGE CONTENT --- */}
         <div className="bg-white py-20 lg:py-32 mt-12 lg:mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -271,12 +277,13 @@ const JeddahPage = () => {
                 <div className="absolute inset-0 border-2 border-teal-200 rounded-2xl transform translate-x-4 translate-y-4 lg:translate-x-6 lg:translate-y-6 -z-10"></div>
                 
                 <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-4/5 bg-gray-100 group">
-                  {/* Image Placeholder - Replace with your actual team/award image */}
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
-                    alt="Alira Medical Export Jeddah" 
+                    alt="Alira Medical Export Al Khobar" 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
+                  {/* Hidden img for SEO */}
+                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="High-quality medical-grade stainless steel surgical instruments for hospitals in the Eastern Province." className="sr-only" />
                   
                   {/* Brand Badge Overlay */}
                   <div className="absolute bottom-0 right-0 bg-teal-700 text-white px-8 py-4 font-bold uppercase tracking-widest text-sm rounded-tl-2xl shadow-lg">
@@ -290,7 +297,7 @@ const JeddahPage = () => {
                 
                 {/* Main Header */}
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                  Welcome to Alira Pharmaceutical
+                   Welcome to Alira Pharmaceutical
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -299,30 +306,30 @@ const JeddahPage = () => {
                   {/* SEO Block 1 */}
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Pharmaceutical Distributors for Jeddah
+                        Pharmaceutical Distributors for Al Khobar
                     </h3>
                     <p>
-                      Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Jeddah healthcare market</span>. We ensure our partners in the Hejaz region receive compliant, high-efficacy products that meet international safety and regulatory standards. Our dedicated professionals ensure that every facility is meticulously stocked with attention to safety and regulatory standards.
+                       Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Al Khobar healthcare market</span>. We ensure our partners in the Eastern Province receive compliant, high-efficacy products that meet international safety and regulatory standards. Our professionals are dedicated to supporting the medical facilities of the industrial heartland.
                     </p>
                   </div>
 
                   {/* SEO Block 2 */}
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Surgical Instruments Suppliers in Jeddah
+                        Surgical Instruments Suppliers in Al Khobar
                     </h3>
                     <p>
-                      We provide <span className="font-semibold text-teal-700">Jeddah’s surgeons</span> and medical professionals with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in the Kingdom’s western hub.
+                       We provide <span className="font-semibold text-teal-700">Al Khobar’s surgeons</span> and specialized medical centers with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in Saudi Arabia’s industrial heartland.
                     </p>
                   </div>
 
                   {/* SEO Block 3 */}
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Wholesale Medical Disposables in Jeddah
+                        Wholesale Medical Disposables in Al Khobar
                     </h3>
                     <p>
-                      Hygiene and infection control are non-negotiable for Jeddah's busy medical centers. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is sourced from high-quality manufacturers to ensure uncompromised hygiene in <span className="font-semibold text-teal-700">Jeddah</span>, making it a perfect addition to any healthcare facility.
+                       Hygiene and infection control are critical for Al Khobar’s high-traffic medical facilities. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is meticulously checked for <span className="font-semibold text-teal-700">Al Khobar's medical facilities</span>.
                     </p>
                   </div>
 
@@ -333,7 +340,7 @@ const JeddahPage = () => {
           </div>
         </div>
 
-        {/* --- NEW CATEGORIES SLIDER SECTION --- */}
+        {/* --- EXPLORE OUR RANGE SLIDER --- */}
         <div className="bg-gray-50 py-20 lg:py-28 relative">
           <div className="max-w-360 mx-auto px-4 sm:px-12 lg:px-16">
             
@@ -394,7 +401,6 @@ const JeddahPage = () => {
                             {category.title}
                           </h3>
                           
-                          {/* Dark View More Button */}
                           <div className="mt-auto">
                             <a 
                               href={`/products/${category.id}`} 
@@ -415,50 +421,45 @@ const JeddahPage = () => {
           </div>
         </div>
 
-        {/* --- NEW SECTION: PRECISION MANUFACTURING --- */}
+        {/* --- PRECISION MANUFACTURING --- */}
         <div className="bg-white py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
               
               {/* Left Side: Image */}
               <div className="w-full lg:w-1/2 relative">
-                {/* Decorative background shape */}
                 <div className="absolute inset-0 bg-teal-100 rounded-[3rem] transform -translate-x-4 translate-y-4 -z-10"></div>
                 <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-4/3 group">
-                  {/* Warehouse Image Placeholder */}
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
-                    alt="Global Medical Logistics Jeddah" 
+                    alt="Global-Medical-Logistics-Al-Khobar" 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
+                  {/* Hidden img for SEO */}
+                  <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Efficient supply chain and export network delivering medical supplies to Al Khobar's elite medical sector." className="sr-only" />
                 </div>
               </div>
 
               {/* Right Side: Content */}
               <div className="w-full lg:w-1/2">
-                
-                {/* Headers */}
                 <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Precision Manufacturing, Worldwide Supply to Jeddah
+                  Precision Manufacturing, Worldwide Supply to Al Khobar
                 </h2>
-                
-                {/* Description */}
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Jeddah medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
+                   Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Al Khobar medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply across the Eastern Province.
                 </p>
-
               </div>
 
             </div>
           </div>
         </div>
 
-        {/* --- WHY CHOOSE ALIRA JEDDAH --- */}
+        {/* --- WHY CHOOSE ALIRA AL KHOBAR --- */}
         <div className="bg-teal-50 py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
-                Why Choose Alira for Jeddah Exports?
+                Why Choose Alira for Al Khobar Exports?
               </h2>
               <div className="h-1.5 w-24 bg-teal-500 mx-auto rounded-full"></div>
             </div>
@@ -467,100 +468,69 @@ const JeddahPage = () => {
               {/* Point 1 */}
               <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-teal-100/50">
                 <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-500">
-                  <Truck 
-                    className="w-8 h-8" 
-                    strokeWidth={1.5} 
-                    role="img"
-                    title="Strategic Logistics - Utilizing Jeddah Islamic Port for faster clearance"
-                    aria-label="Strategic Logistics - Utilizing Jeddah Islamic Port for faster clearance"
-                  />
-                  {/* Hidden img for SEO tools that only scan <img> tags */}
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Strategic Logistics - Utilizing Jeddah Islamic Port for faster clearance" className="sr-only" />
+                  <Truck className="w-8 h-8" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Strategic Logistics</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Export Expertise</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  20+ years of experience navigating international shipping, specifically utilizing the Jeddah Islamic Port for faster local clearance.
+                   20+ years of experience navigating international shipping and Saudi customs requirements for the Eastern Province's private medical sector.
                 </p>
               </div>
 
               {/* Point 2 */}
               <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-teal-100/50">
                 <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-500">
-                  <ShieldCheck 
-                    className="w-8 h-8" 
-                    strokeWidth={1.5} 
-                    role="img"
-                    title="Certified Quality - ISO/CE medical-grade materials"
-                    aria-label="Certified Quality - ISO/CE medical-grade materials"
-                  />
-                  {/* Hidden img for SEO tools that only scan <img> tags */}
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Certified Quality - ISO/CE medical-grade materials" className="sr-only" />
+                  <ShieldCheck className="w-8 h-8" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Certified Quality</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  All products manufactured under strict quality control (ISO/CE) using medical-grade materials.
+                   All products manufactured under strict quality control (ISO/CE) using medical-grade materials to meet international safety and Saudi regulatory standards.
                 </p>
               </div>
 
               {/* Point 3 */}
               <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-teal-100/50">
                 <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-500">
-                  <Globe 
-                    className="w-8 h-8" 
-                    strokeWidth={1.5} 
-                    role="img"
-                    title="Bulk Efficiency - High-volume wholesale orders for Jeddah groups"
-                    aria-label="Bulk Efficiency - High-volume wholesale orders for Jeddah groups"
-                  />
-                  {/* Hidden img for SEO tools that only scan <img> tags */}
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Bulk Efficiency - High-volume wholesale orders for Jeddah groups" className="sr-only" />
+                  <Globe className="w-8 h-8" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Bulk Efficiency</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We specialize in high-volume wholesale orders for large hospital networks and private healthcare groups in Jeddah.
+                   We specialize in high-volume wholesale orders for large private hospital networks and specialized medical hubs in Al Khobar.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* --- MAP & STATS SECTION --- */}
+        {/* --- MAP & STATS --- */}
         <div className="bg-white py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            {/* Top Text Row */}
             <div className="flex flex-col md:flex-row gap-8 mb-16 items-start">
               <div className="w-full md:w-5/12">
                 <h2 className="text-xl md:text-2xl font-bold text-teal-600 uppercase tracking-widest mb-2">
-                  MEDICAL SUPPLIES EXPORT
+                   MEDICAL SUPPLIES EXPORT
                 </h2>
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
-                  Leading Medical Supply Manufacturers for Jeddah
+                   Leading Medical Supply Manufacturers for Al Khobar
                 </h3>
               </div>
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Jeddah market</span>. We are a prominent manufacturer and supplier in the healthcare industry, leveraging major shipping routes to <span className="font-semibold text-teal-700">Jeddah Islamic Port</span> for faster local clearance. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Jeddah.
+                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Al Khobar market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Al Khobar.
                 </p>
               </div>
             </div>
 
-            {/* Bottom Row: Map and Stats Overlap */}
             <div className="relative flex flex-col md:block">
               <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0">
-                <img 
-                  src={placeholderMap} 
-                  alt="Service Map" 
-                  className="w-full h-full object-cover" 
-                />
+                <img src={placeholderMap} alt="Service Map" className="w-full h-full object-cover" />
               </div>
 
-              {/* Dark Stats Box */}
+              {/* Stats Box */}
               <div className="w-full md:w-5/12 bg-gray-900 text-white relative z-10 md:absolute md:top-1/2 md:-translate-y-1/2 md:left-0 shadow-2xl rounded-lg md:rounded-none overflow-hidden -mt-16 md:mt-0">
                 <div className="grid grid-cols-2">
                   <div className="p-8 border-b border-r border-gray-700 flex flex-col justify-center">
                     <div className="text-4xl lg:text-5xl font-bold text-teal-400 mb-2">100+</div>
-                    <div className="text-sm font-semibold tracking-wide text-gray-300">Dealers Across India Served</div>
+                    <div className="text-sm font-semibold tracking-wide text-gray-300">Dealers Served Globally</div>
                   </div>
                   <div className="p-8 border-b border-gray-700 flex flex-col justify-center">
                     <div className="text-4xl lg:text-5xl font-bold text-teal-400 mb-2">5000+</div>
@@ -583,8 +553,6 @@ const JeddahPage = () => {
         {/* FAQ Section */}
         <div id="faq" className="bg-white py-16 lg:py-24 border-t border-gray-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            {/* Header */}
             <div className="text-center mb-16">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase tracking-wide">
                 Frequently Asked Questions
@@ -592,29 +560,22 @@ const JeddahPage = () => {
               <div className="h-1 w-16 bg-teal-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            {/* FAQ List */}
             <div className="space-y-4">
               {faqData.map((item, index) => (
-                <div
-                  key={index}
-                  className="border-b border-gray-200 last:border-0"
-                >
+                <div key={index} className="border-b border-gray-200 last:border-0">
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex justify-between items-center py-5 text-left focus:outline-none group"
                   >
                     <span className={`text-lg font-bold transition-colors duration-300 ${openIndex === index ? 'text-teal-600' : 'text-gray-900 group-hover:text-teal-600'}`}>
-                      Q{index + 1}. {item.question}
+                       Q{index + 1}. {item.question}
                     </span>
                     <span className={`ml-6 shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-teal-600' : 'text-gray-400 group-hover:text-teal-600'}`}>
                       <ChevronDown className="w-6 h-6" />
                     </span>
                   </button>
 
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
-                      }`}
-                  >
+                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
                     <p className="text-gray-600 leading-relaxed pr-12 text-justify">
                       {item.answer}
                     </p>
@@ -630,4 +591,4 @@ const JeddahPage = () => {
   )
 }
 
-export default JeddahPage
+export default KhobarPage

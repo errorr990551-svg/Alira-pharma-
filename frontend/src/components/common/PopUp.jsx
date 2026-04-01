@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
+import toast from 'react-hot-toast';
 import api from '../../services/api';
 
 // Popup API (separate function, same endpoint)
@@ -61,7 +62,12 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
         source: "popup", // optional: helps backend identify popup leads
       });
 
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
+      
+      // Delay closing slightly so user sees the message
+      setTimeout(() => {
+        handleClose();
+      }, 500);
 
       // Reset form after success
       setFormData({
@@ -71,11 +77,9 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
         company: "",
         message: "",
       });
-
-      handleClose(); // close popup after successful submission
     } catch (error) {
       console.error("Popup API Error:", error);
-      alert("Failed to send message");
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
     }

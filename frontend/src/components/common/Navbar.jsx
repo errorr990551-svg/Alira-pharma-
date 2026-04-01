@@ -9,8 +9,8 @@
 //     {/* Placeholder for Logo Image - Replace 'logo.png' with your actual file path */}
 //     <img 
 //       src={LogoImg} 
-//       alt="Alira Pharmaceutical" 
-//       className="h-20 w-auto object-contain" 
+//       alt="Alira Pharmaceuticals company logo - Medical and Surgical Supplies Manufacturer" 
+//       className="h-24 w-auto object-contain cursor-pointer" 
 //     />
 //   </div>
 // );
@@ -548,51 +548,51 @@ const Navbar = () => {
                         {link.name}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isBlogHovered ? 'rotate-180' : ''}`} />
                       </button>
-
                       {/* BLOG DROPDOWN */}
                       <div 
-                        className={`absolute top-full -right-20 bg-white shadow-xl border-t border-teal-500 rounded-b-lg overflow-hidden transition-all duration-300 origin-top z-50 w-72 ${
+                        className={`absolute top-full -right-48 bg-white shadow-xl border-t border-teal-500 rounded-b-lg overflow-hidden transition-all duration-300 origin-top z-50 w-[700px] ${
                           isBlogHovered ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                         }`}
                       >
-                        <div className="p-6 space-y-3">
+                        <div className="p-6 grid grid-cols-2 gap-4">
                           <Link
                             to="/blog/ent-neuro-surgical-tools"
                             onClick={() => setIsBlogHovered(false)}
-                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
                           >
                             <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Sourcing ENT & Neuro-Surgical Tools</h4>
-                            <p className="text-sm text-gray-600">A comprehensive procurement guide for hospital officers</p>
+                            <p className="text-sm text-gray-600 line-clamp-2">A comprehensive procurement guide for hospital officers</p>
                           </Link>
                           
                           <Link
                             to="/blog/india-uae-cepa-zero-duty-medical-imports-dubai"
                             onClick={() => setIsBlogHovered(false)}
-                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
                           >
                             <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">The Zero-Duty Revolution</h4>
-                            <p className="text-sm text-gray-600">UAE healthcare and India-UAE CEPA benefits</p>
+                            <p className="text-sm text-gray-600 line-clamp-2">UAE healthcare and India-UAE CEPA benefits</p>
                           </Link>
-
+ 
                           <Link
                             to="/blog/sourcing-medical-grade-stainless-steel-instruments"
                             onClick={() => setIsBlogHovered(false)}
-                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
                           >
                             <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Sourcing Medical-Grade Stainless Steel</h4>
-                            <p className="text-sm text-gray-600">A guide to metallurgy and clinical quality</p>
+                            <p className="text-sm text-gray-600 line-clamp-2">A guide to metallurgy and clinical quality</p>
                           </Link>
-
+ 
                           <Link
                             to="/blog/benefits-of-medical-oem-partnerships-2026"
                             onClick={() => setIsBlogHovered(false)}
-                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog"
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
                           >
                             <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Benefits of OEM Partnerships 2026</h4>
-                            <p className="text-sm text-gray-600">Strategic manufacturing and private labeling advantages</p>
+                            <p className="text-sm text-gray-600 line-clamp-2">Strategic manufacturing and private labeling advantages</p>
                           </Link>
                         </div>
                       </div>
+
                     </div>
                   );
                 }

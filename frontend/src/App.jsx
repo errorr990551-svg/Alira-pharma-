@@ -3,6 +3,7 @@ import './App.css'
 import './index.css'
 
 import { Route, Routes } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast';
 import Navbar from './components/common/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import Footer from './components/common/Footer.jsx'
@@ -28,10 +29,55 @@ import PopUp from './components/common/PopUp.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx'
 import SeoPage from './pages/SeoPage.jsx'
 import JeddahPage from './pages/JeddahPage.jsx'
+import MeccaPage from './pages/MeccaPage.jsx'
+import MedinaPage from './pages/MedinaPage.jsx'
+import DammamPage from './pages/DammamPage.jsx'
+import MarketArea from './pages/MarketArea.jsx'
+import KhobarPage from './pages/KhobarPage.jsx'
+import DhahranPage from './pages/DhahranPage.jsx'
+import TaifPage from './pages/TaifPage.jsx'
+import JubailPage from './pages/JubailPage.jsx'
+import AlAhsaPage from './pages/AlAhsaPage.jsx'
+import QatifPage from './pages/QatifPage.jsx'
+import RasTanuraPage from './pages/RasTanuraPage.jsx'
+import AbqaiqPage from './pages/AbqaiqPage.jsx'
+import KhafjiPage from './pages/KhafjiPage.jsx'
+import AlKharjPage from './pages/AlKharjPage.jsx'
+import AlMajmaahPage from './pages/AlMajmaahPage.jsx'
+import AlZulfiPage from './pages/AlZulfiPage.jsx'
+import ShaqraPage from './pages/ShaqraPage.jsx'
+import AfifPage from './pages/AfifPage.jsx'
+import DawadmiPage from './pages/DawadmiPage.jsx'
 
 function App() {
   return (
     <div>
+      <Toaster 
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            fontSize: '16px',
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+          success: {
+            duration: 4000,
+            style: {
+              background: '#0d9488', // teal-600
+              color: '#fff',
+            },
+          },
+          error: {
+            duration: 5000,
+            style: {
+              background: '#ef4444', // red-500
+              color: '#fff',
+            },
+          },
+        }}
+      />
       <ScrollToTop />
       <Navbar />
 
@@ -45,6 +91,25 @@ function App() {
         <Route path='/contact' element={<ContactUs/>} />
         <Route path='/Riyadh' element={<SeoPage/>} />
         <Route path='/Jeddah' element={<JeddahPage/>} />
+        <Route path='/Mecca' element={<MeccaPage/>} />
+        <Route path='/Medina' element={<MedinaPage/>} />
+        <Route path='/Dammam' element={<DammamPage/>} />
+        <Route path='/market-area' element={<MarketArea/>} />
+        <Route path='/Al-Khobar' element={<KhobarPage/>} />
+        <Route path='/Dhahran' element={<DhahranPage/>} />
+        <Route path='/Taif' element={<TaifPage/>} />
+        <Route path='/Jubail' element={<JubailPage/>} />
+        <Route path='/Al-Ahsa' element={<AlAhsaPage/>} />
+        <Route path='/Qatif' element={<QatifPage/>} />
+        <Route path='/Ras-Tanura' element={<RasTanuraPage/>} />
+        <Route path='/Abqaiq' element={<AbqaiqPage/>} />
+        <Route path='/Khafji' element={<KhafjiPage/>} />
+        <Route path='/Al-Kharj' element={<AlKharjPage/>} />
+        <Route path='/Al-Majmaah' element={<AlMajmaahPage/>} />
+        <Route path='/Al-Zulfi' element={<AlZulfiPage/>} />
+        <Route path='/Shaqra' element={<ShaqraPage/>} />
+        <Route path='/Afif' element={<AfifPage/>} />
+        <Route path='/Dawadmi' element={<DawadmiPage/>} />
 
 
 

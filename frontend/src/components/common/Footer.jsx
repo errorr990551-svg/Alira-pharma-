@@ -106,6 +106,12 @@ const Footer = () => {
               </li>
 
               <li>
+                <Link to="/market-area" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                  <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                  Market
+                </Link>
+              </li>
+              <li>
   <a
     href="#faq"
     onClick={handleOpenFAQ}
