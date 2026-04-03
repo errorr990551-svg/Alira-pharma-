@@ -21,7 +21,27 @@ const cities = [
   { name: 'Al Zulfi', path: '/Al-Zulfi' },
   { name: 'Shaqra', path: '/Shaqra' },
   { name: 'Afif', path: '/Afif' },
-  { name: 'Dawadmi', path: '/Dawadmi' }
+  { name: 'Dawadmi', path: '/Dawadmi' },
+  { name: 'Wadi ad-Dawasir', path: '/Wadi-ad-Dawasir' },
+  { name: 'Rabigh', path: '/Rabigh' },
+  { name: 'Al-Lith', path: '/Al-Lith' },
+  { name: 'Al-Qunfudhah', path: '/Al-Qunfudhah' },
+  { name: 'Yanbu', path: '/Yanbu' },
+  { name: 'Al-Ula', path: '/Al-Ula' },
+  { name: 'Badr', path: '/Badr' },
+  { name: 'Khaybar', path: '/Khaybar' },
+  { name: 'Hubuna', path: '/Hubuna' },
+  { name: 'Tabuk', path: '/Tabuk' },
+  { name: 'Duba', path: '/Duba' },
+  { name: 'Tayma', path: '/Tayma' },
+  { name: 'Haql', path: '/Haql' },
+  { name: 'Hail', path: '/Hail' },
+  { name: 'Baqaa', path: '/Baqaa' },
+  { name: 'Ghazalah', path: '/Ghazalah' },
+  { name: 'Arar', path: '/Arar' },
+  { name: 'Rafha', path: '/Rafha' },
+  { name: 'Turaif', path: '/Turaif' },
+  { name: 'Buraydah', path: '/Buraydah' }
 ];
 
 const MarketArea = () => {

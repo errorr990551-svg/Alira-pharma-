@@ -48,6 +48,26 @@ import AlZulfiPage from './pages/AlZulfiPage.jsx'
 import ShaqraPage from './pages/ShaqraPage.jsx'
 import AfifPage from './pages/AfifPage.jsx'
 import DawadmiPage from './pages/DawadmiPage.jsx'
+import WadiAdDawasirPage from './pages/WadiAdDawasirPage.jsx'
+import RabighPage from './pages/RabighPage.jsx'
+import AlLithPage from './pages/AlLithPage.jsx'
+import AlQunfudhahPage from './pages/AlQunfudhahPage.jsx'
+import YanbuPage from './pages/YanbuPage.jsx'
+import AlUlaPage from './pages/AlUlaPage.jsx'
+import BadrPage from './pages/BadrPage.jsx'
+import KhaybarPage from './pages/KhaybarPage.jsx'
+import HubunaPage from './pages/HubunaPage.jsx'
+import TabukPage from './pages/TabukPage.jsx'
+import DubaPage from './pages/DubaPage.jsx'
+import TaymaPage from './pages/TaymaPage.jsx'
+import HaqlPage from './pages/HaqlPage.jsx'
+import HailPage from './pages/HailPage.jsx'
+import BaqaaPage from './pages/BaqaaPage.jsx'
+import GhazalahPage from './pages/GhazalahPage.jsx'
+import ArarPage from './pages/ArarPage.jsx'
+import RafhaPage from './pages/RafhaPage.jsx'
+import TuraifPage from './pages/TuraifPage.jsx'
+import BuraydahPage from './pages/BuraydahPage.jsx'
 
 function App() {
   return (
@@ -110,6 +130,26 @@ function App() {
         <Route path='/Shaqra' element={<ShaqraPage/>} />
         <Route path='/Afif' element={<AfifPage/>} />
         <Route path='/Dawadmi' element={<DawadmiPage/>} />
+        <Route path='/Wadi-ad-Dawasir' element={<WadiAdDawasirPage/>} />
+        <Route path='/Rabigh' element={<RabighPage/>} />
+        <Route path='/Al-Lith' element={<AlLithPage/>} />
+        <Route path='/Al-Qunfudhah' element={<AlQunfudhahPage/>} />
+        <Route path='/Yanbu' element={<YanbuPage/>} />
+        <Route path='/Al-Ula' element={<AlUlaPage/>} />
+        <Route path='/Badr' element={<BadrPage/>} />
+        <Route path='/Khaybar' element={<KhaybarPage/>} />
+        <Route path='/Hubuna' element={<HubunaPage/>} />
+        <Route path='/Tabuk' element={<TabukPage/>} />
+        <Route path='/Duba' element={<DubaPage/>} />
+        <Route path='/Tayma' element={<TaymaPage/>} />
+        <Route path='/Haql' element={<HaqlPage/>} />
+        <Route path='/Hail' element={<HailPage/>} />
+        <Route path='/Baqaa' element={<BaqaaPage/>} />
+        <Route path='/Ghazalah' element={<GhazalahPage/>} />
+        <Route path='/Arar' element={<ArarPage/>} />
+        <Route path='/Rafha' element={<RafhaPage/>} />
+        <Route path='/Turaif' element={<TuraifPage/>} />
+        <Route path='/Buraydah' element={<BuraydahPage/>} />
 
 
 
