@@ -68,6 +68,20 @@ import ArarPage from './pages/ArarPage.jsx'
 import RafhaPage from './pages/RafhaPage.jsx'
 import TuraifPage from './pages/TuraifPage.jsx'
 import BuraydahPage from './pages/BuraydahPage.jsx'
+import UnaizahPage from './pages/UnaizahPage.jsx'
+import ArRassPage from './pages/ArRassPage.jsx'
+import AlBukayriyahPage from './pages/AlBukayriyahPage.jsx'
+import SakakaPage from './pages/SakakaPage.jsx'
+import QurayyatPage from './pages/QurayyatPage.jsx'
+import DumatAlJandalPage from './pages/DumatAlJandalPage.jsx'
+import ThuwalPage from './pages/ThuwalPage.jsx'
+import TurabahPage from './pages/TurabahPage.jsx'
+import RanyahPage from './pages/RanyahPage.jsx'
+import AlNamasPage from './pages/AlNamasPage.jsx'
+import TanomahPage from './pages/TanomahPage.jsx'
+import BaljurashiPage from './pages/BaljurashiPage.jsx'
+import AlBahaPage from './pages/AlBahaPage.jsx'
+import AlMithnabPage from './pages/AlMithnabPage.jsx'
 
 function App() {
   return (
@@ -150,6 +164,20 @@ function App() {
         <Route path='/Rafha' element={<RafhaPage/>} />
         <Route path='/Turaif' element={<TuraifPage/>} />
         <Route path='/Buraydah' element={<BuraydahPage/>} />
+        <Route path='/Unaizah' element={<UnaizahPage />} />
+        <Route path='/Ar-Rass' element={<ArRassPage />} />
+        <Route path='/Al-Bukayriyah' element={<AlBukayriyahPage />} />
+        <Route path='/Sakaka' element={<SakakaPage />} />
+        <Route path='/Qurayyat' element={<QurayyatPage />} />
+        <Route path='/Dumat-Al-Jandal' element={<DumatAlJandalPage />} />
+        <Route path='/Thuwal' element={<ThuwalPage />} />
+        <Route path='/Turabah' element={<TurabahPage />} />
+        <Route path='/Ranyah' element={<RanyahPage />} />
+        <Route path='/Al-Namas' element={<AlNamasPage />} />
+        <Route path='/Tanomah' element={<TanomahPage />} />
+        <Route path='/Baljurashi' element={<BaljurashiPage />} />
+        <Route path='/Al-Baha' element={<AlBahaPage />} />
+        <Route path='/Al-Mithnab' element={<AlMithnabPage />} />
 
 
 
