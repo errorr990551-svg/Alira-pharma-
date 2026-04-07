@@ -40,21 +40,21 @@ const Footer = () => {
     <footer className="bg-[#E0F7FA] text-gray-800 pt-16 pb-8 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-12 lg:gap-8">
+        {/* Grid Layout - 7-column system for XL screens to balance Address and Heading widths */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-12 lg:gap-8 xl:gap-8">
           
           {/* Column 1: Contact Information */}
-          <div>
+          <div className="xl:col-span-2">
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Contact Information
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-5">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-teal-700 mt-1 shrink-0" />
-                <span className="text-sm leading-relaxed">
-                  A-116, URBTECH TRADE, CENTRE SECTOR-132, Baraula, Dadri,<br />
-                    Gautam Buddha Nagar, Uttar Pradesh, GAUTAM BUDDHA NAGAR,
-                    UTTAR PRADESH, 201304
+                <span className="text-sm leading-relaxed text-gray-700">
+                  A-116, URBTECH TRADE CENTRE,<br />
+                  SECTOR-132, Baraula, Dadri,<br />
+                  Gautam Buddha Nagar, UP - 201304
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -79,11 +79,11 @@ const Footer = () => {
           </div>
           
           {/* Column 2: Quick Links */}
-          <div>
+          <div className="xl:col-span-1">
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Quick Links
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               <li>
                 <Link to="/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
@@ -116,24 +116,24 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-  <a
-    href="#faq"
-    onClick={handleOpenFAQ}
-    className="group flex items-center text-sm hover:text-teal-700 transition-colors"
-  >
-    <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
-    FAQs
-  </a>
-</li>
+                <a
+                  href="#faq"
+                  onClick={handleOpenFAQ}
+                  className="group flex items-center text-sm hover:text-teal-700 transition-colors"
+                >
+                  <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                  FAQs
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Column 3: Our Products */}
-          <div>
+          <div className="xl:col-span-1">
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Our Products
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {[
                 { name: 'Surgical Instruments', path: '/products/surgical-instruments' },
                 { name: 'Retractors & Elevators', path: '/products/retractors-elevators' },
@@ -159,11 +159,11 @@ const Footer = () => {
 
 
           {/* Column 4: Downloads */}
-          <div className="flex flex-col gap-6">
+          <div className="xl:col-span-1 flex flex-col gap-6">
             <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900">
               Downloads
             </h3>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-4">
                 {[
                     { name: 'Alira Catalog', file: catalogBasic, downloadName: 'Alira-Pharmaceuticals-Catalog.pdf' },
                     { name: 'B2B Catalog 1.1', file: catalogV1_1, downloadName: 'Alira-B2B-Catalog-1.1.pdf' },
@@ -184,8 +184,27 @@ const Footer = () => {
           </div>
 
 
-          {/* Column 5: Follow Us */}
-          <div>
+          {/* Column 5: Policies */}
+          <div className="xl:col-span-1">
+            <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
+              Policies
+            </h3>
+            <ul className="space-y-4">
+              <li>
+                <a 
+                  href={policiesPDF}
+                  download="EXPORT RETURN & REPLACEMENT TERMS.pdf"
+                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 transform"
+                >
+                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
+                  <span>Export & Return Terms</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 6: Follow Us */}
+          <div className="xl:col-span-1">
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Follow Us
             </h3>
@@ -198,25 +217,6 @@ const Footer = () => {
             >
               <Linkedin className="w-5 h-5" />
             </a>
-          </div>
-
-          {/* Column 6: Policies */}
-          <div>
-            <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
-              Policies
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a 
-                  href={policiesPDF}
-                  download="EXPORT RETURN & REPLACEMENT TERMS.pdf"
-                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 transform"
-                >
-                  <FileText className="w-4 h-4 text-teal-700 mr-2" />
-                  <span>Export & Return Terms</span>
-                </a>
-              </li>
-            </ul>
           </div>
 
         </div>
