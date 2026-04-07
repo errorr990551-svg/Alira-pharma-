@@ -210,7 +210,7 @@ const Footer = () => {
                 <a 
                   href={policiesPDF}
                   download="EXPORT RETURN & REPLACEMENT TERMS.pdf"
-                  className="group flex items-center text-sm hover:text-teal-700 transition-colors transition-all duration-300 transform"
+                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 transform"
                 >
                   <FileText className="w-4 h-4 text-teal-700 mr-2" />
                   <span>Export & Return Terms</span>
