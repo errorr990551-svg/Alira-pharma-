@@ -2,6 +2,10 @@ import React from 'react';
 import { MapPin, Mail, Phone, Printer, Linkedin, ChevronRight, FileText } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import policiesPDF from '../../assets/EXPORT RETURN & REPLACEMENT TERMS.pdf';
+import catalogV3 from '../../assets/Alira Pharmaceuticals - B2B Catalog 3.0.pdf';
+import catalogV2 from '../../assets/Alira Pharmaceuticals — B2B Catalog 2.0.pdf';
+import catalogV1_1 from '../../assets/Alira Pharmaceuticals — B2B Catalog 1.1.pdf';
+import catalogBasic from '../../assets/Alira Pharmaceuticals.pdf';
 
 const Footer = () => {
 
@@ -37,7 +41,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-12 lg:gap-8">
           
           {/* Column 1: Contact Information */}
           <div>
@@ -74,7 +78,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Column 3: Quick Links */}
+          {/* Column 2: Quick Links */}
           <div>
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Quick Links
@@ -124,7 +128,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 2: Our Products */}
+          {/* Column 3: Our Products */}
           <div>
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Our Products
@@ -154,7 +158,33 @@ const Footer = () => {
           </div>
 
 
-          {/* Column 4: Follow Us */}
+          {/* Column 4: Downloads */}
+          <div className="flex flex-col gap-6">
+            <h3 className="text-lg font-bold uppercase tracking-wide text-gray-900">
+              Downloads
+            </h3>
+            <div className="flex flex-col gap-3">
+                {[
+                    { name: 'Alira Catalog', file: catalogBasic, downloadName: 'Alira-Pharmaceuticals-Catalog.pdf' },
+                    { name: 'B2B Catalog 1.1', file: catalogV1_1, downloadName: 'Alira-B2B-Catalog-1.1.pdf' },
+                    { name: 'B2B Catalog 2.0', file: catalogV2, downloadName: 'Alira-B2B-Catalog-2.0.pdf' },
+                    { name: 'B2B Catalog 3.0', file: catalogV3, downloadName: 'Alira-B2B-Catalog-3.0.pdf' },
+                ].map((catalog) => (
+                    <a 
+                        key={catalog.name}
+                        href={catalog.file}
+                        download={catalog.downloadName}
+                        className="group flex items-center text-sm text-gray-700 hover:text-teal-700 transition-all duration-300"
+                    >
+                        <FileText className="w-4 h-4 text-teal-700 mr-2 group-hover:scale-110 transition-transform" />
+                        <span>{catalog.name}</span>
+                    </a>
+                ))}
+            </div>
+          </div>
+
+
+          {/* Column 5: Follow Us */}
           <div>
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Follow Us
@@ -170,7 +200,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Column 5: Policies */}
+          {/* Column 6: Policies */}
           <div>
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Policies
@@ -180,7 +210,7 @@ const Footer = () => {
                 <a 
                   href={policiesPDF}
                   download="EXPORT RETURN & REPLACEMENT TERMS.pdf"
-                  className="group flex items-center text-sm hover:text-teal-700 transition-colors"
+                  className="group flex items-center text-sm hover:text-teal-700 transition-colors transition-all duration-300 transform"
                 >
                   <FileText className="w-4 h-4 text-teal-700 mr-2" />
                   <span>Export & Return Terms</span>

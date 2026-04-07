@@ -5,6 +5,7 @@ import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { Menu, X, ArrowRight, Truck, Medal, FileCheck, Globe, Scan, DollarSign, Lightbulb, Users, ChevronRight, Factory, ShieldCheck, ClipboardList, Building2, Stethoscope, FlaskConical, Heart, CheckSquare, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
 import manufacturingImg from '../assets/Images/manufacturing.jpeg';
 import aboutImg from '../assets/Images/about alira.avif';
+import catalogPDF from '../assets/Alira Pharmaceuticals - B2B Catalog 3.0.pdf';
 
 
 // --- Features Data ---
@@ -278,9 +279,13 @@ const Home = () => {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors">
+                <a 
+                  href={catalogPDF}
+                  download="Alira-Pharmaceuticals-Catalog.pdf"
+                  className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors inline-block text-center"
+                >
                   Get Product Catalog
-                </button>
+                </a>
                 <button onClick={openQuotePopup} className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg cursor-pointer">
                   Request a Quote
                 </button>

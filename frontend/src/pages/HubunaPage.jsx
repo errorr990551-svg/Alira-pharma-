@@ -1,4 +1,5 @@
 import { ArrowRight, ChevronDown, Factory, FileCheck, Globe, Medal, ShieldCheck, Truck } from 'lucide-react'
+import catalogPDF from '../assets/Alira Pharmaceuticals - B2B Catalog 3.0.pdf';
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -117,7 +118,7 @@ const HubunaPage = () => {
               <p className="text-lg md:text-xl text-teal-50 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">Supporting the healthcare needs of Hubuna with precision-crafted surgical instruments, certified PPE, and premium medical disposables tailored for the Najran Province’s medical sector.</p>
               <div className="mb-10"><a href="/about" className="inline-flex items-center text-teal-300 font-semibold hover:text-white transition-colors group">Explore More About Us <span className="ml-2 bg-teal-700/50 p-1 rounded-full group-hover:bg-teal-600 transition-colors"><ArrowRight size={16} /></span></a></div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors">Download Hubuna Product Catalog</button>
+                <a href={catalogPDF} download="Alira-Pharmaceuticals-Catalog.pdf" className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors inline-block text-center">Download Hubuna Product Catalog</a>
                 <button onClick={openQuotePopup} className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg cursor-pointer">Get Export Quote</button>
               </div>
             </div>

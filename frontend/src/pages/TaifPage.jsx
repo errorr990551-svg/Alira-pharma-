@@ -1,4 +1,5 @@
 import { ArrowRight, ChevronDown, Factory, FileCheck, Globe, Medal, ShieldCheck, Truck, ClipboardList, Stethoscope } from 'lucide-react'
+import catalogPDF from '../assets/Alira Pharmaceuticals - B2B Catalog 3.0.pdf';
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -212,9 +213,7 @@ const TaifPage = () => {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors">
-                  Download Taif Product Catalog
-                </button>
+                <a href={catalogPDF} download="Alira-Pharmaceuticals-Catalog.pdf" className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors inline-block text-center">Download Taif Product Catalog</a>
                 <button onClick={openQuotePopup} className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg cursor-pointer">
                    Get Export Quote
                 </button>
