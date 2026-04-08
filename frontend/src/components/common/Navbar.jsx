@@ -590,6 +590,52 @@ const Navbar = () => {
                             <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Benefits of OEM Partnerships 2026</h4>
                             <p className="text-sm text-gray-600 line-clamp-2">Strategic manufacturing and private labeling advantages</p>
                           </Link>
+
+                          <Link
+                            to="/blog/future-of-infection-control-2026"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Future of Infection Control</h4>
+                            <p className="text-sm text-gray-600 line-clamp-2">Material science and advanced wound care trends in 2026</p>
+                          </Link>
+
+                          <Link
+                            to="/blog/medical-logistics-2026"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Global Medical Logistics</h4>
+                            <p className="text-sm text-gray-600 line-clamp-2">Ensuring reliability and sterile integrity in emerging markets</p>
+                          </Link>
+
+                          <Link
+                            to="/blog/emergency-trauma-tools-2026"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Emergency Trauma Tools</h4>
+                            <p className="text-sm text-gray-600 line-clamp-2">Essential equipment for trauma care and first response</p>
+                          </Link>
+
+                          <Link
+                            to="/blog/surgical-instrument-sterilization-guide"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Instrument Sterilization Guide</h4>
+                            <p className="text-sm text-gray-600 line-clamp-2">Maximizing lifespan through proper autoclave protocols</p>
+                          </Link>
+
+                          <Link
+                            to="/blog/surgical-precision-2026"
+                            onClick={() => setIsBlogHovered(false)}
+                            className="block p-4 rounded-lg hover:bg-teal-50 border border-transparent hover:border-teal-300 transition-all group/blog h-full"
+                          >
+                            <h4 className="font-semibold text-teal-900 group-hover/blog:text-teal-600 mb-1">Orthopedic & Cardiovascular Precision</h4>
+                            <p className="text-sm text-gray-600 line-clamp-2">Milimeter-level accuracy in the modern operating room</p>
+                          </Link>
+
                         </div>
                       </div>
 
@@ -746,6 +792,42 @@ const Navbar = () => {
                       >
                         OEM Partnerships in 2026
                       </Link>
+                      <Link 
+                        to="/blog/future-of-infection-control-2026"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Future of Infection Control
+                      </Link>
+                      <Link 
+                        to="/blog/medical-logistics-2026"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Global Medical Logistics
+                      </Link>
+                      <Link 
+                        to="/blog/emergency-trauma-tools-2026"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Emergency Trauma Tools
+                      </Link>
+                      <Link 
+                        to="/blog/surgical-instrument-sterilization-guide"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Instrument Sterilization Guide
+                      </Link>
+                      <Link 
+                        to="/blog/surgical-precision-2026"
+                        className="block py-3 pl-8 pr-4 text-base text-gray-600 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent hover:border-teal-500"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Orthopedic & Cardiovascular Precision
+                      </Link>
+
                     </div>
                   </div>
                 );

@@ -240,17 +240,17 @@ const BlogPost3 = () => {
           </p>
 
           <div className="grid sm:grid-cols-3 gap-6">
-            <div className="border border-gray-200 p-6 rounded-xl text-center hover:bg-teal-50 transition-colors">
-              <h4 className="font-bold text-teal-700 mb-2 text-lg">ISO 13485</h4>
-              <p className="text-gray-500 text-sm">Quality management system for medical devices.</p>
+            <div className="bg-teal-50 p-6 rounded-xl text-center border border-teal-100 hover:bg-teal-100 transition-colors">
+              <h4 className="font-bold text-teal-900 mb-2 text-lg">ISO 13485</h4>
+              <p className="text-gray-600 text-sm">Quality management system for medical devices.</p>
             </div>
-            <div className="border border-gray-200 p-6 rounded-xl text-center hover:bg-teal-50 transition-colors">
-              <h4 className="font-bold text-teal-700 mb-2 text-lg">CE Marking</h4>
-              <p className="text-gray-500 text-sm">Signaling health and safety compliance for Europe.</p>
+            <div className="bg-teal-50 p-6 rounded-xl text-center border border-teal-100 hover:bg-teal-100 transition-colors">
+              <h4 className="font-bold text-teal-900 mb-2 text-lg">CE Marking</h4>
+              <p className="text-gray-600 text-sm">Signaling health and safety compliance for Europe.</p>
             </div>
-            <div className="border border-gray-200 p-6 rounded-xl text-center hover:bg-teal-50 transition-colors">
-              <h4 className="font-bold text-teal-700 mb-2 text-lg">ASTM F899</h4>
-              <p className="text-gray-500 text-sm">Standard requirements for wrought stainless steels.</p>
+            <div className="bg-teal-50 p-6 rounded-xl text-center border border-teal-100 hover:bg-teal-100 transition-colors">
+              <h4 className="font-bold text-teal-900 mb-2 text-lg">ASTM F899</h4>
+              <p className="text-gray-600 text-sm">Standard requirements for wrought stainless steels.</p>
             </div>
           </div>
         </section>
@@ -299,20 +299,20 @@ const BlogPost3 = () => {
           <p className="text-gray-700 leading-relaxed mb-6">
             Investing in precision-engineered instruments is an investment in the reliability of your surgical team. At Alira Pharmaceuticals, we combine advanced Manufacturing Excellence with rigorous quality control to ensure every instrument meets international clinical standards.
           </p>
-          <div className="bg-teal-600 rounded-2xl p-8 text-white relative overflow-hidden">
+          <div className="bg-teal-700 rounded-2xl p-12 text-white text-center shadow-2xl relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-4">Ready to Upgrade Your Inventory?</h3>
-              <p className="text-teal-50 mb-8 max-w-xl">
+              <h3 className="text-3xl font-bold mb-6">Ready to Upgrade Your Inventory?</h3>
+              <p className="text-teal-50 mb-10 max-w-xl mx-auto text-lg leading-relaxed">
                 Source ISO-certified surgical instruments with factory-direct pricing for your hospital or distribution network.
               </p>
               <button 
                 onClick={() => openQuotePopup()}
-                className="bg-white text-teal-700 px-8 py-3 rounded-lg font-bold hover:bg-teal-50 transition-colors shadow-lg"
+                className="bg-white text-teal-700 px-10 py-4 rounded-full font-bold hover:shadow-2xl transition-all hover:scale-105"
               >
                 Request Bulk Quotation
               </button>
             </div>
-            <CheckCircle className="absolute -bottom-8 -right-8 w-64 h-64 text-white/10" />
+            <CheckCircle className="absolute -bottom-10 -right-10 w-64 h-64 text-white/10" />
           </div>
         </section>
 

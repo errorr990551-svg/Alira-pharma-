@@ -127,7 +127,7 @@ const BlogPost2 = () => {
             title="India-UAE CEPA Medical Trade Advantage"
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-teal-900/95 to-teal-800/85"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-teal-900/95 to-teal-800/85"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -175,7 +175,7 @@ const BlogPost2 = () => {
               For hospital procurement officers and pharmaceutical distributors operating from hubs like Jebel Ali Free Zone (JAFZA), the implications are clear: Indian medical manufacturers now offer a significant pricing and operational advantage over traditional European or East Asian suppliers.
             </p>
 
-            <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white p-6 rounded-lg mb-8">
+            <div className="bg-linear-to-r from-teal-600 to-teal-700 text-white p-6 rounded-lg mb-8">
               <p className="text-lg">
                 Exporters such as <strong>Alira Pharmaceuticals</strong>, a pharmaceutical exporter to UAE markets, are leveraging this agreement to provide CEPA-compliant medical sourcing solutions that combine cost efficiency, regulatory readiness, and fast logistics.
               </p>
@@ -194,13 +194,13 @@ const BlogPost2 = () => {
               Under CEPA, many Indian-origin medical products now enter the UAE at 0% import duty, creating an immediate financial advantage.
             </p>
 
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-8 mb-8">
+            <div className="bg-linear-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-8 mb-8">
               <h3 className="text-2xl font-bold text-teal-900 mb-8">Financial Advantages for UAE Buyers</h3>
               
               <div className="space-y-6">
                 {/* Advantage 1 */}
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <TrendingUp className="w-8 h-8 text-teal-600 mt-1" />
                   </div>
                   <div>
@@ -213,7 +213,7 @@ const BlogPost2 = () => {
 
                 {/* Advantage 2 */}
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <CheckCircle className="w-8 h-8 text-teal-600 mt-1" />
                   </div>
                   <div>
@@ -240,7 +240,7 @@ const BlogPost2 = () => {
 
                 {/* Advantage 3 */}
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <Globe className="w-8 h-8 text-teal-600 mt-1" />
                   </div>
                   <div>
@@ -370,9 +370,10 @@ const BlogPost2 = () => {
           {/* ======================== QUALITY & COMPLIANCE SECTION ======================== */}
           <section className="mb-16 pb-16 border-b border-gray-200">
             <h2 className="text-3xl font-bold text-teal-900 mb-6">
-              Quality & Compliance: Meeting Global Healthcare Standards
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
+             The Foundation of Modern Surgery: Surgical Grade Metallurgy
+          </h2>
+          <div className="h-1 w-20 bg-teal-500 rounded-full mb-10"></div>
+          <p className="text-xl text-gray-700 leading-relaxed mb-10 font-medium">
               While cost and speed are important, quality assurance remains the top priority for hospital procurement officers. Indian medical manufacturers supplying the UAE market have significantly upgraded their production capabilities over the past decade. Leading exporters now operate under internationally recognized standards, including:
             </p>
 
@@ -475,7 +476,7 @@ const BlogPost2 = () => {
               Geography is another key factor influencing procurement decisions. Compared to European or East Asian suppliers, India offers significantly faster shipping routes to the UAE.
             </p>
 
-            <div className="bg-gradient-to-r from-cyan-50 to-teal-50 border border-teal-200 rounded-lg p-8 space-y-8">
+            <div className="bg-linear-to-r from-cyan-50 to-teal-50 border border-teal-200 rounded-lg p-8 space-y-8">
               {/* Short Transit Times */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
@@ -565,7 +566,7 @@ const BlogPost2 = () => {
             <h2 className="text-3xl font-bold text-teal-900 mb-6">
               The Strategic Opportunity for UAE Healthcare Buyers
             </h2>
-            <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white p-8 rounded-lg">
+            <div className="bg-linear-to-r from-teal-600 to-teal-700 text-white p-8 rounded-lg">
               <p className="text-lg leading-relaxed mb-6">
                 The healthcare procurement landscape in the Gulf is evolving rapidly. Rising demand, expanding hospital networks, and increasing regulatory sophistication require supply partners who combine cost efficiency, regulatory expertise, and dependable logistics.
               </p>
@@ -612,19 +613,19 @@ const BlogPost2 = () => {
               <h3 className="text-xl font-semibold text-teal-900 mb-4">Our capabilities include:</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-700">Supply of high-quality surgical instruments and medical devices</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-700">Products manufactured under WHO-GMP and ISO 13485 standards</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-700">Complete regulatory documentation for MOHAP compliance</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-700">Efficient logistics to Jebel Ali and Dubai healthcare distribution hubs</span>
                 </li>
               </ul>
@@ -645,21 +646,17 @@ const BlogPost2 = () => {
             <h2 className="text-3xl font-bold text-teal-900 mb-8">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqData.map((faq) => (
-                <div key={faq.id} className="border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <div key={faq.id} className="border border-teal-100 rounded-xl overflow-hidden hover:border-teal-300 transition-colors">
                   <button
                     onClick={() => toggleFAQ(faq.id)}
-                    className="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                    className="w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-teal-50 transition-colors"
                   >
-                    <span className="text-lg font-semibold text-teal-900 text-left">{faq.question}</span>
-                    {expandedFAQ === faq.id ? (
-                      <ChevronUp className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                    )}
+                    <span className="text-lg font-bold text-teal-900">{faq.question}</span>
+                    <ChevronDown className={`w-5 h-5 text-teal-600 transition-transform ${expandedFAQ === faq.id ? 'rotate-180' : ''}`} />
                   </button>
                   {expandedFAQ === faq.id && (
-                    <div className="px-6 py-4 bg-teal-50 border-t border-gray-300">
-                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                    <div className="px-6 py-5 bg-teal-50 border-t border-teal-100 italic leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed italic">"{faq.answer}"</p>
                     </div>
                   )}
                 </div>
@@ -668,18 +665,21 @@ const BlogPost2 = () => {
           </section>
 
           {/* ======================== CTA SECTION ======================== */}
-          <section className="mt-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white p-8 rounded-lg text-center">
-            <h3 className="text-3xl font-bold mb-4">Ready to Maximize Your CEPA Benefits?</h3>
-            <p className="text-lg mb-6 text-teal-50">
-              Connect with Alira Pharmaceuticals for CEPA-compliant medical sourcing and wholesale pricing optimization.
+          <section className="bg-teal-700 rounded-2xl p-12 text-white text-center shadow-2xl relative overflow-hidden">
+          <div className="relative z-10">
+            <h3 className="text-3xl font-bold mb-6 text-white">Upgrade Your Surgical Inventory</h3>
+            <p className="text-lg text-teal-50 mb-10 max-w-2xl mx-auto">
+              Our precision-engineered instruments meet the highest standards of durability and performance. Partner with Alira Pharmaceuticals for your hospital's surgical procurement needs.
             </p>
-            <button
+            <button 
               onClick={() => openQuotePopup()}
-              className="bg-white text-teal-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+              className="bg-white text-teal-700 px-10 py-4 rounded-full font-bold hover:shadow-2xl transition-all hover:scale-105"
             >
-              Request Sourcing Information
+              Request Bulk Quotation
             </button>
-          </section>
+          </div>
+          <ShieldCheck className="absolute -bottom-10 -right-10 w-64 h-64 text-white/10" />
+        </section>
         </div>
       </div>
     </div>

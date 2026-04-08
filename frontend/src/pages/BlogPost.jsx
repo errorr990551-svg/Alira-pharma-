@@ -48,7 +48,7 @@ const BlogPost = () => {
             alt="Surgical Instruments Banner" 
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-teal-900/95 to-teal-800/85"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-teal-900/95 to-teal-800/85"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -75,6 +75,7 @@ const BlogPost = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-teal-900 mb-6">
               Growing Demand for Specialized Surgical Instruments in Modern Hospitals
             </h2>
+            <div className="h-1 w-20 bg-teal-500 rounded-full mb-10"></div>
             <p className="text-gray-700 leading-relaxed mb-4">
               Healthcare systems worldwide are witnessing a steady increase in demand for specialized surgical procedures, particularly within otolaryngology (ENT) and neurosurgery. Advancements in diagnostic imaging, minimally invasive surgical techniques, and microsurgical procedures have significantly increased the need for precision surgical instruments.
             </p>
@@ -89,23 +90,23 @@ const BlogPost = () => {
             <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-r-lg mb-8">
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-800"><strong>Instrument precision and mechanical reliability</strong></span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-800"><strong>Surgical-grade metallurgy</strong></span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-800"><strong>Compliance with international manufacturing standards</strong></span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-800"><strong>Sterilization compatibility</strong></span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
                   <span className="text-gray-800"><strong>Supplier reliability and logistics capabilities</strong></span>
                 </li>
               </ul>
@@ -126,8 +127,8 @@ const BlogPost = () => {
             </p>
 
             {/* Nasal Speculum */}
-            <div className="mb-8 bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Nasal Speculum</h3>
+            <div className="mb-8 bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Nasal Speculum</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 A nasal speculum is a diagnostic and surgical instrument used to widen the nasal cavity for examination and surgical procedures. It allows surgeons to access the nasal passages while maintaining clear visibility.
               </p>
@@ -153,8 +154,8 @@ const BlogPost = () => {
             </div>
 
             {/* Ear Forceps */}
-            <div className="mb-8 bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Ear Forceps</h3>
+            <div className="mb-8 bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Ear Forceps</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Ear forceps are delicate instruments used to remove foreign bodies, earwax, or tissue from the ear canal. Because of the ear's sensitive structure, these instruments require precise alignment and narrow tips.
               </p>
@@ -176,8 +177,8 @@ const BlogPost = () => {
             </div>
 
             {/* Sinus Instruments */}
-            <div className="mb-8 bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Sinus Instruments</h3>
+            <div className="mb-8 bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Sinus Instruments</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Sinus surgery instruments are designed for procedures addressing sinus infections, nasal polyps, and sinus blockages. These tools often include curettes, suction tubes, and graspers.
               </p>
@@ -199,8 +200,8 @@ const BlogPost = () => {
             </div>
 
             {/* Laryngoscopes */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Laryngoscopes</h3>
+            <div className="bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Laryngoscopes</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Laryngoscopes are essential diagnostic and surgical tools used to examine the larynx and vocal cords. They are also widely used during airway management procedures such as intubation.
               </p>
@@ -232,8 +233,8 @@ const BlogPost = () => {
             </p>
 
             {/* Micro-Dissectors */}
-            <div className="mb-8 bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Micro-Dissectors</h3>
+            <div className="mb-8 bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Micro-Dissectors</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Micro-dissectors are used to separate delicate tissues during brain or spinal surgery. These instruments must provide maximum control with minimal pressure.
               </p>
@@ -255,8 +256,8 @@ const BlogPost = () => {
             </div>
 
             {/* Surgical Retractors */}
-            <div className="mb-8 bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Specialized Surgical Retractors</h3>
+            <div className="mb-8 bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Specialized Surgical Retractors</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Specialized surgical retractors are essential for holding back tissues to provide surgeons with clear visibility during procedures.
               </p>
@@ -281,8 +282,8 @@ const BlogPost = () => {
             </div>
 
             {/* Cranial Perforators */}
-            <div className="mb-8 bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Cranial Perforators</h3>
+            <div className="mb-8 bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Cranial Perforators</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Cranial perforators are used during neurosurgical procedures to create controlled openings in the skull. These instruments must meet strict safety and precision standards to prevent damage to underlying tissues.
               </p>
@@ -304,8 +305,8 @@ const BlogPost = () => {
             </div>
 
             {/* Neuro Forceps */}
-            <div className="mb-8 bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Neuro Forceps</h3>
+            <div className="mb-8 bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Neuro Forceps</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Neuro forceps are used to grasp and manipulate extremely delicate tissues within the central nervous system.
               </p>
@@ -327,8 +328,8 @@ const BlogPost = () => {
             </div>
 
             {/* Micro Scissors */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-teal-800 mb-3">Micro Scissors</h3>
+            <div className="bg-teal-50 p-6 rounded-2xl border border-teal-100">
+              <h3 className="text-2xl font-bold text-teal-900 mb-3 text-center md:text-left">Micro Scissors</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Micro scissors are used for precise cutting during neurosurgical procedures. These instruments must maintain consistent cutting performance even after repeated sterilization cycles. Hospitals sourcing wholesale neuro-surgical tools should ensure suppliers maintain strict quality control processes during manufacturing.
               </p>
@@ -451,23 +452,23 @@ const BlogPost = () => {
               ENT and neurosurgical procedures often last several hours and require sustained concentration from surgeons. Instrument ergonomics therefore play a crucial role in surgical performance. Well-designed instruments help surgeons maintain control and reduce fatigue during complex procedures.
             </p>
 
-            <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-8 rounded-lg mb-8 border border-teal-200">
+            <div className="bg-linear-to-r from-teal-50 to-cyan-50 p-8 rounded-lg mb-8 border border-teal-200">
               <h3 className="text-2xl font-semibold text-teal-800 mb-4">Key Ergonomic Features</h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <Zap className="w-6 h-6 text-teal-600 flex-shrink-0" />
+                  <Zap className="w-6 h-6 text-teal-600 shrink-0" />
                   <span className="text-gray-800">Lightweight construction</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Zap className="w-6 h-6 text-teal-600 flex-shrink-0" />
+                  <Zap className="w-6 h-6 text-teal-600 shrink-0" />
                   <span className="text-gray-800">Textured grip surfaces</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Zap className="w-6 h-6 text-teal-600 flex-shrink-0" />
+                  <Zap className="w-6 h-6 text-teal-600 shrink-0" />
                   <span className="text-gray-800">Balanced center of gravity</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Zap className="w-6 h-6 text-teal-600 flex-shrink-0" />
+                  <Zap className="w-6 h-6 text-teal-600 shrink-0" />
                   <span className="text-gray-800">Smooth articulation mechanisms</span>
                 </li>
               </ul>
@@ -479,7 +480,7 @@ const BlogPost = () => {
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
               <div className="flex items-start gap-3">
-                <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <AlertCircle className="w-6 h-6 text-blue-600 shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-blue-900 mb-2">Impact on Surgical Outcomes</h3>
                   <p className="text-gray-700">
@@ -616,26 +617,26 @@ const BlogPost = () => {
             <h2 className="text-3xl font-bold text-teal-900 mb-6">
               How Alira Pharmaceuticals Supports Hospital Procurement Teams
             </h2>
-            <div className="bg-gradient-to-r from-teal-900 to-teal-800 text-white p-8 rounded-lg">
+            <div className="bg-linear-to-r from-teal-900 to-teal-800 text-white p-8 rounded-lg">
               <p className="text-lg leading-relaxed mb-6">
                 Alira Pharmaceuticals, based in Delhi NCR, works with trusted manufacturing partners to supply specialized surgical instruments to international healthcare institutions.
               </p>
               <p className="text-lg font-semibold mb-4">The company supports procurement teams by providing:</p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 shrink-0" />
                   <span>Access to ENT surgical instruments manufacturers</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 shrink-0" />
                   <span>Reliable sourcing of wholesale neuro-surgical tools</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 shrink-0" />
                   <span>Bulk procurement support for hospitals and distributors</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 shrink-0" />
                   <span>Efficient global logistics and export coordination</span>
                 </li>
               </ul>
@@ -664,21 +665,17 @@ const BlogPost = () => {
             <h2 className="text-3xl font-bold text-teal-900 mb-8">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqData.map((faq) => (
-                <div key={faq.id} className="border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <div key={faq.id} className="border border-teal-100 rounded-xl overflow-hidden hover:border-teal-300 transition-colors">
                   <button
                     onClick={() => toggleFAQ(faq.id)}
-                    className="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                    className="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-teal-50 transition-colors"
                   >
-                    <span className="text-lg font-semibold text-teal-900 text-left">{faq.question}</span>
-                    {expandedFAQ === faq.id ? (
-                      <ChevronUp className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                    )}
+                    <span className="text-lg font-bold text-teal-900 text-left">{faq.question}</span>
+                    <ChevronDown className={`w-5 h-5 text-teal-600 transition-transform ${expandedFAQ === faq.id ? 'rotate-180' : ''}`} />
                   </button>
                   {expandedFAQ === faq.id && (
-                    <div className="px-6 py-4 bg-teal-50 border-t border-gray-300">
-                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                    <div className="px-6 py-5 bg-teal-50 border-t border-teal-100 italic leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed italic">"{faq.answer}"</p>
                     </div>
                   )}
                 </div>
@@ -687,17 +684,19 @@ const BlogPost = () => {
           </section>
 
           {/* ======================== CTA SECTION ======================== */}
-          <section className="mt-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white p-8 rounded-lg text-center">
-            <h3 className="text-3xl font-bold mb-4">Ready to Source High-Quality Surgical Instruments?</h3>
-            <p className="text-lg mb-6 text-teal-50">
-              Connect with Alira Pharmaceuticals for reliable surgical instrument procurement and global distribution.
-            </p>
-            <button
-              onClick={() => openQuotePopup()}
-              className="bg-white text-teal-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-            >
-              Get in Touch
-            </button>
+          <section className="mt-16 bg-teal-700 rounded-2xl text-white p-12 text-center shadow-2xl relative overflow-hidden">
+            <div className="relative z-10">
+              <h3 className="text-3xl font-bold mb-4">Ready to Source High-Quality Surgical Instruments?</h3>
+              <p className="text-lg mb-8 text-teal-50 max-w-2xl mx-auto">
+                Connect with Alira Pharmaceuticals for reliable surgical instrument procurement and global distribution.
+              </p>
+              <button
+                onClick={() => openQuotePopup()}
+                className="bg-white text-teal-700 px-10 py-4 rounded-full font-bold hover:shadow-2xl transition-all hover:scale-105 inline-block"
+              >
+                Get in Touch
+              </button>
+            </div>
           </section>
         </div>
       </div>
