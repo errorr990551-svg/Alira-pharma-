@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useQuotePopup } from '../components/context/QuotePopupContext';
-import { ChevronDown, ChevronUp, CheckCircle, TrendingUp, Truck, Shield, Globe, AlertCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, CheckCircle, TrendingUp, Truck, Shield, Globe, AlertCircle, ShieldCheck } from 'lucide-react';
 
 const BlogPost2 = () => {
   const { openQuotePopup } = useQuotePopup();

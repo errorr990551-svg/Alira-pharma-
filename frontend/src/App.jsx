@@ -17,6 +17,12 @@ import BlogPost6 from './pages/BlogPost6.jsx'
 import BlogPost7 from './pages/BlogPost7.jsx'
 import BlogPost8 from './pages/BlogPost8.jsx'
 import BlogPost9 from './pages/BlogPost9.jsx'
+import BlogPost10 from './pages/BlogPost10.jsx'
+import BlogPost11 from './pages/BlogPost11.jsx'
+import BlogPost12 from './pages/BlogPost12.jsx'
+import BlogPost13 from './pages/BlogPost13.jsx'
+import BlogPost14 from './pages/BlogPost14.jsx'
+import BlogsPage from './pages/BlogsPage.jsx'
 
 import Category1 from './pages/products/Category1.jsx'
 import Category2 from './pages/products/Category2.jsx'
@@ -133,6 +139,12 @@ function App() {
         <Route path='/blog/emergency-trauma-tools-2026' element={<BlogPost7/>} />
         <Route path='/blog/surgical-instrument-sterilization-guide' element={<BlogPost8/>} />
         <Route path='/blog/surgical-precision-2026' element={<BlogPost9/>} />
+        <Route path='/blog/surgical-robotics-2026' element={<BlogPost10/>} />
+        <Route path='/blog/sustainable-medical-supplies-2026' element={<BlogPost11/>} />
+        <Route path='/blog/diagnostic-precision-2026' element={<BlogPost12/>} />
+        <Route path='/blog/pediatric-instruments-2026' element={<BlogPost13/>} />
+        <Route path='/blog/medical-accessibility-2026' element={<BlogPost14/>} />
+        <Route path='/blogs' element={<BlogsPage />} />
 
         <Route path='/contact' element={<ContactUs/>} />
         <Route path='/Riyadh' element={<SeoPage/>} />
