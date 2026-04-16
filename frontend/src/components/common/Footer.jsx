@@ -233,13 +233,16 @@ const Footer = () => {
 
         </div>
 
-        {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-teal-200/50">
-          <p className="text-sm text-gray-600">
-            @ All rights reserved 2025
+      </div>
+
+      {/* Bottom Bar Signature */}
+      <div className="bg-[#E0F7FA] text-gray-600 py-8 border-t border-teal-200/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] sm:text-xs tracking-widest uppercase font-semibold">
+          <p>© 2026 Alira Pharmaceuticals</p>
+          <p className="text-center md:text-right">
+            Designed and Promoted By <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="text-teal-700 hover:text-teal-900 transition-colors underline decoration-teal-700/30 underline-offset-4">Errorr.in</a> - Best Digital Marketing Company in India.
           </p>
         </div>
-        
       </div>
     </footer>
   );

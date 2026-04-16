@@ -22,6 +22,11 @@ import BlogPost11 from './pages/BlogPost11.jsx'
 import BlogPost12 from './pages/BlogPost12.jsx'
 import BlogPost13 from './pages/BlogPost13.jsx'
 import BlogPost14 from './pages/BlogPost14.jsx'
+import BlogPost15 from './pages/BlogPost15.jsx'
+import BlogPost16 from './pages/BlogPost16.jsx'
+import BlogPost17 from './pages/BlogPost17.jsx'
+import BlogPost18 from './pages/BlogPost18.jsx'
+import BlogPost19 from './pages/BlogPost19.jsx'
 import BlogsPage from './pages/BlogsPage.jsx'
 
 import Category1 from './pages/products/Category1.jsx'
@@ -144,6 +149,11 @@ function App() {
         <Route path='/blog/diagnostic-precision-2026' element={<BlogPost12/>} />
         <Route path='/blog/pediatric-instruments-2026' element={<BlogPost13/>} />
         <Route path='/blog/medical-accessibility-2026' element={<BlogPost14/>} />
+        <Route path='/blog/remote-diagnostics-2026' element={<BlogPost15 />} />
+        <Route path='/blog/specialized-coatings-surgical-metallurgy' element={<BlogPost16 />} />
+        <Route path='/blog/medical-grade-disposables-icu' element={<BlogPost17 />} />
+        <Route path='/blog/future-of-wound-care-2026' element={<BlogPost18 />} />
+        <Route path='/blog/ophthalmic-micro-surgical-precision' element={<BlogPost19 />} />
         <Route path='/blogs' element={<BlogsPage />} />
 
         <Route path='/contact' element={<ContactUs/>} />

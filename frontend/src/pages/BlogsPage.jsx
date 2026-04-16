@@ -128,6 +128,51 @@ const blogs = [
     link: "/blog/medical-accessibility-2026",
     category: "Ethics",
     date: "April 15, 2026"
+  },
+  {
+    id: 15,
+    title: "The Future of Remote Diagnostics",
+    excerpt: "Empowering global health through digital stethoscopes and tele-medical instruments in 2026.",
+    image: "https://images.unsplash.com/photo-1559757175-5700cf9d690a?auto=format&fit=crop&q=80&w=2000",
+    link: "/blog/remote-diagnostics-2026",
+    category: "Technology",
+    date: "April 16, 2026"
+  },
+  {
+    id: 16,
+    title: "Specialized Coatings in Surgical Metallurgy",
+    excerpt: "The science of Tungsten Carbide and DLC coatings for enhanced surgical precision and tool longevity.",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=2000",
+    link: "/blog/specialized-coatings-surgical-metallurgy",
+    category: "Manufacturing",
+    date: "April 16, 2026"
+  },
+  {
+    id: 17,
+    title: "Standards for Medical-Grade Disposables",
+    excerpt: "Critical safety and performance requirements for IV sets and respiratory care in ICU environments.",
+    image: "https://images.unsplash.com/photo-1549462980-007f38f7514a?auto=format&fit=crop&q=80&w=2000",
+    link: "/blog/medical-grade-disposables-icu",
+    category: "Critical Care",
+    date: "April 16, 2026"
+  },
+  {
+    id: 18,
+    title: "Future of Wound Care: Bio-Active Dressings",
+    excerpt: "Redefining healing through hydrocolloids, ionic silver technology, and smart sensor integration.",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
+    link: "/blog/future-of-wound-care-2026",
+    category: "Wound Care",
+    date: "April 16, 2026"
+  },
+  {
+    id: 19,
+    title: "Mastering Ophthalmic Precision",
+    excerpt: "The evolution of micro-surgical tools, sapphire blades, and titanium instruments in eye surgery.",
+    image: "https://images.unsplash.com/photo-1590159413204-6f0144f8087d?auto=format&fit=crop&q=80&w=2000",
+    link: "/blog/ophthalmic-micro-surgical-precision",
+    category: "Ophthalmology",
+    date: "April 16, 2026"
   }
 ];
 
