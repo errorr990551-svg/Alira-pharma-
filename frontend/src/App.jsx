@@ -99,6 +99,7 @@ import TanomahPage from './pages/TanomahPage.jsx'
 import BaljurashiPage from './pages/BaljurashiPage.jsx'
 import AlBahaPage from './pages/AlBahaPage.jsx'
 import AlMithnabPage from './pages/AlMithnabPage.jsx'
+import Certification from './pages/Certification.jsx'
 
 function App() {
   return (
@@ -135,6 +136,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
+        <Route path='/certification' element={<Certification />} />
         <Route path='/blog/ent-neuro-surgical-tools' element={<BlogPost/>} />
         <Route path='/blog/india-uae-cepa-zero-duty-medical-imports-dubai' element={<BlogPost2/>} />
         <Route path='/blog/sourcing-medical-grade-stainless-steel-instruments' element={<BlogPost3/>} />

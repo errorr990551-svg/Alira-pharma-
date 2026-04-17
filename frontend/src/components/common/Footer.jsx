@@ -9,17 +9,22 @@ import catalogBasic from '../../assets/Alira Pharmaceuticals.pdf';
 
 const Footer = () => {
 
-  // Function to handle "opening" the navbar dropdown (simulated via event/scroll)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Handle opening the Products dropdown from footer
   const handleOpenProducts = (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // This dispatches an event that the Navbar can listen to if implemented, 
-    // or simply brings the user to the top where the menu is.
     window.dispatchEvent(new Event('open-products-menu'));
   };
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  // Handle opening the About/Company Profile dropdown from footer
+  const handleOpenAbout = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.dispatchEvent(new Event('open-about-menu'));
+  };
 
   const handleOpenFAQ = (e) => {
     e.preventDefault();
@@ -91,10 +96,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                <a href="#about" onClick={handleOpenAbout} className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
                   Company Profile
-                </Link>
+                </a>
               </li>
               <li>
                 <a href="#products" onClick={handleOpenProducts} className="group flex items-center text-sm hover:text-teal-700 transition-colors">
@@ -240,7 +245,9 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] sm:text-xs tracking-widest uppercase font-semibold">
           <p>© 2026 Alira Pharmaceuticals</p>
           <p className="text-center md:text-right">
-            Designed and Promoted By <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="text-teal-700 hover:text-teal-900 transition-colors underline decoration-teal-700/30 underline-offset-4">Errorr.in</a> - Best Digital Marketing Company in India.
+            <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="text-teal-700 hover:text-teal-900 transition-colors underline decoration-teal-700/30 underline-offset-4">
+              Designed and Promoted By Errorr.in - Best Digital Marketing Company in India.
+            </a>
           </p>
         </div>
       </div>

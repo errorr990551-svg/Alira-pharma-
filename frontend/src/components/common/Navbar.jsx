@@ -485,10 +485,12 @@ const Navbar = () => {
   // State for Desktop Mega Menu
   const [activeCategory, setActiveCategory] = useState(productCategories[0].id);
   const [isProductsHovered, setIsProductsHovered] = useState(false);
+  const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isBlogHovered, setIsBlogHovered] = useState(false);
 
   // State for Mobile Menu Accordions
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
 
@@ -507,15 +509,37 @@ const Navbar = () => {
     };
 
     window.addEventListener('open-products-menu', handleOpenMenu);
-    return () => window.removeEventListener('open-products-menu', handleOpenMenu);
+    
+    const handleOpenAbout = () => {
+      if (window.innerWidth < 768) {
+        setIsOpen(true);
+        setMobileAboutOpen(true);
+      } else {
+        setIsAboutHovered(true);
+      }
+    };
+
+    window.addEventListener('open-about-menu', handleOpenAbout);
+
+    return () => {
+      window.removeEventListener('open-products-menu', handleOpenMenu);
+      window.removeEventListener('open-about-menu', handleOpenAbout);
+    };
   }, []);
   // -------------------------------------------------------------
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Company Profile", href: "/about" },
+    { 
+      name: "Company Profile", 
+      isDropdown: true,
+      subItems: [
+        { name: "About Us", href: "/about" },
+        { name: "Certification", href: "/certification" }
+      ]
+    },
     { name: "Blog", href: "/blogs" },
-    { name: "Products", href: "#products", isDropdown: true }, // Marked as dropdown
+    { name: "Products", href: "#products", isMegaMenu: true }, 
     { name: "Contact", href: "/contact" },
   ];
 
@@ -534,9 +558,8 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-45 h-full ml-30">
             {links.map((link) => {
-              if (link.isDropdown) {
-
-                // Products Dropdown (existing logic)
+              if (link.isMegaMenu) {
+                // Products Dropdown (Mega Menu)
                 return (
                   <div 
                     key={link.name} 
@@ -609,6 +632,42 @@ const Navbar = () => {
                   </div>
                 );
               }
+
+              if (link.isDropdown) {
+                // Simple Dropdown (Company Profile)
+                return (
+                  <div 
+                    key={link.name} 
+                    className="h-full flex items-center relative group"
+                    onMouseEnter={() => setIsAboutHovered(true)}
+                    onMouseLeave={() => setIsAboutHovered(false)}
+                  >
+                    <button className="flex items-center gap-1 font-medium text-gray-600 hover:text-teal-600 text-sm lg:text-base transition-colors duration-200 cursor-pointer h-full border-b-2 border-transparent hover:border-teal-500 whitespace-nowrap">
+                      {link.name}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isAboutHovered ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    <div 
+                      className={`absolute top-full left-0 w-48 bg-white shadow-xl border-t-2 border-teal-500 rounded-b-lg overflow-hidden transition-all duration-300 origin-top z-50 ${
+                        isAboutHovered ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                      }`}
+                    >
+                      <div className="py-2">
+                        {link.subItems.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            to={sub.href}
+                            className="block px-6 py-3 text-sm font-medium text-gray-600 hover:text-teal-600 hover:bg-teal-50 transition-colors"
+                            onClick={() => setIsAboutHovered(false)}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
               
               return (
                 <Link
@@ -642,7 +701,7 @@ const Navbar = () => {
       >
         <div className="px-4 pt-2 pb-6 space-y-1">
           {links.map((link) => {
-            if (link.isDropdown) {
+            if (link.isMegaMenu) {
 
               // Products Dropdown for Mobile (existing)
               return (
@@ -684,6 +743,34 @@ const Navbar = () => {
                            ))}
                         </div>
                       </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
+            if (link.isDropdown) {
+              // Company Profile Dropdown for Mobile
+              return (
+                <div key={link.name} className="border-b border-gray-50 last:border-0">
+                  <button 
+                    onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                    className="w-full flex items-center justify-between py-3 text-lg font-medium text-gray-700 hover:text-teal-600 px-4 rounded-lg"
+                  >
+                    {link.name}
+                    <ChevronDown className={`w-5 h-5 transition-transform ${mobileAboutOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  <div className={`overflow-hidden transition-all duration-300 bg-gray-50 ${mobileAboutOpen ? 'max-h-48' : 'max-h-0'}`}>
+                    {link.subItems.map((sub) => (
+                      <Link 
+                        key={sub.name}
+                        to={sub.href}
+                        className="block py-3 pl-8 text-base font-medium text-gray-600 hover:text-teal-600 hover:bg-teal-50"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
                     ))}
                   </div>
                 </div>
