@@ -5,15 +5,37 @@ import { useQuotePopup } from '../../components/context/QuotePopupContext';
 import tongue from '../../assets/Images/tongue.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "ENT & Oral Instruments",
+  description: "ENT and oral instruments are used for examination, access, and support during ear, nose, throat, and oral procedures. These instruments are designed for ease of use, patient safety, and clear visibility during diagnostic and surgical applications."
+};
+
+const products = [
+  {
+    name: "Tongue Depressor",
+    description: "A tongue depressor is used to gently hold the tongue down during oral examinations. It provides clear visibility of the throat and oral cavity and is commonly used in ENT and general medical practice.",
+    image: tongue
+  },
+  {
+    name: "Mouth Gag (Boyle Davis)",
+    description: "The Boyle Davis mouth gag is used to keep the mouth open during oral and ENT surgical procedures. It provides stable access to the oral cavity while ensuring patient comfort and safety.",
+    image: tongue
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
 const Category4 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  // Helper to create URL slugs (Matches Navbar logic for scrolling)
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
-  // Effect to handle automatic scrolling based on URL parameter
+  // Effect to handle automatic scrolling based on URL parameter and update SEO title
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -27,24 +49,6 @@ const Category4 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "ENT & Oral Instruments",
-    description: "ENT and oral instruments are used for examination, access, and support during ear, nose, throat, and oral procedures. These instruments are designed for ease of use, patient safety, and clear visibility during diagnostic and surgical applications."
-  };
-
-  const products = [
-    {
-      name: "Tongue Depressor",
-      description: "A tongue depressor is used to gently hold the tongue down during oral examinations. It provides clear visibility of the throat and oral cavity and is commonly used in ENT and general medical practice.",
-      image: tongue
-    },
-    {
-      name: "Mouth Gag (Boyle Davis)",
-      description: "The Boyle Davis mouth gag is used to keep the mouth open during oral and ENT surgical procedures. It provides stable access to the oral cavity while ensuring patient comfort and safety.",
-      image: tongue
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

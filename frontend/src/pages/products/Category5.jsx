@@ -5,17 +5,32 @@ import { useQuotePopup } from '../../components/context/QuotePopupContext';
 import scalpel from '../../assets/Images/scalpel.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Surgical Blades & Accessories",
+  description: "Surgical blades and accessories are essential cutting tools used for making precise incisions during surgical procedures. They are manufactured to ensure sharpness, consistency, and safe handling."
+};
 
+const products = [
+  {
+    name: "Scalpel Blades (Disposable)",
+    description: "Disposable scalpel blades are designed for single-use surgical applications, ensuring sharp, clean incisions while maintaining high standards of hygiene and infection control.",
+    image: scalpel
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
 const Category5 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  // Helper to create URL slugs (Matches Navbar logic for scrolling)
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
-  // Effect to handle automatic scrolling based on URL parameter
+  // Effect to handle automatic scrolling based on URL parameter and update SEO title
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -29,19 +44,6 @@ const Category5 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Surgical Blades & Accessories",
-    description: "Surgical blades and accessories are essential cutting tools used for making precise incisions during surgical procedures. They are manufactured to ensure sharpness, consistency, and safe handling."
-  };
-
-  const products = [
-    {
-      name: "Scalpel Blades (Disposable)",
-      description: "Disposable scalpel blades are designed for single-use surgical applications, ensuring sharp, clean incisions while maintaining high standards of hygiene and infection control.",
-      image: scalpel
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

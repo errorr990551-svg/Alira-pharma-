@@ -200,7 +200,7 @@ const Home = () => {
 
   useEffect(() => {
     // SEO Configuration
-    document.title = "Alira Pharmaceuticals | Global Surgical & Medical Supply Manufacturer";
+    document.title = "Alira Pharmaceuticals | Medical Supplies & Surgical Instruments – UAE & GCC";
 
     // Update Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -228,6 +228,17 @@ const Home = () => {
       document.head.appendChild(metaKeywords);
     }
 
+    // Update Canonical URL
+    let linkCanonical = document.querySelector('link[rel="canonical"]');
+    const canonicalUrl = `https://alirapharmaceuticals.com${location.pathname.toLowerCase() === '/' ? '' : location.pathname.toLowerCase()}/`;
+    
+    if (!linkCanonical) {
+      linkCanonical = document.createElement('link');
+      linkCanonical.rel = 'canonical';
+      document.head.appendChild(linkCanonical);
+    }
+    linkCanonical.setAttribute('href', canonicalUrl);
+
     if (location.state?.scrollTo === "faq") {
       const section = document.getElementById("faq");
       if (section) {
@@ -252,6 +263,9 @@ const Home = () => {
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Global medical supply distribution and pharmaceutical manufacturing headquarters"
             className="absolute inset-0 w-full h-full object-cover"
+            width="2070"
+            height="1164"
+            decoding="async"
           />
           {/* Overlays */}
           <div className="absolute inset-0 bg-teal-900/80 mix-blend-multiply" />
@@ -383,6 +397,10 @@ const Home = () => {
                   src={aboutImg}
                   alt="Alira Pharmaceuticals warehouse facility with organized medical supplies for global export"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                  decoding="async"
                 />
               </div>
               {/* Decorative Dot Grid (Optional visual flair) */}
@@ -626,6 +644,10 @@ const Home = () => {
                     src={manufacturingImg}
                     alt="Staff managing inventory and quality inspection at Alira Pharmaceuticals manufacturing unit"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -777,6 +799,10 @@ const Home = () => {
                         src={reviews[currentReview].image} 
                         alt={`${reviews[currentReview].author} - ${reviews[currentReview].role} and Alira Pharmaceuticals client`} 
                         className="w-14 h-14 rounded-full border-2 border-teal-300 object-cover" 
+                        loading="lazy"
+                        width="56"
+                        height="56"
+                        decoding="async"
                       />
                       <div className="text-left">
                         <h4 className="text-xl font-bold">{reviews[currentReview].author}</h4>

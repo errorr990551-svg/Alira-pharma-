@@ -6,13 +6,36 @@ import drapes from '../../assets/Images/drapes.jpeg';
 import gowns from '../../assets/Images/gowns.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Surgical Drapes & Gowns",
+  description: "Surgical drapes and gowns are used to create and maintain a sterile field during medical procedures. They help prevent infection and ensure patient and staff safety."
+};
+
+const products = [
+  {
+    name: "Surgical Drapes (Sterile & Non-Sterile)",
+    description: "Surgical drapes are used to cover patients and surrounding areas during procedures. Available in sterile and non-sterile options, they support effective infection control.",
+    image: drapes
+  },
+  {
+    name: "Surgical Gowns (Sterile & Non-Sterile)",
+    description: "Surgical gowns provide protective coverage for healthcare professionals during procedures. They are designed for comfort, fluid resistance, and safety.",
+    image: gowns
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
 const Category9 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -24,24 +47,6 @@ const Category9 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Surgical Drapes & Gowns",
-    description: "Surgical drapes and gowns are used to create and maintain a sterile field during medical procedures. They help prevent infection and ensure patient and staff safety."
-  };
-
-  const products = [
-    {
-      name: "Surgical Drapes (Sterile & Non-Sterile)",
-      description: "Surgical drapes are used to cover patients and surrounding areas during procedures. Available in sterile and non-sterile options, they support effective infection control.",
-      image: drapes
-    },
-    {
-      name: "Surgical Gowns (Sterile & Non-Sterile)",
-      description: "Surgical gowns provide protective coverage for healthcare professionals during procedures. They are designed for comfort, fluid resistance, and safety.",
-      image: gowns
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

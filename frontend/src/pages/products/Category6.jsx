@@ -6,15 +6,36 @@ import Kidney from '../../assets/Images/kidneytray.jpeg';
 import InstrumentalTray from '../../assets/Images/instrumental tray.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Trays & Utility Items",
+  description: "Trays and utility items are used for holding, organizing, and transporting surgical instruments and medical supplies. They are designed for durability, easy cleaning, and efficient workflow in clinical environments."
+};
 
+const products = [
+  {
+    name: "Instrument Tray",
+    description: "Instrument trays are used to organize and sterilize surgical instruments during procedures. They provide a stable and hygienic surface for instrument placement.",
+    image: InstrumentalTray
+  },
+  {
+    name: "Kidney Tray",
+    description: "Kidney trays are used to hold medical waste, dressings, or instruments during medical procedures. Their curved shape allows easy handling and prevents spillage.",
+    image: Kidney
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
 const Category6 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -26,24 +47,6 @@ const Category6 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Trays & Utility Items",
-    description: "Trays and utility items are used for holding, organizing, and transporting surgical instruments and medical supplies. They are designed for durability, easy cleaning, and efficient workflow in clinical environments."
-  };
-
-  const products = [
-    {
-      name: "Instrument Tray",
-      description: "Instrument trays are used to organize and sterilize surgical instruments during procedures. They provide a stable and hygienic surface for instrument placement.",
-      image: InstrumentalTray
-    },
-    {
-      name: "Kidney Tray",
-      description: "Kidney trays are used to hold medical waste, dressings, or instruments during medical procedures. Their curved shape allows easy handling and prevents spillage.",
-      image: Kidney
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

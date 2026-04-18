@@ -159,61 +159,61 @@ function App() {
         <Route path='/blogs' element={<BlogsPage />} />
 
         <Route path='/contact' element={<ContactUs/>} />
-        <Route path='/Riyadh' element={<SeoPage/>} />
-        <Route path='/Jeddah' element={<JeddahPage/>} />
-        <Route path='/Mecca' element={<MeccaPage/>} />
-        <Route path='/Medina' element={<MedinaPage/>} />
-        <Route path='/Dammam' element={<DammamPage/>} />
+        <Route path='/riyadh' element={<SeoPage/>} />
+        <Route path='/jeddah' element={<JeddahPage/>} />
+        <Route path='/mecca' element={<MeccaPage/>} />
+        <Route path='/medina' element={<MedinaPage/>} />
+        <Route path='/dammam' element={<DammamPage/>} />
         <Route path='/market-area' element={<MarketArea/>} />
-        <Route path='/Al-Khobar' element={<KhobarPage/>} />
-        <Route path='/Dhahran' element={<DhahranPage/>} />
-        <Route path='/Taif' element={<TaifPage/>} />
-        <Route path='/Jubail' element={<JubailPage/>} />
-        <Route path='/Al-Ahsa' element={<AlAhsaPage/>} />
-        <Route path='/Qatif' element={<QatifPage/>} />
-        <Route path='/Ras-Tanura' element={<RasTanuraPage/>} />
-        <Route path='/Abqaiq' element={<AbqaiqPage/>} />
-        <Route path='/Khafji' element={<KhafjiPage/>} />
-        <Route path='/Al-Kharj' element={<AlKharjPage/>} />
-        <Route path='/Al-Majmaah' element={<AlMajmaahPage/>} />
-        <Route path='/Al-Zulfi' element={<AlZulfiPage/>} />
-        <Route path='/Shaqra' element={<ShaqraPage/>} />
-        <Route path='/Afif' element={<AfifPage/>} />
-        <Route path='/Dawadmi' element={<DawadmiPage/>} />
-        <Route path='/Wadi-ad-Dawasir' element={<WadiAdDawasirPage/>} />
-        <Route path='/Rabigh' element={<RabighPage/>} />
-        <Route path='/Al-Lith' element={<AlLithPage/>} />
-        <Route path='/Al-Qunfudhah' element={<AlQunfudhahPage/>} />
-        <Route path='/Yanbu' element={<YanbuPage/>} />
-        <Route path='/Al-Ula' element={<AlUlaPage/>} />
-        <Route path='/Badr' element={<BadrPage/>} />
-        <Route path='/Khaybar' element={<KhaybarPage/>} />
-        <Route path='/Hubuna' element={<HubunaPage/>} />
-        <Route path='/Tabuk' element={<TabukPage/>} />
-        <Route path='/Duba' element={<DubaPage/>} />
-        <Route path='/Tayma' element={<TaymaPage/>} />
-        <Route path='/Haql' element={<HaqlPage/>} />
-        <Route path='/Hail' element={<HailPage/>} />
-        <Route path='/Baqaa' element={<BaqaaPage/>} />
-        <Route path='/Ghazalah' element={<GhazalahPage/>} />
-        <Route path='/Arar' element={<ArarPage/>} />
-        <Route path='/Rafha' element={<RafhaPage/>} />
-        <Route path='/Turaif' element={<TuraifPage/>} />
-        <Route path='/Buraydah' element={<BuraydahPage/>} />
-        <Route path='/Unaizah' element={<UnaizahPage />} />
-        <Route path='/Ar-Rass' element={<ArRassPage />} />
-        <Route path='/Al-Bukayriyah' element={<AlBukayriyahPage />} />
-        <Route path='/Sakaka' element={<SakakaPage />} />
-        <Route path='/Qurayyat' element={<QurayyatPage />} />
-        <Route path='/Dumat-Al-Jandal' element={<DumatAlJandalPage />} />
-        <Route path='/Thuwal' element={<ThuwalPage />} />
-        <Route path='/Turabah' element={<TurabahPage />} />
-        <Route path='/Ranyah' element={<RanyahPage />} />
-        <Route path='/Al-Namas' element={<AlNamasPage />} />
-        <Route path='/Tanomah' element={<TanomahPage />} />
-        <Route path='/Baljurashi' element={<BaljurashiPage />} />
-        <Route path='/Al-Baha' element={<AlBahaPage />} />
-        <Route path='/Al-Mithnab' element={<AlMithnabPage />} />
+        <Route path='/al-khobar' element={<KhobarPage/>} />
+        <Route path='/dhahran' element={<DhahranPage/>} />
+        <Route path='/taif' element={<TaifPage/>} />
+        <Route path='/jubail' element={<JubailPage/>} />
+        <Route path='/al-ahsa' element={<AlAhsaPage/>} />
+        <Route path='/qatif' element={<QatifPage/>} />
+        <Route path='/ras-tanura' element={<RasTanuraPage/>} />
+        <Route path='/abqaiq' element={<AbqaiqPage/>} />
+        <Route path='/khafji' element={<KhafjiPage/>} />
+        <Route path='/al-kharj' element={<AlKharjPage/>} />
+        <Route path='/al-majmaah' element={<AlMajmaahPage/>} />
+        <Route path='/al-zulfi' element={<AlZulfiPage/>} />
+        <Route path='/shaqra' element={<ShaqraPage/>} />
+        <Route path='/afif' element={<AfifPage/>} />
+        <Route path='/dawadmi' element={<DawadmiPage/>} />
+        <Route path='/wadi-ad-dawasir' element={<WadiAdDawasirPage/>} />
+        <Route path='/rabigh' element={<RabighPage/>} />
+        <Route path='/al-lith' element={<AlLithPage/>} />
+        <Route path='/al-qunfudhah' element={<AlQunfudhahPage/>} />
+        <Route path='/yanbu' element={<YanbuPage/>} />
+        <Route path='/al-ula' element={<AlUlaPage/>} />
+        <Route path='/badr' element={<BadrPage/>} />
+        <Route path='/khaybar' element={<KhaybarPage/>} />
+        <Route path='/hubuna' element={<HubunaPage/>} />
+        <Route path='/tabuk' element={<TabukPage/>} />
+        <Route path='/duba' element={<DubaPage/>} />
+        <Route path='/tayma' element={<TaymaPage/>} />
+        <Route path='/haql' element={<HaqlPage/>} />
+        <Route path='/hail' element={<HailPage/>} />
+        <Route path='/baqaa' element={<BaqaaPage/>} />
+        <Route path='/ghazalah' element={<GhazalahPage/>} />
+        <Route path='/arar' element={<ArarPage/>} />
+        <Route path='/rafha' element={<RafhaPage/>} />
+        <Route path='/turaif' element={<TuraifPage/>} />
+        <Route path='/buraydah' element={<BuraydahPage/>} />
+        <Route path='/unaizah' element={<UnaizahPage />} />
+        <Route path='/ar-rass' element={<ArRassPage />} />
+        <Route path='/al-bukayriyah' element={<AlBukayriyahPage />} />
+        <Route path='/sakaka' element={<SakakaPage />} />
+        <Route path='/qurayyat' element={<QurayyatPage />} />
+        <Route path='/dumat-al-jandal' element={<DumatAlJandalPage />} />
+        <Route path='/thuwal' element={<ThuwalPage />} />
+        <Route path='/turabah' element={<TurabahPage />} />
+        <Route path='/ranyah' element={<RanyahPage />} />
+        <Route path='/al-namas' element={<AlNamasPage />} />
+        <Route path='/tanomah' element={<TanomahPage />} />
+        <Route path='/baljurashi' element={<BaljurashiPage />} />
+        <Route path='/al-baha' element={<AlBahaPage />} />
+        <Route path='/al-mithnab' element={<AlMithnabPage />} />
 
 
 

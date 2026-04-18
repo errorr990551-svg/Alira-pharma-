@@ -163,6 +163,17 @@ const AlKharjPage = () => {
             metaKeywords.content = keywordsContent;
             document.head.appendChild(metaKeywords);
         }
+
+        // Update Canonical URL
+        let linkCanonical = document.querySelector('link[rel="canonical"]');
+        const canonicalUrl = `https://alirapharmaceuticals.com${location.pathname.toLowerCase() === '/' ? '' : location.pathname.toLowerCase()}/`;
+        
+        if (!linkCanonical) {
+            linkCanonical = document.createElement('link');
+            linkCanonical.rel = 'canonical';
+            document.head.appendChild(linkCanonical);
+        }
+        linkCanonical.setAttribute('href', canonicalUrl);
     }, [location]);
 
     const maxIndex = categoriesData.length - visibleItems;

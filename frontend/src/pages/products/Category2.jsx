@@ -9,16 +9,52 @@ import periosteal from '../../assets/Images/periosteal.jpeg';
 import volkman from '../../assets/Images/volkmann.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Retractors & Elevators",
+  description: "Retractors and elevators are surgical instruments used to hold back tissues, muscles, or organs, providing better visibility and access to the surgical site. These instruments are ergonomically designed to ensure effective retraction with minimal tissue trauma."
+};
+
+const products = [
+  {
+    name: "Langenbeck Retractor",
+    description: "The Langenbeck retractor is a handheld instrument used to retract soft tissues during surgical procedures. Its flat blade design allows controlled and precise retraction.",
+    image: langenback
+  },
+  {
+    name: "Volkmann Retractor",
+    description: "Volkmann retractors are rake-style instruments used to retract soft tissues and wound edges. They are commonly used in orthopedic and general surgeries.",
+    image: volkman
+  },
+  {
+    name: "Skin Hook Retractor",
+    description: "Skin hook retractors are fine instruments used for gentle retraction of skin and superficial tissues. They are ideal for delicate procedures requiring precision.",
+    image: skinhook
+  },
+  {
+    name: "Self-Retaining Retractors (Weitlaner / Gelpi)",
+    description: "Self-retaining retractors automatically hold tissues apart without manual assistance. Weitlaner and Gelpi retractors are widely used to maintain exposure during surgeries.",
+    image: selfretaining
+  },
+  {
+    name: "Periosteal Elevator",
+    description: "Periosteal elevators are used to separate periosteum from bone surfaces during orthopedic and dental procedures. They allow controlled elevation with minimal damage.",
+    image: periosteal
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
 const Category2 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  // Helper to create URL slugs (Matches Navbar logic for scrolling)
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
-  // Effect to handle automatic scrolling based on URL parameter
+  // Effect to handle automatic scrolling based on URL parameter and update SEO title
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -32,39 +68,6 @@ const Category2 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Retractors & Elevators",
-    description: "Retractors and elevators are surgical instruments used to hold back tissues, muscles, or organs, providing better visibility and access to the surgical site. These instruments are ergonomically designed to ensure effective retraction with minimal tissue trauma."
-  };
-
-  const products = [
-    {
-      name: "Langenbeck Retractor",
-      description: "The Langenbeck retractor is a handheld instrument used to retract soft tissues during surgical procedures. Its flat blade design allows controlled and precise retraction.",
-      image: langenback
-    },
-    {
-      name: "Volkmann Retractor",
-      description: "Volkmann retractors are rake-style instruments used to retract soft tissues and wound edges. They are commonly used in orthopedic and general surgeries.",
-      image: volkman
-    },
-    {
-      name: "Skin Hook Retractor",
-      description: "Skin hook retractors are fine instruments used for gentle retraction of skin and superficial tissues. They are ideal for delicate procedures requiring precision.",
-      image: skinhook
-    },
-    {
-      name: "Self-Retaining Retractors (Weitlaner / Gelpi)",
-      description: "Self-retaining retractors automatically hold tissues apart without manual assistance. Weitlaner and Gelpi retractors are widely used to maintain exposure during surgeries.",
-      image: selfretaining
-    },
-    {
-      name: "Periosteal Elevator",
-      description: "Periosteal elevators are used to separate periosteum from bone surfaces during orthopedic and dental procedures. They allow controlled elevation with minimal damage.",
-      image: periosteal
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

@@ -7,18 +7,41 @@ import UnderWaterSeal from '../../assets/Images/underwater seal.jpeg';
 import DigitalThermometer from '../../assets/Images/digital thermometer.jpeg';
 import BloodPressure from '../../assets/Images/blood pressure.jpeg';
 
-// Using a placeholder image for now as requested
-const placeholderImage = 'https://placehold.co/600x400?text=Medical+Device';
+const categoryInfo = {
+  title: "Medical Device",
+  description: "Our range of medical devices are essential tools used by medical professionals for accurate diagnostics, monitoring, and treatments. These high-quality devices are designed for reliability and everyday clinical or home use."
+};
+
+const products = [
+  {
+    name: "Under water seal drainage system",
+    description: "An under water seal drainage system is used to remove air, fluid, or pus from the pleural cavity, helping restore normal lung function. It is commonly used in thoracic surgeries and emergency care settings. The system ensures controlled drainage while preventing backflow, maintaining patient safety and effective respiratory support.",
+    image: UnderWaterSeal
+  },
+  {
+    name: "Digital thermometer",
+    description: "A digital thermometer is used to measure body temperature quickly and accurately. It provides fast readings with easy-to-read digital displays, making it suitable for clinical and home use. Designed for hygiene and reliability, it ensures precise temperature monitoring for effective patient care.",
+    image: DigitalThermometer
+  },
+  {
+    name: "Blood pressure monitor",
+    description: "A blood pressure monitor is used to measure systolic and diastolic blood pressure levels along with pulse rate. It is essential for monitoring cardiovascular health in hospitals, clinics, and home settings. Designed for accuracy and ease of use, it helps in early detection and management of hypertension.",
+    image: BloodPressure
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
 const Category12 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  // Helper to create URL slugs (Matches Navbar logic for scrolling)
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
-  // Effect to handle automatic scrolling based on URL parameter
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -32,29 +55,6 @@ const Category12 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Medical Device",
-    description: "Our range of medical devices are essential tools used by medical professionals for accurate diagnostics, monitoring, and treatments. These high-quality devices are designed for reliability and everyday clinical or home use."
-  };
-
-  const products = [
-    {
-      name: "Under water seal drainage system",
-      description: "An under water seal drainage system is used to remove air, fluid, or pus from the pleural cavity, helping restore normal lung function. It is commonly used in thoracic surgeries and emergency care settings. The system ensures controlled drainage while preventing backflow, maintaining patient safety and effective respiratory support.",
-      image: UnderWaterSeal
-    },
-    {
-      name: "Digital thermometer",
-      description: "A digital thermometer is used to measure body temperature quickly and accurately. It provides fast readings with easy-to-read digital displays, making it suitable for clinical and home use. Designed for hygiene and reliability, it ensures precise temperature monitoring for effective patient care.",
-      image: DigitalThermometer
-    },
-    {
-      name: "Blood pressure monitor",
-      description: "A blood pressure monitor is used to measure systolic and diastolic blood pressure levels along with pulse rate. It is essential for monitoring cardiovascular health in hospitals, clinics, and home settings. Designed for accuracy and ease of use, it helps in early detection and management of hypertension.",
-      image: BloodPressure
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
@@ -83,7 +83,6 @@ const Category12 = () => {
             <div className="w-full lg:w-1/2">
               <div className="relative group rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
                 <div className="aspect-4/3 overflow-hidden relative">
-                   {/* We can use either img or ZoomableImage from components. Assuming standard img if ZoomableImage was causing issues, but Category1 uses ZoomableImage */}
                    <ZoomableImage src={item.image} alt={item.name} />
                 </div>
                 {/* Decorative Accent */}

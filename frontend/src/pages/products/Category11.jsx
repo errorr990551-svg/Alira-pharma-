@@ -6,14 +6,41 @@ import iv from '../../assets/Images/ivset.jpeg';
 import syringes from '../../assets/Images/syringes.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Disposables & IV Products",
+  description: "Disposable and IV products are essential for safe drug administration and fluid management. These products are designed for single-use to ensure hygiene and patient safety."
+};
+
+const products = [
+  {
+    name: "Disposable Syringes with Needles",
+    description: "Disposable syringes with needles are used for accurate medication delivery. They ensure safe, hygienic, and precise injections.",
+    image: syringes
+  },
+  {
+    name: "IV Sets",
+    description: "IV sets are used to administer fluids and medications directly into the bloodstream. They provide controlled and reliable fluid delivery.",
+    image: iv
+  },
+  {
+    name: "IV Cannula",
+    description: "IV cannulas are used to provide vascular access for fluid and medication administration. They are designed for smooth insertion and patient comfort.",
+    image: iv
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
 const Category11 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -25,29 +52,6 @@ const Category11 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Disposables & IV Products",
-    description: "Disposable and IV products are essential for safe drug administration and fluid management. These products are designed for single-use to ensure hygiene and patient safety."
-  };
-
-  const products = [
-    {
-      name: "Disposable Syringes with Needles",
-      description: "Disposable syringes with needles are used for accurate medication delivery. They ensure safe, hygienic, and precise injections.",
-      image: syringes
-    },
-    {
-      name: "IV Sets",
-      description: "IV sets are used to administer fluids and medications directly into the bloodstream. They provide controlled and reliable fluid delivery.",
-      image: iv
-    },
-    {
-      name: "IV Cannula",
-      description: "IV cannulas are used to provide vascular access for fluid and medication administration. They are designed for smooth insertion and patient comfort.",
-      image: iv
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

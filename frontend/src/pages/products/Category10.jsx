@@ -9,13 +9,51 @@ import crepe from '../../assets/Images/crepe.jpeg';
 import bandages from '../../assets/Images/adhesivebandages.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Wound Care & Dressings",
+  description: "Wound care and dressing products are used to protect wounds, absorb exudate, and support healing. These products are essential in surgical, clinical, and first-aid applications."
+};
+
+const products = [
+  {
+    name: "Absorbent Gauze Rolls",
+    description: "Absorbent gauze rolls are used for wound dressing and bandaging. They provide high absorbency and breathability for effective wound care.",
+    image: gr
+  },
+  {
+    name: "Gauze Swabs (Sterile & Non-Sterile)",
+    description: "Gauze swabs are used for cleaning, dressing, and protecting wounds. Sterile and non-sterile options are available for different medical needs.",
+    image: gs
+  },
+  {
+    name: "Crepe Bandages",
+    description: "Crepe bandages provide light compression and support to injured areas. They are commonly used for sprains, strains, and wound dressing support.",
+    image: crepe
+  },
+  {
+    name: "Adhesive Bandages (Plasters)",
+    description: "Adhesive bandages are used for covering minor cuts and wounds. They protect against contamination while promoting healing.",
+    image: bandages
+  },
+  {
+    name: "Absorbent Cotton Rolls",
+    description: "Absorbent cotton rolls are used for cleaning wounds, applying medication, and general medical use. They are soft, highly absorbent, and skin-friendly.",
+    image: cr
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
 const Category10 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -27,39 +65,6 @@ const Category10 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Wound Care & Dressings",
-    description: "Wound care and dressing products are used to protect wounds, absorb exudate, and support healing. These products are essential in surgical, clinical, and first-aid applications."
-  };
-
-  const products = [
-    {
-      name: "Absorbent Gauze Rolls",
-      description: "Absorbent gauze rolls are used for wound dressing and bandaging. They provide high absorbency and breathability for effective wound care.",
-      image: gr
-    },
-    {
-      name: "Gauze Swabs (Sterile & Non-Sterile)",
-      description: "Gauze swabs are used for cleaning, dressing, and protecting wounds. Sterile and non-sterile options are available for different medical needs.",
-      image: gs
-    },
-    {
-      name: "Crepe Bandages",
-      description: "Crepe bandages provide light compression and support to injured areas. They are commonly used for sprains, strains, and wound dressing support.",
-      image: crepe
-    },
-    {
-      name: "Adhesive Bandages (Plasters)",
-      description: "Adhesive bandages are used for covering minor cuts and wounds. They protect against contamination while promoting healing.",
-      image: bandages
-    },
-    {
-      name: "Absorbent Cotton Rolls",
-      description: "Absorbent cotton rolls are used for cleaning wounds, applying medication, and general medical use. They are soft, highly absorbent, and skin-friendly.",
-      image: cr
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

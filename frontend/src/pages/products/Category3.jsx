@@ -7,16 +7,42 @@ import bonecutter from '../../assets/Images/bonecutter.jpeg';
 import bonenibbler from '../../assets/Images/bonenibbler.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Bone & Neuro Instruments",
+  description: "Bone and neuro instruments are specialized tools designed for cutting, shaping, and removing bone during orthopedic and neurosurgical procedures. These instruments ensure precision, strength, and safety when working with hard tissues."
+};
+
+const products = [
+  {
+    name: "Bone Cutter / Rongeur",
+    description: "Bone cutters or rongeurs are used to cut and remove small sections of bone. They provide strong leverage and precise cutting action during surgical procedures.",
+    image: bonecutter
+  },
+  {
+    name: "Bone Nibbler",
+    description: "Bone nibblers are designed to trim and shape bone edges with controlled pressure. They are commonly used in orthopedic and reconstructive surgeries.",
+    image: bonenibbler
+  },
+  {
+    name: "Laminectomy Punch / Kerrison Rongeur",
+    description: "Laminectomy punches or Kerrison rongeurs are specialized instruments used in spinal and neurosurgeries to remove bone and soft tissue with high precision and safety.",
+    image: lamin
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
 const Category3 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  // Helper to create URL slugs (Matches Navbar logic for scrolling)
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
-  // Effect to handle automatic scrolling based on URL parameter
+  // Effect to handle automatic scrolling based on URL parameter and update SEO title
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -30,29 +56,6 @@ const Category3 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Bone & Neuro Instruments",
-    description: "Bone and neuro instruments are specialized tools designed for cutting, shaping, and removing bone during orthopedic and neurosurgical procedures. These instruments ensure precision, strength, and safety when working with hard tissues."
-  };
-
-  const products = [
-    {
-      name: "Bone Cutter / Rongeur",
-      description: "Bone cutters or rongeurs are used to cut and remove small sections of bone. They provide strong leverage and precise cutting action during surgical procedures.",
-      image: bonecutter
-    },
-    {
-      name: "Bone Nibbler",
-      description: "Bone nibblers are designed to trim and shape bone edges with controlled pressure. They are commonly used in orthopedic and reconstructive surgeries.",
-      image: bonenibbler
-    },
-    {
-      name: "Laminectomy Punch / Kerrison Rongeur",
-      description: "Laminectomy punches or Kerrison rongeurs are specialized instruments used in spinal and neurosurgeries to remove bone and soft tissue with high precision and safety.",
-      image: lamin
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

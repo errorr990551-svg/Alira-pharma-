@@ -10,13 +10,56 @@ import Caps from '../../assets/Images/caps.jpeg';
 import gowns from '../../assets/Images/gowns.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Face Masks & PPE",
+  description: "Face masks and personal protective equipment (PPE) are designed to protect healthcare professionals and patients from airborne particles and contamination. These products support infection control and workplace safety."
+};
+
+const products = [
+  {
+    name: "3-Ply Disposable Face Masks",
+    description: "3-ply disposable face masks provide effective filtration and breathability for everyday medical use. They are suitable for hospitals, clinics, and general healthcare settings.",
+    image: ply
+  },
+  {
+    name: "N95 Face Masks",
+    description: "N95 face masks offer high filtration efficiency against airborne particles. They are commonly used in high-risk medical environments requiring enhanced respiratory protection.",
+    image: n95
+  },
+  {
+    name: "Disposable Shoe Covers (Plastic & Non-Woven)",
+    description: "Disposable shoe covers are used to maintain cleanliness in sterile environments. They prevent the spread of contaminants across clinical areas.",
+    image: shoe
+  },
+  {
+    name: "Disposable Caps (Bouffant / Surgeon)",
+    description: "Disposable caps are used to cover hair and reduce contamination risks in surgical and clinical settings. They are lightweight, breathable, and comfortable to wear.",
+    image: Caps
+  },
+  {
+    name: "Disposable Aprons",
+    description: "Disposable aprons provide a protective barrier against fluids and contaminants. They are commonly used in healthcare, laboratory, and hygiene-sensitive environments.",
+    image: aprons
+  },
+  {
+    name: "Isolation Gowns",
+    description: "Isolation gowns are designed to protect healthcare workers from exposure to infectious agents. They provide full coverage and are suitable for medical and clinical use.",
+    image: gowns
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
 const Category8 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -28,44 +71,6 @@ const Category8 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Face Masks & PPE",
-    description: "Face masks and personal protective equipment (PPE) are designed to protect healthcare professionals and patients from airborne particles and contamination. These products support infection control and workplace safety."
-  };
-
-  const products = [
-    {
-      name: "3-Ply Disposable Face Masks",
-      description: "3-ply disposable face masks provide effective filtration and breathability for everyday medical use. They are suitable for hospitals, clinics, and general healthcare settings.",
-      image: ply
-    },
-    {
-      name: "N95 Face Masks",
-      description: "N95 face masks offer high filtration efficiency against airborne particles. They are commonly used in high-risk medical environments requiring enhanced respiratory protection.",
-      image: n95
-    },
-    {
-      name: "Disposable Shoe Covers (Plastic & Non-Woven)",
-      description: "Disposable shoe covers are used to maintain cleanliness in sterile environments. They prevent the spread of contaminants across clinical areas.",
-      image: shoe
-    },
-    {
-      name: "Disposable Caps (Bouffant / Surgeon)",
-      description: "Disposable caps are used to cover hair and reduce contamination risks in surgical and clinical settings. They are lightweight, breathable, and comfortable to wear.",
-      image: Caps
-    },
-    {
-      name: "Disposable Aprons",
-      description: "Disposable aprons provide a protective barrier against fluids and contaminants. They are commonly used in healthcare, laboratory, and hygiene-sensitive environments.",
-      image: aprons
-    },
-    {
-      name: "Isolation Gowns",
-      description: "Isolation gowns are designed to protect healthcare workers from exposure to infectious agents. They provide full coverage and are suitable for medical and clinical use.",
-      image: gowns
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

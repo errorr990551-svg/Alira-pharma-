@@ -642,7 +642,7 @@ const Navbar = () => {
                     onMouseEnter={() => setIsAboutHovered(true)}
                     onMouseLeave={() => setIsAboutHovered(false)}
                   >
-                    <button className="flex items-center gap-1 font-medium text-gray-600 hover:text-teal-600 text-sm lg:text-base transition-colors duration-200 cursor-pointer h-full border-b-2 border-transparent hover:border-teal-500 whitespace-nowrap">
+                    <button className="flex items-center gap-1 font-medium text-gray-600 hover:text-teal-600 text-sm lg:text-base transition-colors duration-200 cursor-pointer h-full border-b-2 border-transparent hover:border-teal-500">
                       {link.name}
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isAboutHovered ? 'rotate-180' : ''}`} />
                     </button>

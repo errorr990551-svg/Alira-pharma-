@@ -7,14 +7,41 @@ import nitrile from '../../assets/Images/nitrile.jpeg';
 import latex from '../../assets/Images/latex.jpeg';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
+const categoryInfo = {
+  title: "Gloves",
+  description: "Medical gloves are essential protective equipment used to maintain hygiene and prevent cross-contamination. They are designed to provide comfort, flexibility, and reliable barrier protection."
+};
+
+const products = [
+  {
+    name: "Latex Examination Gloves",
+    description: "Latex examination gloves offer excellent elasticity, comfort, and tactile sensitivity. They are widely used in medical examinations and routine clinical procedures.",
+    image: latex
+  },
+  {
+    name: "Nitrile Examination Gloves",
+    description: "Nitrile examination gloves provide strong chemical resistance and are latex-free, making them suitable for users with latex allergies. They offer durability and reliable protection.",
+    image: nitrile
+  },
+  {
+    name: "Surgical Gloves (Sterile)",
+    description: "Sterile surgical gloves are used during surgical procedures to maintain a sterile environment. They provide a precise fit, high sensitivity, and maximum protection.",
+    image: gloves
+  }
+];
+
+// Helper to create URL slugs (Matches Navbar logic for scrolling)
+const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
 const Category7 = () => {
   const { productId } = useParams();
   const { openQuotePopup } = useQuotePopup();
 
-  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
   useEffect(() => {
+    const product = products.find(p => createSlug(p.name) === productId);
+    const productName = product ? product.name : categoryInfo.title;
+    document.title = `${productName} | B2B Medical Supply UAE | Alira Pharmaceuticals`;
+
     if (productId) {
       const element = document.getElementById(productId);
       if (element) {
@@ -26,29 +53,6 @@ const Category7 = () => {
       window.scrollTo(0, 0);
     }
   }, [productId]);
-
-  const categoryInfo = {
-    title: "Gloves",
-    description: "Medical gloves are essential protective equipment used to maintain hygiene and prevent cross-contamination. They are designed to provide comfort, flexibility, and reliable barrier protection."
-  };
-
-  const products = [
-    {
-      name: "Latex Examination Gloves",
-      description: "Latex examination gloves offer excellent elasticity, comfort, and tactile sensitivity. They are widely used in medical examinations and routine clinical procedures.",
-      image: latex
-    },
-    {
-      name: "Nitrile Examination Gloves",
-      description: "Nitrile examination gloves provide strong chemical resistance and are latex-free, making them suitable for users with latex allergies. They offer durability and reliable protection.",
-      image: nitrile
-    },
-    {
-      name: "Surgical Gloves (Sterile)",
-      description: "Sterile surgical gloves are used during surgical procedures to maintain a sterile environment. They provide a precise fit, high sensitivity, and maximum protection.",
-      image: gloves
-    }
-  ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">

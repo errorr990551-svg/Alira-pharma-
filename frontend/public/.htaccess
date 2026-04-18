@@ -1,0 +1,102 @@
+RewriteEngine On
+
+# Set HSTS header
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.alirapharmaceuticals\.com [NC]
+RewriteRule ^(.*)$ https://alirapharmaceuticals.com/$1 [L,R=301]
+
+# Redirect Uppercase City URLs to Lowercase (SEO Standardization)
+Redirect 301 /Riyadh /riyadh
+Redirect 301 /Jeddah /jeddah
+Redirect 301 /Mecca /mecca
+Redirect 301 /Medina /medina
+Redirect 301 /Dammam /dammam
+Redirect 301 /Al-Khobar /al-khobar
+Redirect 301 /Dhahran /dhahran
+Redirect 301 /Taif /taif
+Redirect 301 /Jubail /jubail
+Redirect 301 /Al-Ahsa /al-ahsa
+Redirect 301 /Qatif /qatif
+Redirect 301 /Ras-Tanura /ras-tanura
+Redirect 301 /Abqaiq /abqaiq
+Redirect 301 /Khafji /khafji
+Redirect 301 /Al-Kharj /al-kharj
+Redirect 301 /Al-Majmaah /al-majmaah
+Redirect 301 /Al-Zulfi /al-zulfi
+Redirect 301 /Shaqra /shaqra
+Redirect 301 /Afif /afif
+Redirect 301 /Dawadmi /dawadmi
+Redirect 301 /Wadi-ad-Dawasir /wadi-ad-dawasir
+Redirect 301 /Rabigh /rabigh
+Redirect 301 /Al-Lith /al-lith
+Redirect 301 /Al-Qunfudhah /al-qunfudhah
+Redirect 301 /Yanbu /yanbu
+Redirect 301 /Al-Ula /al-ula
+Redirect 301 /Badr /badr
+Redirect 301 /Khaybar /khaybar
+Redirect 301 /Hubuna /hubuna
+Redirect 301 /Tabuk /tabuk
+Redirect 301 /Duba /duba
+Redirect 301 /Tayma /tayma
+Redirect 301 /Haql /haql
+Redirect 301 /Hail /hail
+Redirect 301 /Baqaa /baqaa
+Redirect 301 /Ghazalah /ghazalah
+Redirect 301 /Arar /arar
+Redirect 301 /Rafha /rafha
+Redirect 301 /Turaif /turaif
+Redirect 301 /Buraydah /buraydah
+Redirect 301 /Unaizah /unaizah
+Redirect 301 /Ar-Rass /ar-rass
+Redirect 301 /Al-Bukayriyah /al-bukayriyah
+Redirect 301 /Sakaka /sakaka
+Redirect 301 /Qurayyat /qurayyat
+Redirect 301 /Dumat-Al-Jandal /dumat-al-jandal
+Redirect 301 /Thuwal /thuwal
+Redirect 301 /Turabah /turabah
+Redirect 301 /Ranyah /ranyah
+Redirect 301 /Al-Namas /al-namas
+Redirect 301 /Tanomah /tanomah
+Redirect 301 /Baljurashi /baljurashi
+Redirect 301 /Al-Baha /al-baha
+Redirect 301 /Al-Mithnab /al-mithnab
+
+# SPA Routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# Enable Gzip Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access plus 2 days"
+</IfModule>
