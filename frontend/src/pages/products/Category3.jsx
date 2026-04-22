@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import lamin from '../../assets/Images/lamin.jpeg';
-import bonecutter from '../../assets/Images/bonecutter.jpeg';
-import bonenibbler from '../../assets/Images/bonenibbler.jpeg';
+import lamin from '../../assets/Images/lamin.webp';
+import bonecutter from '../../assets/Images/bonecutter.webp';
+import bonenibbler from '../../assets/Images/bonenibbler.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

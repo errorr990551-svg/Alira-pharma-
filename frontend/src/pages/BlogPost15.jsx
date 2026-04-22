@@ -26,7 +26,7 @@ const BlogPost15 = () => {
         "name": "Alira Pharmaceuticals",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.png"
+          "url": "https://alirapharmaceuticals.com/logo.webp"
         }
       },
       "datePublished": "2026-04-16",

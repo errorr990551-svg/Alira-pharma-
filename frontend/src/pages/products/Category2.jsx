@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import langenback from '../../assets/Images/langenback.jpeg';
-import selfretaining from '../../assets/Images/selfretaining.jpeg';
-import skinhook from '../../assets/Images/skinhook.jpeg';
-import periosteal from '../../assets/Images/periosteal.jpeg';
-import volkman from '../../assets/Images/volkmann.jpeg';
+import langenback from '../../assets/Images/langenback.webp';
+import selfretaining from '../../assets/Images/selfretaining.webp';
+import skinhook from '../../assets/Images/skinhook.webp';
+import periosteal from '../../assets/Images/periosteal.webp';
+import volkman from '../../assets/Images/volkmann.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

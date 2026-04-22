@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import n95 from '../../assets/Images/n95.jpeg';
-import shoe from '../../assets/Images/shoecovers.jpeg';
-import ply from '../../assets/Images/3ply.jpeg';
-import aprons from '../../assets/Images/aprons.jpeg';
-import Caps from '../../assets/Images/caps.jpeg';
-import gowns from '../../assets/Images/gowns.jpeg';
+import n95 from '../../assets/Images/n95.webp';
+import shoe from '../../assets/Images/shoecovers.webp';
+import ply from '../../assets/Images/3ply.webp';
+import aprons from '../../assets/Images/aprons.webp';
+import Caps from '../../assets/Images/caps.webp';
+import gowns from '../../assets/Images/gowns.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

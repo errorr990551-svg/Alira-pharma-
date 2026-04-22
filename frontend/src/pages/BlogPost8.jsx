@@ -21,7 +21,7 @@ const BlogPost8 = () => {
       "publisher": {
         "@type": "Organization",
         "name": "Alira Pharmaceuticals",
-        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.webp" }
       },
       "datePublished": "2026-04-08",
       "keywords": "surgical instrument care, autoclave protocols, instrument maintenance"

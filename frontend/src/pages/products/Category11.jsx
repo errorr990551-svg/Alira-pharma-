@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import iv from '../../assets/Images/ivset.jpeg';
-import syringes from '../../assets/Images/syringes.jpeg';
+import iv from '../../assets/Images/ivset.webp';
+import syringes from '../../assets/Images/syringes.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import drapes from '../../assets/Images/drapes.jpeg';
-import gowns from '../../assets/Images/gowns.jpeg';
+import drapes from '../../assets/Images/drapes.webp';
+import gowns from '../../assets/Images/gowns.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

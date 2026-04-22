@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import Kidney from '../../assets/Images/kidneytray.jpeg';
-import InstrumentalTray from '../../assets/Images/instrumental tray.jpeg';
+import Kidney from '../../assets/Images/kidneytray.webp';
+import InstrumentalTray from '../../assets/Images/instrumental tray.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

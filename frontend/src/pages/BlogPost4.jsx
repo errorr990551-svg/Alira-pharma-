@@ -49,7 +49,7 @@ const BlogPost4 = () => {
         "name": "Alira Pharmaceuticals",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/assets/logo.png"
+          "url": "https://alirapharmaceuticals.com/assets/logo.webp"
         }
       },
       "datePublished": "2026-03-29",

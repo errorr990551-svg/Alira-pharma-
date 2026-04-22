@@ -62,6 +62,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
       message: formData.message,
       to_email: "anmolchauhan@alirapharmaceuticals.com",
       cc_emails: "akshat99055@gmail.com, errorr990551@gmail.com",
+      Alirapharmaceuticals: "Alira Pharmaceuticals",
     };
 
     try {

@@ -21,7 +21,7 @@ const BlogPost16 = () => {
       "publisher": {
         "@type": "Organization",
         "name": "Alira Pharmaceuticals",
-        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.webp" }
       },
       "datePublished": "2026-04-16",
       "keywords": "surgical instrument coatings, tungsten carbide, DLC coating, Alira Pharmaceuticals",

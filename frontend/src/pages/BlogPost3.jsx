@@ -41,7 +41,7 @@ const BlogPost3 = () => {
       "@type": "MedicalOrganization",
       "name": "Alira Pharmaceuticals",
       "url": "https://alirapharmaceuticals.com/",
-      "logo": "https://alirapharmaceuticals.com/assets/logo.png",
+      "logo": "https://alirapharmaceuticals.com/assets/logo.webp",
       "description": "Global manufacturer and exporter of high-quality surgical instruments, hospital disposables, and PPE.",
       "address": {
         "@type": "PostalAddress",

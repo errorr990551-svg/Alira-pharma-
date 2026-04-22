@@ -50,7 +50,7 @@ const BlogPost2 = () => {
         "name": "Alira Pharmaceuticals",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.png"
+          "url": "https://alirapharmaceuticals.com/logo.webp"
         }
       },
       "mainEntityOfPage": {

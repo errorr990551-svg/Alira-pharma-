@@ -3,16 +3,16 @@ import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
-import mayoScissors from '../../assets/Images/mayoScissor.jpeg';
-import operatingScissors from '../../assets/Images/operatingscissors.jpeg';
-import forceps from '../../assets/Images/tissueforceps.jpeg';
-import needleholders from '../../assets/Images/needleholders.jpeg';
-import Babcock from '../../assets/Images/babcock.jpeg';
-import backhaus from '../../assets/Images/backhaus.jpeg';
-import allis from '../../assets/Images/allistissue.jpeg';
-import artery from '../../assets/Images/artery.jpeg';
-import metzenbaum from '../../assets/Images/metzenbaum.jpeg';
-import surgicalknifes from '../../assets/Images/surgicalknifes.jpeg';
+import mayoScissors from '../../assets/Images/mayoScissor.webp';
+import operatingScissors from '../../assets/Images/operatingscissors.webp';
+import forceps from '../../assets/Images/tissueforceps.webp';
+import needleholders from '../../assets/Images/needleholders.webp';
+import Babcock from '../../assets/Images/babcock.webp';
+import backhaus from '../../assets/Images/backhaus.webp';
+import allis from '../../assets/Images/allistissue.webp';
+import artery from '../../assets/Images/artery.webp';
+import metzenbaum from '../../assets/Images/metzenbaum.webp';
+import surgicalknifes from '../../assets/Images/surgicalknifes.webp';
 
 const categoryInfo = {
   title: "Surgical Instruments",

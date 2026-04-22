@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import gloves from '../../assets/Images/surgicalgloves.jpeg';
-import nitrile from '../../assets/Images/nitrile.jpeg';
-import latex from '../../assets/Images/latex.jpeg';
+import gloves from '../../assets/Images/surgicalgloves.webp';
+import nitrile from '../../assets/Images/nitrile.webp';
+import latex from '../../assets/Images/latex.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { ClipboardList, User, Hand, Award, CheckSquare, Globe, Scan, DollarSign, Lightbulb, Users,Truck, ChevronRight, Factory, } from 'lucide-react';
-import missionImg from '../assets/Images/mission.jpeg';
-import visionImg from '../assets/Images/vision.jpeg';
+import missionImg from '../assets/Images/mission.webp';
+import visionImg from '../assets/Images/vision.webp';
 
 
 // --- Features Data ---

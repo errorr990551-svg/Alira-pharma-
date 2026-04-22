@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
-import gr from '../../assets/Images/gauzerolls.jpeg';
-import gs from '../../assets/Images/gauzeswabs.jpeg';
-import cr from '../../assets/Images/cottonrolls.jpeg';
-import crepe from '../../assets/Images/crepe.jpeg';
-import bandages from '../../assets/Images/adhesivebandages.jpeg';
+import gr from '../../assets/Images/gauzerolls.webp';
+import gs from '../../assets/Images/gauzeswabs.webp';
+import cr from '../../assets/Images/cottonrolls.webp';
+import crepe from '../../assets/Images/crepe.webp';
+import bandages from '../../assets/Images/adhesivebandages.webp';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
 const categoryInfo = {

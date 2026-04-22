@@ -1,12 +1,12 @@
 // import React, { useState } from 'react';
 // import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 // import { Link } from "react-router-dom";
-// import LogoImg from '../../assets/Images/Logo.png';
+// import LogoImg from '../../assets/Images/Logo.webp';
 
 // // Custom Logo Component - Redesigned to be distinct ("Bio-Hexagon" theme)
 // const Logo = () => (
 //   <div className="flex items-center">
-//     {/* Placeholder for Logo Image - Replace 'logo.png' with your actual file path */}
+//     {/* Placeholder for Logo Image - Replace 'logo.webp' with your actual file path */}
 //     <img 
 //       src={LogoImg} 
 //       alt="Alira Pharmaceuticals company logo - Medical and Surgical Supplies Manufacturer" 
@@ -342,7 +342,7 @@ import { Link } from "react-router-dom";
 
 // Using a placeholder image to ensure the code compiles in this environment.
 // You can uncomment your local import below and remove the const LogoImg line.
-import LogoImg from '../../assets/Images/Logo.png';
+import LogoImg from '../../assets/Images/Logo.webp';
 
 
 // --- Data Structure for Products ---

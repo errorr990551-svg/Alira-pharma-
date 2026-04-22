@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 import ZoomableImage from '../../components/common/ZoomableImage';
 
-import UnderWaterSeal from '../../assets/Images/underwater seal.jpeg';
-import DigitalThermometer from '../../assets/Images/digital thermometer.jpeg';
-import BloodPressure from '../../assets/Images/blood pressure.jpeg';
+import UnderWaterSeal from '../../assets/Images/underwater seal.webp';
+import DigitalThermometer from '../../assets/Images/digital thermometer.webp';
+import BloodPressure from '../../assets/Images/blood pressure.webp';
 
 const categoryInfo = {
   title: "Medical Device",

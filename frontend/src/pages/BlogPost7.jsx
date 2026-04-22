@@ -21,7 +21,7 @@ const BlogPost7 = () => {
       "publisher": {
         "@type": "Organization",
         "name": "Alira Pharmaceuticals",
-        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.webp" }
       },
       "datePublished": "2026-04-08",
       "keywords": "emergency medical supplies, trauma shears, wound care, Alira Pharmaceuticals"
