@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 import { MapPin, Phone, Mail, Printer, Send } from 'lucide-react';
 
-import api from "../services/api";
-
-export const sendContactMessage = (data) => {
-  return api.post("/contact", data);
-};
+// EmailJS Configuration
+const SERVICE_ID = "service_e9tpgmh";
+const TEMPLATE_ID = "template_setcryu"; // Correct Template ID from Image 3
+const PUBLIC_KEY = "L6kSSqLl5HJakWtm5"; // Fixed: lowercase 'l' instead of 'I'
 
 
 const ContactUs = () => {
@@ -74,8 +74,25 @@ const ContactUs = () => {
     e.preventDefault();
     setLoading(true);
 
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      message: formData.message,
+      to_email: "anmolchauhan@alirapharmaceuticals.com",
+      cc_emails: "akshat99055@gmail.com, errorr990551@gmail.com",
+    };
+
     try {
-      await sendContactMessage(formData);
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        {
+          publicKey: PUBLIC_KEY,
+        }
+      );
       toast.success("Message sent successfully!");
 
       setFormData({
@@ -87,11 +104,12 @@ const ContactUs = () => {
       });
     } catch (error) {
       console.error(error);
-      toast.error("Failed to send message. Please try again.");
+      toast.error(`Failed to send message: ${error.text || "Please check your EmailJS settings."}`);
     } finally {
       setLoading(false);
     }
   };
+
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
       

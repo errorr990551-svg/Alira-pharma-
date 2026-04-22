@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
-import toast from 'react-hot-toast';
-import api from '../../services/api';
-
-// Popup API (separate function, same endpoint)
-export const sendPopupMessage = (data) => {
-  return api.post("/contact", data);
-};
+import emailjs from '@emailjs/browser';
 
 const PopUp = ({ isOpen, onClose, autoShow = true }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,23 +45,31 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
     });
   };
 
-  // Handle Submit (API CALL TO /contact)
+  // Handle Submit (EMAILJS CALL)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
+    const serviceId = 'service_e9tpgmh';
+    const templateId = 'template_setcryu'; // Correct Template ID from Image 3
+    const publicKey = 'L6kSSqLl5HJakWtm5'; // Fixed: lowercase 'l' instead of 'I'
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      message: formData.message,
+      to_email: "anmolchauhan@alirapharmaceuticals.com",
+      cc_emails: "akshat99055@gmail.com, errorr990551@gmail.com",
+    };
+
     try {
-      await sendPopupMessage({
-        ...formData,
-        source: "popup", // optional: helps backend identify popup leads
+      await emailjs.send(serviceId, templateId, templateParams, {
+        publicKey: publicKey,
       });
 
-      toast.success("Message sent successfully!");
-      
-      // Delay closing slightly so user sees the message
-      setTimeout(() => {
-        handleClose();
-      }, 500);
+      alert("Message sent successfully! Our experts will contact you soon.");
 
       // Reset form after success
       setFormData({
@@ -77,9 +79,11 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
         company: "",
         message: "",
       });
+
+      handleClose();
     } catch (error) {
-      console.error("Popup API Error:", error);
-      toast.error("Failed to send message. Please try again.");
+      console.error("EmailJS Error:", error);
+      alert(`Failed to send message: ${error.text || "Please check your EmailJS settings."}`);
     } finally {
       setLoading(false);
     }
@@ -109,10 +113,10 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
 
         {/* Header */}
         <div className="mb-8 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 text-left">
             Drop in your details below
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-500 text-lg text-left">
             Let our experts take over from here!
           </p>
         </div>
@@ -120,7 +124,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
         {/* Form */}
         <form className="space-y-5" onSubmit={handleSubmit}>
           
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 gap-5 text-left">
             {/* Name */}
             <div className="relative">
               <input 
@@ -135,7 +139,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
             </div>
 
             {/* Email */}
-            <div className="relative">
+            <div className="relative text-left">
               <input 
                 type="email"
                 name="email"
@@ -148,7 +152,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 gap-5 text-left">
             {/* Phone */}
             <div className="relative">
               <input 
@@ -162,7 +166,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
             </div>
 
             {/* Company */}
-            <div className="relative">
+            <div className="relative text-left">
               <input 
                 type="text"
                 name="company"
@@ -175,7 +179,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
           </div>
 
           {/* Message */}
-          <div className="relative">
+          <div className="relative text-left">
             <textarea 
               name="message"
               value={formData.message}
