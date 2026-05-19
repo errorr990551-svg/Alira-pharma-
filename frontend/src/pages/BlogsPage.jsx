@@ -158,12 +158,12 @@ const blogs = [
   },
   {
     id: 18,
-    title: "Future of Wound Care: Bio-Active Dressings",
-    excerpt: "Redefining healing through hydrocolloids, ionic silver technology, and smart sensor integration.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-    link: "/blog/future-of-wound-care-2026",
-    category: "Wound Care",
-    date: "April 16, 2026"
+    title: "Top Surgical Instrument Suppliers in UAE: What Hospitals & Clinics Should Look For (2025)",
+    excerpt: "Discover the key criteria hospitals, clinics, and procurement teams must evaluate when choosing a B2B medical supplier in the GCC.",
+    image: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&q=80&w=1000",
+    link: "/blog/surgical-instrument-suppliers-uae",
+    category: "Procurement",
+    date: "June 2025"
   },
   {
     id: 19,

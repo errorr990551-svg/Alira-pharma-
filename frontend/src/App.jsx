@@ -154,7 +154,7 @@ function App() {
         <Route path='/blog/remote-diagnostics-2026' element={<BlogPost15 />} />
         <Route path='/blog/specialized-coatings-surgical-metallurgy' element={<BlogPost16 />} />
         <Route path='/blog/medical-grade-disposables-icu' element={<BlogPost17 />} />
-        <Route path='/blog/future-of-wound-care-2026' element={<BlogPost18 />} />
+        <Route path='/blog/surgical-instrument-suppliers-uae' element={<BlogPost18 />} />
         <Route path='/blog/ophthalmic-micro-surgical-precision' element={<BlogPost19 />} />
         <Route path='/blogs' element={<BlogsPage />} />
 

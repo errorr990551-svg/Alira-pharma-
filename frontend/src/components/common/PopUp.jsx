@@ -129,7 +129,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
             {/* Name */}
             <div className="relative">
               <input 
-                type="text"
+                type="text" 
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
