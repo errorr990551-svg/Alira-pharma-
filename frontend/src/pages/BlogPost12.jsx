@@ -6,49 +6,7 @@ const BlogPost12 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Modern Diagnostic Instruments & Clinical Accuracy | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Explore the evolution of diagnostic tools in 2026. From high-sensitivity stethoscopes to LED ENT gear, learn why precision diagnostics are the foundation of patient care.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Advancements in Diagnostic Instruments: The First Line of Clinical Accuracy",
-      "description": "A comprehensive look at the role of modern diagnostic tools in 2026, covering acoustic technology, neurological assessment, and digital integration.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-15",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/diagnostic-precision-2026"
-      },
-      "keywords": "diagnostic instruments, medical tools, Alira Pharmaceuticals",
-      "articleSection": "Diagnostic Equipment",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "Why is acoustic sensitivity important in stethoscopes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "High acoustic sensitivity allows healthcare providers to hear subtle heart, lung, and bowel sounds that might indicate early-stage medical conditions, leading to faster and more accurate diagnoses."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

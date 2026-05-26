@@ -1,11 +1,7 @@
 import React from 'react';
 import { MapPin, Mail, Phone, Printer, Instagram, ChevronRight, FileText } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import policiesPDF from '../../assets/EXPORT RETURN & REPLACEMENT TERMS.pdf';
-import catalogV3 from '../../assets/Alira Pharmaceuticals - B2B Catalog 3.0.pdf';
-import catalogV2 from '../../assets/Alira Pharmaceuticals — B2B Catalog 2.0.pdf';
-import catalogV1_1 from '../../assets/Alira Pharmaceuticals — B2B Catalog 1.1.pdf';
-import catalogBasic from '../../assets/Alira Pharmaceuticals.pdf';
+
 
 const Footer = () => {
 
@@ -96,39 +92,35 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#about" onClick={handleOpenAbout} className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                <Link to="/about/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
                   Company Profile
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#products" onClick={handleOpenProducts} className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                <Link to="/products/surgical-instruments/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <Link to="/contact" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                <Link to="/contact/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
                   Contact Us
                 </Link>
               </li>
 
               <li>
-                <Link to="/market-area" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                <Link to="/market-area/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
                   Market Area
                 </Link>
               </li>
               <li>
-                <a
-                  href="#faq"
-                  onClick={handleOpenFAQ}
-                  className="group flex items-center text-sm hover:text-teal-700 transition-colors"
-                >
+                <Link to="/blogs/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
-                  FAQs
-                </a>
+                  Blogs / FAQs
+                </Link>
               </li>
             </ul>
           </div>
@@ -154,10 +146,10 @@ const Footer = () => {
               ))}
               {/* See More Link */}
               <li>
-                <a href="#products" onClick={handleOpenProducts} className="group flex items-center text-sm font-semibold text-teal-600 hover:text-teal-800 transition-colors mt-2">
+                <Link to="/products/surgical-instruments/" className="group flex items-center text-sm font-semibold text-teal-600 hover:text-teal-800 transition-colors mt-2">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
                   See more...
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -170,15 +162,16 @@ const Footer = () => {
             </h3>
             <div className="flex flex-col gap-4">
                 {[
-                    { name: 'Alira Catalog', file: catalogBasic, downloadName: 'Alira-Pharmaceuticals-Catalog.pdf' },
-                    { name: 'B2B Catalog 1.1', file: catalogV1_1, downloadName: 'Alira-B2B-Catalog-1.1.pdf' },
-                    { name: 'B2B Catalog 2.0', file: catalogV2, downloadName: 'Alira-B2B-Catalog-2.0.pdf' },
-                    { name: 'B2B Catalog 3.0', file: catalogV3, downloadName: 'Alira-B2B-Catalog-3.0.pdf' },
+                    { name: 'Alira Catalog', file: '/alira-catalog.pdf', downloadName: 'Alira-Pharmaceuticals-Catalog.pdf' },
+                    { name: 'B2B Catalog 1.1', file: '/alira-b2b-catalog-1.1.pdf', downloadName: 'Alira-B2B-Catalog-1.1.pdf' },
+                    { name: 'B2B Catalog 2.0', file: '/alira-b2b-catalog-2.0.pdf', downloadName: 'Alira-B2B-Catalog-2.0.pdf' },
+                    { name: 'B2B Catalog 3.0', file: '/alira-b2b-catalog-3.0.pdf', downloadName: 'Alira-B2B-Catalog-3.0.pdf' },
                 ].map((catalog) => (
                     <a 
                         key={catalog.name}
                         href={catalog.file}
-                        download={catalog.downloadName}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group flex items-center text-sm text-gray-700 hover:text-teal-700 transition-all duration-300"
                     >
                         <FileText className="w-4 h-4 text-teal-700 mr-2 group-hover:scale-110 transition-transform" />
@@ -197,8 +190,9 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href={policiesPDF}
-                  download="EXPORT RETURN & REPLACEMENT TERMS.pdf"
+                  href="/export-return-and-replacement-terms.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 transform"
                 >
                   <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />

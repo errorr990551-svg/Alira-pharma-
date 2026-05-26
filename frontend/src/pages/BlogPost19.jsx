@@ -6,24 +6,7 @@ const BlogPost19 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Ophthalmic Micro-Surgical Instruments | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Explore the precision engineering behind ophthalmic tools. From micro-blades to titanium forceps, learn how Alira Pharmaceuticals supports eye surgery excellence.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Mastering Ophthalmic Precision: The Evolution of Micro-Surgical Tools",
-      "description": "A technical overview of the materials and engineering required for ophthalmic surgery, covering micro-blades, titanium tools, and sterilization standards.",
-      "author": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "publisher": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "datePublished": "2026-04-16",
-      "keywords": "ophthalmic instruments, microsurgery, medical manufacturing, Alira Pharmaceuticals"
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

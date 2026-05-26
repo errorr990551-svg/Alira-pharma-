@@ -8,56 +8,7 @@ const BlogPost5 = () => {
 
   // SEO Meta Tags & Schema
   useEffect(() => {
-    document.title = "Infection Control Trends 2026 | Alira Pharmaceuticals";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const desc = "Explore the latest in infection control. Learn why high-quality surgical gowns, gloves, and wound care products are essential for hospital safety in 2026.";
-    if (metaDescription) metaDescription.setAttribute('content', desc);
-
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    const keys = "wholesale medical disposables, surgical gown manufacturer, infection control supplies, bulk hospital PPE, Alira Pharmaceuticals products";
-    if (metaKeywords) metaKeywords.setAttribute('content', keys);
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Future of Infection Control: Why Quality Medical Disposables are Non-Negotiable in 2026",
-      "description": "An in-depth look at how material science, advanced wound care, and sustainable manufacturing are redefining medical disposables and patient safety in 2026.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-08",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/future-of-infection-control-2026"
-      },
-      "keywords": "wholesale medical disposables, surgical gown manufacturer, infection control supplies, bulk hospital PPE, Alira Pharmaceuticals products",
-      "articleSection": "Medical Supplies & Infection Control",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "What is the importance of AQL standards in medical gloves?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AQL (Acceptable Quality Level) measures the percentage of defects in a batch. A lower AQL indicates higher reliability and fewer pinhole defects, which is critical for barrier protection in clinical settings."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   const toggleFAQ = (id) => setExpandedFAQ(expandedFAQ === id ? null : id);

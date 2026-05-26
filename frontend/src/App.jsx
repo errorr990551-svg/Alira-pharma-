@@ -28,6 +28,7 @@ import BlogPost17 from './pages/BlogPost17.jsx'
 import BlogPost18 from './pages/BlogPost18.jsx'
 import BlogPost19 from './pages/BlogPost19.jsx'
 import BlogsPage from './pages/BlogsPage.jsx'
+import SEOHelper from './components/common/SEOHelper.jsx'
 
 import Category1 from './pages/products/Category1.jsx'
 import Category2 from './pages/products/Category2.jsx'
@@ -131,31 +132,32 @@ function App() {
         }}
       />
       <ScrollToTop />
+      <SEOHelper />
       <Navbar />
 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
         <Route path='/certification' element={<Certification />} />
-        <Route path='/blog/ent-neuro-surgical-tools' element={<BlogPost/>} />
-        <Route path='/blog/india-uae-cepa-zero-duty-medical-imports-dubai' element={<BlogPost2/>} />
-        <Route path='/blog/sourcing-medical-grade-stainless-steel-instruments' element={<BlogPost3/>} />
-        <Route path='/blog/benefits-of-medical-oem-partnerships-2026' element={<BlogPost4/>} />
-        <Route path='/blog/future-of-infection-control-2026' element={<BlogPost5/>} />
-        <Route path='/blog/medical-logistics-2026' element={<BlogPost6/>} />
-        <Route path='/blog/emergency-trauma-tools-2026' element={<BlogPost7/>} />
-        <Route path='/blog/surgical-instrument-sterilization-guide' element={<BlogPost8/>} />
-        <Route path='/blog/surgical-precision-2026' element={<BlogPost9/>} />
-        <Route path='/blog/surgical-robotics-2026' element={<BlogPost10/>} />
-        <Route path='/blog/sustainable-medical-supplies-2026' element={<BlogPost11/>} />
-        <Route path='/blog/diagnostic-precision-2026' element={<BlogPost12/>} />
-        <Route path='/blog/pediatric-instruments-2026' element={<BlogPost13/>} />
-        <Route path='/blog/medical-accessibility-2026' element={<BlogPost14/>} />
-        <Route path='/blog/remote-diagnostics-2026' element={<BlogPost15 />} />
-        <Route path='/blog/specialized-coatings-surgical-metallurgy' element={<BlogPost16 />} />
-        <Route path='/blog/medical-grade-disposables-icu' element={<BlogPost17 />} />
-        <Route path='/blog/surgical-instrument-suppliers-uae' element={<BlogPost18 />} />
-        <Route path='/blog/ophthalmic-micro-surgical-precision' element={<BlogPost19 />} />
+        <Route path='/blogs/ent-neuro-surgical-tools' element={<BlogPost/>} />
+        <Route path='/blogs/india-uae-cepa-zero-duty-medical-imports-dubai' element={<BlogPost2/>} />
+        <Route path='/blogs/sourcing-medical-grade-stainless-steel-instruments' element={<BlogPost3/>} />
+        <Route path='/blogs/benefits-of-medical-oem-partnerships-2026' element={<BlogPost4/>} />
+        <Route path='/blogs/future-of-infection-control-2026' element={<BlogPost5/>} />
+        <Route path='/blogs/medical-logistics-2026' element={<BlogPost6/>} />
+        <Route path='/blogs/emergency-trauma-tools-2026' element={<BlogPost7/>} />
+        <Route path='/blogs/surgical-instrument-sterilization-guide' element={<BlogPost8/>} />
+        <Route path='/blogs/surgical-precision-2026' element={<BlogPost9/>} />
+        <Route path='/blogs/surgical-robotics-2026' element={<BlogPost10/>} />
+        <Route path='/blogs/sustainable-medical-supplies-2026' element={<BlogPost11/>} />
+        <Route path='/blogs/diagnostic-precision-2026' element={<BlogPost12/>} />
+        <Route path='/blogs/pediatric-instruments-2026' element={<BlogPost13/>} />
+        <Route path='/blogs/medical-accessibility-2026' element={<BlogPost14/>} />
+        <Route path='/blogs/remote-diagnostics-2026' element={<BlogPost15 />} />
+        <Route path='/blogs/specialized-coatings-surgical-metallurgy' element={<BlogPost16 />} />
+        <Route path='/blogs/medical-grade-disposables-icu' element={<BlogPost17 />} />
+        <Route path='/blogs/surgical-instrument-suppliers-uae' element={<BlogPost18 />} />
+        <Route path='/blogs/ophthalmic-micro-surgical-precision' element={<BlogPost19 />} />
         <Route path='/blogs' element={<BlogsPage />} />
 
         <Route path='/contact' element={<ContactUs/>} />

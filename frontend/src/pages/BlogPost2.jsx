@@ -8,75 +8,7 @@ const BlogPost2 = () => {
 
   // SEO Meta Tags
   useEffect(() => {
-    // Update page title
-    document.title = "India-UAE CEPA: Zero-Duty Medical Imports Dubai | Indian Surgical Instruments Exporter";
-
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover how the India-UAE CEPA agreement enables zero-duty medical imports in Dubai. Learn how UAE distributors benefit from faster MOHAP registration, lower procurement costs, and reliable supply from Indian surgical instrument manufacturers.');
-    } else {
-      const newMeta = document.createElement('meta');
-      newMeta.name = 'description';
-      newMeta.content = 'Discover how the India-UAE CEPA agreement enables zero-duty medical imports in Dubai. Learn how UAE distributors benefit from faster MOHAP registration, lower procurement costs, and reliable supply from Indian surgical instrument manufacturers.';
-      document.head.appendChild(newMeta);
-    }
-
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'India-UAE CEPA, zero-duty medical imports Dubai, pharmaceutical exporter to UAE, Indian surgical instruments manufacturer, medical device registration MOHAP, UAE healthcare procurement, Jebel Ali re-export hub, medical device supplier India to UAE, CEPA medical trade India UAE, hospital equipment supplier Dubai');
-    } else {
-      const newMeta = document.createElement('meta');
-      newMeta.name = 'keywords';
-      newMeta.content = 'India-UAE CEPA, zero-duty medical imports Dubai, pharmaceutical exporter to UAE, Indian surgical instruments manufacturer, medical device registration MOHAP, UAE healthcare procurement, Jebel Ali re-export hub, medical device supplier India to UAE, CEPA medical trade India UAE, hospital equipment supplier Dubai';
-      document.head.appendChild(newMeta);
-    }
-
-    // Add JSON-LD Schema Markup
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Zero-Duty Revolution: Why UAE Healthcare is Turning to Indian Medical Excellence",
-      "description": "Learn how the India-UAE CEPA agreement enables zero-duty medical imports in Dubai and why UAE healthcare distributors are sourcing surgical instruments and pharmaceuticals from Indian manufacturers.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/india-uae-cepa-zero-duty-medical-imports-dubai"
-      },
-      "datePublished": "2026-03-15",
-      "dateModified": "2026-03-15",
-      "keywords": [
-        "India-UAE CEPA",
-        "zero-duty medical imports Dubai",
-        "pharmaceutical exporter to UAE",
-        "medical device registration MOHAP",
-        "Indian surgical instruments manufacturer",
-        "Jebel Ali re-export hub"
-      ],
-      "articleSection": "Medical Trade",
-      "inLanguage": "en"
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      if (script.parentNode) {
-        document.head.removeChild(script);
-      }
-    };
+    window.scrollTo(0, 0);
   }, []);
 
   const toggleFAQ = (id) => {

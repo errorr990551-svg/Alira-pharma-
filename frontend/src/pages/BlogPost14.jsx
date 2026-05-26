@@ -6,49 +6,7 @@ const BlogPost14 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Global Medical Accessibility & Health Equity 2026 | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Explore how standardized medical supplies and ethical procurement are bridging the healthcare gap. Learn about Alira Pharmaceuticals\' mission for global accessibility.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Ethics of Accessibility: Bridging the Medical Supply Gap in 2026",
-      "description": "An exploration of global healthcare equity, focusing on the role of standardized medical instrumentation and resilient supply chains in providing universal access to care.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-15",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/medical-accessibility-2026"
-      },
-      "keywords": "medical accessibility, health equity, surgical instruments, Alira Pharmaceuticals",
-      "articleSection": "Global Health & Ethics",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "How does equipment standardization improve healthcare?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standardization ensures that tools are compatible across different regions and facilities, making training easier, maintenance more predictable, and clinical outcomes more consistent globally."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

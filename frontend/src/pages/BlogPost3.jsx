@@ -8,74 +8,7 @@ const BlogPost3 = () => {
 
   // SEO Meta Tags
   useEffect(() => {
-    // Update page title
-    document.title = "Alira Pharmaceuticals | Global Surgical Instrument & Medical Supply Manufacturer";
-
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Leading global manufacturer of ISO-certified surgical instruments, PPE, and medical disposables. Competitive factory pricing and OEM support for hospitals and distributors worldwide.');
-    } else {
-      const newMeta = document.createElement('meta');
-      newMeta.name = 'description';
-      newMeta.content = 'Leading global manufacturer of ISO-certified surgical instruments, PPE, and medical disposables. Competitive factory pricing and OEM support for hospitals and distributors worldwide.';
-      document.head.appendChild(newMeta);
-    }
-
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'surgical instrument manufacturer, medical supply exporter, wholesale hospital disposables, medical grade stainless steel tools, OEM medical supplies');
-    } else {
-      const newMeta = document.createElement('meta');
-      newMeta.name = 'keywords';
-      newMeta.content = 'surgical instrument manufacturer, medical supply exporter, wholesale hospital disposables, medical grade stainless steel tools, OEM medical supplies';
-      document.head.appendChild(newMeta);
-    }
-
-    // Add JSON-LD Schema Markup
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": "Alira Pharmaceuticals",
-      "url": "https://alirapharmaceuticals.com/",
-      "logo": "https://alirapharmaceuticals.com/assets/logo.webp",
-      "description": "Global manufacturer and exporter of high-quality surgical instruments, hospital disposables, and PPE.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "A-116, URBTECH TRADE, CENTRE SECTOR-132, Baraula",
-        "addressLocality": "Gautam Buddha Nagar",
-        "addressRegion": "Uttar Pradesh",
-        "postalCode": "201304",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-7895850793",
-        "contactType": "sales",
-        "email": "info@alirapharmaceuticals.com",
-        "areaServed": "Worldwide",
-        "availableLanguage": "en"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Medical and Surgical Supplies",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Surgical Instruments" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medical Disposables" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "OEM & Private Labeling" } }
-        ]
-      }
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      if (script.parentNode) {
-        document.head.removeChild(script);
-      }
-    };
+    window.scrollTo(0, 0);
   }, []);
 
   const toggleFAQ = (id) => {

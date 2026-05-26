@@ -196,7 +196,7 @@ const BlogsPage = () => {
           {blogs.map((blog) => (
             <Link 
               key={blog.id} 
-              to={blog.link}
+              to={blog.link.replace('/blog/', '/blogs/') + '/'}
               className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full"
             >
               {/* Content */}

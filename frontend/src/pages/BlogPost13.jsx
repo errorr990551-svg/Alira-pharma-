@@ -6,49 +6,7 @@ const BlogPost13 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Specialized Pediatric Surgical Instruments | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Discover why specialized pediatric instruments are critical for patient safety. Learn about micro-precision, atraumatic design, and neonatal care tools for 2026.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Vital Importance of Quality in Specialized Pediatric Instruments",
-      "description": "An analysis of the unique engineering requirements for pediatric and neonatal surgical tools, focusing on micro-precision and patient safety in 2026.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-15",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/pediatric-instruments-2026"
-      },
-      "keywords": "pediatric surgical instruments, neonatal care, medical manufacturing, Alira Pharmaceuticals",
-      "articleSection": "Pediatric Surgery",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "Are pediatric instruments just smaller versions of adult tools?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. True pediatric instruments are specifically engineered for the delicacy of a child's anatomy, featuring lighter tension, micro-fine tips, and specialized finishes that standard tools do not possess."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

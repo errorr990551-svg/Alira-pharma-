@@ -1,13 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /api/private/
-Disallow: /user-dashboard/
-Disallow: /checkout/
-
-# Allow all CSS, JS, and fonts
-Allow: /*.js$
-Allow: /*.css$
-Allow: /assets/
 
 Sitemap: https://alirapharmaceuticals.com/sitemap.xml

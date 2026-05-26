@@ -6,49 +6,7 @@ const BlogPost10 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Surgical Robotics & Hybrid Instruments 2026 | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Explore how surgical robotics is changing the OR. Learn about the engineering behind hybrid instruments and their impact on patient recovery and surgical precision.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Future of Surgical Robotics: Enhancing Surgeon Precision with Hybrid Instrumentation",
-      "description": "An expert analysis of the evolution of surgical tools in the era of robotics, focusing on micro-articulation, material science, and patient outcomes in 2026.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-15",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/surgical-robotics-2026"
-      },
-      "keywords": "surgical robotics, hybrid instruments, robotic surgery, Alira Pharmaceuticals",
-      "articleSection": "Medical Technology",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "What are the benefits of wristed robotic instruments?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wristed robotic instruments provide 7 degrees of freedom, allowing surgeons to operate with greater range of motion and precision than the human hand, especially in tight anatomical spaces."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

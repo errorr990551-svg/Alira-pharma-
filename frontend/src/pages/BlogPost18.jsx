@@ -6,24 +6,7 @@ const BlogPost18 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Top Surgical Instrument Suppliers in UAE: What Hospitals & Clinics Should Look For (2025)";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Looking for reliable surgical instrument suppliers in UAE? Discover the key criteria hospitals, clinics, and procurement teams must evaluate when choosing a B2B medical supplier in the GCC.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Top Surgical Instrument Suppliers in UAE: What Hospitals & Clinics Should Look For (2025)",
-      "description": "Looking for reliable surgical instrument suppliers in UAE? Discover the key criteria hospitals, clinics, and procurement teams must evaluate when choosing a B2B medical supplier in the GCC.",
-      "author": { "@type": "Organization", "name": "Alira Pharmaceuticals Editorial Team" },
-      "publisher": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "datePublished": "2025-06-18", // Assuming current date or relevant date
-      "keywords": "surgical instrument suppliers UAE, surgical instruments UAE, medical supply companies UAE, hospital procurement UAE, B2B medical supplier GCC"
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   // Placeholder component for images

@@ -6,27 +6,7 @@ const BlogPost17 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "High-Acuity Medical Disposables & ICU Standards | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Explore the critical role of IV therapy, respiratory care, and advanced wound care disposables in ICU settings. Learn about Alira\'s 2026 safety standards.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Critical Standards for Medical-Grade Disposables in High-Acuity Units",
-      "description": "A technical guide to the safety and performance requirements of IV sets, respiratory disposables, and wound care in intensive care environments.",
-      "author": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "datePublished": "2026-04-16",
-      "keywords": "ICU medical supplies, medical disposables, IV therapy, Alira Pharmaceuticals"
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

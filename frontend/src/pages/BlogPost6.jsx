@@ -7,43 +7,7 @@ const BlogPost6 = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
 
   useEffect(() => {
-    document.title = "Global Medical Supply Chain Logistics | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Learn how Alira Pharmaceuticals ensures reliable delivery of medical supplies to emerging markets through advanced logistics, compliance, and sterile packaging.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Logistics of Global Medical Supply: Ensuring Reliability in Emerging Markets",
-      "description": "An analysis of medical supply chain challenges in 2026, focusing on regulatory compliance, sterile packaging integrity, and real-time tracking logistics.",
-      "author": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.webp" }
-      },
-      "datePublished": "2026-04-08",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/medical-logistics-2026"
-      },
-      "keywords": "medical supply chain, hospital logistics, medical export, Alira Pharmaceuticals",
-      "articleSection": "Logistics & Supply Chain",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "How does Alira Pharmaceuticals ensure sterile integrity during shipping?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We use reinforced medical-grade packaging and climate-controlled shipping environments to ensure the sterile barrier of every instrument remains intact from the factory to the hospital."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   const toggleFAQ = (id) => setExpandedFAQ(expandedFAQ === id ? null : id);

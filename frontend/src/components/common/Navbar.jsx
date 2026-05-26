@@ -534,13 +534,13 @@ const Navbar = () => {
       name: "Company Profile", 
       isDropdown: true,
       subItems: [
-        { name: "About Us", href: "/about" },
-        { name: "Certification", href: "/certification" }
+        { name: "About Us", href: "/about/" },
+        { name: "Certification", href: "/certification/" }
       ]
     },
-    { name: "Blog", href: "/blogs" },
+    { name: "Blog", href: "/blogs/" },
     { name: "Products", href: "#products", isMegaMenu: true }, 
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact/" },
   ];
 
   return (
@@ -605,7 +605,7 @@ const Navbar = () => {
                         <div className="w-2/3 p-10 overflow-y-auto bg-white">
                           <h3 className="text-2xl font-bold text-gray-900 mb-8 pb-3 border-b border-gray-100">
                             <Link 
-                              to={`/products/${activeCategory}`}
+                              to={`/products/${activeCategory}/`}
                               onClick={() => setIsProductsHovered(false)}
                               className="hover:text-teal-600 transition-colors cursor-pointer block"
                             >
@@ -616,7 +616,7 @@ const Navbar = () => {
                             {productCategories.find(c => c.id === activeCategory)?.products.map((product, idx) => (
                               <Link 
                                 key={idx} 
-                                to={`/products/${activeCategory}/${createSlug(product)}`}
+                                to={`/products/${activeCategory}/${createSlug(product)}/`}
                                 className="text-base text-gray-600 hover:text-teal-600 hover:translate-x-1 transition-all duration-200 flex items-start gap-3 group/item"
                                 onClick={() => setIsProductsHovered(false)}
                               >
@@ -734,7 +734,7 @@ const Navbar = () => {
                            {cat.products.map((product, idx) => (
                              <Link 
                                key={idx}
-                               to={`/products/${cat.id}/${createSlug(product)}`}
+                               to={`/products/${cat.id}/${createSlug(product)}/`}
                                className="block py-2 pl-12 pr-4 text-sm text-gray-500 hover:text-teal-600 hover:bg-teal-50"
                                onClick={() => setIsOpen(false)} // Close menu on click
                              >

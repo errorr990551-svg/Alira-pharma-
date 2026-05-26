@@ -6,49 +6,7 @@ const BlogPost9 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Advanced Orthopedic & Cardiovascular Instruments | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Discover the latest innovations in surgical precision. Explore Alira Pharmaceuticals\' range of high-grade orthopedic tools and cardiovascular instruments for 2026.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Precision in the Operating Room: Evolution of Orthopedic and Cardiovascular Instruments",
-      "description": "An expert overview of advancements in surgical metallurgy, ergonomics, and modular systems for orthopedic and cardiovascular surgery in 2026.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-08",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/surgical-precision-2026"
-      },
-      "keywords": "orthopedic surgical instruments, cardiovascular forceps, surgical tool manufacturer, Alira Pharmaceuticals",
-      "articleSection": "Surgical Instruments",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "Why are Tungsten Carbide inserts used in surgical instruments?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tungsten Carbide (TC) is significantly harder than stainless steel. Instruments with TC inserts stay sharp longer and provide a superior grip, making them the preferred choice for needle holders and scissors."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

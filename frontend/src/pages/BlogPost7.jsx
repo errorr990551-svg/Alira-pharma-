@@ -6,28 +6,7 @@ const BlogPost7 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Emergency Trauma Tools & Wound Care | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Discover the essential tools for emergency response. From high-grade trauma shears to advanced hemostatic wound care, we explore the gear saving lives in 2026.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Emergency Care Excellence: Essential Tools for Trauma and First Response",
-      "description": "A guide to the high-performance instruments and disposables required for critical emergency and trauma care in 2026.",
-      "author": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.webp" }
-      },
-      "datePublished": "2026-04-08",
-      "keywords": "emergency medical supplies, trauma shears, wound care, Alira Pharmaceuticals"
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

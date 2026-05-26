@@ -6,49 +6,7 @@ const BlogPost15 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Telehealth & Remote Diagnostic Instruments 2026 | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Discover how digital stethoscopes, otoscopes, and remote monitoring tools are revolutionizing global healthcare and improving patient access in 2026.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Future of Remote Diagnostics: Empowering Global Health through Tele-Medical Instruments",
-      "description": "An in-depth look at how digital integration and remote diagnostic tools are bridging the gap in global healthcare access and chronic disease management.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-16",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/remote-diagnostics-2026"
-      },
-      "keywords": "telehealth, remote diagnostics, medical instruments, Alira Pharmaceuticals",
-      "articleSection": "Medical Technology",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "What are the benefits of digital stethoscopes in telehealth?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Digital stethoscopes allow for AI-assisted noise filtering and the ability to record/transmit heart and lung sounds to remote specialists, facilitating accurate diagnoses regardless of geography."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

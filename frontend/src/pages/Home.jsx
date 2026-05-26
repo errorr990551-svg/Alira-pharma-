@@ -204,7 +204,7 @@ const Home = () => {
 
     // Update Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
-    const descriptionContent = "Alira Pharmaceuticals is a leading manufacturer and exporter of precision surgical instruments, PPE, wound care, and medical disposables. Request a bulk quote today!";
+    const descriptionContent = "Alira Pharmaceuticals — manufacturer & exporter of surgical instruments, PPE, wound care, and medical disposables. CE/ISO certified. Request a bulk quote.";
     
     if (metaDescription) {
       metaDescription.setAttribute('content', descriptionContent);
@@ -228,16 +228,7 @@ const Home = () => {
       document.head.appendChild(metaKeywords);
     }
 
-    // Update Canonical URL
-    let linkCanonical = document.querySelector('link[rel="canonical"]');
-    const canonicalUrl = `https://alirapharmaceuticals.com${location.pathname.toLowerCase() === '/' ? '' : location.pathname.toLowerCase()}/`;
     
-    if (!linkCanonical) {
-      linkCanonical = document.createElement('link');
-      linkCanonical.rel = 'canonical';
-      document.head.appendChild(linkCanonical);
-    }
-    linkCanonical.setAttribute('href', canonicalUrl);
 
     if (location.state?.scrollTo === "faq") {
       const section = document.getElementById("faq");
@@ -266,6 +257,8 @@ const Home = () => {
             width="2070"
             height="1164"
             decoding="async"
+            loading="eager"
+            fetchpriority="high"
           />
           {/* Overlays */}
           <div className="absolute inset-0 bg-teal-900/80 mix-blend-multiply" />
@@ -294,8 +287,9 @@ const Home = () => {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a 
-                  href={catalogPDF}
-                  download="Alira-Pharmaceuticals-Catalog.pdf"
+                  href="/alira-b2b-catalog-3.0.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors inline-block text-center"
                 >
                   Get Product Catalog

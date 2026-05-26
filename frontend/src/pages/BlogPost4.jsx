@@ -8,64 +8,7 @@ const BlogPost4 = () => {
 
   // SEO Meta Tags
   useEffect(() => {
-    // Update page title
-    document.title = "5 Benefits of Medical OEM Partnerships 2026 | Alira Pharmaceuticals";
-
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover why medical distributors are choosing OEM partnerships in 2026. Learn about cost efficiency, ISO compliance, and custom private labeling for surgical instruments.');
-    } else {
-      const newMeta = document.createElement('meta');
-      newMeta.name = 'description';
-      newMeta.content = 'Discover why medical distributors are choosing OEM partnerships in 2026. Learn about cost efficiency, ISO compliance, and custom private labeling for surgical instruments.';
-      document.head.appendChild(newMeta);
-    }
-
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'medical OEM manufacturer, private label surgical instruments, wholesale medical supplies export, hospital procurement trends 2026');
-    } else {
-      const newMeta = document.createElement('meta');
-      newMeta.name = 'keywords';
-      newMeta.content = 'medical OEM manufacturer, private label surgical instruments, wholesale medical supplies export, hospital procurement trends 2026';
-      document.head.appendChild(newMeta);
-    }
-
-    // Add JSON-LD Schema Markup
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "5 Strategic Benefits of OEM Partnerships for Medical Distributors in 2026",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/assets/logo.webp"
-        }
-      },
-      "datePublished": "2026-03-29",
-      "description": "An in-depth look at how OEM partnerships drive value for medical distributors through customization, compliance, and cost efficiency.",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/benefits-of-medical-oem-partnerships-2026"
-      }
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      if (script.parentNode) {
-        document.head.removeChild(script);
-      }
-    };
+    window.scrollTo(0, 0);
   }, []);
 
   const toggleFAQ = (id) => {

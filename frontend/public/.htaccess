@@ -65,6 +65,12 @@ Redirect 301 /Baljurashi /baljurashi
 Redirect 301 /Al-Baha /al-baha
 Redirect 301 /Al-Mithnab /al-mithnab
 
+# Enforce Trailing Slash (except for files)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !(.*)\.(.*)$
+RewriteRule ^(.*)$ https://alirapharmaceuticals.com/$1/ [L,R=301]
+
 # SPA Routing
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

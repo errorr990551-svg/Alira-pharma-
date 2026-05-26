@@ -6,38 +6,7 @@ const BlogPost16 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Surgical Instrument Coatings & Metallurgy | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Learn how Tungsten Carbide, DLC, and Anti-Glare coatings enhance surgical precision and tool lifespan in 2026. Expert guide to medical surface engineering.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Science of Specialized Coatings in Surgical Metallurgy",
-      "description": "An expert analysis of how advanced coatings like Tungsten Carbide and DLC improve the performance, durability, and safety of surgical instruments.",
-      "author": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.webp" }
-      },
-      "datePublished": "2026-04-16",
-      "keywords": "surgical instrument coatings, tungsten carbide, DLC coating, Alira Pharmaceuticals",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "What do gold handles on surgical instruments mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Gold handles signify that the instrument is equipped with Tungsten Carbide (TC) inserts, which provide superior hardness, grip, and edge retention compared to standard steel."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

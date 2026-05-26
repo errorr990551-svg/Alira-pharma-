@@ -6,49 +6,7 @@ const BlogPost11 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Sustainable Medical Supplies & Green Hospitals 2026 | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Explore the shift toward eco-friendly healthcare. Learn about sustainable procurement, biodegradable PPE, and the ROI of green medical supplies.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Global Shift Toward Green Hospitals: Sustainable Procurement in Medical Supplies",
-      "description": "An in-depth guide on how the medical supply chain is evolving to support environmental sustainability through circular economy models and eco-friendly disposables.",
-      "author": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://alirapharmaceuticals.com/logo.webp"
-        }
-      },
-      "datePublished": "2026-04-15",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://alirapharmaceuticals.com/blog/sustainable-medical-supplies-2026"
-      },
-      "keywords": "sustainable medical supplies, green hospital, eco-friendly medical, Alira Pharmaceuticals",
-      "articleSection": "Sustainability & Logistics",
-      "hasPart": [
-        {
-          "@type": "Question",
-          "name": "Can surgical instruments be recycled?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, high-grade surgical stainless steel can be recycled. Many manufacturers offer recycling programs where retired instruments are repurposed to reduce environmental impact."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

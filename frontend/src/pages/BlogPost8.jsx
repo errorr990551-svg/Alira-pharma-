@@ -6,28 +6,7 @@ const BlogPost8 = () => {
   const { openQuotePopup } = useQuotePopup();
   
   useEffect(() => {
-    document.title = "Surgical Instrument Maintenance & Sterilization Guide | Alira Pharmaceuticals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', 'Learn how to extend the life of your medical-grade stainless steel tools. Expert tips on autoclave protocols, cleaning, and preventing corrosion.');
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "The Art of the Autoclave: Maximizing the Lifespan of Your Surgical Assets",
-      "description": "Expert advice on the cleaning, lubrication, and sterilization of surgical instruments to ensure clinical safety and long-term durability.",
-      "author": { "@type": "Organization", "name": "Alira Pharmaceuticals" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Alira Pharmaceuticals",
-        "logo": { "@type": "ImageObject", "url": "https://alirapharmaceuticals.com/logo.webp" }
-      },
-      "datePublished": "2026-04-08",
-      "keywords": "surgical instrument care, autoclave protocols, instrument maintenance"
-    });
-    document.head.appendChild(script);
-    return () => { script.remove(); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (
