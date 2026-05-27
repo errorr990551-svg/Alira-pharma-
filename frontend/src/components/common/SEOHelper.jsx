@@ -10,7 +10,7 @@ const SEOHelper = () => {
     const rawPath = location.pathname.toLowerCase();
     
     // 1. Resolve Trailing Slash and Double Slash Bug (Issue 1, Issue 7)
-    const cleanPath = rawPath.replace(/\/+$/, '') + '/';
+    const cleanPath = rawPath.replace(/\/+/g, '/').replace(/\/+$/, '') + '/';
     const canonicalPath = cleanPath === '//' ? '/' : cleanPath;
     const canonicalUrl = `${origin}${canonicalPath}`;
 

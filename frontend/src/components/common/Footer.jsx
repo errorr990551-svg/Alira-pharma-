@@ -132,10 +132,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               {[
-                { name: 'Surgical Instruments', path: '/products/surgical-instruments' },
-                { name: 'Retractors & Elevators', path: '/products/retractors-elevators' },
-                { name: 'Bone & Neuro Instruments', path: '/products/bone-neuro' },
-                { name: 'ENT & Oral Instruments', path: '/products/ent-oral' }
+                { name: 'Surgical Instruments', path: '/products/surgical-instruments/' },
+                { name: 'Retractors & Elevators', path: '/products/retractors-elevators/' },
+                { name: 'Bone & Neuro Instruments', path: '/products/bone-neuro/' },
+                { name: 'ENT & Oral Instruments', path: '/products/ent-oral/' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link to={item.path} className="group flex items-center text-sm hover:text-teal-700 transition-colors">

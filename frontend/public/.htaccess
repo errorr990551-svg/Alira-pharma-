@@ -9,6 +9,20 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.alirapharmaceuticals\.com [NC]
 RewriteRule ^(.*)$ https://alirapharmaceuticals.com/$1 [L,R=301]
 
+# Clean up duplicate slashes (e.g. // -> /)
+RewriteCond %{THE_REQUEST} \s[^?]*//
+RewriteRule ^(.*)$ https://alirapharmaceuticals.com/$1 [R=301,L]
+
+# Redirect old WordPress search queries to home (discard query string)
+RewriteCond %{QUERY_STRING} ^s= [NC]
+RewriteRule ^.*$ https://alirapharmaceuticals.com/ [R=301,L,QSD]
+
+# Redirect old WordPress /blog/ paths to /blogs/
+RewriteRule ^blog/(.*)$ https://alirapharmaceuticals.com/blogs/$1 [R=301,L]
+
+# Return 410 Gone for other old WordPress paths to clean up Google index
+RewriteRule ^(wp-admin|wp-content|wp-includes|comments/feed)(/.*)?$ - [G,L]
+
 # Redirect Uppercase City URLs to Lowercase (SEO Standardization)
 Redirect 301 /Riyadh /riyadh
 Redirect 301 /Jeddah /jeddah

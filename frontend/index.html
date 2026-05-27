@@ -10,6 +10,25 @@
     <link rel="preconnect" href="https://www.google-analytics.com" />
 
     <title>Alira Pharmaceuticals | Medical Supplies & Surgical Instruments – UAE & GCC</title>
+
+    <!-- Synchronous Canonical Link Generation to prevent Google Search Console indexing issues -->
+    <script>
+      (function() {
+        var origin = "https://alirapharmaceuticals.com";
+        var rawPath = window.location.pathname.toLowerCase();
+        var cleanPath = rawPath.replace(/\/+/g, '/').replace(/\/+$/, '') + '/';
+        var canonicalPath = cleanPath === '//' ? '/' : cleanPath;
+        var canonicalUrl = origin + canonicalPath;
+        
+        var link = document.querySelector('link[rel="canonical"]');
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = 'canonical';
+          document.head.appendChild(link);
+        }
+        link.setAttribute('href', canonicalUrl);
+      })();
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y02NWB2TEM"></script>
     <script>
