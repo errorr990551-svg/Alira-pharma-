@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
 import scalpel from '../../assets/Images/scalpel.webp';
@@ -100,15 +100,20 @@ const Category5 = () => {
                 {item.description}
               </p>
 
-              <button
-                onClick={openQuotePopup}
-                className="cursor-pointer inline-flex items-center gap-2 bg-teal-600 text-white font-semibold px-5 py-2.5 rounded-lg shadow-md hover:bg-teal-700 hover:shadow-lg transition-all group/btn"
-              >
-                Request Quote
-                <span className="transform group-hover/btn:translate-x-1 transition-transform">
-                  →
-                </span>
-              </button>
+              <div className="flex flex-wrap gap-4 mt-6">
+                <Link
+                  to={`/products/surgical-blades/${createSlug(item.name)}/`}
+                  className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-2.5 rounded-lg shadow-md transition-all text-sm"
+                >
+                  View Details
+                </Link>
+                <button
+                  onClick={openQuotePopup}
+                  className="cursor-pointer inline-flex items-center gap-2 border border-teal-600 text-teal-600 hover:bg-teal-50 font-semibold px-5 py-2.5 rounded-lg transition-all text-sm"
+                >
+                  Request Quote
+                </button>
+              </div>
             </div>
 
           </div>

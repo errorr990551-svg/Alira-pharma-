@@ -1,4 +1,8 @@
 User-agent: *
-Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
 
 Sitemap: https://alirapharmaceuticals.com/sitemap.xml

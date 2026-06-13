@@ -101,6 +101,9 @@ import BaljurashiPage from './pages/BaljurashiPage.jsx'
 import AlBahaPage from './pages/AlBahaPage.jsx'
 import AlMithnabPage from './pages/AlMithnabPage.jsx'
 import Certification from './pages/Certification.jsx'
+import ProductDetailPage from './pages/products/ProductDetailPage.jsx'
+import NotFound from './pages/NotFound.jsx'
+import WhatsAppButton from './components/common/WhatsAppButton.jsx'
 
 function App() {
   return (
@@ -133,6 +136,7 @@ function App() {
       />
       <ScrollToTop />
       <SEOHelper />
+      <WhatsAppButton />
       <Navbar />
 
       <Routes>
@@ -219,41 +223,24 @@ function App() {
 
 
 
-        <Route path="/products/surgical-instruments/:productId" element={<Category1 />} />
+        <Route path="/products/:categorySlug/:productSlug/" element={<ProductDetailPage />} />
+        <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage />} />
+
         <Route path="/products/surgical-instruments" element={<Category1 />} />
-
-        <Route path="/products/retractors-elevators/:productId" element={<Category2 />} />
         <Route path="/products/retractors-elevators" element={<Category2 />} />
-
-        <Route path="/products/bone-neuro/:productId" element={<Category3 />} />
         <Route path="/products/bone-neuro" element={<Category3 />} />
-
-        <Route path="/products/ent-oral/:productId" element={<Category4 />} />
         <Route path="/products/ent-oral" element={<Category4 />} />
-
-        <Route path="/products/surgical-blades/:productId" element={<Category5 />} />
         <Route path="/products/surgical-blades" element={<Category5 />} />
-
-        <Route path="/products/trays-utility/:productId" element={<Category6 />} />
         <Route path="/products/trays-utility" element={<Category6 />} />
-
-        <Route path="/products/gloves/:productId" element={<Category7 />} />
         <Route path="/products/gloves" element={<Category7 />} />
-        
-        <Route path="/products/ppe/:productId" element={<Category8 />} />
         <Route path="/products/ppe" element={<Category8 />} />
-
-        <Route path="/products/drapes-gowns/:productId" element={<Category9 />} />
         <Route path="/products/drapes-gowns" element={<Category9 />} />
-
-        <Route path="/products/wound-care/:productId" element={<Category10 />} />
         <Route path="/products/wound-care" element={<Category10 />} />
-
-        <Route path="/products/disposables-iv/:productId" element={<Category11 />} />
         <Route path="/products/disposables-iv" element={<Category11 />} />
-        
-        <Route path="/products/medical-device/:productId" element={<Category12 />} />
         <Route path="/products/medical-device" element={<Category12 />} />
+
+        {/* 404 Routing */}
+        <Route path="*" element={<NotFound />} />
         
       </Routes>
       <Footer />

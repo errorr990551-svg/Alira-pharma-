@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { seoConfig } from '../../services/seoConfig';
+import { productsCatalog } from '../../data/productsCatalog';
 
 const SEOHelper = () => {
   const location = useLocation();
@@ -84,16 +85,35 @@ const SEOHelper = () => {
       }
     }
 
-    // Check if category page
+    // Check if category or product page
     let isCategory = false;
+    let isProduct = false;
     let categoryMeta = null;
     let categorySlug = "";
+    let productSlug = "";
+    let productMeta = null;
+
     if (rawPath.startsWith('/products/')) {
       const segments = rawPath.split('/').filter(Boolean);
       categorySlug = segments[1]; // e.g. surgical-instruments
-      if (seoConfig.categories[categorySlug]) {
-        categoryMeta = seoConfig.categories[categorySlug];
-        isCategory = true;
+      productSlug = segments[2];  // e.g. mayo-scissors-straight-curved
+      
+      if (categorySlug) {
+        if (productSlug && productsCatalog[categorySlug]) {
+          const product = productsCatalog[categorySlug].products.find(p => p.slug === productSlug);
+          if (product) {
+            isProduct = true;
+            productMeta = {
+              title: `${product.name} — ${product.specsTable.Material.split('-')[0].trim()} | ${product.specsTable.Compliance.split(',')[0]} | Supplier Saudi Arabia & UAE | Alira`,
+              description: `${product.name} available in bulk. ${product.specsTable.Material.split('-')[0].trim()}, ${product.specsTable.Certifications}. Serving hospitals & clinics in Saudi Arabia, UAE, GCC. Request RFQ today. | Alira Pharmaceuticals`
+            };
+          }
+        }
+        
+        if (!isProduct && seoConfig.categories[categorySlug]) {
+          categoryMeta = seoConfig.categories[categorySlug];
+          isCategory = true;
+        }
       }
     }
 
@@ -114,6 +134,9 @@ const SEOHelper = () => {
     } else if (isBlogPost && blogPostMeta) {
       activeTitle = blogPostMeta.title;
       activeDescription = blogPostMeta.description;
+    } else if (isProduct && productMeta) {
+      activeTitle = productMeta.title;
+      activeDescription = productMeta.description;
     } else if (isCategory && categoryMeta) {
       // Dynamic title check might be performed by child component if productId is present
       // We will allow page configuration overrides but fall back to category default

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 const PopUp = ({ isOpen, onClose, autoShow = true }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,7 +71,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
         publicKey: publicKey,
       });
 
-      alert("Message sent successfully! Our experts will contact you soon.");
+      toast.success("Message sent successfully! Our experts will contact you soon.");
 
       // Reset form after success
       setFormData({
@@ -84,7 +85,7 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
       handleClose();
     } catch (error) {
       console.error("EmailJS Error:", error);
-      alert(`Failed to send message: ${error.text || "Please check your EmailJS settings."}`);
+      toast.error(`Failed to send message: ${error.text || "Please check your EmailJS settings."}`);
     } finally {
       setLoading(false);
     }

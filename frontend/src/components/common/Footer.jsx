@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Mail, Phone, Printer, Instagram, ChevronRight, FileText } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
 const Footer = () => {
@@ -73,6 +74,14 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-teal-700 shrink-0" />
                 <a href="tel:+91-7895850793" className="text-sm hover:text-teal-700 transition-colors">
                   Phone: +91 7895850793
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-green-600 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.864-9.843.002-2.63-1.023-5.101-2.886-6.968C16.59 1.93 14.113.905 11.48.905c-5.44 0-9.866 4.415-9.87 9.845-.001 1.716.45 3.39 1.303 4.872L1.896 21.07l5.75-1.506zM18.01 14.88c-.324-.162-1.92-.949-2.213-1.055-.294-.106-.508-.16-.722.162-.214.324-.83.106-1.017-.107-.187-.213-.746-.275-.828-.328-.08-.053-.162-.107-.267-.213-.105-.107-.374-.374-.535-.587-.16-.213-.374-.16-.481-.053-.107.106-.213.267-.32.373-.107.107-.214.16-.427.054-.213-.107-.9-.331-1.718-1.06-.63-.564-1.055-1.261-1.178-1.473-.123-.213-.013-.328.093-.434.096-.096.213-.267.32-.4.107-.133.143-.227.214-.373.07-.147.035-.275-.018-.382-.053-.107-.481-1.16-.659-1.59-.173-.427-.36-.37-.508-.37-.131-.007-.282-.008-.434-.008-.152 0-.399.057-.609.287-.21.23-.8.782-.8 1.908 0 1.127.818 2.215.932 2.37.114.156 1.611 2.46 3.902 3.45.545.235.97.375 1.302.48.548.174 1.047.15 1.442.09.44-.066 1.92-.785 2.187-1.542.267-.757.267-1.405.187-1.54-.08-.135-.294-.216-.618-.378z"/>
+                </svg>
+                <a href="https://wa.me/917895850793" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition-colors font-semibold">
+                  WhatsApp: +91 7895850793
                 </a>
               </li>
               
@@ -199,6 +208,35 @@ const Footer = () => {
                   <span>Export & Return Terms</span>
                 </a>
               </li>
+              <li>
+                <button 
+                  onClick={() => toast("Privacy Policy: Alira Pharmaceuticals is committed to protecting the privacy of healthcare buyers and facility data. All medical RFQ submissions, contact details, and hospital procurement histories are encrypted and held in strict confidentiality. We do not sell or share buyer data with unverified third parties.", { icon: '🔒', duration: 8000 })}
+                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 text-left cursor-pointer"
+                >
+                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
+                  <span>Privacy Policy</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => toast("Terms & Conditions: All products supplied by Alira Pharmaceuticals are for professional clinical use only. Wholesale order volumes (MOQ), export duties under India-UAE CEPA, custom labeling, and payment methods are negotiated directly via proforma invoice. Returns are governed by our return policy guidelines.", { icon: '📄', duration: 8000 })}
+                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 text-left cursor-pointer"
+                >
+                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
+                  <span>Terms & Conditions</span>
+                </button>
+              </li>
+              <li>
+                <a 
+                  href="/sitemap.xml" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300"
+                >
+                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
+                  <span>Sitemap XML</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -230,6 +268,77 @@ const Footer = () => {
             </div>
           </div>
 
+        </div>
+
+        {/* GCC Flags Strip & Certifications Badges */}
+        <div className="mt-12 pt-8 border-t border-teal-200/50 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Countries Served */}
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-gray-900">
+              Countries Served (GCC & Middle East)
+            </h4>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/market-area" className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer" title="Saudi Arabia">
+                <span>🇸🇦</span> <span>Saudi Arabia (KSA)</span>
+              </Link>
+              <button 
+                onClick={() => toast.success("Zero-Duty Import: Under India-UAE CEPA, medical devices and surgical instruments from our facilities qualify for zero import duty in Dubai/Abu Dhabi.", { icon: "🇦🇪", duration: 6000 })}
+                className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer text-left" 
+                title="United Arab Emirates"
+              >
+                <span>🇦🇪</span> <span>United Arab Emirates (UAE)</span>
+              </button>
+              <button 
+                onClick={() => toast("Qatar Distribution: We supply government hospitals, primary health centers (PHCC), and private clinics in Doha. SFDA/CE compliance documentation is available upon request.", { icon: "🇶🇦", duration: 6000 })}
+                className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer text-left" 
+                title="Qatar"
+              >
+                <span>🇶🇦</span> <span>Qatar</span>
+              </button>
+              <button 
+                onClick={() => toast("Oman Distribution: Direct wholesale shipment to Muscat, Salalah, and Sohar with full MOH compliance and CE certificate clearance.", { icon: "🇴🇲", duration: 6000 })}
+                className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer text-left" 
+                title="Oman"
+              >
+                <span>🇴🇲</span> <span>Oman</span>
+              </button>
+              <button 
+                onClick={() => toast("Kuwait Distribution: Trusted supplier to public and private clinical facilities under MOH guidelines. MOQ and customized shipping terms apply.", { icon: "🇰🇼", duration: 6000 })}
+                className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer text-left" 
+                title="Kuwait"
+              >
+                <span>🇰🇼</span> <span>Kuwait</span>
+              </button>
+              <button 
+                onClick={() => toast("Bahrain Distribution: Shipping high-grade surgical and clinical consumables directly to Manama. Compliance with local NHRA standards.", { icon: "🇧🇭", duration: 6000 })}
+                className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer text-left" 
+                title="Bahrain"
+              >
+                <span>🇧🇭</span> <span>Bahrain</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Certifications and Compliance */}
+          <div className="space-y-3 lg:text-right">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-gray-900">
+              Regulatory Compliance & Certifications
+            </h4>
+            <div className="flex flex-wrap gap-2 lg:justify-end">
+              <Link to="/certification" className="bg-teal-900 hover:bg-teal-800 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-md border border-teal-800 uppercase tracking-wider shadow-sm transition-colors cursor-pointer text-center">
+                ISO 13485:2016
+              </Link>
+              <Link to="/certification" className="bg-teal-900 hover:bg-teal-800 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-md border border-teal-800 uppercase tracking-wider shadow-sm transition-colors cursor-pointer text-center">
+                CE Mark Approved
+              </Link>
+              <Link to="/certification" className="bg-teal-900 hover:bg-teal-800 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-md border border-teal-800 uppercase tracking-wider shadow-sm transition-colors cursor-pointer text-center">
+                SFDA Compliant
+              </Link>
+              <Link to="/certification" className="bg-teal-900 hover:bg-teal-800 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-md border border-teal-800 uppercase tracking-wider shadow-sm transition-colors cursor-pointer text-center">
+                UAE MOH Certified
+              </Link>
+            </div>
+          </div>
         </div>
 
       </div>

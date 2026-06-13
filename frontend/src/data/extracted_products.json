@@ -1,0 +1,356 @@
+{
+  "category1": {
+    "fileName": "Category1.jsx",
+    "title": "Surgical Instruments",
+    "description": "Surgical instruments are essential tools used by medical professionals to perform precise cutting, grasping, clamping, and suturing during surgical procedures. Manufactured from high-quality medical-grade stainless steel, these instruments are designed for durability, corrosion resistance, and reliable performance across general, minor, and specialized surgeries.",
+    "products": [
+      {
+        "name": "Mayo Scissors (Straight & Curved)",
+        "description": "Mayo scissors are heavy-duty surgical scissors used for cutting dense tissues such as muscle and fascia. Available in straight and curved variants, they provide excellent control, strength, and precision during surgical procedures.",
+        "imageVar": "mayoScissors",
+        "imagePath": "../../assets/Images/mayoScissor.webp"
+      },
+      {
+        "name": "Metzenbaum Scissors",
+        "description": "Metzenbaum scissors are lightweight instruments designed for cutting delicate soft tissues. Their long handles and short blades allow precise dissection while minimizing tissue trauma.",
+        "imageVar": "metzenbaum",
+        "imagePath": "../../assets/Images/metzenbaum.webp"
+      },
+      {
+        "name": "Operating Scissors (Sharp / Blunt)",
+        "description": "Operating scissors are versatile cutting instruments used for both sharp and blunt dissection. They are commonly used in general surgeries for cutting tissues, sutures, and dressings.",
+        "imageVar": "operatingScissors",
+        "imagePath": "../../assets/Images/operatingscissors.webp"
+      },
+      {
+        "name": "Surgical Knife Handles (No. 3 & 4)",
+        "description": "Surgical knife handles are used to securely hold disposable scalpel blades during surgical incisions. Handle No. 3 and No. 4 are compatible with different blade sizes for precise cutting control.",
+        "imageVar": "surgicalknifes",
+        "imagePath": "../../assets/Images/surgicalknifes.webp"
+      },
+      {
+        "name": "Tissue Forceps (Toothed / Non-Toothed)",
+        "description": "Tissue forceps are used to grasp and hold tissues during surgical procedures. Toothed forceps provide a firm grip on tough tissues, while non-toothed forceps are suitable for delicate tissue handling.",
+        "imageVar": "forceps",
+        "imagePath": "../../assets/Images/tissueforceps.webp"
+      },
+      {
+        "name": "Artery Forceps / Hemostats (Straight & Curved)",
+        "description": "Artery forceps are used to clamp blood vessels and control bleeding during surgery. Available in straight and curved designs, they ensure secure locking and effective hemostasis.",
+        "imageVar": "artery",
+        "imagePath": "../../assets/Images/artery.webp"
+      },
+      {
+        "name": "Needle Holders (Mayo-Hegar / Olsen-Hegar)",
+        "description": "Needle holders are designed to securely hold suturing needles during wound closure. Mayo-Hegar and Olsen-Hegar types offer excellent grip, balance, and control for precise suturing.",
+        "imageVar": "needleholders",
+        "imagePath": "../../assets/Images/needleholders.webp"
+      },
+      {
+        "name": "Allis Tissue Forceps",
+        "description": "Allis tissue forceps are used to grasp tough tissues during surgical procedures. Their multiple teeth provide a firm hold, making them suitable for holding fascia and connective tissue.",
+        "imageVar": "allis",
+        "imagePath": "../../assets/Images/allistissue.webp"
+      },
+      {
+        "name": "Babcock Forceps",
+        "description": "Babcock forceps are atraumatic instruments designed to hold delicate tubular structures such as intestines and tissues without causing damage. They are commonly used in abdominal and general surgeries.",
+        "imageVar": "Babcock",
+        "imagePath": "../../assets/Images/babcock.webp"
+      },
+      {
+        "name": "Backhaus Towel Clamp",
+        "description": "Backhaus towel clamps are used to secure surgical drapes in place during procedures. Their sharp pointed tips ensure a firm grip on drapes without slipping.",
+        "imageVar": "backhaus",
+        "imagePath": "../../assets/Images/backhaus.webp"
+      }
+    ]
+  },
+  "category2": {
+    "fileName": "Category2.jsx",
+    "title": "Retractors & Elevators",
+    "description": "Retractors and elevators are surgical instruments used to hold back tissues, muscles, or organs, providing better visibility and access to the surgical site. These instruments are ergonomically designed to ensure effective retraction with minimal tissue trauma.",
+    "products": [
+      {
+        "name": "Langenbeck Retractor",
+        "description": "The Langenbeck retractor is a handheld instrument used to retract soft tissues during surgical procedures. Its flat blade design allows controlled and precise retraction.",
+        "imageVar": "langenback",
+        "imagePath": "../../assets/Images/langenback.webp"
+      },
+      {
+        "name": "Volkmann Retractor",
+        "description": "Volkmann retractors are rake-style instruments used to retract soft tissues and wound edges. They are commonly used in orthopedic and general surgeries.",
+        "imageVar": "volkman",
+        "imagePath": "../../assets/Images/volkmann.webp"
+      },
+      {
+        "name": "Skin Hook Retractor",
+        "description": "Skin hook retractors are fine instruments used for gentle retraction of skin and superficial tissues. They are ideal for delicate procedures requiring precision.",
+        "imageVar": "skinhook",
+        "imagePath": "../../assets/Images/skinhook.webp"
+      },
+      {
+        "name": "Self-Retaining Retractors (Weitlaner / Gelpi)",
+        "description": "Self-retaining retractors automatically hold tissues apart without manual assistance. Weitlaner and Gelpi retractors are widely used to maintain exposure during surgeries.",
+        "imageVar": "selfretaining",
+        "imagePath": "../../assets/Images/selfretaining.webp"
+      },
+      {
+        "name": "Periosteal Elevator",
+        "description": "Periosteal elevators are used to separate periosteum from bone surfaces during orthopedic and dental procedures. They allow controlled elevation with minimal damage.",
+        "imageVar": "periosteal",
+        "imagePath": "../../assets/Images/periosteal.webp"
+      }
+    ]
+  },
+  "category3": {
+    "fileName": "Category3.jsx",
+    "title": "Bone & Neuro Instruments",
+    "description": "Bone and neuro instruments are specialized tools designed for cutting, shaping, and removing bone during orthopedic and neurosurgical procedures. These instruments ensure precision, strength, and safety when working with hard tissues.",
+    "products": [
+      {
+        "name": "Bone Cutter / Rongeur",
+        "description": "Bone cutters or rongeurs are used to cut and remove small sections of bone. They provide strong leverage and precise cutting action during surgical procedures.",
+        "imageVar": "bonecutter",
+        "imagePath": "../../assets/Images/bonecutter.webp"
+      },
+      {
+        "name": "Bone Nibbler",
+        "description": "Bone nibblers are designed to trim and shape bone edges with controlled pressure. They are commonly used in orthopedic and reconstructive surgeries.",
+        "imageVar": "bonenibbler",
+        "imagePath": "../../assets/Images/bonenibbler.webp"
+      },
+      {
+        "name": "Laminectomy Punch / Kerrison Rongeur",
+        "description": "Laminectomy punches or Kerrison rongeurs are specialized instruments used in spinal and neurosurgeries to remove bone and soft tissue with high precision and safety.",
+        "imageVar": "lamin",
+        "imagePath": "../../assets/Images/lamin.webp"
+      }
+    ]
+  },
+  "category4": {
+    "fileName": "Category4.jsx",
+    "title": "ENT & Oral Instruments",
+    "description": "ENT and oral instruments are used for examination, access, and support during ear, nose, throat, and oral procedures. These instruments are designed for ease of use, patient safety, and clear visibility during diagnostic and surgical applications.",
+    "products": [
+      {
+        "name": "Tongue Depressor",
+        "description": "A tongue depressor is used to gently hold the tongue down during oral examinations. It provides clear visibility of the throat and oral cavity and is commonly used in ENT and general medical practice.",
+        "imageVar": "tongue",
+        "imagePath": "../../assets/Images/tongue.webp"
+      },
+      {
+        "name": "Mouth Gag (Boyle Davis)",
+        "description": "The Boyle Davis mouth gag is used to keep the mouth open during oral and ENT surgical procedures. It provides stable access to the oral cavity while ensuring patient comfort and safety.",
+        "imageVar": "tongue",
+        "imagePath": "../../assets/Images/tongue.webp"
+      }
+    ]
+  },
+  "category5": {
+    "fileName": "Category5.jsx",
+    "title": "Surgical Blades & Accessories",
+    "description": "Surgical blades and accessories are essential cutting tools used for making precise incisions during surgical procedures. They are manufactured to ensure sharpness, consistency, and safe handling.",
+    "products": [
+      {
+        "name": "Scalpel Blades (Disposable)",
+        "description": "Disposable scalpel blades are designed for single-use surgical applications, ensuring sharp, clean incisions while maintaining high standards of hygiene and infection control.",
+        "imageVar": "scalpel",
+        "imagePath": "../../assets/Images/scalpel.webp"
+      }
+    ]
+  },
+  "category6": {
+    "fileName": "Category6.jsx",
+    "title": "Trays & Utility Items",
+    "description": "Trays and utility items are used for holding, organizing, and transporting surgical instruments and medical supplies. They are designed for durability, easy cleaning, and efficient workflow in clinical environments.",
+    "products": [
+      {
+        "name": "Instrument Tray",
+        "description": "Instrument trays are used to organize and sterilize surgical instruments during procedures. They provide a stable and hygienic surface for instrument placement.",
+        "imageVar": "InstrumentalTray",
+        "imagePath": "../../assets/Images/instrumental tray.webp"
+      },
+      {
+        "name": "Kidney Tray",
+        "description": "Kidney trays are used to hold medical waste, dressings, or instruments during medical procedures. Their curved shape allows easy handling and prevents spillage.",
+        "imageVar": "Kidney",
+        "imagePath": "../../assets/Images/kidneytray.webp"
+      }
+    ]
+  },
+  "category7": {
+    "fileName": "Category7.jsx",
+    "title": "Gloves",
+    "description": "Medical gloves are essential protective equipment used to maintain hygiene and prevent cross-contamination. They are designed to provide comfort, flexibility, and reliable barrier protection.",
+    "products": [
+      {
+        "name": "Latex Examination Gloves",
+        "description": "Latex examination gloves offer excellent elasticity, comfort, and tactile sensitivity. They are widely used in medical examinations and routine clinical procedures.",
+        "imageVar": "latex",
+        "imagePath": "../../assets/Images/latex.webp"
+      },
+      {
+        "name": "Nitrile Examination Gloves",
+        "description": "Nitrile examination gloves provide strong chemical resistance and are latex-free, making them suitable for users with latex allergies. They offer durability and reliable protection.",
+        "imageVar": "nitrile",
+        "imagePath": "../../assets/Images/nitrile.webp"
+      },
+      {
+        "name": "Surgical Gloves (Sterile)",
+        "description": "Sterile surgical gloves are used during surgical procedures to maintain a sterile environment. They provide a precise fit, high sensitivity, and maximum protection.",
+        "imageVar": "gloves",
+        "imagePath": "../../assets/Images/surgicalgloves.webp"
+      }
+    ]
+  },
+  "category8": {
+    "fileName": "Category8.jsx",
+    "title": "Face Masks & PPE",
+    "description": "Face masks and personal protective equipment (PPE) are designed to protect healthcare professionals and patients from airborne particles and contamination. These products support infection control and workplace safety.",
+    "products": [
+      {
+        "name": "3-Ply Disposable Face Masks",
+        "description": "3-ply disposable face masks provide effective filtration and breathability for everyday medical use. They are suitable for hospitals, clinics, and general healthcare settings.",
+        "imageVar": "ply",
+        "imagePath": "../../assets/Images/3ply.webp"
+      },
+      {
+        "name": "N95 Face Masks",
+        "description": "N95 face masks offer high filtration efficiency against airborne particles. They are commonly used in high-risk medical environments requiring enhanced respiratory protection.",
+        "imageVar": "n95",
+        "imagePath": "../../assets/Images/n95.webp"
+      },
+      {
+        "name": "Disposable Shoe Covers (Plastic & Non-Woven)",
+        "description": "Disposable shoe covers are used to maintain cleanliness in sterile environments. They prevent the spread of contaminants across clinical areas.",
+        "imageVar": "shoe",
+        "imagePath": "../../assets/Images/shoecovers.webp"
+      },
+      {
+        "name": "Disposable Caps (Bouffant / Surgeon)",
+        "description": "Disposable caps are used to cover hair and reduce contamination risks in surgical and clinical settings. They are lightweight, breathable, and comfortable to wear.",
+        "imageVar": "Caps",
+        "imagePath": "../../assets/Images/caps.webp"
+      },
+      {
+        "name": "Disposable Aprons",
+        "description": "Disposable aprons provide a protective barrier against fluids and contaminants. They are commonly used in healthcare, laboratory, and hygiene-sensitive environments.",
+        "imageVar": "aprons",
+        "imagePath": "../../assets/Images/aprons.webp"
+      },
+      {
+        "name": "Isolation Gowns",
+        "description": "Isolation gowns are designed to protect healthcare workers from exposure to infectious agents. They provide full coverage and are suitable for medical and clinical use.",
+        "imageVar": "gowns",
+        "imagePath": "../../assets/Images/gowns.webp"
+      }
+    ]
+  },
+  "category9": {
+    "fileName": "Category9.jsx",
+    "title": "Surgical Drapes & Gowns",
+    "description": "Surgical drapes and gowns are used to create and maintain a sterile field during medical procedures. They help prevent infection and ensure patient and staff safety.",
+    "products": [
+      {
+        "name": "Surgical Drapes (Sterile & Non-Sterile)",
+        "description": "Surgical drapes are used to cover patients and surrounding areas during procedures. Available in sterile and non-sterile options, they support effective infection control.",
+        "imageVar": "drapes",
+        "imagePath": "../../assets/Images/drapes.webp"
+      },
+      {
+        "name": "Surgical Gowns (Sterile & Non-Sterile)",
+        "description": "Surgical gowns provide protective coverage for healthcare professionals during procedures. They are designed for comfort, fluid resistance, and safety.",
+        "imageVar": "gowns",
+        "imagePath": "../../assets/Images/gowns.webp"
+      }
+    ]
+  },
+  "category10": {
+    "fileName": "Category10.jsx",
+    "title": "Wound Care & Dressings",
+    "description": "Wound care and dressing products are used to protect wounds, absorb exudate, and support healing. These products are essential in surgical, clinical, and first-aid applications.",
+    "products": [
+      {
+        "name": "Absorbent Gauze Rolls",
+        "description": "Absorbent gauze rolls are used for wound dressing and bandaging. They provide high absorbency and breathability for effective wound care.",
+        "imageVar": "gr",
+        "imagePath": "../../assets/Images/gauzerolls.webp"
+      },
+      {
+        "name": "Gauze Swabs (Sterile & Non-Sterile)",
+        "description": "Gauze swabs are used for cleaning, dressing, and protecting wounds. Sterile and non-sterile options are available for different medical needs.",
+        "imageVar": "gs",
+        "imagePath": "../../assets/Images/gauzeswabs.webp"
+      },
+      {
+        "name": "Crepe Bandages",
+        "description": "Crepe bandages provide light compression and support to injured areas. They are commonly used for sprains, strains, and wound dressing support.",
+        "imageVar": "crepe",
+        "imagePath": "../../assets/Images/crepe.webp"
+      },
+      {
+        "name": "Adhesive Bandages (Plasters)",
+        "description": "Adhesive bandages are used for covering minor cuts and wounds. They protect against contamination while promoting healing.",
+        "imageVar": "bandages",
+        "imagePath": "../../assets/Images/adhesivebandages.webp"
+      },
+      {
+        "name": "Absorbent Cotton Rolls",
+        "description": "Absorbent cotton rolls are used for cleaning wounds, applying medication, and general medical use. They are soft, highly absorbent, and skin-friendly.",
+        "imageVar": "cr",
+        "imagePath": "../../assets/Images/cottonrolls.webp"
+      }
+    ]
+  },
+  "category11": {
+    "fileName": "Category11.jsx",
+    "title": "Disposables & IV Products",
+    "description": "Disposable and IV products are essential for safe drug administration and fluid management. These products are designed for single-use to ensure hygiene and patient safety.",
+    "products": [
+      {
+        "name": "Disposable Syringes with Needles",
+        "description": "Disposable syringes with needles are used for accurate medication delivery. They ensure safe, hygienic, and precise injections.",
+        "imageVar": "syringes",
+        "imagePath": "../../assets/Images/syringes.webp"
+      },
+      {
+        "name": "IV Sets",
+        "description": "IV sets are used to administer fluids and medications directly into the bloodstream. They provide controlled and reliable fluid delivery.",
+        "imageVar": "iv",
+        "imagePath": "../../assets/Images/ivset.webp"
+      },
+      {
+        "name": "IV Cannula",
+        "description": "IV cannulas are used to provide vascular access for fluid and medication administration. They are designed for smooth insertion and patient comfort.",
+        "imageVar": "iv",
+        "imagePath": "../../assets/Images/ivset.webp"
+      }
+    ]
+  },
+  "category12": {
+    "fileName": "Category12.jsx",
+    "title": "Medical Device",
+    "description": "Our range of medical devices are essential tools used by medical professionals for accurate diagnostics, monitoring, and treatments. These high-quality devices are designed for reliability and everyday clinical or home use.",
+    "products": [
+      {
+        "name": "Under water seal drainage system",
+        "description": "An under water seal drainage system is used to remove air, fluid, or pus from the pleural cavity, helping restore normal lung function. It is commonly used in thoracic surgeries and emergency care settings. The system ensures controlled drainage while preventing backflow, maintaining patient safety and effective respiratory support.",
+        "imageVar": "UnderWaterSeal",
+        "imagePath": "../../assets/Images/underwater seal.webp"
+      },
+      {
+        "name": "Digital thermometer",
+        "description": "A digital thermometer is used to measure body temperature quickly and accurately. It provides fast readings with easy-to-read digital displays, making it suitable for clinical and home use. Designed for hygiene and reliability, it ensures precise temperature monitoring for effective patient care.",
+        "imageVar": "DigitalThermometer",
+        "imagePath": "../../assets/Images/digital thermometer.webp"
+      },
+      {
+        "name": "Blood pressure monitor",
+        "description": "A blood pressure monitor is used to measure systolic and diastolic blood pressure levels along with pulse rate. It is essential for monitoring cardiovascular health in hospitals, clinics, and home settings. Designed for accuracy and ease of use, it helps in early detection and management of hypertension.",
+        "imageVar": "BloodPressure",
+        "imagePath": "../../assets/Images/blood pressure.webp"
+      }
+    ]
+  }
+}
