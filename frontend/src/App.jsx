@@ -103,7 +103,6 @@ import AlMithnabPage from './pages/AlMithnabPage.jsx'
 import Certification from './pages/Certification.jsx'
 import ProductDetailPage from './pages/products/ProductDetailPage.jsx'
 import NotFound from './pages/NotFound.jsx'
-import WhatsAppButton from './components/common/WhatsAppButton.jsx'
 
 function App() {
   return (
@@ -136,7 +135,6 @@ function App() {
       />
       <ScrollToTop />
       <SEOHelper />
-      <WhatsAppButton />
       <Navbar />
 
       <Routes>
