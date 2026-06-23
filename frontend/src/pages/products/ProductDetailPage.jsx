@@ -5,7 +5,6 @@ import { productsCatalog } from '../../data/productsCatalog';
 import ZoomableImage from '../../components/common/ZoomableImage';
 import { 
   ArrowLeft, 
-  MessageCircle, 
   Send, 
   FileText, 
   ShieldCheck, 
@@ -175,23 +174,14 @@ const ProductDetailPage = () => {
                   <span className="text-lg font-bold text-teal-700">{product.priceIndicator}</span>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div>
                   <button 
                     onClick={openQuotePopup}
-                    className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-teal-600/10 flex items-center justify-center gap-2 transition-all transform active:scale-[0.98] uppercase tracking-wide text-sm"
+                    className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-teal-600/10 flex items-center justify-center gap-2 transition-all transform active:scale-[0.98] uppercase tracking-wide text-sm"
                   >
                     <Send className="w-5 h-5" />
                     Request a Quote
                   </button>
-                  <a 
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-green-600/10 flex items-center justify-center gap-2 transition-all transform active:scale-[0.98] uppercase tracking-wide text-sm"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    Chat on WhatsApp
-                  </a>
                 </div>
                 
                 {/* PDF Catalog download */}
