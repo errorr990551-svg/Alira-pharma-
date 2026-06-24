@@ -682,29 +682,7 @@ const Navbar = () => {
              })}
           </div>
 
-          {/* Desktop Language Toggle */}
-          <div className="hidden md:flex items-center gap-4 ml-auto shrink-0">
-            {/* Language Selector */}
-            <div className="flex items-center gap-2 h-8 shrink-0">
-              <button 
-                onClick={() => toast("Arabic language version is currently under construction. Please use our English site.", { icon: 'ℹ️' })}
-                className="flex items-center gap-1 text-xs text-gray-500 hover:text-teal-600 transition-colors font-semibold cursor-pointer"
-                title="Translate to Arabic"
-              >
-                <span className="text-sm">🇸🇦</span>
-                <span className="hidden xl:inline font-bold">العربية</span>
-              </button>
-              
-              <span className="text-xs text-gray-300 font-light">|</span>
-              <button 
-                className="flex items-center gap-1 text-xs text-teal-600 font-bold cursor-default"
-                title="English (GCC) default"
-              >
-                <span className="text-sm">🇦🇪</span>
-                <span>EN</span>
-              </button>
-            </div>
-          </div>
+
 
           {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden ml-auto">
@@ -814,28 +792,7 @@ const Navbar = () => {
             );
           })}
 
-          {/* Mobile Language Toggle */}
-          <div className="pt-4 mt-4 border-t border-gray-100 flex flex-col gap-4 px-4">
-            <div className="flex items-center justify-center gap-4 py-2 bg-gray-50 rounded-lg">
-              <button 
-                onClick={() => {
-                  toast("Arabic language version is currently under construction. Please use our English site.", { icon: 'ℹ️' });
-                  setIsOpen(false);
-                }}
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-teal-600 font-bold cursor-pointer"
-              >
-                <span>🇸🇦</span>
-                <span>العربية</span>
-              </button>
-              <span className="text-gray-300">|</span>
-              <button 
-                className="flex items-center gap-2 text-sm text-teal-600 font-bold cursor-default"
-              >
-                <span>🇦🇪</span>
-                <span>English (EN)</span>
-              </button>
-            </div>
-          </div>
+
         </div>
       </div>
     </nav>

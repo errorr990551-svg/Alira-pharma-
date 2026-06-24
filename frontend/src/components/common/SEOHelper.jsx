@@ -64,12 +64,6 @@ const SEOHelper = () => {
     const pathSegment = rawPath.replace(/\//g, '');
     const isMinorCity = minorCities.includes(pathSegment);
 
-    if (isMinorCity) {
-      metaRobots.setAttribute('content', 'noindex, follow');
-    } else {
-      metaRobots.setAttribute('content', 'index, follow');
-    }
-
     // 4. Update Meta Description and Title based on Config
     let pageMeta = seoConfig.pages[canonicalPath];
     let isBlogPost = false;
@@ -125,6 +119,20 @@ const SEOHelper = () => {
       isMajorCity = true;
     }
 
+    const isValidPage = 
+      !!pageMeta || 
+      (isBlogPost && !!blogPostMeta) || 
+      (isProduct && !!productMeta) || 
+      (isCategory && !!categoryMeta) || 
+      (isMajorCity && !!majorCityMeta) || 
+      isMinorCity;
+
+    if (isMinorCity || !isValidPage) {
+      metaRobots.setAttribute('content', 'noindex, follow');
+    } else {
+      metaRobots.setAttribute('content', 'index, follow');
+    }
+
     let activeTitle = "";
     let activeDescription = "";
 
@@ -145,6 +153,9 @@ const SEOHelper = () => {
     } else if (isMajorCity && majorCityMeta) {
       activeTitle = majorCityMeta.title;
       activeDescription = majorCityMeta.description;
+    } else if (!isValidPage) {
+      activeTitle = "Page Not Found | Alira Pharmaceuticals";
+      activeDescription = "The page you are looking for does not exist or has been moved. | Alira Pharmaceuticals";
     }
 
     // Set page values if found

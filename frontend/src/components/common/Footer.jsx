@@ -208,24 +208,7 @@ const Footer = () => {
                   <span>Export & Return Terms</span>
                 </a>
               </li>
-              <li>
-                <button 
-                  onClick={() => toast("Privacy Policy: Alira Pharmaceuticals is committed to protecting the privacy of healthcare buyers and facility data. All medical RFQ submissions, contact details, and hospital procurement histories are encrypted and held in strict confidentiality. We do not sell or share buyer data with unverified third parties.", { icon: '🔒', duration: 8000 })}
-                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 text-left cursor-pointer"
-                >
-                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
-                  <span>Privacy Policy</span>
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => toast("Terms & Conditions: All products supplied by Alira Pharmaceuticals are for professional clinical use only. Wholesale order volumes (MOQ), export duties under India-UAE CEPA, custom labeling, and payment methods are negotiated directly via proforma invoice. Returns are governed by our return policy guidelines.", { icon: '📄', duration: 8000 })}
-                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 text-left cursor-pointer"
-                >
-                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
-                  <span>Terms & Conditions</span>
-                </button>
-              </li>
+
               <li>
                 <a 
                   href="/sitemap.xml" 

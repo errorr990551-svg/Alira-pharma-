@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FileQuestion, Home, ArrowRight, MessageSquare } from 'lucide-react';
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = "Page Not Found | Alira Pharmaceuticals";
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.setAttribute('content', 'noindex, follow');
+  }, []);
+
   const whatsappNumber = "+917895850793";
   const whatsappMessage = encodeURIComponent("Hi Alira Pharmaceuticals, I hit a broken page or could not find a specific medical supply item. Can you help me locate the correct product or quote?");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
