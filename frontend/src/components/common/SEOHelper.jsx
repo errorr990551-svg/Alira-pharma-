@@ -64,6 +64,24 @@ const SEOHelper = () => {
     const pathSegment = rawPath.replace(/\//g, '');
     const isMinorCity = minorCities.includes(pathSegment);
 
+    // Helpers to generate trimmed and highly optimized title/description
+    const makeProductTitle = (productName) => {
+      const suffix = " | Alira Pharmaceuticals";
+      if (productName.length + suffix.length <= 65) {
+        return productName + suffix;
+      }
+      const shortSuffix = " | Alira";
+      if (productName.length + shortSuffix.length <= 65) {
+        return productName + shortSuffix;
+      }
+      return productName.substring(0, 65 - shortSuffix.length) + shortSuffix;
+    };
+
+    const makeProductDescription = (productName) => {
+      const base = `Buy ${productName} in bulk. Certified medical supplies for hospitals & clinics in UAE, KSA & GCC. Request a wholesale quote today.`;
+      return base.substring(0, 155);
+    };
+
     // 4. Update Meta Description and Title based on Config
     let pageMeta = seoConfig.pages[canonicalPath];
     let isBlogPost = false;
@@ -93,18 +111,18 @@ const SEOHelper = () => {
       productSlug = segments[2];  // e.g. mayo-scissors-straight-curved
       
       if (categorySlug) {
-        if (productSlug && productsCatalog[categorySlug]) {
-          const product = productsCatalog[categorySlug].products.find(p => p.slug === productSlug);
-          if (product) {
-            isProduct = true;
-            productMeta = {
-              title: `${product.name} — ${product.specsTable.Material.split('-')[0].trim()} | ${product.specsTable.Compliance.split(',')[0]} | Supplier Saudi Arabia & UAE | Alira`,
-              description: `${product.name} available in bulk. ${product.specsTable.Material.split('-')[0].trim()}, ${product.specsTable.Certifications}. Serving hospitals & clinics in Saudi Arabia, UAE, GCC. Request RFQ today. | Alira Pharmaceuticals`
-            };
+        if (productSlug) {
+          if (productsCatalog[categorySlug]) {
+            const product = productsCatalog[categorySlug].products.find(p => p.slug === productSlug);
+            if (product) {
+              isProduct = true;
+              productMeta = {
+                title: makeProductTitle(product.name),
+                description: makeProductDescription(product.name)
+              };
+            }
           }
-        }
-        
-        if (!isProduct && seoConfig.categories[categorySlug]) {
+        } else if (seoConfig.categories[categorySlug]) {
           categoryMeta = seoConfig.categories[categorySlug];
           isCategory = true;
         }
@@ -127,12 +145,6 @@ const SEOHelper = () => {
       (isMajorCity && !!majorCityMeta) || 
       isMinorCity;
 
-    if (isMinorCity || !isValidPage) {
-      metaRobots.setAttribute('content', 'noindex, follow');
-    } else {
-      metaRobots.setAttribute('content', 'index, follow');
-    }
-
     let activeTitle = "";
     let activeDescription = "";
 
@@ -146,8 +158,6 @@ const SEOHelper = () => {
       activeTitle = productMeta.title;
       activeDescription = productMeta.description;
     } else if (isCategory && categoryMeta) {
-      // Dynamic title check might be performed by child component if productId is present
-      // We will allow page configuration overrides but fall back to category default
       activeTitle = categoryMeta.title;
       activeDescription = categoryMeta.description;
     } else if (isMajorCity && majorCityMeta) {
@@ -158,24 +168,10 @@ const SEOHelper = () => {
       activeDescription = "The page you are looking for does not exist or has been moved. | Alira Pharmaceuticals";
     }
 
-    // Set page values if found
-    if (activeTitle) {
-      document.title = activeTitle;
-    }
-    if (activeDescription) {
-      let metaDescEl = document.querySelector('meta[name="description"]');
-      if (!metaDescEl) {
-        metaDescEl = document.createElement('meta');
-        metaDescEl.name = "description";
-        document.head.appendChild(metaDescEl);
-      }
-      metaDescEl.setAttribute('content', activeDescription);
-    }
-
-    // 5. Setup Open Graph and Twitter Card tags dynamically (Issue 16)
+    // 5. Setup Open Graph and Twitter Card tags dynamically (Issue 11, 16)
     const updateOGTags = () => {
-      const currentTitle = document.title;
-      const currentDesc = document.querySelector('meta[name="description"]')?.getAttribute('content') || "";
+      const currentTitle = activeTitle || document.title;
+      const currentDesc = activeDescription || document.querySelector('meta[name="description"]')?.getAttribute('content') || "";
       
       const tags = {
         "og:type": "website",
@@ -186,7 +182,9 @@ const SEOHelper = () => {
         "twitter:card": "summary_large_image",
         "twitter:title": currentTitle,
         "twitter:description": currentDesc,
-        "twitter:image": isBlogPost && blogPostMeta ? blogPostMeta.image : "https://alirapharmaceuticals.com/og-image-1200x630.jpg"
+        "twitter:image": isBlogPost && blogPostMeta ? blogPostMeta.image : "https://alirapharmaceuticals.com/og-image-1200x630.jpg",
+        "twitter:site": "@AliraPharma",
+        "twitter:creator": "@AliraPharma"
       };
 
       Object.entries(tags).forEach(([property, content]) => {
@@ -206,10 +204,7 @@ const SEOHelper = () => {
       });
     };
 
-    // A brief timeout allows child components' page title overrides to complete before we copy them to OG tags
-    const ogTimeout = setTimeout(updateOGTags, 150);
-
-    // 6. Inject Structured JSON-LD Schemas (Issue 6, Issue 14)
+    // 6. Inject Structured JSON-LD Schemas (Issue 14, 15)
     const injectSchema = () => {
       let schemas = [];
 
@@ -219,7 +214,7 @@ const SEOHelper = () => {
         "@type": "Organization",
         "name": "Alira Pharmaceuticals",
         "url": "https://alirapharmaceuticals.com",
-        "logo": "https://alirapharmaceuticals.com/favicon.ico",
+        "logo": "https://alirapharmaceuticals.com/Logo.webp",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "A-116, URBTECH TRADE CENTRE, SECTOR-132, Baraula, Dadri",
@@ -347,15 +342,17 @@ const SEOHelper = () => {
             "datePublished": blogPostMeta.datePublished,
             "dateModified": blogPostMeta.datePublished, // Fallback to published
             "author": {
-              "@type": "Organization",
-              "name": "Alira Pharmaceuticals"
+              "@type": "Person",
+              "name": "Dr. Anmol Chauhan",
+              "jobTitle": "Head of Quality & Compliance",
+              "url": "https://alirapharmaceuticals.com/about/"
             },
             "publisher": {
               "@type": "Organization",
               "name": "Alira Pharmaceuticals",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://alirapharmaceuticals.com/favicon.ico"
+                "url": "https://alirapharmaceuticals.com/Logo.webp"
               }
             },
             "mainEntityOfPage": {
@@ -378,7 +375,7 @@ const SEOHelper = () => {
             breadcrumbList.itemListElement.push({
               "@type": "ListItem",
               "position": 3,
-              "name": document.title.split('|')[0].trim(),
+              "name": activeTitle.split('|')[0].trim(),
               "item": canonicalUrl
             });
           }
@@ -388,9 +385,9 @@ const SEOHelper = () => {
           const productSchema = {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": document.title.split('|')[0].trim(),
-            "description": activeDescription,
-            "image": "https://alirapharmaceuticals.com/favicon.ico",
+            "name": activeTitle.split('|')[0].trim(),
+            "description": activeDescription || (categoryMeta ? categoryMeta.description : ""),
+            "image": "https://alirapharmaceuticals.com/Logo.webp",
             "offers": {
               "@type": "AggregateOffer",
               "priceCurrency": "USD",
@@ -407,7 +404,7 @@ const SEOHelper = () => {
           breadcrumbList.itemListElement.push({
             "@type": "ListItem",
             "position": 2,
-            "name": document.title.split('|')[0].trim(),
+            "name": activeTitle.split('|')[0].trim(),
             "item": canonicalUrl
           });
           schemas.push(breadcrumbList);
@@ -418,7 +415,7 @@ const SEOHelper = () => {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": `Alira Pharmaceuticals - ${pathSegment.toUpperCase()}`,
-              "image": "https://alirapharmaceuticals.com/favicon.ico",
+              "image": "https://alirapharmaceuticals.com/Logo.webp",
               "url": canonicalUrl,
               "telephone": "+91-7895850793",
               "address": {
@@ -443,9 +440,34 @@ const SEOHelper = () => {
       script.innerHTML = JSON.stringify(schemas.length === 1 ? schemas[0] : schemas);
     };
 
-    const schemaTimeout = setTimeout(injectSchema, 200);
+    const updateDocumentMeta = () => {
+      if (activeTitle) {
+        document.title = activeTitle;
+      }
+      if (activeDescription) {
+        let metaDescEl = document.querySelector('meta[name="description"]');
+        if (!metaDescEl) {
+          metaDescEl = document.createElement('meta');
+          metaDescEl.name = "description";
+          document.head.appendChild(metaDescEl);
+        }
+        metaDescEl.setAttribute('content', activeDescription);
+      }
+
+      if (isMinorCity || !isValidPage) {
+        metaRobots.setAttribute('content', 'noindex, follow');
+      } else {
+        metaRobots.setAttribute('content', 'index, follow');
+      }
+    };
+
+    // Use a small timeout to consistently run after any local page useEffect hooks
+    const metaTimeout = setTimeout(updateDocumentMeta, 50);
+    const ogTimeout = setTimeout(updateOGTags, 75);
+    const schemaTimeout = setTimeout(injectSchema, 100);
 
     return () => {
+      clearTimeout(metaTimeout);
       clearTimeout(ogTimeout);
       clearTimeout(schemaTimeout);
       const script = document.getElementById('jsonld-schema');

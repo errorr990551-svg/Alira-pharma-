@@ -58,10 +58,22 @@ const BlogPost = () => {
           <p className="text-lg md:text-xl text-teal-50 mb-6">
             A Comprehensive Guide for Procurement Officers
           </p>
-          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm md:text-base font-medium">
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span className="text-white">Blog</span>
+            <a href="/blogs/" className="hover:text-white transition-colors">Blog</a>
+            <span>|</span>
+            <span className="text-white font-semibold truncate max-w-xs md:max-w-md" title="Sourcing Specialty ENT & Neuro-Surgical Tools">Sourcing Specialty ENT & Neuro-Surgical Tools</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 10, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 10, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
           </div>
         </div>
       </div>

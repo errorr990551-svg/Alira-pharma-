@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { ChevronDown, CheckCircle, ShieldCheck, HeartPulse, Activity, Layers, Settings, Microscope } from 'lucide-react';
 
@@ -14,10 +14,12 @@ const BlogPost9 = () => {
       <div className="relative bg-teal-900 py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=2000" 
-            alt="Operating room with precision instruments"
-            className="w-full h-full object-cover opacity-30"
-          />
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=2000" 
+                    alt="Operating room with precision instruments" 
+                    width={400}
+                    height={500}
+                    className="w-full h-full object-cover opacity-30"
+                  />
           <div className="absolute inset-0 bg-linear-to-r from-teal-900/95 to-teal-800/85"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
@@ -27,10 +29,17 @@ const BlogPost9 = () => {
           <p className="text-lg md:text-xl text-teal-100 max-w-3xl mx-auto mb-8 font-medium">
             Engineering the next generation of specialized surgical tools for 2026.
           </p>
-          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm font-medium">
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span className="text-white">Blog</span>
+            <a href="/blogs/" className="hover:text-white transition-colors">Blog</a>
+            <span>|</span>
+            <span className="text-white font-semibold truncate max-w-xs md:max-w-md" title="Orthopedic & Cardiovascular Precision in 2026">Orthopedic & Cardiovascular Precision in 2026</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 08, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
           </div>
         </div>
       </div>

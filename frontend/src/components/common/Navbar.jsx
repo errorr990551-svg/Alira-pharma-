@@ -339,7 +339,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link } from "react-router-dom";
-import toast from 'react-hot-toast';
+
 
 // Using a placeholder image to ensure the code compiles in this environment.
 // You can uncomment your local import below and remove the const LogoImg line.
@@ -475,6 +475,8 @@ const Logo = () => (
     <img 
       src={LogoImg} 
       alt="Alira Pharmaceuticals company logo - Medical and Surgical Supplies Manufacturer" 
+      width={240}
+      height={80}
       className="h-20 w-auto object-contain" 
     />
   </div>
@@ -487,12 +489,10 @@ const Navbar = () => {
   const [activeCategory, setActiveCategory] = useState(productCategories[0].id);
   const [isProductsHovered, setIsProductsHovered] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
-  const [isBlogHovered, setIsBlogHovered] = useState(false);
 
   // State for Mobile Menu Accordions
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
-  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
 
   // --- NEW ADDITION: Listen for Footer "See more" click event ---
@@ -551,7 +551,7 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <div className="shrink-0 cursor-pointer z-50">
-            <Link to="/">
+            <Link to="/" aria-label="Alira Pharmaceuticals Home">
               <Logo />
             </Link>
           </div>

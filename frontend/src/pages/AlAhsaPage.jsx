@@ -89,7 +89,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Al Ahsa?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, rehabilitation centers, and clinics throughout Al Ahsa and the Eastern Province."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to hospitals, rehabilitation centers, and clinics throughout Al Ahsa and the Eastern Province."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
@@ -281,10 +281,18 @@ const AlAhsaPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
                     alt="Alira Medical Export Al Ahsa" 
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO tools */}
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="High-quality medical-grade stainless steel surgical instruments for specialized surgical centers in Al Ahsa." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
+                    alt="High-quality medical-grade stainless steel surgical instruments for specialized surgical centers in Al Ahsa." 
+                    width={400}
+                    height={500}
+                    className="sr-only"
+                  />
                   
                   {/* Brand Badge Overlay */}
                   <div className="absolute bottom-0 right-0 bg-teal-700 text-white px-8 py-4 font-bold uppercase tracking-widest text-sm rounded-tl-2xl shadow-lg">
@@ -298,7 +306,7 @@ const AlAhsaPage = () => {
                 
                 {/* Main Header */}
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                   Welcome to Alira Pharmaceutical
+                   Welcome to Alira Pharmaceuticals
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -310,7 +318,7 @@ const AlAhsaPage = () => {
                         Pharmaceutical Distributors for Al Ahsa
                     </h3>
                     <p>
-                       Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Al Ahsa healthcare market</span>. We ensure our partners and clinics in the Eastern Province receive compliant, high-efficacy products that meet international safety and regulatory standards. Our professionals are dedicated to supporting the medical infrastructure of Al Ahsa.
+                       Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Al Ahsa healthcare market</span>. We ensure our partners and clinics in the Eastern Province receive compliant, high-efficacy products that meet international safety and regulatory standards. Our professionals are dedicated to supporting the medical infrastructure of Al Ahsa.
                     </p>
                   </div>
 
@@ -392,6 +400,8 @@ const AlAhsaPage = () => {
                           <img 
                             src={category.image} 
                             alt={category.title} 
+                            width={360}
+                            height={224}
                             className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -434,10 +444,18 @@ const AlAhsaPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
                     alt="Global-Medical-Logistics-Al-Ahsa" 
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO tools */}
-                  <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Efficient supply chain and export network delivering medical supplies to Al Ahsa's healthcare sector." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
+                    alt="Efficient supply chain and export network delivering medical supplies to Al Ahsa's healthcare sector." 
+                    width={600}
+                    height={450}
+                    className="sr-only"
+                  />
                 </div>
               </div>
 
@@ -447,7 +465,7 @@ const AlAhsaPage = () => {
                   Precision Manufacturing, Worldwide Supply to Al Ahsa
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                   Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Al Ahsa healthcare market</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply across the Eastern Province.
+                   Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Al Ahsa healthcare market</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply across the Eastern Province.
                 </p>
               </div>
 
@@ -516,14 +534,20 @@ const AlAhsaPage = () => {
               </div>
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Al Ahsa market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Al Ahsa.
+                  Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Al Ahsa market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Al Ahsa.
                 </p>
               </div>
             </div>
 
             <div className="relative flex flex-col md:block">
               <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0">
-                <img src={placeholderMap} alt="Service Map" className="w-full h-full object-cover" />
+                <img 
+                  src={placeholderMap} 
+                  alt="Service Map" 
+                  width={800}
+                  height={340}
+                  className="w-full h-full object-cover" 
+                />
               </div>
 
               {/* Stats Box */}

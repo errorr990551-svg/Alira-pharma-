@@ -69,10 +69,22 @@ const BlogPost2 = () => {
           <p className="text-lg md:text-xl text-teal-50 mb-6">
             India-UAE CEPA: Zero-Duty Medical Imports Dubai
           </p>
-          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm md:text-base font-medium">
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span className="text-white">Blog</span>
+            <a href="/blogs/" className="hover:text-white transition-colors">Blog</a>
+            <span>|</span>
+            <span className="text-white font-semibold truncate max-w-xs md:max-w-md" title="The Zero-Duty Revolution: India-UAE CEPA for Medical Imports">The Zero-Duty Revolution: India-UAE CEPA for Medical Imports</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 09, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 09, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
           </div>
         </div>
       </div>

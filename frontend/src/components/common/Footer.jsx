@@ -1,42 +1,10 @@
 import React from 'react';
 import { MapPin, Mail, Phone, Printer, Instagram, ChevronRight, FileText } from 'lucide-react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 
 const Footer = () => {
-
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // Handle opening the Products dropdown from footer
-  const handleOpenProducts = (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    window.dispatchEvent(new Event('open-products-menu'));
-  };
-
-  // Handle opening the About/Company Profile dropdown from footer
-  const handleOpenAbout = (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    window.dispatchEvent(new Event('open-about-menu'));
-  };
-
-  const handleOpenFAQ = (e) => {
-    e.preventDefault();
-
-    if (location.pathname !== "/") {
-      // Go to home and tell it to scroll to FAQ
-      navigate("/", { state: { scrollTo: "faq" } });
-    } else {
-      // Already on home, just scroll
-      const section = document.getElementById("faq");
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-};
 
   return (
     <footer className="bg-[#E0F7FA] text-gray-800 pt-16 pb-8 font-sans">
@@ -171,10 +139,10 @@ const Footer = () => {
             </h3>
             <div className="flex flex-col gap-4">
                 {[
-                    { name: 'Alira Catalog', file: '/alira-catalog.pdf', downloadName: 'Alira-Pharmaceuticals-Catalog.pdf' },
-                    { name: 'B2B Catalog 1.1', file: '/alira-b2b-catalog-1.1.pdf', downloadName: 'Alira-B2B-Catalog-1.1.pdf' },
-                    { name: 'B2B Catalog 2.0', file: '/alira-b2b-catalog-2.0.pdf', downloadName: 'Alira-B2B-Catalog-2.0.pdf' },
-                    { name: 'B2B Catalog 3.0', file: '/alira-b2b-catalog-3.0.pdf', downloadName: 'Alira-B2B-Catalog-3.0.pdf' },
+                    { name: 'Alira Catalog [PDF, 5.0 MB]', file: '/alira-catalog.pdf' },
+                    { name: 'B2B Catalog 1.1 [PDF, 1.8 MB]', file: '/alira-b2b-catalog-1.1.pdf' },
+                    { name: 'B2B Catalog 2.0 [PDF, 2.5 MB]', file: '/alira-b2b-catalog-2.0.pdf' },
+                    { name: 'B2B Catalog 3.0 [PDF, 2.1 MB]', file: '/alira-b2b-catalog-3.0.pdf' },
                 ].map((catalog) => (
                     <a 
                         key={catalog.name}
@@ -205,8 +173,28 @@ const Footer = () => {
                   className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300 transform"
                 >
                   <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
-                  <span>Export & Return Terms</span>
+                  <span>Export & Return Terms [PDF, 2.0 MB]</span>
                 </a>
+              </li>
+
+              <li>
+                <Link 
+                  to="/privacy-policy/"
+                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300"
+                >
+                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
+                  <span>Privacy Policy</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link 
+                  to="/terms-and-conditions/"
+                  className="group flex items-center text-sm hover:text-teal-700 transition-all duration-300"
+                >
+                  <FileText className="w-4 h-4 text-teal-700 mr-2 shrink-0" />
+                  <span>Terms & Conditions</span>
+                </Link>
               </li>
 
               <li>
@@ -233,7 +221,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-700 text-white hover:bg-teal-800 transition-colors"
-                aria-label="X (Twitter)"
+                aria-label="Follow Alira Pharmaceuticals on X"
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true" className="w-5 h-5 fill-current">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
@@ -244,7 +232,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-700 text-white hover:bg-teal-800 transition-colors"
-                aria-label="Instagram"
+                aria-label="Follow Alira Pharmaceuticals on Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>

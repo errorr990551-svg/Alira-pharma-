@@ -39,7 +39,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Turabah?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to public and private hospitals, distributors, and clinics throughout the Turabah region."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to public and private hospitals, distributors, and clinics throughout the Turabah region."
   },
   {
     question: "Are your medical products compliant with Saudi SFDA standards?",
@@ -153,17 +153,23 @@ const TurabahPage = () => {
               <div className="w-full lg:w-5/12 relative">
                 <div className="absolute inset-0 border-2 border-teal-200 rounded-2xl transform translate-x-4 translate-y-4 lg:translate-x-6 lg:translate-y-6 -z-10"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-4/5 bg-gray-100 group">
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="Alira-Medical-Export-Turabah" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
+                    alt="Alira-Medical-Export-Turabah" 
+                    width={400}
+                    height={500}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
                   <div className="absolute bottom-0 right-0 bg-teal-700 text-white px-8 py-4 font-bold uppercase tracking-widest text-sm rounded-tl-2xl shadow-lg">Alira Pharmaceuticals</div>
                 </div>
               </div>
               <div className="w-full lg:w-7/12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">Welcome to Alira Pharmaceutical</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">Welcome to Alira Pharmaceuticals</h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
                 <div className="space-y-10 text-gray-700 leading-relaxed text-justify">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Pharmaceutical Distributors for Turabah</h3>
-                    <p>Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Turabah healthcare market</span>. We serve the region’s network of hospitals and clinics, ensuring they receive compliant, high-efficacy products that meet international safety and SFDA standards.</p>
+                    <p>Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Turabah healthcare market</span>. We serve the region’s network of hospitals and clinics, ensuring they receive compliant, high-efficacy products that meet international safety and SFDA standards.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Surgical Instruments Suppliers in Turabah</h3>
@@ -191,7 +197,13 @@ const TurabahPage = () => {
                   {categoriesData.map((category) => (
                     <div key={category.id} className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-4">
                       <div className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-[500px] overflow-hidden group/card">
-                        <div className="h-56 w-full p-6 bg-white shrink-0 overflow-hidden"><img src={category.image} alt={category.title} className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500" /></div>
+                        <div className="h-56 w-full p-6 bg-white shrink-0 overflow-hidden"><img 
+                            src={category.image} 
+                            alt={category.title} 
+                            width={360}
+                            height={224}
+                            className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
+                          /></div>
                         <div className="p-8 pt-4 flex flex-col items-center text-center grow">
                           <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-1">{category.title}</h3>
                           <div className="mt-auto"><a href={`/products/${category.id}`} className="inline-block bg-gray-900 text-white font-bold text-xs uppercase tracking-widest px-8 py-3 rounded-full hover:bg-teal-700 hover:shadow-md transition-all duration-300">View More</a></div>
@@ -210,11 +222,17 @@ const TurabahPage = () => {
             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
               <div className="w-full lg:w-1/2 relative">
                 <div className="absolute inset-0 bg-teal-100 rounded-[3rem] transform -translate-x-4 translate-y-4 -z-10"></div>
-                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-4/3 group"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Global-Medical-Logistics-Turabah" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" /></div>
+                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-4/3 group"><img 
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
+                    alt="Global-Medical-Logistics-Turabah" 
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  /></div>
               </div>
               <div className="w-full lg:w-1/2">
                 <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Precision Manufacturing, Worldwide Supply to Turabah</h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Turabah medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.</p>
+                <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Turabah medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.</p>
               </div>
             </div>
           </div>
@@ -247,10 +265,16 @@ const TurabahPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row gap-8 mb-16 items-start">
               <div className="w-full md:w-5/12"><h2 className="text-xl md:text-2xl font-bold text-teal-600 uppercase tracking-widest mb-2">MEDICAL SUPPLIES EXPORT</h2><h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">Leading Medical Supply Manufacturers for Turabah</h3></div>
-              <div className="w-full md:w-7/12"><p className="text-gray-600 text-lg leading-relaxed text-justify">Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Turabah market</span>. We are a prominent manufacturer and supplier in the healthcare industry, leveraging major shipping routes to the western region of Saudi Arabia for faster delivery. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Turabah.</p></div>
+              <div className="w-full md:w-7/12"><p className="text-gray-600 text-lg leading-relaxed text-justify">Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Turabah market</span>. We are a prominent manufacturer and supplier in the healthcare industry, leveraging major shipping routes to the western region of Saudi Arabia for faster delivery. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Turabah.</p></div>
             </div>
             <div className="relative flex flex-col md:block">
-              <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0"><img src={placeholderMap} alt="Service Map" className="w-full h-full object-cover" /></div>
+              <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0"><img 
+                  src={placeholderMap} 
+                  alt="Service Map" 
+                  width={800}
+                  height={340}
+                  className="w-full h-full object-cover" 
+                /></div>
               <div className="w-full md:w-5/12 bg-gray-900 text-white relative z-10 md:absolute md:top-1/2 md:-translate-y-1/2 md:left-0 shadow-2xl rounded-lg md:rounded-none overflow-hidden -mt-16 md:mt-0">
                 <div className="grid grid-cols-2">
                   <div className="p-8 border-b border-r border-gray-700 flex flex-col justify-center"><div className="text-4xl lg:text-5xl font-bold text-teal-400 mb-2">100+</div><div className="text-sm font-semibold tracking-wide text-gray-300">Dealers Served</div></div>

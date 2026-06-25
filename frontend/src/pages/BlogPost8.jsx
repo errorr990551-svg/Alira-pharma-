@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { ChevronDown, CheckCircle, ShieldCheck, Microscope, AlertTriangle, Settings, RefreshCw } from 'lucide-react';
 
@@ -27,10 +27,17 @@ const BlogPost8 = () => {
           <p className="text-lg md:text-xl text-teal-100 max-w-3xl mx-auto mb-8 font-medium">
             Expert protocols for sterilization, maintenance, and clinical safety in 2026.
           </p>
-          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm font-medium">
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span className="text-white">Blog</span>
+            <a href="/blogs/" className="hover:text-white transition-colors">Blog</a>
+            <span>|</span>
+            <span className="text-white font-semibold truncate max-w-xs md:max-w-md" title="Surgical Instrument Sterilization Guide">Surgical Instrument Sterilization Guide</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 08, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
           </div>
         </div>
       </div>

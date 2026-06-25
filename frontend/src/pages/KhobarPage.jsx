@@ -89,7 +89,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Al Khobar?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics throughout Al Khobar and the Eastern Province."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics throughout Al Khobar and the Eastern Province."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
@@ -281,10 +281,18 @@ const KhobarPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
                     alt="Alira Medical Export Al Khobar" 
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO */}
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="High-quality medical-grade stainless steel surgical instruments for hospitals in the Eastern Province." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
+                    alt="High-quality medical-grade stainless steel surgical instruments for hospitals in the Eastern Province." 
+                    width={400}
+                    height={500}
+                    className="sr-only"
+                  />
                   
                   {/* Brand Badge Overlay */}
                   <div className="absolute bottom-0 right-0 bg-teal-700 text-white px-8 py-4 font-bold uppercase tracking-widest text-sm rounded-tl-2xl shadow-lg">
@@ -298,7 +306,7 @@ const KhobarPage = () => {
                 
                 {/* Main Header */}
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                   Welcome to Alira Pharmaceutical
+                   Welcome to Alira Pharmaceuticals
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -309,9 +317,7 @@ const KhobarPage = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                         Pharmaceutical Distributors for Al Khobar
                     </h3>
-                    <p>
-                       Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Al Khobar healthcare market</span>. We ensure our partners in the Eastern Province receive compliant, high-efficacy products that meet international safety and regulatory standards. Our professionals are dedicated to supporting the medical facilities of the industrial heartland.
-                    </p>
+                    <p>Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the Al Khobar healthcare market. We ensure our partners in the Eastern Province, including King Fahd University Hospital and Mohammad Dossary Hospital, receive compliant, high-efficacy products that meet international safety and regulatory standards, keeping local clinical stocks highly reliable.</p>
                   </div>
 
                   {/* SEO Block 2 */}
@@ -319,9 +325,7 @@ const KhobarPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                         Surgical Instruments Suppliers in Al Khobar
                     </h3>
-                    <p>
-                       We provide <span className="font-semibold text-teal-700">Al Khobar’s surgeons</span> and specialized medical centers with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in Saudi Arabia’s industrial heartland.
-                    </p>
+                    <p>We provide Al Khobar’s surgeons with the precision they demand. Our surgical instruments are forged from medical-grade stainless steel, ensuring durability for complex orthopedic and general surgeries. From surgical forceps to specialized hooks, we are a leading supplier for operating room excellence in the region, bringing certified tools to modern private healthcare networks.</p>
                   </div>
 
                   {/* SEO Block 3 */}
@@ -329,9 +333,7 @@ const KhobarPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                         Wholesale Medical Disposables in Al Khobar
                     </h3>
-                    <p>
-                       Hygiene and infection control are critical for Al Khobar’s high-traffic medical facilities. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is meticulously checked for <span className="font-semibold text-teal-700">Al Khobar's medical facilities</span>.
-                    </p>
+                    <p>Hygiene and infection control are non-negotiable for Al Khobar's premium private clinics. As a leading wholesale medical disposables supplier, we offer a robust inventory of gloves, surgical gowns, and wound care products designed for single-use safety and hygiene. Each batch is compliant with international safety standards, making it the perfect addition to any modern hospital.</p>
                   </div>
 
                 </div>
@@ -392,6 +394,8 @@ const KhobarPage = () => {
                           <img 
                             src={category.image} 
                             alt={category.title} 
+                            width={360}
+                            height={224}
                             className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -434,10 +438,18 @@ const KhobarPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
                     alt="Global-Medical-Logistics-Al-Khobar" 
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO */}
-                  <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Efficient supply chain and export network delivering medical supplies to Al Khobar's elite medical sector." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
+                    alt="Efficient supply chain and export network delivering medical supplies to Al Khobar's elite medical sector." 
+                    width={600}
+                    height={450}
+                    className="sr-only"
+                  />
                 </div>
               </div>
 
@@ -447,7 +459,7 @@ const KhobarPage = () => {
                   Precision Manufacturing, Worldwide Supply to Al Khobar
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                   Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Al Khobar medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply across the Eastern Province.
+                   Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Al Khobar medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply across the Eastern Province.
                 </p>
               </div>
 
@@ -516,14 +528,20 @@ const KhobarPage = () => {
               </div>
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Al Khobar market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Al Khobar.
+                  Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Al Khobar market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Al Khobar.
                 </p>
               </div>
             </div>
 
             <div className="relative flex flex-col md:block">
               <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0">
-                <img src={placeholderMap} alt="Service Map" className="w-full h-full object-cover" />
+                <img 
+                  src={placeholderMap} 
+                  alt="Service Map" 
+                  width={800}
+                  height={340}
+                  className="w-full h-full object-cover" 
+                />
               </div>
 
               {/* Stats Box */}

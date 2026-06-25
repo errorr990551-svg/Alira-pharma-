@@ -5,7 +5,7 @@ import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { Menu, X, ArrowRight, Truck, Medal, FileCheck, Globe, Scan, DollarSign, Lightbulb, Users, ChevronRight, Factory, ShieldCheck, ClipboardList, Building2, Stethoscope, FlaskConical, Heart, CheckSquare, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
 import manufacturingImg from '../assets/Images/manufacturing.webp';
 import aboutImg from '../assets/Images/about alira.avif';
-import catalogPDF from '../assets/Alira Pharmaceuticals - B2B Catalog 3.0.pdf';
+
 
 
 // --- Features Data ---
@@ -148,14 +148,8 @@ const reviews = [
 
 const Home = () => {
 
-  const [expandedCardId, setExpandedCardId] = useState(null);
-
   // Carousel State
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const toggleReadMore = (id) => {
-    setExpandedCardId(expandedCardId === id ? null : id);
-  };
 
   const { openQuotePopup } = useQuotePopup();
 
@@ -194,7 +188,7 @@ const Home = () => {
       setCurrentReview((prev) => (prev + 1) % reviews.length);
     }, 5000); // Change slide every 5 seconds
     return () => clearInterval(timer);
-  }, [reviews.length]);
+  }, []);
 
   const location = useLocation();
 
@@ -521,7 +515,7 @@ const Home = () => {
               Comprehensive Manufacturing & Global Export Capabilities
             </h2>
             <p className="max-w-4xl mx-auto text-lg md:text-xl text-teal-50 font-medium">
-              Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, PPE, and wound care products. We combine precision engineering, strict quality control, and international logistics expertise to deliver trusted healthcare solutions worldwide.
+              Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments, medical disposables, PPE, and wound care products. We combine precision engineering, strict quality control, and international logistics expertise to deliver trusted healthcare solutions worldwide.
             </p>
           </div>
 
@@ -576,7 +570,7 @@ const Home = () => {
                   Precision Manufacturing, Worldwide Supply
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
+                  Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
 
                 <div className="space-y-8">

@@ -14,7 +14,9 @@ const staticPaths = [
   '/certification/',
   '/contact/',
   '/market-area/',
-  '/blogs/'
+  '/blogs/',
+  '/privacy-policy/',
+  '/terms-and-conditions/'
 ];
 
 // Major city pages allowed to index
@@ -79,6 +81,49 @@ majorCities.forEach(p => urls.push(p));
 // 3. Add blog paths
 blogSlugs.forEach(slug => urls.push(`/blogs/${slug}/`));
 
+// Helper to match URLs to their corresponding physical source files
+const getFileForUrl = (urlPath) => {
+  if (urlPath === '/') return 'src/pages/Home.jsx';
+  if (urlPath === '/about/') return 'src/pages/About.jsx';
+  if (urlPath === '/certification/') return 'src/pages/Certification.jsx';
+  if (urlPath === '/contact/') return 'src/pages/ContactUs.jsx';
+  if (urlPath === '/market-area/') return 'src/pages/MarketArea.jsx';
+  if (urlPath === '/blogs/') return 'src/pages/BlogsPage.jsx';
+  if (urlPath === '/privacy-policy/') return 'src/pages/PrivacyPolicy.jsx';
+  if (urlPath === '/terms-and-conditions/') return 'src/pages/TermsConditions.jsx';
+
+  if (urlPath === '/riyadh/') return 'src/pages/SeoPage.jsx';
+  if (urlPath === '/jeddah/') return 'src/pages/JeddahPage.jsx';
+  if (urlPath === '/dammam/') return 'src/pages/DammamPage.jsx';
+  if (urlPath === '/al-khobar/') return 'src/pages/KhobarPage.jsx';
+  if (urlPath === '/mecca/') return 'src/pages/MeccaPage.jsx';
+  if (urlPath === '/medina/') return 'src/pages/MedinaPage.jsx';
+
+  if (urlPath.startsWith('/blogs/')) {
+    const slug = urlPath.split('/').filter(Boolean)[1];
+    const idx = blogSlugs.indexOf(slug);
+    if (idx === 0) return 'src/pages/BlogPost.jsx';
+    if (idx > 0) return `src/pages/BlogPost${idx + 1}.jsx`;
+  }
+
+  if (urlPath.startsWith('/products/')) {
+    const segments = urlPath.split('/').filter(Boolean);
+    if (segments.length === 2) {
+      const catSlug = segments[1];
+      const categoryEntry = Object.entries(categorySlugs).find(([k, v]) => v === catSlug);
+      if (categoryEntry) {
+        const catKey = categoryEntry[0];
+        const num = catKey.replace('category', '');
+        return `src/pages/products/Category${num}.jsx`;
+      }
+    } else if (segments.length === 3) {
+      return 'src/pages/products/ProductDetailPage.jsx';
+    }
+  }
+
+  return null;
+};
+
 // 4. Add product categories and products from JSON metadata
 try {
   const metaPath = path.join(__dirname, '../src/data/extracted_products.json');
@@ -109,9 +154,20 @@ try {
     else if (urlPath.startsWith('/products/')) priority = 0.8;
     else if (majorCities.includes(urlPath)) priority = 0.7;
 
+    // Default modification time: today
+    let lastmodDate = new Date().toISOString().split('T')[0];
+    const relFile = getFileForUrl(urlPath);
+    if (relFile) {
+      const fullFilePath = path.join(__dirname, '..', relFile);
+      if (fs.existsSync(fullFilePath)) {
+        const stats = fs.statSync(fullFilePath);
+        lastmodDate = stats.mtime.toISOString().split('T')[0];
+      }
+    }
+
     return `  <url>
     <loc>${origin}${urlPath}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <lastmod>${lastmodDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${priority.toFixed(1)}</priority>
   </url>`;

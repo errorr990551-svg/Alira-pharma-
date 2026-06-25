@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { Heart, CheckCircle, ShieldCheck, Microscope, Scissors, Star, Activity, Settings } from 'lucide-react';
 
@@ -27,10 +27,17 @@ const BlogPost13 = () => {
           <p className="text-lg md:text-xl text-teal-100 max-w-3xl mx-auto mb-8 font-medium">
             Beyond "Small": Engineering the next generation of life-saving tools for developing anatomy.
           </p>
-          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm font-medium">
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <a href="/blogs" className="hover:text-white transition-colors">Blog</a>
+            <a href="/blogs/" className="hover:text-white transition-colors">Blog</a>
+            <span>|</span>
+            <span className="text-white font-semibold truncate max-w-xs md:max-w-md" title="Quality in Specialized Pediatric Instruments">Quality in Specialized Pediatric Instruments</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 15, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
           </div>
         </div>
       </div>

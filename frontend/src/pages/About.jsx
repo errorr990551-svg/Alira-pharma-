@@ -1,55 +1,8 @@
 import React, { useEffect } from 'react'
 import { useQuotePopup } from '../components/context/QuotePopupContext';
-import { ClipboardList, User, Hand, Award, CheckSquare, Globe, Scan, DollarSign, Lightbulb, Users,Truck, ChevronRight, Factory, } from 'lucide-react';
+import { CheckSquare } from 'lucide-react';
 import missionImg from '../assets/Images/mission.webp';
 import visionImg from '../assets/Images/vision.webp';
-
-
-// --- Features Data ---
-const featuresData = [
-  {
-    id: 1,
-    icon: Globe,
-    title: "Manufacturing Excellence",
-    shortText: "We manufacture high-quality surgical instruments and medical disposables using premium-grade materials and advanced production processes to ensure durability and precision.",
-    longText: " Our team's deep understanding of market trends and regulatory landscapes helps us anticipate challenges and provide proactive solutions. We don't just supply products; we offer strategic insights that help your pharmacy thrive in a competitive environment."
-  },
-  {
-    id: 2,
-    icon: Scan,
-    title: "Strict Quality Control",
-    shortText: "Every product undergoes rigorous inspection and testing to meet international healthcare standards and ensure consistent performance.",
-    longText: " From high-volume generics to hard-to-find niche medications, our catalog is constantly updated to reflect current demands. We maintain robust stock levels to minimize backorders and ensure your patients never have to wait for critical treatments."
-  },
-  {
-    id: 3,
-    icon: Truck, // Reusing Truck icon, or could use MapPin/Globe
-    title: "Global Export Network",
-    shortText: "We supply hospitals, distributors, and medical institutions across international markets with reliable shipping and documentation support.",
-    longText: " Our logistics partners are vetted for excellence in cold-chain management and secure transport. Whether you are a rural independent pharmacy or a large urban hospital system, our reliable supply chain reaches you with speed and precision."
-  },
-  {
-    id: 4,
-    icon: DollarSign,
-    title: "Competitive Factory Pricing",
-    shortText: "As direct manufacturers, we offer cost-effective pricing without compromising on quality.",
-    longText: " We pass these savings directly to you, improving your pharmacy's margins without compromising on quality. Our transparent pricing models and flexible terms are designed to support your financial sustainability."
-  },
-  {
-    id: 5,
-    icon: Lightbulb,
-    title: "Customization & OEM Support",
-    shortText: "We provide private labelling, OEM manufacturing, and customized product solutions to meet specific client requirements.",
-    longText: " Our user-friendly online portal provides real-time inventory visibility, automated order tracking, and seamless DSCSA compliance documentation. We are constantly evolving our tech stack to make your procurement process effortless."
-  },
-  {
-    id: 6,
-    icon: Users,
-    title: "Trusted Industry Experience",
-    shortText: "With strong expertise in surgical and medical manufacturing, we focus on innovation, compliance, and long-term partnerships.",
-    longText: " We view ourselves as an extension of your team. Our dedicated support staff is always available to resolve issues, answer questions, and tailor our services to match your specific operational requirements."
-  }
-];
 
 const About = () => {
   const { openQuotePopup } = useQuotePopup();
@@ -108,12 +61,12 @@ const About = () => {
         {/* Banner Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-            Company Profile
+            About Us
           </h1>
           <div className="flex items-center justify-center gap-2 text-teal-100 text-sm md:text-base font-medium">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span className="text-white">Company Profile</span>
+            <span className="text-white">About Us</span>
           </div>
         </div>
       </div>

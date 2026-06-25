@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 // --- NEW: Image Zoom Sub-Component ---
-const ZoomableImage = ({ src, alt }) => {
+const ZoomableImage = ({ src, alt, width = 600, height = 600 }) => {
   const [position, setPosition] = useState({ x: '50%', y: '50%' });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -27,6 +27,8 @@ const ZoomableImage = ({ src, alt }) => {
       <img
         src={src}
         alt={alt}
+        width={width}
+        height={height}
         className="w-full h-full object-contain transition-transform duration-200 ease-out"
         style={{
           // Scale up heavily on hover, stay normal otherwise

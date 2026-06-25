@@ -117,7 +117,12 @@ const ContactUs = () => {
         />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Contact Us</h1>
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm md:text-base font-medium mb-6">
+            <a href="/" className="hover:text-white transition-colors">Home</a>
+            <span>|</span>
+            <span className="text-white">Contact Us</span>
+          </div>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-teal-50 leading-relaxed font-light">
             Have questions or need assistance? Our dedicated team is here to help. Reach out to us for product inquiries, partnership opportunities, or support.
           </p>

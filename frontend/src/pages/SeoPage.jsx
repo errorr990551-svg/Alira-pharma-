@@ -89,7 +89,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Riyadh?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics across Riyadh and the wider Saudi Arabian region."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics across Riyadh and the wider Saudi Arabian region."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
@@ -282,6 +282,8 @@ const SeoPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
                     alt="Alira Medical Export Riyadh" 
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   
@@ -297,7 +299,7 @@ const SeoPage = () => {
                 
                 {/* Main Header */}
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                  Welcome to Alira Pharmaceutical
+                  Welcome to Alira Pharmaceuticals
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -308,9 +310,7 @@ const SeoPage = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       Pharmaceutical Distributors for Riyadh
                     </h3>
-                    <p>
-                      Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Riyadh healthcare market</span>. We ensure our Saudi partners receive compliant, high-efficacy products that meet international safety and regulatory standards. Our dedicated professionals ensure that every facility is meticulously stocked with attention to safety and regulatory standards.
-                    </p>
+                    <p>Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the Riyadh healthcare market. We serve major institutions such as the King Faisal Specialist Hospital, King Saud Medical City, and Riyadh Military Hospital. We ensure our Saudi partners receive compliant, high-efficacy products that meet international safety and SFDA standards, managed via our climate-controlled local logistics warehouses.</p>
                   </div>
 
                   {/* SEO Block 2 */}
@@ -318,9 +318,7 @@ const SeoPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       Surgical Instruments Suppliers in Riyadh
                     </h3>
-                    <p>
-                      We provide <span className="font-semibold text-teal-700">Riyadh’s surgeons</span> with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in the Kingdom. These finely manufactured pieces provide reliability during critical procedures and add an element of uncompromising safety to your operating rooms.
-                    </p>
+                    <p>We provide Riyadh’s surgeons and clinical groups with the precision they demand. Our surgical instruments are forged from premium medical-grade stainless steel, ensuring longevity and durability for complex procedures. Under rigorous SFDA guidelines, we supply high-quality retractors, forceps, and neurosurgical instruments directly to operating rooms across the capital city, ensuring patient safety is never compromised.</p>
                   </div>
 
                   {/* SEO Block 3 */}
@@ -328,9 +326,7 @@ const SeoPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       Wholesale Medical Disposables in Riyadh
                     </h3>
-                    <p>
-                      Hygiene and infection control are non-negotiable. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer Riyadh clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is sourced from high-quality manufacturers to ensure uncompromised hygiene in <span className="font-semibold text-teal-700">Riyadh</span>, making it a perfect addition to any healthcare facility.
-                    </p>
+                    <p>Hygiene and infection control are non-negotiable for high-volume central hospitals in the capital. As a leading wholesale medical disposables supplier, we offer Riyadh clinics a robust inventory of nitrile gloves, sterile surgical gowns, and advanced wound care products designed for single-use safety. Each product batch complies with SFDA mandates, safeguarding critical care settings and surgical theaters throughout the Central Province.</p>
                   </div>
 
                 </div>
@@ -393,6 +389,8 @@ const SeoPage = () => {
                           <img 
                             src={category.image} 
                             alt={category.title} 
+                            width={360}
+                            height={224}
                             className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -438,6 +436,8 @@ const SeoPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
                     alt="Global Medical Logistics for Riyadh" 
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -453,7 +453,7 @@ const SeoPage = () => {
                 
                 {/* Description */}
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Riyadh medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
+                  Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Riyadh medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
 
               </div>
@@ -551,7 +551,7 @@ const SeoPage = () => {
               {/* Paragraph */}
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Riyadh market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping and Saudi customs requirements. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Riyadh.
+                  Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Riyadh market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping and Saudi customs requirements. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Riyadh.
                 </p>
               </div>
             </div>
@@ -565,6 +565,8 @@ const SeoPage = () => {
                 <img 
                   src={placeholderMap} 
                   alt="Service Map" 
+                  width={800}
+                  height={340}
                   className="w-full h-full object-cover" 
                 />
               </div>

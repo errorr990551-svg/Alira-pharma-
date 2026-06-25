@@ -1,108 +1,114 @@
-import React from 'react'
+import React from 'react';
+import Navbar from './components/common/Navbar.jsx'
+import Footer from './components/common/Footer.jsx'
+import SEOHelper from './components/common/SEOHelper.jsx'
+import PopUp from './components/common/PopUp.jsx'
+import ScrollToTop from './components/common/ScrollToTop.jsx'
+import CookieConsent from './components/common/CookieConsent.jsx'
+
+// Lazy-loaded pages for bundle size optimization (Issue 24)
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost.jsx'));
+const BlogPost2 = React.lazy(() => import('./pages/BlogPost2.jsx'));
+const BlogPost3 = React.lazy(() => import('./pages/BlogPost3.jsx'));
+const BlogPost4 = React.lazy(() => import('./pages/BlogPost4.jsx'));
+const BlogPost5 = React.lazy(() => import('./pages/BlogPost5.jsx'));
+const BlogPost6 = React.lazy(() => import('./pages/BlogPost6.jsx'));
+const BlogPost7 = React.lazy(() => import('./pages/BlogPost7.jsx'));
+const BlogPost8 = React.lazy(() => import('./pages/BlogPost8.jsx'));
+const BlogPost9 = React.lazy(() => import('./pages/BlogPost9.jsx'));
+const BlogPost10 = React.lazy(() => import('./pages/BlogPost10.jsx'));
+const BlogPost11 = React.lazy(() => import('./pages/BlogPost11.jsx'));
+const BlogPost12 = React.lazy(() => import('./pages/BlogPost12.jsx'));
+const BlogPost13 = React.lazy(() => import('./pages/BlogPost13.jsx'));
+const BlogPost14 = React.lazy(() => import('./pages/BlogPost14.jsx'));
+const BlogPost15 = React.lazy(() => import('./pages/BlogPost15.jsx'));
+const BlogPost16 = React.lazy(() => import('./pages/BlogPost16.jsx'));
+const BlogPost17 = React.lazy(() => import('./pages/BlogPost17.jsx'));
+const BlogPost18 = React.lazy(() => import('./pages/BlogPost18.jsx'));
+const BlogPost19 = React.lazy(() => import('./pages/BlogPost19.jsx'));
+const BlogsPage = React.lazy(() => import('./pages/BlogsPage.jsx'));
+const Category1 = React.lazy(() => import('./pages/products/Category1.jsx'));
+const Category2 = React.lazy(() => import('./pages/products/Category2.jsx'));
+const Category3 = React.lazy(() => import('./pages/products/Category3.jsx'));
+const Category4 = React.lazy(() => import('./pages/products/Category4.jsx'));
+const Category5 = React.lazy(() => import('./pages/products/Category5.jsx'));
+const Category6 = React.lazy(() => import('./pages/products/Category6.jsx'));
+const Category7 = React.lazy(() => import('./pages/products/Category7.jsx'));
+const Category8 = React.lazy(() => import('./pages/products/Category8.jsx'));
+const Category9 = React.lazy(() => import('./pages/products/Category9.jsx'));
+const Category10 = React.lazy(() => import('./pages/products/Category10.jsx'));
+const Category11 = React.lazy(() => import('./pages/products/Category11.jsx'));
+const Category12 = React.lazy(() => import('./pages/products/Category12.jsx'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs.jsx'));
+const SeoPage = React.lazy(() => import('./pages/SeoPage.jsx'));
+const JeddahPage = React.lazy(() => import('./pages/JeddahPage.jsx'));
+const MeccaPage = React.lazy(() => import('./pages/MeccaPage.jsx'));
+const MedinaPage = React.lazy(() => import('./pages/MedinaPage.jsx'));
+const DammamPage = React.lazy(() => import('./pages/DammamPage.jsx'));
+const MarketArea = React.lazy(() => import('./pages/MarketArea.jsx'));
+const KhobarPage = React.lazy(() => import('./pages/KhobarPage.jsx'));
+const DhahranPage = React.lazy(() => import('./pages/DhahranPage.jsx'));
+const TaifPage = React.lazy(() => import('./pages/TaifPage.jsx'));
+const JubailPage = React.lazy(() => import('./pages/JubailPage.jsx'));
+const AlAhsaPage = React.lazy(() => import('./pages/AlAhsaPage.jsx'));
+const QatifPage = React.lazy(() => import('./pages/QatifPage.jsx'));
+const RasTanuraPage = React.lazy(() => import('./pages/RasTanuraPage.jsx'));
+const AbqaiqPage = React.lazy(() => import('./pages/AbqaiqPage.jsx'));
+const KhafjiPage = React.lazy(() => import('./pages/KhafjiPage.jsx'));
+const AlKharjPage = React.lazy(() => import('./pages/AlKharjPage.jsx'));
+const AlMajmaahPage = React.lazy(() => import('./pages/AlMajmaahPage.jsx'));
+const AlZulfiPage = React.lazy(() => import('./pages/AlZulfiPage.jsx'));
+const ShaqraPage = React.lazy(() => import('./pages/ShaqraPage.jsx'));
+const AfifPage = React.lazy(() => import('./pages/AfifPage.jsx'));
+const DawadmiPage = React.lazy(() => import('./pages/DawadmiPage.jsx'));
+const WadiAdDawasirPage = React.lazy(() => import('./pages/WadiAdDawasirPage.jsx'));
+const RabighPage = React.lazy(() => import('./pages/RabighPage.jsx'));
+const AlLithPage = React.lazy(() => import('./pages/AlLithPage.jsx'));
+const AlQunfudhahPage = React.lazy(() => import('./pages/AlQunfudhahPage.jsx'));
+const YanbuPage = React.lazy(() => import('./pages/YanbuPage.jsx'));
+const AlUlaPage = React.lazy(() => import('./pages/AlUlaPage.jsx'));
+const BadrPage = React.lazy(() => import('./pages/BadrPage.jsx'));
+const KhaybarPage = React.lazy(() => import('./pages/KhaybarPage.jsx'));
+const HubunaPage = React.lazy(() => import('./pages/HubunaPage.jsx'));
+const TabukPage = React.lazy(() => import('./pages/TabukPage.jsx'));
+const DubaPage = React.lazy(() => import('./pages/DubaPage.jsx'));
+const TaymaPage = React.lazy(() => import('./pages/TaymaPage.jsx'));
+const HaqlPage = React.lazy(() => import('./pages/HaqlPage.jsx'));
+const HailPage = React.lazy(() => import('./pages/HailPage.jsx'));
+const BaqaaPage = React.lazy(() => import('./pages/BaqaaPage.jsx'));
+const GhazalahPage = React.lazy(() => import('./pages/GhazalahPage.jsx'));
+const ArarPage = React.lazy(() => import('./pages/ArarPage.jsx'));
+const RafhaPage = React.lazy(() => import('./pages/RafhaPage.jsx'));
+const TuraifPage = React.lazy(() => import('./pages/TuraifPage.jsx'));
+const BuraydahPage = React.lazy(() => import('./pages/BuraydahPage.jsx'));
+const UnaizahPage = React.lazy(() => import('./pages/UnaizahPage.jsx'));
+const ArRassPage = React.lazy(() => import('./pages/ArRassPage.jsx'));
+const AlBukayriyahPage = React.lazy(() => import('./pages/AlBukayriyahPage.jsx'));
+const SakakaPage = React.lazy(() => import('./pages/SakakaPage.jsx'));
+const QurayyatPage = React.lazy(() => import('./pages/QurayyatPage.jsx'));
+const DumatAlJandalPage = React.lazy(() => import('./pages/DumatAlJandalPage.jsx'));
+const ThuwalPage = React.lazy(() => import('./pages/ThuwalPage.jsx'));
+const TurabahPage = React.lazy(() => import('./pages/TurabahPage.jsx'));
+const RanyahPage = React.lazy(() => import('./pages/RanyahPage.jsx'));
+const AlNamasPage = React.lazy(() => import('./pages/AlNamasPage.jsx'));
+const TanomahPage = React.lazy(() => import('./pages/TanomahPage.jsx'));
+const BaljurashiPage = React.lazy(() => import('./pages/BaljurashiPage.jsx'));
+const AlBahaPage = React.lazy(() => import('./pages/AlBahaPage.jsx'));
+const AlMithnabPage = React.lazy(() => import('./pages/AlMithnabPage.jsx'));
+const Certification = React.lazy(() => import('./pages/Certification.jsx'));
+const ProductDetailPage = React.lazy(() => import('./pages/products/ProductDetailPage.jsx'));
+const NotFound = React.lazy(() => import('./pages/NotFound.jsx'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy.jsx'));
+const TermsConditions = React.lazy(() => import('./pages/TermsConditions.jsx'));
+
 import './App.css'
 import './index.css'
 
 import { Route, Routes } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast';
-import Navbar from './components/common/Navbar.jsx'
-import Home from './pages/Home.jsx'
-import Footer from './components/common/Footer.jsx'
-import About from './pages/About.jsx'
-import BlogPost from './pages/BlogPost.jsx'
-import BlogPost2 from './pages/BlogPost2.jsx'
-import BlogPost3 from './pages/BlogPost3.jsx'
-import BlogPost4 from './pages/BlogPost4.jsx'
-import BlogPost5 from './pages/BlogPost5.jsx'
-import BlogPost6 from './pages/BlogPost6.jsx'
-import BlogPost7 from './pages/BlogPost7.jsx'
-import BlogPost8 from './pages/BlogPost8.jsx'
-import BlogPost9 from './pages/BlogPost9.jsx'
-import BlogPost10 from './pages/BlogPost10.jsx'
-import BlogPost11 from './pages/BlogPost11.jsx'
-import BlogPost12 from './pages/BlogPost12.jsx'
-import BlogPost13 from './pages/BlogPost13.jsx'
-import BlogPost14 from './pages/BlogPost14.jsx'
-import BlogPost15 from './pages/BlogPost15.jsx'
-import BlogPost16 from './pages/BlogPost16.jsx'
-import BlogPost17 from './pages/BlogPost17.jsx'
-import BlogPost18 from './pages/BlogPost18.jsx'
-import BlogPost19 from './pages/BlogPost19.jsx'
-import BlogsPage from './pages/BlogsPage.jsx'
-import SEOHelper from './components/common/SEOHelper.jsx'
 
-import Category1 from './pages/products/Category1.jsx'
-import Category2 from './pages/products/Category2.jsx'
-import Category3 from './pages/products/Category3.jsx'
-import Category4 from './pages/products/Category4.jsx'
-import Category5 from './pages/products/Category5.jsx'
-import Category6 from './pages/products/Category6.jsx'
-import Category7 from './pages/products/Category7.jsx'
-import Category8 from './pages/products/Category8.jsx'
-import Category9 from './pages/products/Category9.jsx'
-import Category10 from './pages/products/Category10.jsx'
-import Category11 from './pages/products/Category11.jsx'
-import Category12 from './pages/products/Category12.jsx'
-import ContactUs from './pages/ContactUs.jsx'
-import PopUp from './components/common/PopUp.jsx'
-import ScrollToTop from './components/common/ScrollToTop.jsx'
-import SeoPage from './pages/SeoPage.jsx'
-import JeddahPage from './pages/JeddahPage.jsx'
-import MeccaPage from './pages/MeccaPage.jsx'
-import MedinaPage from './pages/MedinaPage.jsx'
-import DammamPage from './pages/DammamPage.jsx'
-import MarketArea from './pages/MarketArea.jsx'
-import KhobarPage from './pages/KhobarPage.jsx'
-import DhahranPage from './pages/DhahranPage.jsx'
-import TaifPage from './pages/TaifPage.jsx'
-import JubailPage from './pages/JubailPage.jsx'
-import AlAhsaPage from './pages/AlAhsaPage.jsx'
-import QatifPage from './pages/QatifPage.jsx'
-import RasTanuraPage from './pages/RasTanuraPage.jsx'
-import AbqaiqPage from './pages/AbqaiqPage.jsx'
-import KhafjiPage from './pages/KhafjiPage.jsx'
-import AlKharjPage from './pages/AlKharjPage.jsx'
-import AlMajmaahPage from './pages/AlMajmaahPage.jsx'
-import AlZulfiPage from './pages/AlZulfiPage.jsx'
-import ShaqraPage from './pages/ShaqraPage.jsx'
-import AfifPage from './pages/AfifPage.jsx'
-import DawadmiPage from './pages/DawadmiPage.jsx'
-import WadiAdDawasirPage from './pages/WadiAdDawasirPage.jsx'
-import RabighPage from './pages/RabighPage.jsx'
-import AlLithPage from './pages/AlLithPage.jsx'
-import AlQunfudhahPage from './pages/AlQunfudhahPage.jsx'
-import YanbuPage from './pages/YanbuPage.jsx'
-import AlUlaPage from './pages/AlUlaPage.jsx'
-import BadrPage from './pages/BadrPage.jsx'
-import KhaybarPage from './pages/KhaybarPage.jsx'
-import HubunaPage from './pages/HubunaPage.jsx'
-import TabukPage from './pages/TabukPage.jsx'
-import DubaPage from './pages/DubaPage.jsx'
-import TaymaPage from './pages/TaymaPage.jsx'
-import HaqlPage from './pages/HaqlPage.jsx'
-import HailPage from './pages/HailPage.jsx'
-import BaqaaPage from './pages/BaqaaPage.jsx'
-import GhazalahPage from './pages/GhazalahPage.jsx'
-import ArarPage from './pages/ArarPage.jsx'
-import RafhaPage from './pages/RafhaPage.jsx'
-import TuraifPage from './pages/TuraifPage.jsx'
-import BuraydahPage from './pages/BuraydahPage.jsx'
-import UnaizahPage from './pages/UnaizahPage.jsx'
-import ArRassPage from './pages/ArRassPage.jsx'
-import AlBukayriyahPage from './pages/AlBukayriyahPage.jsx'
-import SakakaPage from './pages/SakakaPage.jsx'
-import QurayyatPage from './pages/QurayyatPage.jsx'
-import DumatAlJandalPage from './pages/DumatAlJandalPage.jsx'
-import ThuwalPage from './pages/ThuwalPage.jsx'
-import TurabahPage from './pages/TurabahPage.jsx'
-import RanyahPage from './pages/RanyahPage.jsx'
-import AlNamasPage from './pages/AlNamasPage.jsx'
-import TanomahPage from './pages/TanomahPage.jsx'
-import BaljurashiPage from './pages/BaljurashiPage.jsx'
-import AlBahaPage from './pages/AlBahaPage.jsx'
-import AlMithnabPage from './pages/AlMithnabPage.jsx'
-import Certification from './pages/Certification.jsx'
-import ProductDetailPage from './pages/products/ProductDetailPage.jsx'
-import NotFound from './pages/NotFound.jsx'
 
 function App() {
   return (
@@ -135,9 +141,19 @@ function App() {
       />
       <ScrollToTop />
       <SEOHelper />
+      <CookieConsent />
       <Navbar />
 
+      <React.Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="w-12 h-12 border-4 border-teal-600 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      }>
       <Routes>
+        <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions/" element={<TermsConditions />} />
+        <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
         <Route path='/certification' element={<Certification />} />
@@ -241,6 +257,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         
       </Routes>
+      </React.Suspense>
       <Footer />
     </div>
       

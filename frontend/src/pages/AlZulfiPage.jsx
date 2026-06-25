@@ -89,7 +89,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Al Zulfi?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to public and private hospitals, distributors, and clinics throughout the Al Zulfi region."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to public and private hospitals, distributors, and clinics throughout the Al Zulfi region."
   },
   {
     question: "Are your medical products compliant with Saudi SFDA standards?",
@@ -274,6 +274,8 @@ const AlZulfiPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
                     alt="Alira Medical Export Al Zulfi" 
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   
@@ -287,7 +289,7 @@ const AlZulfiPage = () => {
               <div className="w-full lg:w-7/12">
                 
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                  Welcome to Alira Pharmaceutical
+                  Welcome to Alira Pharmaceuticals
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -299,7 +301,7 @@ const AlZulfiPage = () => {
                       Pharmaceutical Distributors for Al Zulfi
                     </h3>
                     <p>
-                      Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Al Zulfi healthcare market</span>. We serve the region’s public and private medical centers, ensuring they receive compliant, high-efficacy products that meet international safety and SFDA standards.
+                      Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Al Zulfi healthcare market</span>. We serve the region’s public and private medical centers, ensuring they receive compliant, high-efficacy products that meet international safety and SFDA standards.
                     </p>
                   </div>
 
@@ -374,6 +376,8 @@ const AlZulfiPage = () => {
                           <img 
                             src={category.image} 
                             alt={category.title} 
+                            width={360}
+                            height={224}
                             className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -413,6 +417,8 @@ const AlZulfiPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
                     alt="Global Medical Logistics for Al Zulfi" 
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -423,7 +429,7 @@ const AlZulfiPage = () => {
                   Precision Manufacturing, Worldwide Supply to Al Zulfi
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Al Zulfi medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
+                  Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Al Zulfi medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
               </div>
             </div>
@@ -488,7 +494,7 @@ const AlZulfiPage = () => {
               </div>
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Al Zulfi market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping and Saudi customs requirements. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Al Zulfi.
+                  Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Al Zulfi market</span>. We are a prominent manufacturer and supplier in the healthcare industry, with 20+ years of experience navigating international shipping and Saudi customs requirements. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Al Zulfi.
                 </p>
               </div>
             </div>
@@ -498,6 +504,8 @@ const AlZulfiPage = () => {
                 <img 
                   src={placeholderMap} 
                   alt="Service Map" 
+                  width={800}
+                  height={340}
                   className="w-full h-full object-cover" 
                 />
               </div>

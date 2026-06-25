@@ -63,10 +63,22 @@ const BlogPost3 = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
             The Ultimate Guide to Sourcing Medical-Grade Stainless Steel Instruments
           </h1>
-          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm md:text-base font-medium">
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span className="text-white">Blog</span>
+            <a href="/blogs/" className="hover:text-white transition-colors">Blog</a>
+            <span>|</span>
+            <span className="text-white font-semibold truncate max-w-xs md:max-w-md" title="Sourcing Medical-Grade Stainless Steel Instruments">Sourcing Medical-Grade Stainless Steel Instruments</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 08, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: April 08, 2026</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
           </div>
         </div>
       </div>

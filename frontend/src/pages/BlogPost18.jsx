@@ -37,10 +37,17 @@ const BlogPost18 = () => {
           <p className="text-lg md:text-xl text-teal-100 max-w-3xl mx-auto mb-8 font-medium">
             A comprehensive guide for procurement managers, hospital administrators, and clinic owners in the GCC.
           </p>
-          <div className="flex items-center justify-center gap-2 text-teal-100 text-sm font-medium">
-            <span>By Alira Pharmaceuticals Editorial Team</span>
+          <div className="flex items-center justify-center gap-2 text-teal-100 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap">
+            <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span>Last reviewed: June 2025</span>
+            <a href="/blogs/" className="hover:text-white transition-colors">Blog</a>
+            <span>|</span>
+            <span className="text-white font-semibold truncate max-w-xs md:max-w-md" title="Top Surgical Instrument Suppliers in UAE: 2025 Evaluation Guide">Top Surgical Instrument Suppliers in UAE: 2025 Evaluation Guide</span>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-teal-200 text-xs mt-4 font-normal">
+            <span>Published: June 18, 2025</span>
+            <span>•</span>
+            <span>Author: Dr. Anmol Chauhan (Head of Quality &amp; Compliance)</span>
           </div>
         </div>
       </div>

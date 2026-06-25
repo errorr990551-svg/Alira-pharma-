@@ -56,10 +56,7 @@ const ProductDetailPage = () => {
   // PDF Catalog download handler
   const catalogLink = "/alira-b2b-catalog-3.0.pdf";
 
-  // Pre-filled WhatsApp link
-  const whatsappNumber = "+917895850793";
-  const whatsappMessage = encodeURIComponent(`Hi Alira Pharmaceuticals, I am interested in requesting a quote for ${product.name} (REF: ${product.specsTable["REF Number"]}). Please share procurement pricing, MOQ options, and shipping timelines to my location.`);
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
@@ -192,7 +189,7 @@ const ProductDetailPage = () => {
                   className="inline-flex items-center text-xs font-bold text-teal-600 hover:text-teal-800 gap-1.5 transition-colors uppercase tracking-wider mx-auto sm:mx-0 pt-2"
                 >
                   <Download className="w-4 h-4" />
-                  Download Full B2B Medical Catalog (PDF)
+                  Download Full B2B Medical Catalog [PDF, 2.1 MB]
                 </a>
               </div>
 
@@ -223,16 +220,6 @@ const ProductDetailPage = () => {
                 </div>
               </div>
 
-              {/* Arabic Translation Block (Bilingual Target Audience) */}
-              <div className="bg-teal-50/30 rounded-xl p-6 md:p-8 border border-teal-100/50 space-y-4" dir="rtl">
-                <h2 className="text-xl font-bold text-teal-900 border-r-4 border-teal-600 pr-4 text-right">
-                  الوصف باللغة العربية (Bilingual Content)
-                </h2>
-                <h3 className="text-lg font-bold text-gray-900 text-right">{product.arName}</h3>
-                <p className="text-gray-700 leading-relaxed text-sm md:text-base text-right">
-                  {product.arDescription} يلتزم هذا المنتج بأعلى المعايير الطبية المعتمدة ويخضع لرقابة جودة صارمة لتلبية متطلبات المستشفيات والمرافق الطبية في المملكة العربية السعودية والخليج العربي. معقم ومتوافق تمامًا مع الهيئة العامة للغذاء والدواء (SFDA).
-                </p>
-              </div>
 
               {/* Technical Specifications Table */}
               <div className="space-y-4">
@@ -366,6 +353,8 @@ const ProductDetailPage = () => {
                     <img 
                       src={item.image} 
                       alt={item.name} 
+                      width={300}
+                      height={225}
                       className="w-full h-full object-cover" 
                       loading="lazy"
                     />

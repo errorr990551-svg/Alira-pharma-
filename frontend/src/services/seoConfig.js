@@ -7,18 +7,18 @@ export const seoConfig = {
       keywords: "Surgical instrument manufacturer, medical supplies exporter, bulk PPE suppliers, hospital disposables, wound care products, Alira Pharmaceuticals, medical grade stainless steel instruments, OEM medical manufacturing"
     },
     "/about/": {
-      title: "Company Profile | Alira Pharmaceuticals | Medical Supply Manufacturer",
-      description: "Learn about Alira Pharmaceuticals, a trusted global exporter of surgical instruments and medical disposables. We combine precision engineering with patient safety.",
+      title: "About Us | Alira Pharmaceuticals | Medical Supply Manufacturer",
+      description: "About Alira Pharmaceuticals: a trusted global exporter of surgical instruments and medical disposables. We combine precision engineering and safety.",
       keywords: "Alira Pharmaceuticals profile, medical device manufacturer, surgical instrument exporter, healthcare supply mission, certified medical manufacturing, global medical distribution, surgical tool engineering"
     },
     "/contact/": {
       title: "Contact Us | Alira Pharmaceuticals | Request a Medical Supply Quote",
-      description: "Get in touch with Alira Pharmaceuticals. Contact our sales department for bulk surgical instruments, medical disposables, and PPE exports to UAE and GCC.",
+      description: "Get in touch with Alira Pharmaceuticals. Contact our sales department for bulk surgical instruments, medical disposables, and PPE exports to UAE & GCC.",
       keywords: "contact Alira Pharmaceuticals, medical supply sales, surgical instrument bulk quote, global healthcare exports, contact medical manufacturer"
     },
     "/certification/": {
       title: "ISO & CE Certifications | Alira Pharmaceuticals | Trusted Quality",
-      description: "Explore Alira Pharmaceuticals' ISO 13485, ISO 9001, and CE certifications. Verified medical manufacturer supplying UAE, GCC, and global healthcare systems.",
+      description: "Explore Alira Pharmaceuticals' ISO 13485, ISO 9001, and CE certifications. Certified medical manufacturer supplying UAE, GCC, and global markets.",
       keywords: "ISO 13485 certification, CE mark medical device, surgical instrument certification, Alira certifications, hospital compliant medical supplies"
     },
     "/market-area/": {
@@ -30,6 +30,16 @@ export const seoConfig = {
       title: "Surgical & Medical Industry Insights | Alira Pharmaceuticals Blog",
       description: "Stay updated with the latest trends in surgical technology, medical device procurement, and global healthcare logistics. Insights from Alira.",
       keywords: "surgical technology blog, medical procurement trends, global medical logistics news, hospital supply chain insight, healthcare articles 2026"
+    },
+    "/privacy-policy/": {
+      title: "Privacy Policy | Alira Pharmaceuticals",
+      description: "Read the Privacy Policy of Alira Pharmaceuticals. Learn how we collect, use, and protect your personal data in compliance with global standards.",
+      keywords: "privacy policy, Alira Pharmaceuticals, data protection, medical data privacy, GDPR compliance"
+    },
+    "/terms-and-conditions/": {
+      title: "Terms & Conditions | Alira Pharmaceuticals",
+      description: "Read the Terms & Conditions of Alira Pharmaceuticals. Review our service terms, ordering policies, compliance guidelines, and agreement details.",
+      keywords: "terms and conditions, user agreement, Alira terms, medical supply policies"
     }
   },
 

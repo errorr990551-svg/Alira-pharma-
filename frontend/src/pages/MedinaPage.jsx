@@ -89,7 +89,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Medina?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics throughout Medina and the surrounding region."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics throughout Medina and the surrounding region."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
@@ -281,10 +281,18 @@ const MedinaPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
                     alt="Precision-Surgical-Instruments-Medina" 
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO */}
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="High-quality medical-grade surgical instruments for hospitals and clinics in the Medina region." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
+                    alt="High-quality medical-grade surgical instruments for hospitals and clinics in the Medina region." 
+                    width={400}
+                    height={500}
+                    className="sr-only"
+                  />
                   
                   {/* Brand Badge Overlay */}
                   <div className="absolute bottom-0 right-0 bg-teal-700 text-white px-8 py-4 font-bold uppercase tracking-widest text-sm rounded-tl-2xl shadow-lg">
@@ -298,7 +306,7 @@ const MedinaPage = () => {
                 
                 {/* Main Header */}
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                   Welcome to Alira Pharmaceutical
+                   Welcome to Alira Pharmaceuticals
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -309,9 +317,7 @@ const MedinaPage = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                        Pharmaceutical Distributors for Medina (Madinah)
                     </h3>
-                    <p>
-                      Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Medina healthcare market</span>. We ensure our Saudi partners receive compliant, high-efficacy products that meet international safety and regulatory standards. Our professionals are dedicated to supporting the healthcare infrastructure of the Al-Madinah region.
-                    </p>
+                    <p>Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the Medina healthcare market. We serve major institutions such as King Salman Medical City and Al Dar Hospital. We ensure our partners receive compliant, high-efficacy products that meet international safety and SFDA standards.</p>
                   </div>
 
                   {/* SEO Block 2 */}
@@ -319,9 +325,7 @@ const MedinaPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                        Surgical Instruments Suppliers in Medina
                     </h3>
-                    <p>
-                       We provide <span className="font-semibold text-teal-700">Medina’s surgeons</span> and medical professionals with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in the Al-Madinah region.
-                    </p>
+                    <p>We provide Medina’s surgeons and medical professionals with the precision they demand. Our surgical instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From retractors to neuro instruments, we are your trusted partner for operating room excellence in Medina, supplying certified equipment directly to local healthcare facilities.</p>
                   </div>
 
                   {/* SEO Block 3 */}
@@ -329,9 +333,7 @@ const MedinaPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                        Wholesale Medical Disposables in Medina
                     </h3>
-                    <p>
-                      Hygiene and infection control are paramount in Medina's healthcare centers. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is meticulously checked for <span className="font-semibold text-teal-700">Medina's clinics and hospitals</span>.
-                    </p>
+                    <p>Hygiene and infection control are non-negotiable for Medina's healthcare clinics and emergency medical centers. As a leading wholesale medical disposables supplier, we offer a robust inventory of gloves, surgical gowns, and wound care products designed for single-use safety and uncompromised hygiene.</p>
                   </div>
 
                 </div>
@@ -392,6 +394,8 @@ const MedinaPage = () => {
                           <img 
                             src={category.image} 
                             alt={category.title} 
+                            width={360}
+                            height={224}
                             className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -434,10 +438,18 @@ const MedinaPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
                     alt="Global-Medical-Logistics-Medina" 
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO */}
-                  <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Reliable supply chain and export network delivering medical disposables to Medina." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
+                    alt="Reliable supply chain and export network delivering medical disposables to Medina." 
+                    width={600}
+                    height={450}
+                    className="sr-only"
+                  />
                 </div>
               </div>
 
@@ -447,7 +459,7 @@ const MedinaPage = () => {
                    Precision Manufacturing, Worldwide Supply to Medina
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Medina medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
+                  Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Medina medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
               </div>
 
@@ -516,14 +528,20 @@ const MedinaPage = () => {
               </div>
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Medina market</span>. We are a prominent manufacturer and supplier in the healthcare industry, ensuring our Saudi partners receive high-efficacy products. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Medina.
+                  Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Medina market</span>. We are a prominent manufacturer and supplier in the healthcare industry, ensuring our Saudi partners receive high-efficacy products. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Medina.
                 </p>
               </div>
             </div>
 
             <div className="relative flex flex-col md:block">
               <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0">
-                <img src={placeholderMap} alt="Service Map" className="w-full h-full object-cover" />
+                <img 
+                  src={placeholderMap} 
+                  alt="Service Map" 
+                  width={800}
+                  height={340}
+                  className="w-full h-full object-cover" 
+                />
               </div>
 
               {/* Stats Box */}

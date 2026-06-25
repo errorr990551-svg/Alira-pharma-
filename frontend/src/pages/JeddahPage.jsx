@@ -89,7 +89,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Jeddah?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics across Jeddah and the Western Province of Saudi Arabia."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics across Jeddah and the Western Province of Saudi Arabia."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
@@ -276,6 +276,8 @@ const JeddahPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
                     alt="Alira Medical Export Jeddah" 
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   
@@ -291,7 +293,7 @@ const JeddahPage = () => {
                 
                 {/* Main Header */}
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                  Welcome to Alira Pharmaceutical
+                  Welcome to Alira Pharmaceuticals
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -302,9 +304,7 @@ const JeddahPage = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       Pharmaceutical Distributors for Jeddah
                     </h3>
-                    <p>
-                      Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Jeddah healthcare market</span>. We ensure our partners in the Hejaz region receive compliant, high-efficacy products that meet international safety and regulatory standards. Our dedicated professionals ensure that every facility is meticulously stocked with attention to safety and regulatory standards.
-                    </p>
+                    <p>Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the Jeddah healthcare market. We support leading medical networks including the King Fahd General Hospital, Jeddah Clinic Hospital, and the International Medical Center. Our logistics partners utilize the cold-chain facilities of the Western Region to guarantee product stability, adhering strictly to global GMP standards.</p>
                   </div>
 
                   {/* SEO Block 2 */}
@@ -312,9 +312,7 @@ const JeddahPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       Surgical Instruments Suppliers in Jeddah
                     </h3>
-                    <p>
-                      We provide <span className="font-semibold text-teal-700">Jeddah’s surgeons</span> and medical professionals with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in the Kingdom’s western hub.
-                    </p>
+                    <p>We provide Jeddah’s surgeons and operating teams with the precision they demand. Our surgical instruments are forged from medical-grade stainless steel, ensuring corrosion resistance during complex surgeries. From cardiovascular retractors to pediatric micro-instruments, we supply operating theaters across the Red Sea region with CE-certified quality and SFDA compliance documents.</p>
                   </div>
 
                   {/* SEO Block 3 */}
@@ -322,9 +320,7 @@ const JeddahPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       Wholesale Medical Disposables in Jeddah
                     </h3>
-                    <p>
-                      Hygiene and infection control are non-negotiable for Jeddah's busy medical centers. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is sourced from high-quality manufacturers to ensure uncompromised hygiene in <span className="font-semibold text-teal-700">Jeddah</span>, making it a perfect addition to any healthcare facility.
-                    </p>
+                    <p>Hygiene and infection control are non-negotiable for Jeddah's bustling maritime clinics and urban healthcare centers. As a trusted wholesale medical disposables supplier, we offer a robust inventory of surgical gloves, drapes, and wound care dressings. Each batch is optimized for single-use reliability and is shipped directly via sea cargo, keeping inventory levels consistent.</p>
                   </div>
 
                 </div>
@@ -385,6 +381,8 @@ const JeddahPage = () => {
                           <img 
                             src={category.image} 
                             alt={category.title} 
+                            width={360}
+                            height={224}
                             className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -430,6 +428,8 @@ const JeddahPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
                     alt="Global Medical Logistics Jeddah" 
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -445,7 +445,7 @@ const JeddahPage = () => {
                 
                 {/* Description */}
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Jeddah medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
+                  Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Jeddah medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
 
               </div>
@@ -480,7 +480,7 @@ const JeddahPage = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Strategic Logistics</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  20+ years of experience navigating international shipping, specifically utilizing the Jeddah Islamic Port for faster local clearance.
+                  20+ years of experience navigating international shipping, 20+ years of experience navigating international shipping, specifically utilizing the Jeddah Islamic Port for faster local clearance.
                 </p>
               </div>
 
@@ -541,7 +541,7 @@ const JeddahPage = () => {
               </div>
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Jeddah market</span>. We are a prominent manufacturer and supplier in the healthcare industry, leveraging major shipping routes to <span className="font-semibold text-teal-700">Jeddah Islamic Port</span> for faster local clearance. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Jeddah.
+                  Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Jeddah market</span>. We are a prominent manufacturer and supplier in the healthcare industry, leveraging major shipping routes to <span className="font-semibold text-teal-700">Jeddah Islamic Port</span> for faster local clearance. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Jeddah.
                 </p>
               </div>
             </div>
@@ -552,6 +552,8 @@ const JeddahPage = () => {
                 <img 
                   src={placeholderMap} 
                   alt="Service Map" 
+                  width={800}
+                  height={340}
                   className="w-full h-full object-cover" 
                 />
               </div>

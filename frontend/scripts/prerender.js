@@ -16,7 +16,9 @@ const staticPaths = [
   '/certification/',
   '/contact/',
   '/market-area/',
-  '/blogs/'
+  '/blogs/',
+  '/privacy-policy/',
+  '/terms-and-conditions/'
 ];
 
 const majorCities = [

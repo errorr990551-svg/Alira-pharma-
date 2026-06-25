@@ -89,7 +89,7 @@ const categoriesData = [
 const faqData = [
   {
     question: "Do you export surgical instruments directly to Dammam?",
-    answer: "Yes, Alira Pharmaceutical has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics throughout Dammam, Al Khobar, and Dhahran."
+    answer: "Yes, Alira Pharmaceuticals has a dedicated export wing that handles direct shipments to hospitals, distributors, and private clinics throughout Dammam, Al Khobar, and Dhahran."
   },
   {
     question: "Are your medical products compliant with Saudi healthcare standards?",
@@ -281,10 +281,18 @@ const DammamPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
                     alt="Precision-Surgical-Instruments-Dammam" 
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO */}
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="High-quality medical-grade stainless steel surgical instruments for hospitals in the Eastern Province." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
+                    alt="High-quality medical-grade stainless steel surgical instruments for hospitals in the Eastern Province." 
+                    width={400}
+                    height={500}
+                    className="sr-only"
+                  />
                   
                   {/* Brand Badge Overlay */}
                   <div className="absolute bottom-0 right-0 bg-teal-700 text-white px-8 py-4 font-bold uppercase tracking-widest text-sm rounded-tl-2xl shadow-lg">
@@ -298,7 +306,7 @@ const DammamPage = () => {
                 
                 {/* Main Header */}
                 <h2 className="text-3xl lg:text-4xl font-bold text-teal-700 mb-4">
-                   Welcome to Alira Pharmaceutical
+                   Welcome to Alira Pharmaceuticals
                 </h2>
                 <div className="h-1 w-24 bg-teal-500 rounded-full mb-10"></div>
 
@@ -309,9 +317,7 @@ const DammamPage = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                         Pharmaceutical Distributors for Dammam
                     </h3>
-                    <p>
-                       Alira Pharmaceutical specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the <span className="font-semibold text-teal-700">Dammam healthcare market</span>. We ensure our partners in the Eastern Province receive compliant, high-efficacy products that meet international safety and regulatory standards. Our professionals are dedicated to supporting the medical facilities of the industrial heartland.
-                    </p>
+                    <p>Alira Pharmaceuticals specializes in the strategic sourcing and distribution of generic medications and essential medical supplies tailored for the Dammam healthcare market. We serve the region's prominent networks, including the King Fahd Specialist Hospital Dammam and the Dammam Medical Complex. We ensure our eastern Saudi partners receive compliant, high-efficacy products matching international SFDA standards.</p>
                   </div>
 
                   {/* SEO Block 2 */}
@@ -319,9 +325,7 @@ const DammamPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                         Surgical Instruments Suppliers in Dammam
                     </h3>
-                    <p>
-                       We provide <span className="font-semibold text-teal-700">Dammam’s surgeons</span> and specialized medical centers with the precision they demand. Our Surgical Instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From Retractors to Neuro Instruments, we are your trusted partner for operating room excellence in Saudi Arabia’s industrial heartland.
-                    </p>
+                    <p>We provide Dammam’s surgeons and medical professionals with the precision they demand. Our surgical instruments are forged from medical-grade stainless steel, ensuring durability for complex procedures. From bone cutters to ENT instruments, we are your trusted partner for operating room excellence in the Eastern Province, supplying certified equipment directly to local healthcare facilities.</p>
                   </div>
 
                   {/* SEO Block 3 */}
@@ -329,9 +333,7 @@ const DammamPage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                         Wholesale Medical Disposables in Dammam
                     </h3>
-                    <p>
-                       Hygiene and infection control are critical for Dammam’s high-traffic medical facilities. As a leading <span className="font-semibold text-teal-700">Wholesale Medical Disposables Supplier</span>, we offer clinics a robust inventory of Gloves, Surgical Gowns, and Wound Care products designed for single-use safety and uncompromised hygiene. Each product is meticulously checked for <span className="font-semibold text-teal-700">Dammam's medical facilities</span>.
-                    </p>
+                    <p>Hygiene and infection control are critical in Dammam's dense industrial and residential hubs. As a leading wholesale medical disposables supplier, we offer clinics a robust inventory of gloves, surgical gowns, and wound care products designed for single-use safety. Each product is sourced from high-quality facilities to ensure uncompromised hygiene in Dammam, supporting clinical excellence.</p>
                   </div>
 
                 </div>
@@ -392,6 +394,8 @@ const DammamPage = () => {
                           <img 
                             src={category.image} 
                             alt={category.title} 
+                            width={360}
+                            height={224}
                             className="w-full h-full object-contain transform group-hover/card:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -434,10 +438,18 @@ const DammamPage = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
                     alt="Global-Medical-Logistics-Dammam" 
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Hidden img for SEO */}
-                  <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Efficient supply chain and export network delivering medical disposables via Dammam’s King Abdulaziz Port." className="sr-only" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" 
+                    alt="Efficient supply chain and export network delivering medical disposables via Dammam’s King Abdulaziz Port." 
+                    width={600}
+                    height={450}
+                    className="sr-only"
+                  />
                 </div>
               </div>
 
@@ -447,7 +459,7 @@ const DammamPage = () => {
                   Precision Manufacturing, Worldwide Supply to Dammam
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
-                   Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Dammam medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply via <span className="font-semibold text-teal-700">King Abdulaziz Port</span>.
+                   Alira Pharmaceuticals is a leading manufacturer and global exporter of surgical instruments and medical supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets, specifically catering to the <span className="font-semibold text-teal-700">Dammam medical sector</span>. Our commitment to quality, compliance, and timely delivery ensures dependable supply via <span className="font-semibold text-teal-700">King Abdulaziz Port</span>.
                 </p>
               </div>
 
@@ -516,14 +528,20 @@ const DammamPage = () => {
               </div>
               <div className="w-full md:w-7/12">
                 <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                  Alira Pharmaceutical offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Dammam market</span>. We are a prominent manufacturer and supplier in the healthcare industry, ensuring our partners in the Eastern Province receive high-efficacy products. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Dammam.
+                  Alira Pharmaceuticals offers a unique variety of surgical instruments, PPE, and medical disposables tailored for the <span className="font-semibold text-teal-700">Dammam market</span>. We are a prominent manufacturer and supplier in the healthcare industry, ensuring our partners in the Eastern Province receive high-efficacy products. Following the latest regulatory standards, our supplies add reliability and operational efficiency to your medical facility in Dammam.
                 </p>
               </div>
             </div>
 
             <div className="relative flex flex-col md:block">
               <div className="w-full md:w-3/4 md:ml-auto bg-sky-100 rounded-lg overflow-hidden aspect-square md:aspect-21/9 relative z-0">
-                <img src={placeholderMap} alt="Service Map" className="w-full h-full object-cover" />
+                <img 
+                  src={placeholderMap} 
+                  alt="Service Map" 
+                  width={800}
+                  height={340}
+                  className="w-full h-full object-cover" 
+                />
               </div>
 
               {/* Stats Box */}
