@@ -1,13 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import emailjs from '@emailjs/browser';
 import { MapPin, Phone, Mail, Printer, Send } from 'lucide-react';
-
-// EmailJS Configuration
-const SERVICE_ID = "service_e9tpgmh";
-const TEMPLATE_ID = "template_setcryu"; // Correct Template ID from Image 3
-const PUBLIC_KEY = "L6kSSqLl5HJakWtm5"; // Fixed: lowercase 'l' instead of 'I'
 
 
 const ContactUs = () => {
@@ -65,26 +59,31 @@ const ContactUs = () => {
     e.preventDefault();
     setLoading(true);
 
-    const templateParams = {
+    const payload = {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
       company: formData.company,
       message: formData.message,
-      to_email: "anmolchauhan@alirapharmaceuticals.com",
-      cc_emails: "akshat99055@gmail.com, errorr990551@gmail.com",
-      Alirapharmaceuticals: "Alira Pharmaceuticals",
     };
 
     try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        templateParams,
-        {
-          publicKey: PUBLIC_KEY,
-        }
-      );
+      const baseUrl = import.meta.env.VITE_API_URL || "";
+      
+      const response = await fetch(`${baseUrl}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send message");
+      }
+
       toast.success("Message sent successfully!");
 
       setFormData({
@@ -96,7 +95,7 @@ const ContactUs = () => {
       });
     } catch (error) {
       console.error(error);
-      toast.error(`Failed to send message: ${error.text || "Please check your EmailJS settings."}`);
+      toast.error(error.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }

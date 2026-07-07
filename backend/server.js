@@ -15,6 +15,8 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get("/health", (req, res) => res.send("OK"));
+
 app.use("/api", contactRoutes);
 
 const PORT = process.env.PORT || 5000;

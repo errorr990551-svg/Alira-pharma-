@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 const PopUp = ({ isOpen, onClose, autoShow = true }) => {
@@ -46,30 +45,35 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
     });
   };
 
-  // Handle Submit (EMAILJS CALL)
+  // Handle Submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    const serviceId = 'service_e9tpgmh';
-    const templateId = 'template_setcryu'; // Correct Template ID from Image 3
-    const publicKey = 'L6kSSqLl5HJakWtm5'; // Fixed: lowercase 'l' instead of 'I'
-
-    const templateParams = {
+    const payload = {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
       company: formData.company,
       message: formData.message,
-      to_email: "anmolchauhan@alirapharmaceuticals.com",
-      cc_emails: "akshat99055@gmail.com, errorr990551@gmail.com",
-      Alirapharmaceuticals: "Alira Pharmaceuticals",
     };
 
     try {
-      await emailjs.send(serviceId, templateId, templateParams, {
-        publicKey: publicKey,
+      const baseUrl = import.meta.env.VITE_API_URL || "";
+      
+      const response = await fetch(`${baseUrl}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send message");
+      }
 
       toast.success("Message sent successfully! Our experts will contact you soon.");
 
@@ -84,8 +88,8 @@ const PopUp = ({ isOpen, onClose, autoShow = true }) => {
 
       handleClose();
     } catch (error) {
-      console.error("EmailJS Error:", error);
-      toast.error(`Failed to send message: ${error.text || "Please check your EmailJS settings."}`);
+      console.error("API Error:", error);
+      toast.error(error.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
