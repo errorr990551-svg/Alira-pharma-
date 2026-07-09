@@ -1,11 +1,24 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { MapPin, Phone, Mail, Printer, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Printer, Send, Lock } from 'lucide-react';
+import ContactDetailPopup from '../components/common/ContactDetailPopup';
 
 
 const ContactUs = () => {
-    const [formData, setFormData] = useState({
+  const [detailsRevealed, setDetailsRevealed] = useState(() => localStorage.getItem('alira_contact_details_revealed') === 'true');
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+
+  useEffect(() => {
+    const handleReveal = () => {
+      setDetailsRevealed(true);
+    };
+    window.addEventListener('contactDetailsRevealed', handleReveal);
+    return () => {
+      window.removeEventListener('contactDetailsRevealed', handleReveal);
+    };
+  }, []);
+
+  const [formData, setFormData] = useState({
     name: "",
     company: "",
     email: "",
@@ -165,53 +178,70 @@ const ContactUs = () => {
                 </div>
               </div>
 
-              {/* Phone & Fax */}
-              <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="bg-teal-50 p-3 rounded-full text-teal-600 shrink-0">
-                  <Phone 
-                    className="w-6 h-6" 
-                    role="img"
-                    title="Call Alira Pharmaceuticals for medical supply support and ordering"
-                    aria-label="Call Alira Pharmaceuticals for medical supply support and ordering" 
-                  />
-                  {/* Hidden img for SEO tools that only scan <img> tags */}
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Call Alira Pharmaceuticals for medical supply support and ordering" className="sr-only" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                  <p className="text-gray-600 flex flex-col gap-1">
-                    <a href="tel:800-210-0845" className="hover:text-teal-600 transition-colors">
-                      +91 7895850793
-                    </a>
-                    
-                  </p>
-                </div>
-              </div>
+              {detailsRevealed ? (
+                <>
+                  {/* Phone & Fax */}
+                  <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div className="bg-teal-50 p-3 rounded-full text-teal-600 shrink-0">
+                      <Phone 
+                        className="w-6 h-6" 
+                        role="img"
+                        title="Call Alira Pharmaceuticals for medical supply support and ordering"
+                        aria-label="Call Alira Pharmaceuticals for medical supply support and ordering" 
+                      />
+                      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Call Alira Pharmaceuticals for medical supply support and ordering" className="sr-only" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
+                      <p className="text-gray-600 flex flex-col gap-1">
+                        <a href="tel:+917895850793" className="hover:text-teal-600 transition-colors">
+                          +91 7895850793
+                        </a>
+                      </p>
+                    </div>
+                  </div>
 
-              {/* Email */}
-              <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="bg-teal-50 p-3 rounded-full text-teal-600 shrink-0">
-                  <Mail 
-                    className="w-6 h-6" 
-                    role="img"
-                    title="Email Alira Pharmaceuticals for wholesale surgical instrument inquiries"
-                    aria-label="Email Alira Pharmaceuticals for wholesale surgical instrument inquiries" 
-                  />
-                  {/* Hidden img for SEO tools that only scan <img> tags */}
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Email Alira Pharmaceuticals for wholesale surgical instrument inquiries" className="sr-only" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Email Us</h3>
-                  <p className="text-gray-600 flex flex-col gap-1">
-                    <a href="mailto:anmolchauhan@alirapharmaceuticals.com" className="hover:text-teal-600 transition-colors">
-                      anmolchauhan@alirapharmaceuticals.com
-                    </a>
-                    <a href="mailto:info@alirapharmaceuticals.com" className="hover:text-teal-600 transition-colors">
-                      info@alirapharmaceuticals.com
-                    </a>
+                  {/* Email */}
+                  <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div className="bg-teal-50 p-3 rounded-full text-teal-600 shrink-0">
+                      <Mail 
+                        className="w-6 h-6" 
+                        role="img"
+                        title="Email Alira Pharmaceuticals for wholesale surgical instrument inquiries"
+                        aria-label="Email Alira Pharmaceuticals for wholesale surgical instrument inquiries" 
+                      />
+                      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Email Alira Pharmaceuticals for wholesale surgical instrument inquiries" className="sr-only" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-1">Email Us</h3>
+                      <p className="text-gray-600 flex flex-col gap-1">
+                        <a href="mailto:anmolchauhan@alirapharmaceuticals.com" className="hover:text-teal-600 transition-colors">
+                          anmolchauhan@alirapharmaceuticals.com
+                        </a>
+                        <a href="mailto:info@alirapharmaceuticals.com" className="hover:text-teal-600 transition-colors">
+                          info@alirapharmaceuticals.com
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="flex flex-col items-center justify-center p-8 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all text-center">
+                  <div className="bg-teal-50 p-4 rounded-full text-teal-600 mb-4">
+                    <Lock className="w-8 h-8 stroke-2" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Contact Details Locked</h3>
+                  <p className="text-gray-500 text-sm max-w-sm mb-6 leading-relaxed">
+                    Please submit your information to get direct phone numbers and email addresses for support.
                   </p>
+                  <button 
+                    onClick={() => setIsContactPopupOpen(true)}
+                    className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-md shadow-teal-600/10 uppercase tracking-wider text-xs cursor-pointer animate-pulse hover:animate-none"
+                  >
+                    Show Contact Details
+                  </button>
                 </div>
-              </div>
+              )}
             </div>
           </div>
 
@@ -313,6 +343,10 @@ const ContactUs = () => {
         </div>
       </div>
 
+      <ContactDetailPopup 
+        isOpen={isContactPopupOpen} 
+        onClose={() => setIsContactPopupOpen(false)} 
+      />
     </div>
   );
 };
