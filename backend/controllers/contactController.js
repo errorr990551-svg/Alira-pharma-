@@ -13,8 +13,8 @@ exports.submitContactForm = async (req, res) => {
 
     // Trigger email send without awaiting (Non-blocking for fast UI)
     sendMail({
-      to: "anmolchauhan@alirapharmaceuticals.com",
-      cc: ["akshat99055@gmail.com", "errorr990551@gmail.com"],
+      to: "akshat99055@gmail.com",
+      cc: ["errorr990551@gmail.com"],
       subject: "New Contact Us Enquiry",
       html: `
         <h2>New Contact Enquiry</h2>
