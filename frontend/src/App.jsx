@@ -42,61 +42,7 @@ const Category10 = React.lazy(() => import('./pages/products/Category10.jsx'));
 const Category11 = React.lazy(() => import('./pages/products/Category11.jsx'));
 const Category12 = React.lazy(() => import('./pages/products/Category12.jsx'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs.jsx'));
-const SeoPage = React.lazy(() => import('./pages/SeoPage.jsx'));
-const JeddahPage = React.lazy(() => import('./pages/JeddahPage.jsx'));
-const MeccaPage = React.lazy(() => import('./pages/MeccaPage.jsx'));
-const MedinaPage = React.lazy(() => import('./pages/MedinaPage.jsx'));
-const DammamPage = React.lazy(() => import('./pages/DammamPage.jsx'));
-const MarketArea = React.lazy(() => import('./pages/MarketArea.jsx'));
-const KhobarPage = React.lazy(() => import('./pages/KhobarPage.jsx'));
-const DhahranPage = React.lazy(() => import('./pages/DhahranPage.jsx'));
-const TaifPage = React.lazy(() => import('./pages/TaifPage.jsx'));
-const JubailPage = React.lazy(() => import('./pages/JubailPage.jsx'));
-const AlAhsaPage = React.lazy(() => import('./pages/AlAhsaPage.jsx'));
-const QatifPage = React.lazy(() => import('./pages/QatifPage.jsx'));
-const RasTanuraPage = React.lazy(() => import('./pages/RasTanuraPage.jsx'));
-const AbqaiqPage = React.lazy(() => import('./pages/AbqaiqPage.jsx'));
-const KhafjiPage = React.lazy(() => import('./pages/KhafjiPage.jsx'));
-const AlKharjPage = React.lazy(() => import('./pages/AlKharjPage.jsx'));
-const AlMajmaahPage = React.lazy(() => import('./pages/AlMajmaahPage.jsx'));
-const AlZulfiPage = React.lazy(() => import('./pages/AlZulfiPage.jsx'));
-const ShaqraPage = React.lazy(() => import('./pages/ShaqraPage.jsx'));
-const AfifPage = React.lazy(() => import('./pages/AfifPage.jsx'));
-const DawadmiPage = React.lazy(() => import('./pages/DawadmiPage.jsx'));
-const WadiAdDawasirPage = React.lazy(() => import('./pages/WadiAdDawasirPage.jsx'));
-const RabighPage = React.lazy(() => import('./pages/RabighPage.jsx'));
-const AlLithPage = React.lazy(() => import('./pages/AlLithPage.jsx'));
-const AlQunfudhahPage = React.lazy(() => import('./pages/AlQunfudhahPage.jsx'));
-const YanbuPage = React.lazy(() => import('./pages/YanbuPage.jsx'));
-const AlUlaPage = React.lazy(() => import('./pages/AlUlaPage.jsx'));
-const BadrPage = React.lazy(() => import('./pages/BadrPage.jsx'));
-const KhaybarPage = React.lazy(() => import('./pages/KhaybarPage.jsx'));
-const HubunaPage = React.lazy(() => import('./pages/HubunaPage.jsx'));
-const TabukPage = React.lazy(() => import('./pages/TabukPage.jsx'));
-const DubaPage = React.lazy(() => import('./pages/DubaPage.jsx'));
-const TaymaPage = React.lazy(() => import('./pages/TaymaPage.jsx'));
-const HaqlPage = React.lazy(() => import('./pages/HaqlPage.jsx'));
-const HailPage = React.lazy(() => import('./pages/HailPage.jsx'));
-const BaqaaPage = React.lazy(() => import('./pages/BaqaaPage.jsx'));
-const GhazalahPage = React.lazy(() => import('./pages/GhazalahPage.jsx'));
-const ArarPage = React.lazy(() => import('./pages/ArarPage.jsx'));
-const RafhaPage = React.lazy(() => import('./pages/RafhaPage.jsx'));
-const TuraifPage = React.lazy(() => import('./pages/TuraifPage.jsx'));
-const BuraydahPage = React.lazy(() => import('./pages/BuraydahPage.jsx'));
-const UnaizahPage = React.lazy(() => import('./pages/UnaizahPage.jsx'));
-const ArRassPage = React.lazy(() => import('./pages/ArRassPage.jsx'));
-const AlBukayriyahPage = React.lazy(() => import('./pages/AlBukayriyahPage.jsx'));
-const SakakaPage = React.lazy(() => import('./pages/SakakaPage.jsx'));
-const QurayyatPage = React.lazy(() => import('./pages/QurayyatPage.jsx'));
-const DumatAlJandalPage = React.lazy(() => import('./pages/DumatAlJandalPage.jsx'));
-const ThuwalPage = React.lazy(() => import('./pages/ThuwalPage.jsx'));
-const TurabahPage = React.lazy(() => import('./pages/TurabahPage.jsx'));
-const RanyahPage = React.lazy(() => import('./pages/RanyahPage.jsx'));
-const AlNamasPage = React.lazy(() => import('./pages/AlNamasPage.jsx'));
-const TanomahPage = React.lazy(() => import('./pages/TanomahPage.jsx'));
-const BaljurashiPage = React.lazy(() => import('./pages/BaljurashiPage.jsx'));
-const AlBahaPage = React.lazy(() => import('./pages/AlBahaPage.jsx'));
-const AlMithnabPage = React.lazy(() => import('./pages/AlMithnabPage.jsx'));
+
 const Certification = React.lazy(() => import('./pages/Certification.jsx'));
 const ProductDetailPage = React.lazy(() => import('./pages/products/ProductDetailPage.jsx'));
 const NotFound = React.lazy(() => import('./pages/NotFound.jsx'));
@@ -157,6 +103,9 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
         <Route path='/certification' element={<Certification />} />
+        <Route path='/contact' element={<ContactUs/>} />
+
+        {/* Blogs */}
         <Route path='/blogs/ent-neuro-surgical-tools' element={<BlogPost/>} />
         <Route path='/blogs/india-uae-cepa-zero-duty-medical-imports-dubai' element={<BlogPost2/>} />
         <Route path='/blogs/sourcing-medical-grade-stainless-steel-instruments' element={<BlogPost3/>} />
@@ -178,68 +127,9 @@ function App() {
         <Route path='/blogs/ophthalmic-micro-surgical-precision' element={<BlogPost19 />} />
         <Route path='/blogs' element={<BlogsPage />} />
 
-        <Route path='/contact' element={<ContactUs/>} />
-        <Route path='/riyadh' element={<SeoPage/>} />
-        <Route path='/jeddah' element={<JeddahPage/>} />
-        <Route path='/mecca' element={<MeccaPage/>} />
-        <Route path='/medina' element={<MedinaPage/>} />
-        <Route path='/dammam' element={<DammamPage/>} />
-        <Route path='/market-area' element={<MarketArea/>} />
-        <Route path='/al-khobar' element={<KhobarPage/>} />
-        <Route path='/dhahran' element={<DhahranPage/>} />
-        <Route path='/taif' element={<TaifPage/>} />
-        <Route path='/jubail' element={<JubailPage/>} />
-        <Route path='/al-ahsa' element={<AlAhsaPage/>} />
-        <Route path='/qatif' element={<QatifPage/>} />
-        <Route path='/ras-tanura' element={<RasTanuraPage/>} />
-        <Route path='/abqaiq' element={<AbqaiqPage/>} />
-        <Route path='/khafji' element={<KhafjiPage/>} />
-        <Route path='/al-kharj' element={<AlKharjPage/>} />
-        <Route path='/al-majmaah' element={<AlMajmaahPage/>} />
-        <Route path='/al-zulfi' element={<AlZulfiPage/>} />
-        <Route path='/shaqra' element={<ShaqraPage/>} />
-        <Route path='/afif' element={<AfifPage/>} />
-        <Route path='/dawadmi' element={<DawadmiPage/>} />
-        <Route path='/wadi-ad-dawasir' element={<WadiAdDawasirPage/>} />
-        <Route path='/rabigh' element={<RabighPage/>} />
-        <Route path='/al-lith' element={<AlLithPage/>} />
-        <Route path='/al-qunfudhah' element={<AlQunfudhahPage/>} />
-        <Route path='/yanbu' element={<YanbuPage/>} />
-        <Route path='/al-ula' element={<AlUlaPage/>} />
-        <Route path='/badr' element={<BadrPage/>} />
-        <Route path='/khaybar' element={<KhaybarPage/>} />
-        <Route path='/hubuna' element={<HubunaPage/>} />
-        <Route path='/tabuk' element={<TabukPage/>} />
-        <Route path='/duba' element={<DubaPage/>} />
-        <Route path='/tayma' element={<TaymaPage/>} />
-        <Route path='/haql' element={<HaqlPage/>} />
-        <Route path='/hail' element={<HailPage/>} />
-        <Route path='/baqaa' element={<BaqaaPage/>} />
-        <Route path='/ghazalah' element={<GhazalahPage/>} />
-        <Route path='/arar' element={<ArarPage/>} />
-        <Route path='/rafha' element={<RafhaPage/>} />
-        <Route path='/turaif' element={<TuraifPage/>} />
-        <Route path='/buraydah' element={<BuraydahPage/>} />
-        <Route path='/unaizah' element={<UnaizahPage />} />
-        <Route path='/ar-rass' element={<ArRassPage />} />
-        <Route path='/al-bukayriyah' element={<AlBukayriyahPage />} />
-        <Route path='/sakaka' element={<SakakaPage />} />
-        <Route path='/qurayyat' element={<QurayyatPage />} />
-        <Route path='/dumat-al-jandal' element={<DumatAlJandalPage />} />
-        <Route path='/thuwal' element={<ThuwalPage />} />
-        <Route path='/turabah' element={<TurabahPage />} />
-        <Route path='/ranyah' element={<RanyahPage />} />
-        <Route path='/al-namas' element={<AlNamasPage />} />
-        <Route path='/tanomah' element={<TanomahPage />} />
-        <Route path='/baljurashi' element={<BaljurashiPage />} />
-        <Route path='/al-baha' element={<AlBahaPage />} />
-        <Route path='/al-mithnab' element={<AlMithnabPage />} />
-
-
-
+        {/* Products */}
         <Route path="/products/:categorySlug/:productSlug/" element={<ProductDetailPage />} />
         <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage />} />
-
         <Route path="/products/surgical-instruments" element={<Category1 />} />
         <Route path="/products/retractors-elevators" element={<Category2 />} />
         <Route path="/products/bone-neuro" element={<Category3 />} />
@@ -255,14 +145,10 @@ function App() {
 
         {/* 404 Routing */}
         <Route path="*" element={<NotFound />} />
-        
       </Routes>
       </React.Suspense>
       <Footer />
     </div>
-      
-    
-    
   )
 }
 

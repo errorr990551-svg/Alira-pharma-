@@ -106,12 +106,7 @@ const Footer = () => {
                 </Link>
               </li>
 
-              <li>
-                <Link to="/market-area/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
-                  <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
-                  Market Area
-                </Link>
-              </li>
+
               <li>
                 <Link to="/blogs/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
                   <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
@@ -268,9 +263,13 @@ const Footer = () => {
               Countries Served (GCC & Middle East)
             </h4>
             <div className="flex flex-wrap gap-3">
-              <Link to="/market-area" className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer" title="Saudi Arabia">
+              <button 
+                onClick={() => toast("Saudi Arabia Distribution: We supply hospitals, medical networks, and private healthcare facilities across KSA. CE and SFDA compliance documentation provided upon request.", { icon: "🇸🇦", duration: 6000 })}
+                className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer text-left" 
+                title="Saudi Arabia"
+              >
                 <span>🇸🇦</span> <span>Saudi Arabia (KSA)</span>
-              </Link>
+              </button>
               <button 
                 onClick={() => toast.success("Zero-Duty Import: Under India-UAE CEPA, medical devices and surgical instruments from our facilities qualify for zero import duty in Dubai/Abu Dhabi.", { icon: "🇦🇪", duration: 6000 })}
                 className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-white/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100/50 transition-colors cursor-pointer text-left" 

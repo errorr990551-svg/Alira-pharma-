@@ -43,26 +43,13 @@ const SEOHelper = () => {
     }
     linkHreflangDefault.setAttribute('href', canonicalUrl);
 
-    // 3. Resolve Robots Tag & Minor Cities Pruning (Issue 10, Issue 13)
+    // 3. Resolve Robots Tag
     let metaRobots = document.querySelector('meta[name="robots"]');
     if (!metaRobots) {
       metaRobots = document.createElement('meta');
       metaRobots.name = 'robots';
       document.head.appendChild(metaRobots);
     }
-
-    const minorCities = [
-      'abqaiq', 'afif', 'al-ahsa', 'al-baha', 'al-bukayriyah', 'al-kharj', 'al-lith',
-      'al-majmaah', 'al-mithnab', 'al-namas', 'al-qunfudhah', 'al-ula', 'al-zulfi',
-      'ar-rass', 'arar', 'badr', 'baljurashi', 'baqaa', 'buraydah', 'dawadmi',
-      'dhahran', 'duba', 'dumat-al-jandal', 'ghazalah', 'hail', 'haql', 'hubuna',
-      'jubail', 'khafji', 'khaybar', 'qatif', 'qurayyat', 'rabigh', 'rafha',
-      'ranyah', 'ras-tanura', 'sakaka', 'shaqra', 'tabuk', 'taif', 'tanomah',
-      'tayma', 'thuwal', 'turabah', 'turaif', 'unaizah', 'wadi-ad-dawasir', 'yanbu'
-    ];
-
-    const pathSegment = rawPath.replace(/\//g, '');
-    const isMinorCity = minorCities.includes(pathSegment);
 
     // Helpers to generate trimmed and highly optimized title/description
     const makeProductTitle = (productName) => {
@@ -129,21 +116,11 @@ const SEOHelper = () => {
       }
     }
 
-    // Check if major city page
-    let isMajorCity = false;
-    let majorCityMeta = null;
-    if (seoConfig.majorCities[pathSegment]) {
-      majorCityMeta = seoConfig.majorCities[pathSegment];
-      isMajorCity = true;
-    }
-
     const isValidPage = 
       !!pageMeta || 
       (isBlogPost && !!blogPostMeta) || 
       (isProduct && !!productMeta) || 
-      (isCategory && !!categoryMeta) || 
-      (isMajorCity && !!majorCityMeta) || 
-      isMinorCity;
+      (isCategory && !!categoryMeta);
 
     let activeTitle = "";
     let activeDescription = "";
@@ -160,9 +137,6 @@ const SEOHelper = () => {
     } else if (isCategory && categoryMeta) {
       activeTitle = categoryMeta.title;
       activeDescription = categoryMeta.description;
-    } else if (isMajorCity && majorCityMeta) {
-      activeTitle = majorCityMeta.title;
-      activeDescription = majorCityMeta.description;
     } else if (!isValidPage) {
       activeTitle = "Page Not Found | Alira Pharmaceuticals";
       activeDescription = "The page you are looking for does not exist or has been moved. | Alira Pharmaceuticals";
@@ -400,32 +374,7 @@ const SEOHelper = () => {
           };
           schemas.push(productSchema);
         } else {
-          // Other pages
-          breadcrumbList.itemListElement.push({
-            "@type": "ListItem",
-            "position": 2,
-            "name": activeTitle.split('|')[0].trim(),
-            "item": canonicalUrl
-          });
           schemas.push(breadcrumbList);
-
-          // If major city page, add LocalBusiness schema
-          if (isMajorCity && majorCityMeta) {
-            const localBusiness = {
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": `Alira Pharmaceuticals - ${pathSegment.toUpperCase()}`,
-              "image": "https://alirapharmaceuticals.com/Logo.webp",
-              "url": canonicalUrl,
-              "telephone": "+91-7895850793",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": pathSegment.charAt(0).toUpperCase() + pathSegment.slice(1),
-                "addressCountry": "SA"
-              }
-            };
-            schemas.push(localBusiness);
-          }
         }
       }
 
@@ -454,7 +403,7 @@ const SEOHelper = () => {
         metaDescEl.setAttribute('content', activeDescription);
       }
 
-      if (isMinorCity || !isValidPage) {
+      if (!isValidPage) {
         metaRobots.setAttribute('content', 'noindex, follow');
       } else {
         metaRobots.setAttribute('content', 'index, follow');

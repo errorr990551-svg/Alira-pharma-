@@ -15,20 +15,12 @@ const staticPaths = [
   '/about/',
   '/certification/',
   '/contact/',
-  '/market-area/',
   '/blogs/',
   '/privacy-policy/',
   '/terms-and-conditions/'
 ];
 
-const majorCities = [
-  '/riyadh/',
-  '/jeddah/',
-  '/dammam/',
-  '/al-khobar/',
-  '/mecca/',
-  '/medina/'
-];
+
 
 const blogSlugs = [
   'ent-neuro-surgical-tools',
@@ -121,9 +113,6 @@ async function runPrerender() {
   
   // 1. Static paths
   staticPaths.forEach(p => routes.push(p));
-  
-  // 2. Major cities
-  majorCities.forEach(p => routes.push(p));
   
   // 3. Blog paths
   blogSlugs.forEach(slug => routes.push(`/blogs/${slug}/`));

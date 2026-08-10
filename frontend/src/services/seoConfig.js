@@ -21,11 +21,7 @@ export const seoConfig = {
       description: "Explore Alira Pharmaceuticals' ISO 13485, ISO 9001, and CE certifications. Certified medical manufacturer supplying UAE, GCC, and global markets.",
       keywords: "ISO 13485 certification, CE mark medical device, surgical instrument certification, Alira certifications, hospital compliant medical supplies"
     },
-    "/market-area/": {
-      title: "Global Export Markets | Alira Pharmaceuticals | Serving UAE & GCC",
-      description: "Discover Alira Pharmaceuticals' international medical supply network, serving hospitals and distributors across UAE, GCC, Europe, Asia, and Africa.",
-      keywords: "medical export markets, UAE healthcare supplies, Saudi Arabia hospital procurement, GCC medical distributor, Alira global supply network"
-    },
+
     "/blogs/": {
       title: "Surgical & Medical Industry Insights | Alira Pharmaceuticals Blog",
       description: "Stay updated with the latest trends in surgical technology, medical device procurement, and global healthcare logistics. Insights from Alira.",
@@ -232,31 +228,5 @@ export const seoConfig = {
     }
   },
 
-  // Major Cities allowed to index (Issue 10)
-  majorCities: {
-    "riyadh": {
-      title: "Global Manufacturer & Exporter of Surgical Supplies to Riyadh",
-      description: "Sourcing surgical instruments, medical devices, and hospital supplies to Riyadh. SFDA compliance, competitive pricing, direct export."
-    },
-    "jeddah": {
-      title: "Precision Surgical Instruments & Medical Supplies to Jeddah",
-      description: "Leading manufacturer exporting premium surgical instruments and medical disposables to hospitals and clinical distributors in Jeddah, KSA."
-    },
-    "dammam": {
-      title: "Surgical Instruments & Hospital Medical Supplies to Dammam",
-      description: "Reliable B2B medical supply exporter supplying surgical steel instruments and certified PPE to healthcare providers in Dammam."
-    },
-    "al-khobar": {
-      title: "Top Medical Supplies & Surgical Instrument Exporter to Al Khobar",
-      description: "Supplying Al Khobar's hospitals and medical institutions with high-precision surgical instruments, PPE, and wound care devices."
-    },
-    "mecca": {
-      title: "Surgical Instruments & Medical Disposables Exporter to Mecca",
-      description: "Providing international-standard medical disposables, surgical instruments, and hospital drapes to healthcare centers in Mecca, KSA."
-    },
-    "medina": {
-      title: "Global Medical Supplies & Surgical Instruments to Medina",
-      description: "Precision-engineered surgical tools and medical disposables exported directly to healthcare networks in Medina, Saudi Arabia."
-    }
-  }
+
 };

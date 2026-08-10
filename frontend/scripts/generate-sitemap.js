@@ -13,21 +13,12 @@ const staticPaths = [
   '/about/',
   '/certification/',
   '/contact/',
-  '/market-area/',
   '/blogs/',
   '/privacy-policy/',
   '/terms-and-conditions/'
 ];
 
-// Major city pages allowed to index
-const majorCities = [
-  '/riyadh/',
-  '/jeddah/',
-  '/dammam/',
-  '/al-khobar/',
-  '/mecca/',
-  '/medina/'
-];
+
 
 // Blog posts slugs
 const blogSlugs = [
@@ -75,9 +66,6 @@ const urls = [];
 // 1. Add static paths
 staticPaths.forEach(p => urls.push(p));
 
-// 2. Add major cities
-majorCities.forEach(p => urls.push(p));
-
 // 3. Add blog paths
 blogSlugs.forEach(slug => urls.push(`/blogs/${slug}/`));
 
@@ -87,17 +75,9 @@ const getFileForUrl = (urlPath) => {
   if (urlPath === '/about/') return 'src/pages/About.jsx';
   if (urlPath === '/certification/') return 'src/pages/Certification.jsx';
   if (urlPath === '/contact/') return 'src/pages/ContactUs.jsx';
-  if (urlPath === '/market-area/') return 'src/pages/MarketArea.jsx';
   if (urlPath === '/blogs/') return 'src/pages/BlogsPage.jsx';
   if (urlPath === '/privacy-policy/') return 'src/pages/PrivacyPolicy.jsx';
   if (urlPath === '/terms-and-conditions/') return 'src/pages/TermsConditions.jsx';
-
-  if (urlPath === '/riyadh/') return 'src/pages/SeoPage.jsx';
-  if (urlPath === '/jeddah/') return 'src/pages/JeddahPage.jsx';
-  if (urlPath === '/dammam/') return 'src/pages/DammamPage.jsx';
-  if (urlPath === '/al-khobar/') return 'src/pages/KhobarPage.jsx';
-  if (urlPath === '/mecca/') return 'src/pages/MeccaPage.jsx';
-  if (urlPath === '/medina/') return 'src/pages/MedinaPage.jsx';
 
   if (urlPath.startsWith('/blogs/')) {
     const slug = urlPath.split('/').filter(Boolean)[1];
@@ -152,7 +132,6 @@ try {
     let priority = 0.5;
     if (urlPath === '/') priority = 1.0;
     else if (urlPath.startsWith('/products/')) priority = 0.8;
-    else if (majorCities.includes(urlPath)) priority = 0.7;
 
     // Default modification time: today
     let lastmodDate = new Date().toISOString().split('T')[0];
