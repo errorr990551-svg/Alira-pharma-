@@ -142,10 +142,20 @@ async function runPrerender() {
 
   // Launch browser
   console.log("Launching Puppeteer...");
-  const browser = await puppeteer.launch({
-    headless: "shell",
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
+  let browser;
+  try {
+    browser = await puppeteer.launch({
+      headless: "shell",
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu']
+    });
+  } catch (launchErr) {
+    console.error("Puppeteer launch failed:", launchErr.message);
+    server.close(() => {
+      console.log("Temp server stopped. Continuing without static prerendering...");
+      process.exit(0);
+    });
+    return;
+  }
 
   const page = await browser.newPage();
 
@@ -196,4 +206,7 @@ async function runPrerender() {
   });
 }
 
-runPrerender();
+runPrerender().catch(err => {
+  console.error("Prerender execution error:", err);
+  process.exit(0);
+});

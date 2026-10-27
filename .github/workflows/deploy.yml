@@ -1,0 +1,62 @@
+name: Fast ZIP CI/CD Auto-Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build & Fast ZIP Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: 📦 Install Frontend Dependencies
+        run: |
+          cd frontend
+          npm ci
+
+      - name: ⚙️ Build Production Site
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://alirapharma.errorr990551.workers.dev' }}
+        run: |
+          cd frontend
+          npm run build
+
+      - name: 🗜️ Package Build into deploy.zip
+        run: |
+          cd frontend/dist
+          zip -r ../../deploy.zip .
+          cd ../..
+          echo "deploy.zip created successfully:"
+          ls -lh deploy.zip
+
+      - name: 📦 Install Deployment Tooling
+        run: |
+          npm install basic-ftp
+
+      - name: 🚀 Fast ZIP FTP Upload & Auto-Extract
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT || '21' }}
+          SITE_URL: 'https://alirapharmaceuticals.com'
+        run: |
+          node .github/scripts/fast-deploy.cjs
